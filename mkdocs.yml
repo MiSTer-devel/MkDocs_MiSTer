@@ -45,7 +45,7 @@ plugins:
   - rss:
       image: assets/mister_kun_bw.svg
   # Permits the use of embedded videos
-  - mkdocs-video
+  - ffc-mkdocs-video
   # Adds date/time stamp to page when updated according to git history.
   - git-revision-date-localized
   # Makes things load faster at the cost of a little extra build time
