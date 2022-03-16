@@ -22,11 +22,11 @@ Light guns such as the NES Zapper are too timing sensitive to work over USB, but
 ## Any USB controller recommendations?
 Almost any controller that uses USB will work with MiSTer. You can also use a Bluetooth or 2.4ghz USB adapter for wireless. Good controllers that many users seem to like and have low input latency are:
 
-* [Sony DualSense (PS5 Controller)](https://www.playstation.com/en-us/accessories/dualsense-wireless-controller/){target=_blank} - Very low lag, fast pairing, touchpad, and extra button (mute) if paired with a bluetooth 5.0 adapter (TP-Link UB-500, Edimax BT-8500, or Asus USB-BT500 adapters are recommended and known to work).
-* [8BitDo M30 Bluetooth](https://www.8bitdo.com/m30/){target=_blank} and [8BitDoM30 2.4G](https://www.8bitdo.com/m30-2-4g-for-genesis-mini-mega-drive-mini/){target=_blank} - Note these kinds of controllers do not have as many buttons as the Playstation style controllers and you may be limited if you use them.
+* [Sony DualSense (PS5 Controller)](https://www.playstation.com/en-us/accessories/dualsense-wireless-controller/){target=_blank} - Very low lag, fast pairing, and a touchpad that can be used as mouse input (for cores with mouse support, like SNES lightgun use or a mouse as a spinner control).
+* [8BitDo M30 Bluetooth](https://www.8bitdo.com/m30/){target=_blank} and [8BitDoM30 2.4G](https://www.8bitdo.com/m30-2-4g-for-genesis-mini-mega-drive-mini/){target=_blank} - Note these kinds of controllers do not have as many buttons as the Playstation style controllers, and they do not have joysticks, so you may be limited if you solely use them.
 * [8bitDo SN30 Pro 2](https://www.8bitdo.com/pro2/){target=_blank} - Versatile connectivity and confortable design that is similar to the Playstation DualShock form factor with an SNES aesthetic and button layout.
-* [8bitDo Arcade Stick](https://www.8bitdo.com/arcade-stick/){target=_blank} - Wired and wireless low lag functionality with low variable lag, customizable buttons and joystick is supported.
-* [iBuffalo SNES Controller](https://www.amazon.com/Buffalo-iBuffalo-Classic-USB-Gamepad/dp/B002B9XB0E/){target=_blank} - A little overpriced now, but it is a very low lag controller.
+* [8bitDo Arcade Stick](https://www.8bitdo.com/arcade-stick/){target=_blank} - Wired and wireless low lag functionality with somewhat low variable lag, DIY customizable pushbuttons and joystick is also supported.
+* [iBuffalo SNES Controller](https://www.amazon.com/Buffalo-iBuffalo-Classic-USB-Gamepad/dp/B002B9XB0E/){target=_blank} - A little overpriced now, but it is one of the lowest lag controllers tested.
 
 And many many more. Check [MiSTerAddons' input latency tests](https://rpubs.com/misteraddons/inputlatency){target=_blank} to help you decide. Also to ensure you get the fastest response make sure to check the [USB overclock instructions](../advanced/lag.md) section out.
 
