@@ -66,6 +66,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://MiSTer-devel.github.io/MkDocs_MiSTer/basics/addons/</loc>
+         <lastmod>2022-03-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://MiSTer-devel.github.io/MkDocs_MiSTer/basics/bluetooth/</loc>
          <lastmod>2022-03-16</lastmod>
          <changefreq>daily</changefreq>
