@@ -61,8 +61,8 @@ I have found it to be a little complicated to get started, but once it is runnin
 The following is an example for connecting to a BBS using Striketerm 2014.
 
 1. Start the C64 core (please note that custom kernels may remove functionality required, if in doubt use the built in kernel).
-2. In the Mister C64 Menu ( Win/F12 ) set the "User Port" to "UART", and save it.
-3. In the Mister System Menu ( Win/F12 ) set the "Uart Connection" to "Midi", "Remote", "TCP" and save it.
+2. In the Mister C64 Menu ( Win/F12 ), go to "Hardware", set the "Expansion" to "RS232", "RS232 Connection" to "Internal", "RS232 mode" to "VIC-1011" and save it.
+3. In the Mister System Menu ( Win/F12 ) set the "Uart Connection" to "Modem", Link to "TCP", Baud to "2400" and save it.
 4. Load Striketerm 2014 from d64. Available from [here](https://csdb.dk/release/?id=130807){target=_blank}
 5. Keep the defaults in the Main Menu (F1), ensure you are running at 2400 baud.
 6. Save a BBS into the Addressbook (F5), you can get some from [here](http://cbbsoutpost.servebbs.com){target=_blank}
