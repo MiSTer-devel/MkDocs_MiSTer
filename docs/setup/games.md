@@ -32,8 +32,12 @@ You can also turn off the MiSTer, remove the MicroSD and plug it into your compu
 
 After this is done you can proceed to the next step since we are going to [Play a Game](play.md).
 
-## File Formats
-CD images for any cores that use CD's must either be in CUE/BIN or CHD. CD Images can't be placed in zip folders/archives.
+## Notes about File Formats
+CD images for any cores that use CD's must either be in CUE/BIN or CHD. It is best to place CD images into their own separate folders and it is adviced to place multi-disc games's into the same folder (e.g. `Final Fantasy VII Discs 1-3` in the same `Final Fantasy VII` folder), since you can then change discs without resetting the core, and your save files will load from disc to disc (in the case of the PSX core).
+
+CD images can't be placed in zip archives. They are handled differently from other game ROMs.
+
+For more CD image information check [CD-based ROMs](../basics/cd.md)
 
 VHD (virtual hard drive) files are the same, they must not be zipped.
 
