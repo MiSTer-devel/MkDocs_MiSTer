@@ -91,6 +91,7 @@ nav:
   # Just some basics things to go over. Slightly more advanced than the setup section above
   - The Basics:
     - FAQ: basics/faq.md
+    - Addon Boards: basics/addons.md
     - Hotkeys: basics/hotkey.md
     - Controllers: basics/input.md
     - Keyboards: basics/keyboard.md
