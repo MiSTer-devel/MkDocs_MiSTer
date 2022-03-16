@@ -40,7 +40,7 @@ jobs:
           mkdocs-material \
           mkdocs-minify-plugin \
           mkdocs-redirects \
-          mkdocs-video \
+          ffc-mkdocs-video \
           mkdocs-git-revision-date-localized-plugin \
           mkdocs-rss-plugin
 
