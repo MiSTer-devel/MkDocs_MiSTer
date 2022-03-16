@@ -67,10 +67,10 @@ You can find the updated list at the [Console Cores](../cores/console.md) and [C
 The Genesis has graphics RAM and stores data that is copied from the cartridge ROM. The NES does not do this, and typically accesses the ROM directly for the data which requires much tighter timings. Using the SDRAM board on the NES core allows meeting these timing requirements.
 
 ## Does my MiSTer need cooling?
-Yes, you will want at least a heatsink (passive cooling). 22mm x 22mm is the ideal size. Active cooling (a fan) helps but is not strictly required. Some faster cores like ao486 may generate a lot of heat.
+Yes, you will want at least a heatsink (passive cooling). 22mm x 22mm is the ideal size. 20mm x 20mm is more than enough however and is more common. Active cooling with a fan helps but is not strictly required. Some faster cores like ao486 or PSX may generate a lot of heat.
 
 ## What power supply is compatible with MiSTer?
-The DE10-Nano board needs a 5V power supply with at least 2A. The connector is a coaxial "barrel" plug of 5.5 mm outer diameter and 2.1 mm inner diameter, center positive. If you are using a USB Hub addon board and have a lot of power hungry peripherals attached to it (wifi, bluetooth, multiple controllers), it might be a good idea to upgrade to a similar 5v power supply, but with more amps (4A-5A).
+The DE10-Nano board needs a 5V power supply with at least 2A. The connector is a coaxial "barrel" plug of 5.5 mm outer diameter and 2.1 mm inner diameter, center positive. If you are using a USB Hub addon board and have a lot of power hungry peripherals attached to it (wifi, bluetooth, multiple controllers, a mechanical hard drive), it might be a good idea to upgrade to a similar 5v power supply, but with more amps (4A-5A). Typically this is only needed if you have a mechanical hard drive, are heavily using the charging port, or have an MT32-Pi powered by the serial IO user port as these draw a good amount of amps.
 
 ## My MiSTer needs a case. What should I do?
 There are two routes you can take; either make it yourself or purchase a case from an online vendor. For DiY, you can find the necessary 3D print files online (e.g. [thingiverse](https://www.thingiverse.com/search?q=mister+fpga){target=_blank}).
