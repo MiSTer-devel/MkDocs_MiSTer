@@ -39,6 +39,6 @@ Here's a reference of the hotkeys you can use with the MiSTer. Hotkeys are usefu
 
 ## Core-specific hotkeys
 
-| Core  | Hotkey    | Description  |
-| ----- | --------- | ------------ |
-| ao486 | Win + F12 | Open the OSD |
+| Core                | Hotkey    | Description  |
+| ------------------- | --------- | ------------ |
+| Many Computer Cores | Win + F12 | Open the OSD |

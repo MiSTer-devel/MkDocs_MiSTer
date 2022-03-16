@@ -46,7 +46,7 @@ No, but you will probably want some sort of inexpensive OTG hub at least (or a r
 Yes, it's a good idea to always have a USB keyboard available. Cheap wireless keyboards exist that you can use to reduce clutter.
 
 ## How do I add a second controller to MiSTer?
-First setup the controller in the main menu after plugging it in with no core loaded. Then you can define it in the various cores' OSD menus.
+First setup the controller in the main menu after plugging it in with no core loaded. Then you can define it in the various cores' OSD menus. This is only necessary if the controller is a different make/model (or has a different VendorID/ProductID) than any other controllers you have already defined. If you have already setup a Dualshock 4 controller, the second Dualshock 4 controller shouldn't need it's inputs to be defined again. Because of this, shared VendorID's and ProductID's between devices that are different may require reconfiguration when switching between them. There isn't any way around this currently. This includes using 8BitDo and Mayflash controller adapters with multiple controllers, as the adapters contain the ID information which is referenced.
 
 ## Does MiSTer need an IO board?
 No. The IO board is optional, but offers features that could be important for some users (3.5mm and optical audio, CRT output, tape audio input, etc).
@@ -106,9 +106,9 @@ MiSTer repositories are self contained and the official updater script only fetc
 Probably never. There isn’t really sufficient bandwidth.
 
 ## When is PlayStation core coming?
-Probably next year. Serious progress has been made by a few developers but there’s no official ETA.
+It's almost here. It is currently in an open beta stage and nearing completion rapidly. To assist in testing please join [the MiSTer FPGA discord server](https://discord.gg/misterfpga){target=_blank} and read the pins in the #psx-core-testing channel before submitting a bug report.
 
-##  Other cores work but I get a black screen for this one. What do I do?
+## Other cores work but I get a black screen for this one. What do I do?
 Try setting vsync to 0 as your display may not support all refresh rates. (Note that this was the default setting.)
 
 ## My CD games don’t work! Help!
@@ -129,7 +129,7 @@ De10-Nano is manufactured in very large scale for use by students and is widely 
 ## I see a defect that some other people aren’t seeing. Should I get a different DE-10 Nano?
 No, you should report the defect and wait for a fix. There is no magical best DE-10 Nano.
 
-##  I found some other Cyclone based dev board on sale and it has built in WiFi. Can I use it for MiSTer?
+## I found some other Cyclone based dev board on sale and it has built in WiFi. Can I use it for MiSTer?
 Generally, no. While it’s always possible that someone will take time to port things to other boards, the different pins and memory will mean it won’t be a straight use and unless it’s a significant upgrade, it would never gain official support.
 
 ## The DE-10 is rated for up to 100°C operation and it doesn’t get nearly that hot.  Do I really need a fan or heatsink? 
