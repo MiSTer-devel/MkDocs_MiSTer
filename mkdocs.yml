@@ -28,8 +28,6 @@ theme:
     - search.suggest
     # Update url with the active anchor as highlighted in ToC
     - navigation.tracking
-    # Expands the table of contents on the left by default
-    - navigation.expand
   # Folder for css and page overrides
   custom_dir: overrides
 
