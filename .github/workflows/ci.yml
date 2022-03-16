@@ -1,0 +1,60 @@
+name: ci
+on:
+  push:
+    branches:
+      - main
+
+env:
+  PYTHON_VERSION: 3.x
+
+jobs:
+  deploy:
+    name: Build documentation
+    runs-on: ubuntu-latest
+    steps:
+
+      # - name: Install Ubuntu Dependencies for Material for MkDocs Insiders
+      #   run: |
+      #     sudo apt-get install \
+      #     libcairo2-dev \
+      #     libfreetype6-dev \
+      #     libffi-dev \
+      #     libjpeg-dev \
+      #     libpng-dev \
+      #     libz-dev
+
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python runtime
+        uses: actions/setup-python@v3
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Install Python Dependencies
+        run: |
+          pip install \
+          mkdocs \
+          mkdocs-material \
+          mkdocs-minify-plugin \
+          mkdocs-redirects \
+          mkdocs-video \
+          mkdocs-git-revision-date-localized-plugin \
+          mkdocs-rss-plugin
+
+        # For mkdocs insiders build purposes to use later
+        # Pillow \
+        # cairosvg \
+
+      # - name: Install mkdocs-material-insiders
+      #   env:
+      #     GH_TOKEN: ${{ secrets.MKDOCS_MATERIAL_INSIDERS }}
+      #   run: |
+      #     pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
+
+      - name: Deploy Documentation
+        run: |
+          mkdocs gh-deploy --force
+          mkdocs --version
