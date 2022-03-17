@@ -1,4 +1,7 @@
-![MiSTer FPGA Sandwich Punk Style Art by hewhoisred](img/misterpunk.png)
+<figure markdown>
+  ![MiSTer FPGA Sandwich Punk Style Art by hewhoisred](img/misterpunk.png){ align=center width="400" }
+  <figcaption>Artwork by Hewhoisred</figcaption>
+</figure>
 
 MiSTer has various addon boards that are somewhat optional to use such as a 128MB SDRAM add-on board that allows you to use all of the cores on the system and the Analog IO board which enables you to easily connect your MiSTer to a classic CRT telivision or monitor. These boards can be purchased by various sellers online or assembled yourself by ordering the PCB from a PCB manufacturer, buying the components online, and soldering it yourself. 
 

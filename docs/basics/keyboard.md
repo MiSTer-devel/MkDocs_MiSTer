@@ -12,7 +12,7 @@ Keyboards can be switched to joystick emulation. You need to define keys used fo
 Keyboards can be switched to mouse emulation. You need to define mouse emulation buttons in the Menu core the same way as for joystick, in the Define Gamepad menu option.
 
 ## Emulation switch
-To switch between emulation modes press `NumLock` or `ScrLock` until the desired mode is selected. 
+To switch between emulation modes press ++num-lock++ or ++scroll-lock++ until the desired mode is selected. 
 
 The switching sequence is `Mouse >> Joy1 >> Joy2 >> None`
 
@@ -22,11 +22,11 @@ The LEDs on your keyboard will display the emulation modes:
 * Joystick 2 emulation: ScrLock LED.
 
 ## Common functional keys/combos used in cores
-* `F12` - open/close OSD menu/submenu
-* `Alt-F12` - quick core selection (like in Menu core).
-* `LCtrl+LAlt+RAlt` - presses the "USER" button which usually is reset in emulated system.
-* `LShift+LCtrl+LAlt+RAlt` - MiSTer reset (load Menu core).
+* ++f12++ - open/close OSD menu/submenu
+* ++alt+f12++ - quick core selection (like in Menu core).
+* ++lctrl+lalt+ralt++ - presses the "USER" button which usually is reset in emulated system.
+* ++lshift+lctrl+lalt+ralt++ - MiSTer reset (load Menu core).
 
 ### Notes:
-* Some systems provide writing support which requires additional attention to how you reset/shutdown the MiSTer. MiSTer tries not to keep any pending writes and writes physically to the disk as soon as possible. Still, safer way to reset the MiSTer from core which probably was writing to disk recently is using combo `LShift+LCtrl+LAlt+RAlt` - this will flush all caches to disk before restart. Cores without write can be restarted by hard reset button or powered down without special attention.
-* `LCtrl+LAlt+RAlt` sequence can be replaced by some other well known combos through INI file.
+* Some systems provide writing support which requires additional attention to how you reset/shutdown the MiSTer. MiSTer tries not to keep any pending writes and writes physically to the disk as soon as possible. Still, safer way to reset the MiSTer from core which probably was writing to disk recently is using combo ++lshift+lctrl+lalt+ralt++ - this will flush all caches to disk before restart. Cores without write can be restarted by hard reset button or powered down without special attention.
+* ++lctrl+lalt+ralt++ sequence can be replaced by some other well known combos through INI file.

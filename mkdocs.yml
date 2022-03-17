@@ -156,6 +156,14 @@ markdown_extensions:
   - pymdownx.superfences
   # https://squidfunk.github.io/mkdocs-material/reference/images/
   - attr_list
+  # https://facelessuser.github.io/pymdown-extensions/extensions/keys/
+  - pymdownx.keys
+  # https://facelessuser.github.io/pymdown-extensions/extensions/emoji/
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  # https://python-markdown.github.io/extensions/md_in_html/
+  - md_in_html
 
 extra_css:
   - stylesheets/extra.css
