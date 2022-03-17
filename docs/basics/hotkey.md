@@ -11,8 +11,8 @@ Here's a reference of the hotkeys you can use with the MiSTer. Hotkeys are usefu
 | ----------------------------------------- | ---------------------------------------------------------------------------------- |
 | ++f12++                                   | Open or close the Menu/On-Screen Display                                           |
 | ++alt+f12++                               | Open core select menu                                                              |
-| ++win+prtsc++                            | Take a screenshot (upscaled)                                                       |
-| ++shift+win+prtsc++                      | Take a screenshot (raw output)                                                     |
+| ++win+prtsc++                             | Take a screenshot (upscaled)                                                       |
+| ++shift+win+prtsc++                       | Take a screenshot (raw output)                                                     |
 | ++lctrl+lalt+ralt++                       | Press "User" button, usually resets current core, same function as IO board button |
 | ++lshift+lctrl+lalt+ralt++                | Full Reboot/Reset, same as IO add-on board Reset button                            |
 | Controller: Button + OSD button           | Turn on/off turbo/autofire for the pressed button                                  |
