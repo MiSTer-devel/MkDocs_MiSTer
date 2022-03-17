@@ -66,3 +66,9 @@ This is a Raspberry Pi HAT add-on board for the [MT32-Pi](https://github.com/dwh
 ![MiSTer FPGA Real Time Clock Add-on Board](img/rtc.png)
 
 There is a Real Time Clock add-on board. If you want to add a real-time clock to your MiSTer you will require this. Some computer cores use this feature if you are interested in it.
+
+## [ADC Analog Audio Input Addon Board](https://github.com/MiSTer-devel/Hardware_MiSTer/blob/master/releases/ADCin_1.1.pdf){target=_blank}
+
+![MiSTer FPGA ADC Analog Audio Input Add-on Board](img/adc.png)
+
+The ADC Add-on board for MiSTer allows you to use either recordings of computer tape audio or actual retro tape players to send data over analog audio into certain computer cores.
