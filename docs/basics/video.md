@@ -53,7 +53,19 @@ There are also ways to add exceptions. My monitor doesn't play nice with the low
 vsync_adjust=0
 ```
 
-This makes it so no matter what my `vsync_adjust` setting is in the upper section, when I use the Genesis core, it will force it to use `vsync_adjust=0` (the most compatible mode) every time.
+This makes it so no matter what my `vsync_adjust` setting is in the upper section, when I use the Genesis core, it will force it to use `vsync_adjust=0` (the most compatible mode) every time. You can also add a wildcard to these exceptions so one exception could be applied to multiple cores:
+
+```ini
+[dkong*]
+vsync_adjust=1
+```
+
+This will make it so every core that starts with `dkong` will have the same rule applied to it. You can also make an exception for every single arcade core like so:
+
+```ini
+[arcade]
+vsync_adjust=1
+```
 
 ## Video Processing Options Tutorial
 Here's a tutorial that you can follow along to get you started using the powerful video processing options on MiSTer FPGA.
