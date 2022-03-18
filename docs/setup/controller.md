@@ -19,9 +19,9 @@ Then it will ask you to assign some buttons:
 * OSD button or 2-button combo (to use instead of F12 on the keyboard)
 * A few extra buttons for advanced functions
 
-Skip any buttons you don't want to assign (there may be a lot of them) with the spacebar. If you accidentally assign the wrong button, don't worry, just define it all over again from the start.
+Skip any buttons you don't want to assign (there may be a lot of them) with the ++space++ on the keyboard or the User button on your MiSTer. If you accidentally assign the wrong button, don't worry, just define it all over again from the start.
 
-If you press enter to "Finish" too early, you might miss the Analog Joystick configuration step which is important if you have analog joysticks.
+If you press ++enter++ to "Finish" too early, you might miss the Analog Joystick configuration step which is important if you have analog joysticks.
 
 Here is a picture to give you an idea of what the buttons it is asking you to press may represent:
 
@@ -29,7 +29,7 @@ Here is a picture to give you an idea of what the buttons it is asking you to pr
 
 The L on the bottom left is referring to an analog joystick. Your controller may or may not have this. If it does, the step to define the analogy joystick's input is at the end, so your joystick will not work unless you go through the entire list of inputs to define.
 
-Another important button is the OSD button. Many modern controllers have a "Home" button, it's probably best to assign this to the OSD/Menu. If you do not assign anything to home, the only way to access the menu will be to use the F12 key on a keyboard.
+Another important button is the OSD button. Many modern controllers have a "Home" button, it's probably best to assign this to the OSD/Menu. If you do not assign anything to home, the only way to access the menu will be to use the ++f12++ key on a keyboard.
 
 ### Define Gamepad Inputs/Buttons Example Video
 ![type:video](videos/define-gamepad.mp4)
