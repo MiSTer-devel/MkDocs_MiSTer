@@ -9,19 +9,25 @@ Here's a rundown of what some of the current add-on boards are and what they do.
 
 ## [128MB SDRAM Addon Board](https://github.com/MiSTer-devel/Hardware_MiSTer/blob/master/releases/sdram_xsds_2.9.pdf){target=_blank}
 
-![MiSTer FPGA 128MB SDRAM Add-on Board](img/sdram.png)
+<figure markdown>
+  ![MiSTer FPGA 128MB SDRAM Add-on Board](img/sdram.png){ align=center }
+</figure>
 
 The 128MB SDRAM Add-on board for MiSTer is essential for multiple cores to even load games. You can alternatively go with a 32MB SDRAM board for a cheaper price, however there are some games on Neo Geo, Game Boy Advance, and a few other cores which might no be compatible if you go with the smaller sized module.
 
 ## [USB Hub Addon Board](https://github.com/MiSTer-devel/Hardware_MiSTer/blob/master/releases/USBHub_2.1.pdf){target=_blank}
 
-![MiSTer FPGA USB Hub Add-on Board](img/usbhub.png)
+<figure markdown>
+  ![MiSTer FPGA USB Hub Add-on Board](img/usbhub.png){ align=center }
+</figure>
 
 The USB Hub Add-on board for MiSTer has two methods of connecting to your DE10-Nano either via internal headers with a slim external board or with a bridge to connect both MicroUSB ports together. This board provides an OTG USB Hub for the Mister which has one power-only usb port in the back and 6 USB 2.0 ports ont he other 3 sides. It requires power so you may need a power splitter to supply power to both the DE10-Nano and this USB hub. If you use a Digital IO board you will only need a DC to DC jumper cable and a single cable to the Digital IO board's barrel jack in order to power the whole stack.
 
 ## [Digital I/O Addon Board](https://github.com/MiSTer-devel/Hardware_MiSTer/blob/master/releases/iobrd_dig_1.2.pdf){target=_blank}
 
-![MiSTer FPGA Digital I/O Add-on Board](img/digitalio.png)
+<figure markdown>
+  ![MiSTer FPGA Digital I/O Add-on Board](img/digitalio.png){ align=center }
+</figure>
 
 Get this board if you want a few more options. It is cheaper than the Analog IO board below typically, and it leaves the 2nd SDRAM slot unoccuppied for the potential future cores which may require it someday.
 
@@ -36,7 +42,9 @@ Get this board if you want a few more options. It is cheaper than the Analog IO 
 
 ## [Analog I/O Addon Board](https://github.com/MiSTer-devel/Hardware_MiSTer/raw/master/releases/iobrd_6.1.pdf){target=_blank}
 
-![MiSTer FPGA Analog I/O Add-on Board](img/analogio.png)
+<figure markdown>
+  ![MiSTer FPGA Analog I/O Add-on Board](img/analogio.png){ align=center }
+</figure>
 
 Get this board instead of the Digital IO Addon board if you want to use your MiSTer for simultaneous video output to a CRT and HDMI monitor. Otherwise the cheaper Digital IO board should be sufficient.
 
@@ -60,18 +68,24 @@ Get this board instead of the Digital IO Addon board if you want to use your MiS
 
 ## [MT32-Pi Raspberry Pi HAT Addon Board](https://github.com/MiSTer-devel/Hardware_MiSTer/blob/master/releases/MT32Pi_Main.pdf){target=_blank}
 
-![MiSTer FPGA MT32-Pi Raspberry Pi HAT Add-on Board](img/mt32pimain.png)
+<figure markdown>
+  ![MiSTer FPGA MT32-Pi Raspberry Pi HAT Add-on Board](img/mt32pimain.png){ align=center }
+</figure>
 
 This is a Raspberry Pi HAT add-on board for the [MT32-Pi](https://github.com/dwhinham/mt32-pi/wiki){target=_blank}. It is intended to be used with the Raspberry Pi 3A+ due to it's square shape, but the 3B and 4 will work just fine as well. You will also need a short USB Type A 3.0 Male to Male cable if you choose this option.
 
 ## [Real Time Clock Addon Board](https://github.com/MiSTer-devel/Hardware_MiSTer/blob/master/releases/rtc_1.3.pdf){target=_blank}
 
-![MiSTer FPGA Real Time Clock Add-on Board](img/rtc.png)
+<figure markdown>
+  ![MiSTer FPGA Real Time Clock Add-on Board](img/rtc.png){ align=center }
+</figure>
 
 There is a Real Time Clock add-on board. If you want to add a real-time clock to your MiSTer you will require this. Some computer cores use this feature if you are interested in it.
 
 ## [ADC Analog Audio Input Addon Board](https://github.com/MiSTer-devel/Hardware_MiSTer/blob/master/releases/ADCin_1.1.pdf){target=_blank}
 
-![MiSTer FPGA ADC Analog Audio Input Add-on Board](img/adc.png)
+<figure markdown>
+  ![MiSTer FPGA ADC Analog Audio Input Add-on Board](img/adc.png){ align=center }
+</figure>
 
 The ADC Add-on board for MiSTer allows you to use either recordings of computer tape audio or actual retro tape players to send data over analog audio into certain computer cores.
