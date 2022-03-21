@@ -69,6 +69,7 @@ The following is an example for connecting to a BBS using Striketerm 2014 and VI
 7. Surf the BBS very slowly...
 
 The following is an example for connecting to a BBS using CCGMS Ultimate and UP9600 mode:
+
 1. Start the C64 core (please note that custom kernels may remove functionality required, if in doubt use the built in kernel).
 2. In the Mister C64 Menu ( Win/F12 ), go to "Hardware", set the "Expansion" to "RS232", "RS232 Connection" to "Internal", "RS232 mode" to "UP9600" and save it.
 3. In the Mister System Menu ( Win/F12 ) set the "Uart Connection" to "Modem", Link to "TCP", Baud to "9600" and save it.
