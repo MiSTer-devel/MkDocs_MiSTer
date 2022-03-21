@@ -77,3 +77,15 @@ The following is an example for connecting to a BBS using CCGMS Ultimate and UP9
 5. Hit F7 key to access configuration page, then "M" to change the modem to "UP9600/EZ232", then "B" to set the baud speed to "9600". Save the config with the "S" key.
 6. Access the Phonebook with "A" key from the same configuration page, save some BBS addresses from [here](http://cbbsoutpost.servebbs.com){target=_blank}
 7. Enjoy the faster BBS experience.
+
+## Serial connection on Color Computer 3 (CoCo3)
+The following is an example for connecting to a BBS using UltimaTerm 4.0
+
+1. Start the CoCo3 core (use Multi-pak Slot 4 Disk or Slot 2 CoCoSDC)
+2. In the MiSTer System Menu ( Win/F12 ) set the "Uart Connection" to "Modem", Link to "TCP", Baud to "9600" and save it.
+3. Mount UltimaTerm DSK file, obtainable [HERE](https://colorcomputerarchive.com/repo/Disks/Applications/Ultimaterm%204.0%20%28Ken%20Johnston%29%20%28Coco%203%29.zip){target=_blank}
+4. Load UltimaTerm by issuing: **LOADM"ULTIMATE**
+5. Hit "Alt+O" to open Options Menu, then "M" for Modem options. Use "B" to modify the baud rate (left/right arrows to change values) to 9600. The rest of the settings should be default (word length 8, parity none, stop bits 1, duplex full, terminal type ANSI). 
+6. Save your changes with "Alt+D" then F1 key.
+7. Hit "Alt+A" to open Phonebook, add a BBS and dial away.
+8. Alternatively, you can dial directly by issuing an **ATDT**BBS_Address:port. Full UltimaTerm 4.0 Documentation [HERE](https://colorcomputerarchive.com/repo/Documents/Manuals/Applications/Ultimaterm%20v4.0%20%28Ken%20Johnston%29.pdf){target=_blank}
