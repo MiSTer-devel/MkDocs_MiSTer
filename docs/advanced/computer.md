@@ -58,7 +58,7 @@ The following steps will allow you to get it working.
 I have found it to be a little complicated to get started, but once it is running it is rock solid and supports multiple client programs at once.
 
 ## Serial connection on C64
-The following is an example for connecting to a BBS using Striketerm 2014.
+The following is an example for connecting to a BBS using Striketerm 2014 and VIC-101 2400 baud mode.
 
 1. Start the C64 core (please note that custom kernels may remove functionality required, if in doubt use the built in kernel).
 2. In the Mister C64 Menu ( Win/F12 ), go to "Hardware", set the "Expansion" to "RS232", "RS232 Connection" to "Internal", "RS232 mode" to "VIC-1011" and save it.
@@ -67,3 +67,12 @@ The following is an example for connecting to a BBS using Striketerm 2014.
 5. Keep the defaults in the Main Menu (F1), ensure you are running at 2400 baud.
 6. Save a BBS into the Addressbook (F5), you can get some from [here](http://cbbsoutpost.servebbs.com){target=_blank}
 7. Surf the BBS very slowly...
+
+The following is an example for connecting to a BBS using CCGMS Ultimate and UP9600 mode:
+1. Start the C64 core (please note that custom kernels may remove functionality required, if in doubt use the built in kernel).
+2. In the Mister C64 Menu ( Win/F12 ), go to "Hardware", set the "Expansion" to "RS232", "RS232 Connection" to "Internal", "RS232 mode" to "UP9600" and save it.
+3. In the Mister System Menu ( Win/F12 ) set the "Uart Connection" to "Modem", Link to "TCP", Baud to "9600" and save it.
+4. Load CCGMS Ultimate from d64, available [here](https://csdb.dk/release/download.php?id=214853){target=_blank}
+5. Hit F7 key to access configuration page, then "M" to change the modem to "UP9600/EZ232", then "B" to set the baud speed to "9600". Save the config with the "S" key.
+6. Access the Phonebook with "A" key from the same configuration page, save some BBS addresses from [here](http://cbbsoutpost.servebbs.com){target=_blank}
+7. Enjoy the faster BBS experience.
