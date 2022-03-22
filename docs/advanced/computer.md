@@ -33,7 +33,7 @@ For correct PPP work, make sure you see a network icon in Menu core before start
 ## PPP connection in Windows 95 on ao486
 Unfortunately winsock and winsock2 provided by Microsoft do not work with the ppp connection when in Windows 95.
 
-The following steps will allow you to get it working.
+The following steps will allow you to get it working:
 
 1. In the Mister System Menu ( Win/F12 ) set the "Uart Connection" to "PPP" and save it.
 2. In Windows 95 ensure the COM1 device is installed in Start->Settings->Control Panel->System - Device Manager Tab, there should be a twisty called Ports(COM & LPT) and under that a "Communications Port (COM1)"
@@ -58,7 +58,7 @@ The following steps will allow you to get it working.
 I have found it to be a little complicated to get started, but once it is running it is rock solid and supports multiple client programs at once.
 
 ## Serial connection on C64
-The following is an example for connecting to a BBS using Striketerm 2014 and VIC-101 2400 baud mode.
+The following is an example for connecting to a BBS using Striketerm 2014 and VIC-101 2400 baud mode:
 
 1. Start the C64 core (please note that custom kernels may remove functionality required, if in doubt use the built in kernel).
 2. In the Mister C64 Menu ( Win/F12 ), go to "Hardware", set the "Expansion" to "RS232", "RS232 Connection" to "Internal", "RS232 mode" to "VIC-1011" and save it.
@@ -79,13 +79,13 @@ The following is an example for connecting to a BBS using CCGMS Ultimate and UP9
 7. Enjoy the faster BBS experience.
 
 ## Serial connection on Color Computer 3 (CoCo3)
-The following is an example for connecting to a BBS using UltimaTerm 4.0
+The following is an example for connecting to a BBS using UltimaTerm 4.0:
 
 1. Start the CoCo3 core (use Multi-pak Slot 4 Disk or Slot 2 CoCoSDC)
-2. In the MiSTer System Menu ( Win/F12 ) set the "Uart Connection" to "Modem", Link to "TCP", Baud to "9600" and save it.
+2. In the MiSTer System Menu ++win+f12++ ) set the "Uart Connection" to "Modem", Link to "TCP", Baud to "9600" and save it.
 3. Mount UltimaTerm DSK file, obtainable [HERE](https://colorcomputerarchive.com/repo/Disks/Applications/Ultimaterm%204.0%20%28Ken%20Johnston%29%20%28Coco%203%29.zip){target=_blank}
-4. Load UltimaTerm by issuing: **LOADM"ULTIMATE**
-5. Hit "Alt+O" to open Options Menu, then "M" for Modem options. Use "B" to modify the baud rate (left/right arrows to change values) to 9600. The rest of the settings should be default (word length 8, parity none, stop bits 1, duplex full, terminal type ANSI). 
-6. Save your changes with "Alt+D" then F1 key.
-7. Hit "Alt+A" to open Phonebook, add a BBS and dial away.
-8. Alternatively, you can dial directly by issuing an **ATDT**BBS_Address:port. Full UltimaTerm 4.0 Documentation [HERE](https://colorcomputerarchive.com/repo/Documents/Manuals/Applications/Ultimaterm%20v4.0%20%28Ken%20Johnston%29.pdf){target=_blank}
+4. Load UltimaTerm by issuing: `LOADM"ULTIMATE"`
+5. Hit ++alt+o++ to open Options Menu, then ++m++ for Modem options. Use ++b++ to modify the baud rate (++left++ or ++right++ arrows to change values) to 9600. The rest of the settings should be default (word length 8, parity none, stop bits 1, duplex full, terminal type ANSI). 
+6. Save your changes with ++alt+d++ then ++f1++ key.
+7. Hit ++alt+a++ to open Phonebook, add a BBS and dial away.
+8. Alternatively, you can dial directly by issuing an `ATDTBBS_Address:port`. Full UltimaTerm 4.0 Documentation [HERE](https://colorcomputerarchive.com/repo/Documents/Manuals/Applications/Ultimaterm%20v4.0%20%28Ken%20Johnston%29.pdf){target=_blank}
