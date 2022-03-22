@@ -84,7 +84,7 @@ The following is an example for connecting to a BBS using UltimaTerm 4.0:
 1. Start the CoCo3 core (use Multi-pak Slot 4 Disk or Slot 2 CoCoSDC)
 2. In the MiSTer System Menu ++win+f12++ ) set the "Uart Connection" to "Modem", Link to "TCP", Baud to "9600" and save it.
 3. Mount UltimaTerm DSK file, obtainable [HERE](https://colorcomputerarchive.com/repo/Disks/Applications/Ultimaterm%204.0%20%28Ken%20Johnston%29%20%28Coco%203%29.zip){target=_blank}
-4. Load UltimaTerm by issuing: `LOADM"ULTIMATE"`
+4. Load UltimaTerm by issuing: `LOADM"ULTIMATE`
 5. Hit ++alt+o++ to open Options Menu, then ++m++ for Modem options. Use ++b++ to modify the baud rate (++left++ or ++right++ arrows to change values) to 9600. The rest of the settings should be default (word length 8, parity none, stop bits 1, duplex full, terminal type ANSI). 
 6. Save your changes with ++alt+d++ then ++f1++ key.
 7. Hit ++alt+a++ to open Phonebook, add a BBS and dial away.
