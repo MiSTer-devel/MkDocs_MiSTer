@@ -41,9 +41,9 @@ Do keep in mind, however, that even over HDMI MiSTer is capable of providing a b
 MiSTer offers options in how to configure its HDMI upscaler, making a tradeoff between compatibility and low latency.
 These can be set in the MiSTER.INI file at the root of the SD card:
 
-* `vsync_adjust=2` is the best option if it is compatible with your TV. This mode uses the original refresh rate and pixel clock of the core, resulting in no additional latency.
-* `vsync_adjust=1` is the second best option, but it adds up to 2 frames of latency. This mode uses a framebuffer but maintains the system's original vsync and varies the pixel clock per core.
-* `vsync_adjust=0` is the lesser option, but the most compatible. Up to 2 frames of latency and less smooth scrolling. This mode guarantees 60 hz output with an NTSC standard pixel clock.
+* `vsync_adjust=2` is the best option if it is compatible with your TV. This mode uses the original refresh rate and pixel clock of the core, resulting in sub-frame latency. The actual latency of this mode is around 4 to 30 lines of lag according to Grabulosaure who made the scaler [in this video he made](https://www.youtube.com/watch?v=DYfUZ6PG7H4){target=_blank}.
+* `vsync_adjust=1` is the second best option, but it 1 frame of latency. This mode uses a framebuffer but maintains the system's original vsync and varies the pixel clock per core.
+* `vsync_adjust=0` is the lesser option, but it is the most compatible vsync_adjust mode. Up to 2-3 frames of latency and less smooth scrolling. This mode guarantees 60 hz output with an NTSC standard pixel clock.
 
 ### Input lag
 
