@@ -82,6 +82,7 @@ Please keep in mind, “high latency” controllers *should* add, at most, 16 ms
 
 There is no definitive fastest controller that you can get, but there are quite a few at the top of the list. You can, again, check MiSTerAddons and Lemonici's [MiSTer Input Latency Chart](https://rpubs.com/misteraddons/inputlatency){target=_blank} for a definitive community sourced list of controllers tested with MiSTer with a separate device that uses the DE10-Nano's headers to get an objective result.
 
-Please see these article for more information about USB controller lag
-* https://medium.com/@WydD/controller-input-lag-how-to-measure-it-1ebfd2c9d60
-* https://inputlag.science/
+Please see these article for more information about USB controller lag:
+
+* [Controller Input Lag — How to measure it? by Loïc "WydD" Petit](https://medium.com/@WydD/controller-input-lag-how-to-measure-it-1ebfd2c9d60){target=_blank}
+* [inputlag.science](https://inputlag.science/){target=_blank}
