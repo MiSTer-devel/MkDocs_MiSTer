@@ -3,7 +3,7 @@ There are multiple options for using MIDI on the MiSTer. Here's a few of the way
 
 ## [The mt32-pi Project](https://github.com/dwhinham/mt32-pi/wiki){target=_blank}
 
-Dale Whinham (aka d0pefish) has come up with an open source MIDI synthesizer for the raspberry pi called mt32-pi. For the most up to date instructions on how to use mt32-pi with your MiSTer, [please go to the MiSTer FPGA section of the mt32-pi wiki](https://github.com/dwhinham/mt32-pi/wiki/MiSTer-FPGA){target=_blank} to get all of the information you should need. There are also [two add-on boards designed by sorgelig](../basics/addons/#mt32-pi-lite-mister-addon-board){target=_blank} specifically for mt32-pi to be used with the MiSTer.
+Dale Whinham (aka d0pefish) has come up with an open source MIDI synthesizer for the raspberry pi called mt32-pi. For the most up to date instructions on how to use mt32-pi with your MiSTer, [please go to the MiSTer FPGA section of the mt32-pi wiki](https://github.com/dwhinham/mt32-pi/wiki/MiSTer-FPGA){target=_blank} to get all of the information you should need. There are also [two add-on boards designed by sorgelig](https://mister-devel.github.io/MkDocs_MiSTer/basics/addons/#mt32-pi-lite-mister-addon-board){target=_blank} specifically for mt32-pi to be used with the MiSTer.
 
 ## MT32-pi Video Example
 ![type:video](videos/mt32-pi.mp4)
