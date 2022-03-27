@@ -14,28 +14,25 @@ The [Arcade-Battlezone](https://github.com/jopdorp/Arcade-BattleZone_MiSTer){tar
 ## A way to approach the problem:
 
 1. Find youtube video's of people playing the actual game, to get some idea of the sounds it has.
-2. Play the game in an emulator, paying extra attention to sounds that do not sound the same in the emulator as in the video of the actual machine
+2. Play the game in an emulator, paying extra attention to sounds that do not sound the same in the emulator as in the video of the actual machine.
 3. Identify the digital and analog parts of the schematic.
 
-   One thing to keep in mind is that the digital parts run at the system clock speed, or sometimes a separate clock source that is closer to the audible frequency spectrum, in Arcade Battlezone there is a 12khz input to a digital noise circuit, of which the output goes into and analog integrator circuit. This creates an axplosion sound. The implementation of this sound is listed at "inverting amplifier" below.
-   
-   The analog parts will be outputting at audio sample rate, i.e. 48khz
-4. Implement all the digital parts, common digital components in sound systems are:
-    * linear feedback shift register:
+    * One thing to keep in mind is that the digital parts run at the system clock speed, or sometimes a separate clock source that is closer to the audible frequency spectrum, in Arcade Battlezone there is a 12khz input to a digital noise circuit, of which the output goes into and analog integrator circuit. This creates an axplosion sound. The implementation of this sound is listed at "inverting amplifier" below. The analog parts will be outputting at audio sample rate, i.e. 48khz
 
-    ![linear feedback shift register](img/linear_feedback_shift_reg.png)
-        
+4. Implement all the digital parts, common digital components in sound systems are:  
+
+    * linear feedback shift register:  
+    ![linear feedback shift register](img/linear_feedback_shift_reg.png)  
     An implementation of a similar circuit in arcade battlezone can be found [here](https://github.com/jopdorp/Arcade-BattleZone_MiSTer/blob/sound/rtl/noise_shifters.sv){target=_blank}:
 
     * flipflops, like the jk flipflop, implemented [here](https://github.com/jopdorp/Arcade-BattleZone_MiSTer/blob/sound/rtl/jk74109.sv){target=_blank}:
 
 5. Identify analog circuits with isolated behavior, i.e. 1 input, 1 output. These can be individually implemented and tested.
-6. Identify common, easily recognisable and implementable parts, such as: 
-   * [low pass filters](https://www.electronics-tutorials.ws/filter/filter_2.html){target=_blank}
+6. Identify common, easily recognisable and implementable parts, such as:
 
-     ![low pass](img/low_pass_filter.png)
-
-      This can be implemented using an iir low pass filter, you can find the parameters using [this spreadsheet](https://docs.google.com/spreadsheets/d/1Z2DNhAQyqkDpNVJuzYPk3ZeW4rChxN7fTKsLGvb2r7g/edit#gid=0){target=_blank}
+   * [low pass filters](https://www.electronics-tutorials.ws/filter/filter_2.html){target=_blank}  
+     ![low pass](img/low_pass_filter.png)  
+     This can be implemented using an iir low pass filter, you can find the parameters using [this spreadsheet](https://docs.google.com/spreadsheets/d/1Z2DNhAQyqkDpNVJuzYPk3ZeW4rChxN7fTKsLGvb2r7g/edit#gid=0){target=_blank}
       
       Some implementations of iir filters:
 
