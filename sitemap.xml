@@ -186,6 +186,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://MiSTer-devel.github.io/MkDocs_MiSTer/developer/headonsoundpcb/</loc>
+         <lastmod>2022-03-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://MiSTer-devel.github.io/MkDocs_MiSTer/developer/links/</loc>
          <lastmod>2022-03-27</lastmod>
          <changefreq>daily</changefreq>
