@@ -113,13 +113,13 @@ The [Arcade-Battlezone](https://github.com/jopdorp/Arcade-BattleZone_MiSTer){tar
 
 ## Handy links:
 ### Developer journeys of analog circuit implementations
-[MiSTer - Head On](https://github.com/MiSTer-devel/Main_MiSTer/wiki/Developer-journey:-Implementing-the-Head-On-sound-PCB){target=_blank}
+[MiSTer - Head On](./developer/headonsoundpcb.md)
 
 ### Informational resources
-* For finding the right values of a filter: [](https://www.micromodeler.com/dsp/){target=_blank}
-* Common operational amplifier uses, such as differentiators and integrators: [](https://en.wikipedia.org/wiki/Operational_amplifier_applications){target=_blank}
-* Explanation of how 555 timers work: [](https://www.electronics-tutorials.ws/waveforms/555_oscillator.html){target=_blank}
-* Spice programming [](https://www.allaboutcircuits.com/textbook/reference/chpt-7/fundamentals-spice-programming/){target=_blank}
+* For finding the right values of a filter: [https://www.micromodeler.com/dsp/](https://www.micromodeler.com/dsp/){target=_blank}
+* Common operational amplifier uses, such as differentiators and integrators: [https://en.wikipedia.org/wiki/Operational_amplifier_applications](https://en.wikipedia.org/wiki/Operational_amplifier_applications){target=_blank}
+* Explanation of how 555 timers work: [https://www.electronics-tutorials.ws/waveforms/555_oscillator.html](https://www.electronics-tutorials.ws/waveforms/555_oscillator.html){target=_blank}
+* Spice programming [https://www.allaboutcircuits.com/textbook/reference/chpt-7/fundamentals-spice-programming/](https://www.allaboutcircuits.com/textbook/reference/chpt-7/fundamentals-spice-programming/){target=_blank}
 
 ### Code examples
 * [example of a noise-based sound python implementation in a notebook](https://github.com/jopdorp/Arcade-BattleZone_MiSTer/blob/sound/spice/Red%20baron%20crash%20circuit%20sim.ipynb){target=_blank}
