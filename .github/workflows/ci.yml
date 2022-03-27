@@ -43,6 +43,10 @@ jobs:
           ffc-mkdocs-video \
           mkdocs-git-revision-date-localized-plugin \
           mkdocs-rss-plugin
+      
+      - name: Downgrade Markupsafe to 2.0.1
+        run: |
+          pip install markupsafe==2.0.1
 
         # For mkdocs insiders build purposes to use later
         # Pillow \
