@@ -140,7 +140,8 @@ nav:
   - Developer Reference:
     - Core Configuration String: developer/conf_str.md
     - Arcade ROMS and MRA Files: developer/mra.md
-    - Analog Simulation: developer/analogsim.md
+    - Developer Journeys:
+      - Analog Simulation: developer/analogsim.md
       - Head On Sound PCB Implementation: developer/headonsoundpcb.md
     - Useful Links: developer/links.md
     - Tips and Guidelines: developer/principles.md
