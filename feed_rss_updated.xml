@@ -16,8 +16,8 @@
     <language>en</language>
 
     <!-- Timestamps and frequency -->
-    <pubDate>Mon, 28 Mar 2022 22:31:42 -0000</pubDate>
-    <lastBuildDate>Mon, 28 Mar 2022 22:31:42 -0000</lastBuildDate>
+    <pubDate>Mon, 28 Mar 2022 22:37:33 -0000</pubDate>
+    <lastBuildDate>Mon, 28 Mar 2022 22:37:33 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     <!-- Credits -->
@@ -44,7 +44,7 @@
 
 **MiSTer** is an open source proj</description>
       <link>https://MiSTer-devel.github.io/MkDocs_MiSTer/</link>
-      <pubDate>Mon, 28 Mar 2022 22:31:09 -0000</pubDate>
+      <pubDate>Mon, 28 Mar 2022 22:37:03 -0000</pubDate>
       <source url="https://MiSTer-devel.github.io/MkDocs_MiSTer/feed_rss_updated.xml">MiSTer FPGA Documentation</source>
       <guid isPermaLink="true">https://MiSTer-devel.github.io/MkDocs_MiSTer/</guid>
       <enclosure url="None" type="None" />
