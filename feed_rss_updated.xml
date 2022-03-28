@@ -16,8 +16,8 @@
     <language>en</language>
 
     <!-- Timestamps and frequency -->
-    <pubDate>Sun, 27 Mar 2022 19:29:00 -0000</pubDate>
-    <lastBuildDate>Sun, 27 Mar 2022 19:29:00 -0000</lastBuildDate>
+    <pubDate>Mon, 28 Mar 2022 21:12:09 -0000</pubDate>
+    <lastBuildDate>Mon, 28 Mar 2022 21:12:09 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     <!-- Credits -->
@@ -33,6 +33,16 @@
     
 
     <!-- Entries -->
+    
+    <item>
+      <title>Saves</title>
+      <description>Many MiSTer cores have the capability to let you save your game, whether it be with traditional simulation of the original save features from the hard</description>
+      <link>https://MiSTer-devel.github.io/MkDocs_MiSTer/basics/saves/</link>
+      <pubDate>Mon, 28 Mar 2022 21:11:33 -0000</pubDate>
+      <source url="https://MiSTer-devel.github.io/MkDocs_MiSTer/feed_rss_updated.xml">MiSTer FPGA Documentation</source>
+      <guid isPermaLink="true">https://MiSTer-devel.github.io/MkDocs_MiSTer/basics/saves/</guid>
+      <enclosure url="None" type="None" />
+    </item>
     
     <item>
       <title>Analog Simulation</title>
@@ -243,16 +253,6 @@ Since autumn of 2019 there is a method for outputting analog video called *Direc
       <pubDate>Wed, 16 Mar 2022 00:43:34 -0000</pubDate>
       <source url="https://MiSTer-devel.github.io/MkDocs_MiSTer/feed_rss_updated.xml">MiSTer FPGA Documentation</source>
       <guid isPermaLink="true">https://MiSTer-devel.github.io/MkDocs_MiSTer/advanced/console/</guid>
-      <enclosure url="None" type="None" />
-    </item>
-    
-    <item>
-      <title>Using Your CRT With MiSTer</title>
-      <description>There are a few different ways you can use a CRT display with the MiSTer. The two main methods are either using the VGA port on the Analog IO board or</description>
-      <link>https://MiSTer-devel.github.io/MkDocs_MiSTer/advanced/crt/</link>
-      <pubDate>Wed, 16 Mar 2022 00:43:34 -0000</pubDate>
-      <source url="https://MiSTer-devel.github.io/MkDocs_MiSTer/feed_rss_updated.xml">MiSTer FPGA Documentation</source>
-      <guid isPermaLink="true">https://MiSTer-devel.github.io/MkDocs_MiSTer/advanced/crt/</guid>
       <enclosure url="None" type="None" />
     </item>
     

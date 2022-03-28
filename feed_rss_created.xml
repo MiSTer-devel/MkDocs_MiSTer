@@ -16,8 +16,8 @@
     <language>en</language>
 
     <!-- Timestamps and frequency -->
-    <pubDate>Sun, 27 Mar 2022 19:29:00 -0000</pubDate>
-    <lastBuildDate>Sun, 27 Mar 2022 19:29:00 -0000</lastBuildDate>
+    <pubDate>Mon, 28 Mar 2022 21:12:09 -0000</pubDate>
+    <lastBuildDate>Mon, 28 Mar 2022 21:12:09 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     <!-- Credits -->
@@ -33,6 +33,16 @@
     
 
     <!-- Entries -->
+    
+    <item>
+      <title>Saves</title>
+      <description>Many MiSTer cores have the capability to let you save your game, whether it be with traditional simulation of the original save features from the hard</description>
+      <link>https://MiSTer-devel.github.io/MkDocs_MiSTer/basics/saves/</link>
+      <pubDate>Mon, 28 Mar 2022 21:11:33 -0000</pubDate>
+      <source url="https://MiSTer-devel.github.io/MkDocs_MiSTer/feed_rss_created.xml">MiSTer FPGA Documentation</source>
+      <guid isPermaLink="true">https://MiSTer-devel.github.io/MkDocs_MiSTer/basics/saves/</guid>
+      <enclosure url="None" type="None" />
+    </item>
     
     <item>
       <title>Head On Sound PCB Implementation</title>
@@ -250,16 +260,6 @@ Generally speaking, most bluetooth 4.0 ad</description>
       <pubDate>Wed, 16 Mar 2022 00:43:34 -0000</pubDate>
       <source url="https://MiSTer-devel.github.io/MkDocs_MiSTer/feed_rss_created.xml">MiSTer FPGA Documentation</source>
       <guid isPermaLink="true">https://MiSTer-devel.github.io/MkDocs_MiSTer/basics/faq/</guid>
-      <enclosure url="None" type="None" />
-    </item>
-    
-    <item>
-      <title>Hotkeys</title>
-      <description>Here&#39;s a reference of the hotkeys you can use with the MiSTer. Hotkeys are useful at saving time and there are some hotkeys which do things you can on</description>
-      <link>https://MiSTer-devel.github.io/MkDocs_MiSTer/basics/hotkey/</link>
-      <pubDate>Wed, 16 Mar 2022 00:43:34 -0000</pubDate>
-      <source url="https://MiSTer-devel.github.io/MkDocs_MiSTer/feed_rss_created.xml">MiSTer FPGA Documentation</source>
-      <guid isPermaLink="true">https://MiSTer-devel.github.io/MkDocs_MiSTer/basics/hotkey/</guid>
       <enclosure url="None" type="None" />
     </item>
     
