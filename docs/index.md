@@ -3,8 +3,10 @@ hide:
   - toc
 ---
 
-![MiSTer FPGA Logo](assets/logo_small.png)
-
+<figure markdown>
+  ![MiSTer FPGA Logo](assets/logo_small.png){ align=center }
+</figure>
+  
 ## What is MiSTer FPGA?
 
 **MiSTer** is an open source project that aims to recreate various classic computers, game consoles, and arcade machines using modern hardware. It allows software and game images to run as they would on original hardware, using peripherals such as mice, keyboards, joysticks and other game controllers.
