@@ -16,8 +16,8 @@
     <language>en</language>
 
     <!-- Timestamps and frequency -->
-    <pubDate>Mon, 28 Mar 2022 21:12:56 -0000</pubDate>
-    <lastBuildDate>Mon, 28 Mar 2022 21:12:56 -0000</lastBuildDate>
+    <pubDate>Mon, 28 Mar 2022 22:31:42 -0000</pubDate>
+    <lastBuildDate>Mon, 28 Mar 2022 22:31:42 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     <!-- Credits -->
@@ -33,6 +33,22 @@
     
 
     <!-- Entries -->
+    
+    <item>
+      <title>Home</title>
+      <description>&lt;figure markdown&gt;
+  ![MiSTer FPGA Logo](assets/logo_small.png){ align=center }
+&lt;/figure&gt;
+  
+## What is MiSTer FPGA?
+
+**MiSTer** is an open source proj</description>
+      <link>https://MiSTer-devel.github.io/MkDocs_MiSTer/</link>
+      <pubDate>Mon, 28 Mar 2022 22:31:09 -0000</pubDate>
+      <source url="https://MiSTer-devel.github.io/MkDocs_MiSTer/feed_rss_updated.xml">MiSTer FPGA Documentation</source>
+      <guid isPermaLink="true">https://MiSTer-devel.github.io/MkDocs_MiSTer/</guid>
+      <enclosure url="None" type="None" />
+    </item>
     
     <item>
       <title>Game Saves</title>
@@ -209,20 +225,6 @@ Since autumn of 2019 there is a method for outputting analog video called *Direc
       <pubDate>Wed, 16 Mar 2022 15:38:40 -0000</pubDate>
       <source url="https://MiSTer-devel.github.io/MkDocs_MiSTer/feed_rss_updated.xml">MiSTer FPGA Documentation</source>
       <guid isPermaLink="true">https://MiSTer-devel.github.io/MkDocs_MiSTer/setup/games/</guid>
-      <enclosure url="None" type="None" />
-    </item>
-    
-    <item>
-      <title>Home</title>
-      <description>![MiSTer FPGA Logo](assets/logo_small.png)
-
-## What is MiSTer FPGA?
-
-**MiSTer** is an open source project that aims to recreate various classic comput</description>
-      <link>https://MiSTer-devel.github.io/MkDocs_MiSTer/</link>
-      <pubDate>Wed, 16 Mar 2022 00:43:34 -0000</pubDate>
-      <source url="https://MiSTer-devel.github.io/MkDocs_MiSTer/feed_rss_updated.xml">MiSTer FPGA Documentation</source>
-      <guid isPermaLink="true">https://MiSTer-devel.github.io/MkDocs_MiSTer/</guid>
       <enclosure url="None" type="None" />
     </item>
     
