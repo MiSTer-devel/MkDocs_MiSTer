@@ -16,8 +16,8 @@
     <language>en</language>
 
     <!-- Timestamps and frequency -->
-    <pubDate>Mon, 28 Mar 2022 21:12:09 -0000</pubDate>
-    <lastBuildDate>Mon, 28 Mar 2022 21:12:09 -0000</lastBuildDate>
+    <pubDate>Mon, 28 Mar 2022 21:12:56 -0000</pubDate>
+    <lastBuildDate>Mon, 28 Mar 2022 21:12:56 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     <!-- Credits -->
@@ -35,7 +35,7 @@
     <!-- Entries -->
     
     <item>
-      <title>Saves</title>
+      <title>Game Saves</title>
       <description>Many MiSTer cores have the capability to let you save your game, whether it be with traditional simulation of the original save features from the hard</description>
       <link>https://MiSTer-devel.github.io/MkDocs_MiSTer/basics/saves/</link>
       <pubDate>Mon, 28 Mar 2022 21:11:33 -0000</pubDate>
