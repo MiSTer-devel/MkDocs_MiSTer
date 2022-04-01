@@ -15,4 +15,4 @@ MiSTer utilizes a readily available FPGA board called the [DE10-Nano](http://de1
 
 The MiSTer project is currently under active development with new cores, features, and bug-fixes appearing on a regular basis.
 
-Check the navigation sidebar to the left for documentation on how to use your MiSTer FPGA.
+Check the navigation sidebar to the left for documentation on how to use your MiSTer FPGA. For a full comprehensive overview of the MiSTer in a video form, check out [My Life In Gaming's video](https://www.youtube.com/watch?v=rhT6YYRH1EI){target=_blank} as well.
