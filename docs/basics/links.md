@@ -5,7 +5,9 @@ hide:
 
 Here's a collection of links to various information, videos, and articles about the MiSTer. MiSTer is an evolving platform, so these videos can only represent what was available at the time of them being made, some information and representations may be outdated. If you just want a comprehensive full review of almost everything MiSTer has to offer that is up to date, watch the My Life In Gaming video here:
 
-![](https://youtu.be/rhT6YYRH1EI)
+[MiSTer FPGA in 2022: A Primer Guide to Retro Gaming's Hardware Emulator / MY LIFE IN GAMING](https://youtu.be/rhT6YYRH1EI){target=_blank} - March 31, 2022
+
+Otherwise there are some older videos listed below.
 
 ## MiSTer FPGA Articles
 * [Polygon - MiSTer 101: A classic gaming device to rule them all by Christopher Grant](https://www.polygon.com/22640171/mister-project-classic-gaming-retro-fpga-board-chip-io-explainer-usb-hub){target=_blank} - August 8, 2021
