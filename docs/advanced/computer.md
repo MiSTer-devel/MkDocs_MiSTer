@@ -9,7 +9,22 @@ Starting from 2018 may 7 release MiSTer supports serial (UART) connection from F
     1. AmiTCP provides more complete solution with ftpd daemon. There are many other 3rd party addons are based on AmiTCP, so it's advised to use this package.
     2. Roadshow works very well, it is fully compatible with AmiTCP and offers additional extensions. Follow these [Instructions](https://misterfpga.org/viewtopic.php?f=4&t=2063&p=18598&hilit=Roadshow#p18598){target=_blank} for complete setup.  It is still a paid for and supported product, you can find more information [here](http://roadshow.apc-tcp.de/index-en.php){target=_blank}.
     3.  Miami was successfully tested. The Miami settings that worked: use PPP connection via serial.device, set baud rate to 115200, RTS/CTS to on, and enable 8N1. Set modem to nullmodem. Manually enter an IP suitable for your lan ending in 254, e.g. 192.168.1.254. Manually add a DNS server, e.g. 8.8.8.8 for Google DNS. Term v4.7 has been used to test console connection. For a more detailed MiamiDX setup guide, please check [here](https://www.geocities.ws/allforamiga/){target=_blank}
-* **ao486**. Currently only console connection has been tested using Dos Navigator's integrated Terminal and Kermit 3.15. PPP should work under Win95.
+    4.  You can also double the speed on Minimig by modifying the /sbin/uartmode script, like mine:
+```
+echo "$localip:$remoteip" >/tmp/ppp_options
+cat /media/fat/linux/ppp_options >>/tmp/ppp_options
+
+echo 1 > /proc/sys/net/ipv4/ip_forward
+[ -f /tmp/CORENAME ] && core_name=$(cat /tmp/CORENAME)
+    if [ "$core_name" == "Minimig" ]; then
+        taskset 1 pppd 230400 file /tmp/ppp_options
+    else
+        taskset 1 pppd $conn_speed file /tmp/ppp_options
+    fi
+```
+Of course, change the baud rate as well to 230400 on your TCP/IP stack of choice. Tested under MiamiDX, no issues.
+
+* **ao486**. PPP and serial connections are working under DOS, tested with mTCP and various terminal software. PPP is also working under Win3.11/Win95/Win95.
 DOS tools are here : [dos_ftpd.zip](https://github.com/MiSTer-devel/ao486_MiSTer/raw/master/sw/dos_ftpd.zip){target=_blank}. The DOS FTP server included does not support passive mode, so set your client to use active.
 * **C64**. Serial connection.
 * **Tandy Color Computer 3 (CoCo3)**. Serial Connection.
@@ -32,6 +47,38 @@ PPP daemon uses **/media/fat/linux/ppp_options** (linux\ppp_options of PC) file.
 For correct PPP work, make sure you see a network icon in Menu core before starting the other core. Otherwise PPP link won't get IPs. If you've started core earlier, then simply connect the core to PPP and disconnect. Next connection will get correct IP. Or you can switch UART mode in OSD to renew the IP.
 
 **NOTE:** I'm looking Amiga and MSDOS terminal supporting color and control codes of linux, so it will be possible to use Midnight Commander in terminal connection. If you know such terminal application, then let me know.
+
+## PPP connection in MS-DOS on ao486
+1. In the Mister System Menu ++win+f12++ set the "Uart Connection" to "PPP", Baud to "115200" and save it.
+2.  Download the DOS PPPD driver: DOSPPP06.ZIP from [HERE](https://www.ibiblio.org/pub/micro/pc-stuff/freedos/files/net/dosppp/){target=_blank}.
+3.  Grab the latest version of Michael Brutman's mTCP TCP/IP applications for MS-DOS, from the 'Downloads' section [HERE](http://www.brutman.com/mTCP/){target=_blank}
+4.  Transfer those zip files over to your ao486's virtual hard drive and unzip them into the directory of your choice (e.g. C:\NETWORK)
+5.  In MS-DOS on the core, you need to edit a mtcp config file. There's a sample config in the SAMPLES directory called 'sample.cfg' that you can use as a base, 
+or you can use the example below (simple text file named mtcp.cfg in your installation folder). If you use the sample.cfg file, you need to add the top MTCPSLIP line.:
+```
+SET MTCPSLIP=true
+mtu 1500
+packetint 0x60
+hostname ao486_fpga
+IPADDR 192.168.1.254 <- Change this to reflect your network.
+NETMASK 255.255.255.0
+GATEWAY 192.168.1.1 <- Change this to reflect your network.
+NAMESERVER 8.8.8.8 <- You can change this to reflect your network if you want to.
+LEASE_TIME 86400
+IRCJR_USER FPGA_User
+IRCJR_NICK fpga_user
+IRCJR_NAME FPGA_User
+```
+6. Edit your AUTOEXEC.BAT and add the path to your installation folder, as well with the MTCP variable:
+```
+PATH C:\DOS;C:\NETWORK
+SET MTCPCFG=C:\NETWORK\MTCP.CFG
+```
+7. The DOS PPPD driver archive includes the ppp packet driver, which you need to load:
+```
+epppd com1 115200 local
+```
+8. Enjoy telnet, ftp, irc, and other internet applications while you use MS-DOS. Be sure and make sure you have ANSI.SYS loaded in CONFIG.SYS if you want to use the telnet client to hit telnet BBSes. Original discussion [HERE](https://misterfpga.org/viewtopic.php?t=896){target=_blank}.
 
 ## PPP connection in Windows 95 on ao486
 Unfortunately winsock and winsock2 provided by Microsoft do not work with the ppp connection when in Windows 95.
