@@ -5,6 +5,7 @@ hide:
 
 <figure markdown>
   ![MiSTer FPGA Logo](assets/logo_small.png){ align=center }
+  <figcaption>Logo by Conrad French</figcaption>
 </figure>
   
 ## What is MiSTer FPGA?
