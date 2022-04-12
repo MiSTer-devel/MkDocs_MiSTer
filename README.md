@@ -42,6 +42,6 @@ Thanks to [@Kitrinx](https://github.com/Kitrinx/), [@sentientsix](https://github
 
 Thanks to [@hewhoisred](https://github.com/hewhoisred) for supplying art and giving expert UI design and aesthetics advice!
 
-Thanks to Conrad French for the logo design!
+Thanks to Conrad Fenech for the logo design!
 
 Thanks to [@sorgelig](https://github.com/sorgelig/) (Alexey Melnikov) for all of his amazing hard work on the MiSTer FPGA project that we all are so happy to enjoy!
