@@ -4,7 +4,7 @@ hide:
 ---
 
 <figure markdown>
-  ![MiSTer FPGA Logo](assets/logo_small.png){ align=center }
+  ![MiSTer FPGA Logo by Conrad Fenech](assets/logo_small.png){ align=center }
   <figcaption>Logo by Conrad Fenech</figcaption>
 </figure>
   
