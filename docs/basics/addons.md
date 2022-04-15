@@ -15,6 +15,14 @@ Here's a rundown of what some of the current add-on boards are and what they do.
 
 The 128MB SDRAM Add-on board for MiSTer is essential for multiple cores to even load games. You can alternatively go with a 32MB SDRAM board for a cheaper price, however there are some games on Neo Geo, Game Boy Advance, and a few other cores which might no be compatible if you go with the smaller sized module.
 
+When Plugging in the SDRAM Board, make sure to support the DE10-Nano from beneath with your thumbs. Forcing in the SDRAM Board without support can bend the DE10-Nano board and permanently damage it.
+
+![How to Insert MiSTer FPGA SDRAM Module Add-On Board the right way](img/sdramdiy1.gif)
+
+Removing the SDRAM Board can be tricky for some GPIO connectors and just pulling won't do it sometimes. For very tight connectors, it is recommended to wiggle the SDRAM Board back and forth to remove the connectors slowly, bit-by-bit. Just pulling with force will often bend the GPIO header.
+
+![How to remove MiSTer FPGA SDRAM Module Add-On Board the right way](img/sdramdiy2.gif)
+
 ## [USB Hub Addon Board](https://github.com/MiSTer-devel/Hardware_MiSTer/blob/master/releases/USBHub_2.1.pdf){target=_blank}
 
 <figure markdown>
