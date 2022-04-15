@@ -36,6 +36,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://MiSTer-devel.github.io/MkDocs_MiSTer/advanced/diy2parcade/</loc>
+         <lastmod>2022-04-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://MiSTer-devel.github.io/MkDocs_MiSTer/advanced/ini/</loc>
          <lastmod>2022-04-15</lastmod>
          <changefreq>daily</changefreq>
