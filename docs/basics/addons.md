@@ -89,3 +89,22 @@ There is a Real Time Clock add-on board. If you want to add a real-time clock to
 </figure>
 
 The ADC Add-on board for MiSTer allows you to use either recordings of computer tape audio or actual retro tape players to send data over analog audio into certain computer cores.
+
+## Where to buy?
+
+If you'd like to buy a board from a vendor online (instead of soldering one yourself), the MiSTer FPGA Forums have a [Hardware Sellers forum](https://misterfpga.org/viewforum.php?f=34){target=_blank} just for that purpose. Here's a list of some hardware sellers from that forum and elsewhere, for your convenience:
+
+* [MiSTerAddons.com](https://misteraddons.com){target=_blank} (USA)
+* [UltimateMiSTer.com](https://ultimatemister.com/){target=_blank} (Spain)
+* [MiSTerFPGA.co.uk](https://misterfpga.co.uk){target=_blank} (United Kingdom)
+* [AntonioVillena.es](https://www.antoniovillena.es/store/){target=_blank} (Spain)
+* [LegacyPixels.com](https://www.legacypixels.com/mister/){target=_blank} (USA)
+* [OzMiSTerMods.com](https://ozmistermods.com/){target=_blank} (Australia)
+* [CAMInventions.com](https://www.caminventions.com/){target=_blank} (Australia)
+* [MiSTerKits.com](https://www.misterkits.com/){target=_blank} (USA)
+* [ManuFerHi.com](https://manuferhi.com/c/mister-fpga){target=_blank} (Spain)
+* [MiSTer-FPGA.de](https://www.mister-fpga.de/sonstiges/mister-fpga-emu-2-0/mister-kaufen/){target=_blank} (Germany)
+* [RetroKit.tech](https://retrokit.tech/shop/){target=_blank} (United Kingdom)
+* [RetroCastle AliExpress store](https://www.aliexpress.com/store/912024455){target=_blank} (China)
+
+This is not an official endorsement of these sellers, merely a collection of links. Any hardware failures or shipping failures you have should prompt you to reach out for support from the vendor you purchased your board from first.
