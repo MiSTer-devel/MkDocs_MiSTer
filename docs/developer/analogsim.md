@@ -110,7 +110,7 @@ The [Arcade-Battlezone](https://github.com/jopdorp/Arcade-BattleZone_MiSTer){tar
 
 ## Handy links:
 ### Developer journeys of analog circuit implementations
-[MiSTer - Head On](./developer/headonsoundpcb.md)
+[MiSTer - Head On](headonsoundpcb.md)
 
 ### Informational resources
 * For finding the right values of a filter: [https://www.micromodeler.com/dsp/](https://www.micromodeler.com/dsp/){target=_blank}
