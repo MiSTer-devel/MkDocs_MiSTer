@@ -8,10 +8,10 @@ Alternate mappings are active in parallel and allow two kinds of abilities: map 
 
 The simplest is to map an extra physical button. Only this additional button needs to be defined in the alternate map, as follows:
 
-| **map** | **d-pad** | **A** | **B** |
-|:--------|:---------|:------|:------|
-|**main**|_define_|Btn 1|Btn 2|
-|**alt**|_skip_|_skip_|Btn 3|
+| Map      | D-Pad     | A      | B      |
+| -------- | --------- | ------ | ------ |
+| `main`   | _define_  | Btn 1  | Btn 2  |
+| `alt`    | _skip_    | _skip_ | Btn 3  |
 
 The result of using this setup ia that you will have physical buttons 2 and 3 mapped to the core button B.
 
@@ -23,10 +23,10 @@ A more advanced setup is to use both mappings in parallel to make one physical b
 
 See the table below:
 
-| **map** | **d-pad** | **A** | **B** 
-|:--------|:---------|:------|:------|
-|**main**|_define_|Btn 1|Btn 3|
-|**alt**|_skip_|Btn 3|Btn 2|
+| Map      | D-Pad     | A      | B      |
+| -------- | --------- | ------ | ------ |
+| `main`   | _define_  | Btn 1  | Btn 3  |
+| `alt`    | _skip_    | Btn 3  | Btn 2  |
 
 The result of this is that Button 1 will be A, Button 2 will be B, and Button 3 will be A+B.
 
