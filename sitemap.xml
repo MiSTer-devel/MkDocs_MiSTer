@@ -11,6 +11,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://MiSTer-devel.github.io/MkDocs_MiSTer/advanced/analogcompat/</loc>
+         <lastmod>2022-04-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://MiSTer-devel.github.io/MkDocs_MiSTer/advanced/audio/</loc>
          <lastmod>2022-04-15</lastmod>
          <changefreq>daily</changefreq>
@@ -67,6 +72,11 @@
     </url>
     <url>
          <loc>https://MiSTer-devel.github.io/MkDocs_MiSTer/advanced/network/</loc>
+         <lastmod>2022-04-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://MiSTer-devel.github.io/MkDocs_MiSTer/advanced/rtc/</loc>
          <lastmod>2022-04-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -162,6 +172,11 @@
     </url>
     <url>
          <loc>https://MiSTer-devel.github.io/MkDocs_MiSTer/cores/features/cheats/</loc>
+         <lastmod>2022-04-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://MiSTer-devel.github.io/MkDocs_MiSTer/cores/features/rtcsupport/</loc>
          <lastmod>2022-04-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
