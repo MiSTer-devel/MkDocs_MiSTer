@@ -150,7 +150,7 @@ nav:
     - Tips and Guidelines: developer/principles.md
 
   # Fun guide that shows users how to edit the documentation site
-  - Editing Docs: editing.md
+  - Editing These Docs: editing.md
 
 
 markdown_extensions:
