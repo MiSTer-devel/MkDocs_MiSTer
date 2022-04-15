@@ -110,6 +110,7 @@ nav:
     # Just a good place to show off special features of some cores, to get people started.
     - Common Core Features:
       - Cheats: cores/features/cheats.md
+      - RTC Support: cores/features/rtcsupport.md
     - Core Highlights:
       - SNES: cores/highlights/snes.md
       - NES: cores/highlights/nes.md
@@ -125,12 +126,15 @@ nav:
   # More advanced configuration options. Anything not basic or not simple essentials, dump here.
   - Advanced Configuration:
     - Troubleshooting: advanced/troubleshooting.md
+    - Add-On Boards:
+      - RTC Board: advanced/rtc.md
     - Networking:
       - Setting Up SSH, FTP, and NAS: advanced/network.md
       - Computer Core Networking: advanced/computer.md
     - Video:
       - Using Your CRT With MiSTer: advanced/crt.md
       - Direct Video Adapter: advanced/directvideo.md
+      - Analog Video Compatibility: advanced/analogcompat.md
     - Audio Filters: advanced/audio.md
     - MIDI Features: advanced/midi.md
     - Multi-Button Mapping: advanced/multibutton.md

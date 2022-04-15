@@ -88,7 +88,7 @@ This is a Raspberry Pi HAT add-on board for the [MT32-Pi](https://github.com/dwh
   ![MiSTer FPGA Real Time Clock Add-on Board](img/rtc.png){ align=center }
 </figure>
 
-There is a Real Time Clock add-on board. If you want to add a real-time clock to your MiSTer you will require this. Some computer cores use this feature if you are interested in it.
+There is a Real Time Clock add-on board. If you want to add a real-time clock to your MiSTer you will require this. Various [MiSTer FPGA cores use the Real-Time Clock](../cores/features/rtcsupport.md) feature. For more detailed information on how the board works and how to use it, check the [Advanced - Add-On Boards - RTC Board](../advanced/rtc.md) section of this documentation page for more information.
 
 ## [ADC Analog Audio Input Addon Board](https://github.com/MiSTer-devel/Hardware_MiSTer/blob/master/releases/ADCin_1.1.pdf){target=_blank}
 
@@ -103,7 +103,7 @@ The ADC Add-on board for MiSTer allows you to use either recordings of computer 
 If you'd like to buy a board from a vendor online (instead of soldering one yourself), the MiSTer FPGA Forums have a [Hardware Sellers forum](https://misterfpga.org/viewforum.php?f=34){target=_blank} just for that purpose. Here's a list of some hardware sellers from that forum and elsewhere, for your convenience:
 
 * [MiSTerAddons.com](https://misteraddons.com){target=_blank} (USA)
-* [UltimateMiSTer.com](https://ultimatemister.com/){target=_blank} (Spain)
+* [UltimateMiSTer.com](https://ultimatemister.com/){target=_blank} (Portugal)
 * [MiSTerFPGA.co.uk](https://misterfpga.co.uk){target=_blank} (United Kingdom)
 * [AntonioVillena.es](https://www.antoniovillena.es/store/){target=_blank} (Spain)
 * [LegacyPixels.com](https://www.legacypixels.com/mister/){target=_blank} (USA)
