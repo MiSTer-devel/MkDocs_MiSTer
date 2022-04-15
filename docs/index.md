@@ -3,10 +3,9 @@ hide:
   - toc
 ---
 <figure markdown>
-  ![MiSTer FPGA Logo by Conrad Fenech](assets/logo_small.png){ align=center }
+  ![MiSTer FPGA Logo by Conrad Fenech](assets/logo_small.png){ align=center width="750" }
   <figcaption>Logo by Conrad Fenech</figcaption>
 </figure>
-
 ### What is MiSTer FPGA?
 **MiSTer** is an open source project that aims to recreate classic computers, video game consoles, and arcade machines using modern hardware. It allows software and game images to run as they would on original hardware while using peripherals such as mice, keyboards, joysticks and other game controllers. MiSTer utilizes an FPGA board called the [DE10-Nano](http://de10-nano.terasic.com){target=_blank} which connects to your TV or monitor via HDMI video out. It can also be expanded with various [add-on boards](basics/addons.md){target=_blank} such as a 7-port USB hub, a 128MB SDRAM module, and either a Digital I/O or Analog I/O board. The MiSTer project is currently under active development with new cores, features, and bug-fixes appearing on a regular basis.
 
