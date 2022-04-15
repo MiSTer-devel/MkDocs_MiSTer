@@ -86,6 +86,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://MiSTer-devel.github.io/MkDocs_MiSTer/basics/case/</loc>
+         <lastmod>2022-04-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://MiSTer-devel.github.io/MkDocs_MiSTer/basics/cd/</loc>
          <lastmod>2022-04-15</lastmod>
          <changefreq>daily</changefreq>
