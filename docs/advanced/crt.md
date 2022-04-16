@@ -117,7 +117,7 @@ There's also an open-source design which you can DIY: [Github](https://github.co
 Another alternative is the [Axunworks converter](https://www.axunworks.com/RGB-to-Composite-S-Video-p341706.html){target=_blank}. It requires using a VGA-to-BNC cable with BNC-to-RCA adapters and most likely also suffers from artifacting in Composite [(forum thread)](https://shmups.system11.org/viewtopic.php?f=6&t=63452&start=270){target=_blank}.
 
 ### Unofficial Custom YC (S-Video / Composite) Cores by MikeS11
-These requirements are for a [set of unofficial cores (currently in testing)](https://github.com/MikeS11/Template_MiSTer/tree/master/YC%20Builds){target=_blank} that natively output s-video / composite directly from the core. The current cores generate two signals that use the existing RGB pins, where the luma (Brightness) uses the green output and the chroma (Color) uses the red output. Please do not report any bugs from using these cores in the official repositories, they are unofficial and in a testing state. It is possible that bugs could be induced by the changes made to the core.
+These requirements are for a [set of unofficial cores (currently in testing)](https://github.com/MikeS11/MiSTerFPGA_YC_Encoder/tree/main/YC%20Builds){target=_blank} that natively output s-video / composite directly from the core. The current cores generate two signals that use the existing RGB pins, where the luma (Brightness) uses the green output and the chroma (Color) uses the red output. Please do not report any bugs from using these cores in the official repositories, they are unofficial and in a testing state. It is possible that bugs could be induced by the changes made to the core.
 
 #### Connection Requirements - S-Video
 
