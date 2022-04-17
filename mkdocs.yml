@@ -92,6 +92,7 @@ nav:
   # Just some basics things to go over. Slightly more advanced than the setup section above
   - The Basics:
     - FAQ: basics/faq.md
+    - Troubleshooting: basics/troubleshooting.md
     - Game Saves: basics/saves.md
     - Addon Boards: basics/addons.md
     - Cases: basics/case.md
@@ -125,7 +126,6 @@ nav:
 
   # More advanced configuration options. Anything not basic or not simple essentials, dump here.
   - Advanced Configuration:
-    - Troubleshooting: advanced/troubleshooting.md
     - Add-On Boards:
       - RTC Board: advanced/rtc.md
     - Networking:
