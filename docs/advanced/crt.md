@@ -25,7 +25,7 @@ Here's a table that shows you what options correlate to what video connection, t
 ² Upscaled resolution = video_mode  
 ³ External "direct video" (HDMI to VGA) adapter required - native resolution only (no upscaling or scan-doubling  
 ⁴ External "direct video" adapter requires modification to pass Sync on Green (SoG)  
-⁵ External RGB to NTSC/PAL converter required
+⁵ External RGB to NTSC/PAL converter or Unofficial Y/C Core required
 
 Credit: [Porkchop Express](https://twitter.com/MisterAddons){target=_blank}
 
@@ -131,7 +131,7 @@ These requirements are for a [set of unofficial cores (currently in testing)](ht
 * VGA to Component Cable to a 1-Male to 2-Female RCA Y-Adapter Splitter Cable
 
 *Note 1: It is recommended that you use a 0.47nF Capacitor in series with the Chroma signal. This will reduce the output voltage of your composite signal.*  
-*Note 2: If using composite, it is recommended to use a breakout board with a luma trap that will filter out frequencies that confuse the tv from thinking brightness changes are color. (E.g Color Bleed & Rainbow Artifacting)*
+*Note 2: If using composite, it is recommended to use a breakout board with a luma trap that will filter out frequencies that confuse the tv from thinking brightness changes are color. (E.g Color Bleed & Rainbow Artifacting). A cheaper alternative is to connect a 10uH and 200pF capacitor in parallel to the luma signal before you combine chroma.*
 
 ### Using the Analog IO Board with the YC Test Cores
 
