@@ -21,7 +21,7 @@ Here's a table that shows you what options correlate to what video connection, t
 | YPbPr Native          |      0     |      1     |      1       |         0         |    OVR     |      0     |          0         |
 | YPbPr Scan-doubled    |      0     |      1     |      1       |         0         |    OVR     |      0     |          1         |
 | YPbPr Upscaled²       |      0     |      1     |      1       |         0         |    OVR     |      1     |          0         |
-| YPbPr Direct³⁴        |      0     |      1     |      1       |         1         |    N/A     |      0     |          0         |
+| YPbPr Direct³⁴        |      0     |      1     |      0       |         1         |    N/A     |      0     |          0         |
 | S-Video⁵              |      1     |      0     |      0       |         0         |    N/A     |      0     |          0         |
 | Composite⁵            |      1     |      0     |      0       |         0         |    N/A     |      0     |          0         |
 
