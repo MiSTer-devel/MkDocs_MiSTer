@@ -1,4 +1,4 @@
-The Genesis core is a port of the [fpgagen](https://github.com/Torlus/fpgagen){target=_blank} core to MiSTer, with significant enhancements and additions.
+The Genesis core is a port of the [fpgagen](https://github.com/Torlus/fpgagen){target=_blank} core to MiSTer, with significant enhancements and additions. The audio filtering options have been adjusted according to real hardware using [MDFourier](https://junkerhq.net/MDFourier/){target=_blank}.
 
 ## Features
 * Composite Blending effect (e.g. Sonic Waterfall transparency)
@@ -22,6 +22,9 @@ There are two methods of region detection.
     * MD = Europe
 
 There is also a region priority list for multi-region games that had multiple region codes in the header. This is useful if you want to specify a certain region to default to in order of first priority to last (e.g. US>JP>EU will try to load multi-region games in US first, then it will load as JP if no US region code is present, then EU if neither is present).
+
+## YM2612/YM3438 and Genesis Model 1/2 Audio Filtering
+![type:video](videos/genesis-filters.mp4)
 
 ## Corrected Aspect Ratio Example Video
 ![type:video](videos/genesis-car.mp4)
