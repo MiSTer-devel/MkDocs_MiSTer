@@ -132,6 +132,7 @@ nav:
       - Setting Up SSH, FTP, and NAS: advanced/network.md
       - Computer Core Networking: advanced/computer.md
     - Video:
+      - CRT Configuration Table: advanced/crttable.md
       - Using Your CRT With MiSTer: advanced/crt.md
       - Direct Video Adapter: advanced/directvideo.md
       - Analog Video Compatibility: advanced/analogcompat.md

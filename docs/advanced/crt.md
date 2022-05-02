@@ -1,53 +1,19 @@
 There are a few different ways you can use your MiSTer with a classic CRT display. The two main methods are either using the VGA port on the Analog IO board or using a specific Direct Video HDMI to VGA adapter.
 
-## Configuration Table
-
-Here's a table that shows you what options correlate to what video connection, to make it a bit easier to decide what you need in order to connect to your CRT, and what settings are required in the MiSTer.ini to get it to work.
-
-|   Analog Video Out    | Ini: CSYNC | Ini: YPbPr | Ini: VGA_SOG | Ini: Direct Video | SoG Switch | VGA Scaler | Forced Scandoubler |
-| --------------------- | ---------- | ---------- | ------------ | ----------------- |----------- | ---------- | ------------------ |
-| RGBS Native           |      1     |      0     |      0       |         0         |   AUTO     |      0     |          0         |
-| RGBS Scan-doubled¹    |      1     |      0     |      0       |         0         |   AUTO     |      0     |          1         |
-| RGBS Upscaled²        |      1     |      0     |      0       |         0         |   AUTO     |      1     |          0         |
-| RGBS Direct³          |      1     |      0     |      0       |         1         |    N/A     |      0     |          0         |
-| RGBHV Native          |      0     |      0     |      0       |         0         |   AUTO     |      0     |          0         |
-| RGBHV Scan-doubled    |      0     |      0     |      0       |         0         |   AUTO     |      0     |          1         |
-| RGBHV Upscaled²       |      0     |      0     |      0       |         0         |   AUTO     |      1     |          0         |
-| RGBHV Direct³         |      0     |      0     |      0       |         1         |    N/A     |      0     |          0         |
-| RGsB Native           |      1     |      0     |      1       |         0         |   AUTO     |      0     |          0         |
-| RGsB Scan-doubled¹    |      1     |      0     |      1       |         0         |   AUTO     |      0     |          1         |
-| RGsB Upscaled²        |      1     |      0     |      1       |         0         |   AUTO     |      1     |          0         |
-| RGsB Direct³          |      1     |      0     |      1       |         1         |    N/A     |      0     |          0         |
-| YPbPr Native          |      0     |      1     |      1       |         0         |    OVR     |      0     |          0         |
-| YPbPr Scan-doubled    |      0     |      1     |      1       |         0         |    OVR     |      0     |          1         |
-| YPbPr Upscaled²       |      0     |      1     |      1       |         0         |    OVR     |      1     |          0         |
-| YPbPr Direct³⁴        |      0     |      1     |      0       |         1         |    N/A     |      0     |          0         |
-| S-Video⁵              |      1     |      0     |      0       |         0         |    N/A     |      0     |          0         |
-| Composite⁵            |      1     |      0     |      0       |         0         |    N/A     |      0     |          0         |
-
-¹ Scan-doubled = 2x resolution (e.g. 240p > 480p)  
-² Upscaled resolution = video_mode  
-³ External "direct video" (HDMI to VGA) adapter required - native resolution only (no upscaling or scan-doubling  
-⁴ External "direct video" adapter requires modification to pass Sync on Green (SoG)  
-⁵ External RGB to NTSC/PAL converter or Unofficial Y/C Core required
-
-Credit: [Porkchop Express](https://twitter.com/MisterAddons){target=_blank}
-
-For more detailed information than this table provides, read on below.
+*The vast majority of this content is from the guide written by [MikeS11](https://github.com/MikeS11/){target=_blank} and [ArchiveRL](https://github.com/ArchiveRL/){target=_blank} on the MiSTer FPGA GitHub Wiki*
 
 ## MiSTer CRT Connectivity Options
 
-*most of this content is from the guide written by [MikeS11](https://github.com/MikeS11/){target=_blank} and [ArchiveRL](https://github.com/ArchiveRL/){target=_blank} on the MiSTer FPGA GitHub Wiki*
 ### Boards / Converters
 
 You can connect MiSTer natively to a CRT set using two methods: either by installing the analogue I/O board and using its VGA output or by connecting an HDMI-to-VGA DAC dongle directly to DE10 Nano's HDMI socket. Both of these methods produce nearly identical image which in most cases should match the output of the original hardware 1:1. Apart from that, they also have their specific pros & cons:
 
-* Analogue I/O board 
+* Analog I/O board
   * Pros: extra features (buttons, led lights, etc), doesn't need SoG mod to connect to component
-  * Cons: more expensive, lesser colour depth in some cores, can't use 2xSDRAM 
-* Direct Video 
+  * Cons: more expensive, lesser colour depth in some cores, can't use Dual SDRAM
+* Direct Video
   * Pros: better colour depth, much cheaper
-  * Cons: no extra features, needs extra modification for component, not all the dongles are guaranteed to work 
+  * Cons: no extra features, needs extra modification for component, not all the dongles are guaranteed to work
 
 Once you have acquired either an I/O board or a Direct video adapter, you will need to connect it to your TV via a cable and also change some settings in the mister.ini file.
 
@@ -118,7 +84,7 @@ There's also an open-source design which you can DIY: [Github](https://github.co
 
 **These adapters have been reported to work well in S-Video mode, but Composite has problems with rainbow artifacting and excessive dot crawl. This is currently unavoidable and expected**
 
-Another alternative is the [Axunworks converter](https://www.axunworks.com/RGB-to-Composite-S-Video-p341706.html){target=_blank}. It requires using a VGA-to-BNC cable with BNC-to-RCA adapters and most likely also suffers from artifacting in Composite [(forum thread)](https://shmups.system11.org/viewtopic.php?f=6&t=63452&start=270){target=_blank}.
+Another alternative is the [Axunworks converter](https://www.axunworks.com/RGB-to-Composite-S-Video-p341706.html){target=_blank}. It requires using a VGA-to-BNC cable with BNC-to-RCA adapters and most likely also suffers from artifacting in Composite [(forum thread)](https://shmups.system11.org/viewtopic.php?f=6&t=63452&start=270){target=_blank}. Some other options reported to work well are converters from seller "wakabavideo" and "Keene Scart to S-Video" brand on ebay.
 
 ### Unofficial Custom YC (S-Video / Composite) Cores by MikeS11
 These requirements are for a [set of unofficial cores (currently in testing)](https://github.com/MikeS11/MiSTerFPGA_YC_Encoder/tree/main/YC%20Builds){target=_blank} that natively output s-video / composite directly from the core. The current cores generate two signals that use the existing RGB pins, where the luma (Brightness) uses the green output and the chroma (Color) uses the red output. Please do not report any bugs from using these cores in the official repositories, they are unofficial and in a testing state. It is possible that bugs could be induced by the changes made to the core.
