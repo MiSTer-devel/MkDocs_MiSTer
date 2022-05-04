@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 Here's a table that shows you what options correlate to what video connection, to make it a bit easier to decide what you need in order to connect to your CRT, and what settings are required in the MiSTer.ini to get it to work.
 
 ## CRT Configuration Table
