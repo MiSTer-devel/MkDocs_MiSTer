@@ -5,6 +5,102 @@ hide:
 
 This is a chart that shows the default native resolution, frequencies, and pixel clock of each core upon startup. These values are not static and are only here for documentation purposes. This should not be taken as a list of a core's compatibility with your particular display.
 
+## Arcade Core Default Native Resolutions
+
+| Core             | Version   | Default Native Resolution | Horizontal Freq. (kHz) | Vertical Freq. (Hz) | Pixel Clock (MHz) | Notes                                              |
+| ---------------- | --------- | ------------------------- | ---------------------- | ------------------- | ----------------- | -------------------------------------------------- |
+| Arkanoid         | 20211225  | 256x225                   | 15.6                   | 59.2                | 6.00              |                                                    |
+| Asteroids        | 20220313  | 640x480                   | 31.3                   | 59.5                | 25.00             |                                                    |
+| AsteroidsDeluxe  | 20220313  | 640x480                   | 31.3                   | 59.5                | 25.00             |                                                    |
+| Astrocade        | 20220427  | 377x230                   | 15.8                   | 60.0                | 7.16              |                                                    |
+| AtariTetris      | 20210405  | 337x240                   | 15.6                   | 59.7                | 7.16              |                                                    |
+| Bagman           | 20211114  | 256x224                   | 15.6                   | 59.2                | 6.00              |                                                    |
+| Berzerk          | 20211009  | 256x224                   | 15.6                   | 59.6                | 5.00              |                                                    |
+| BlackWidow       | 20210915  | 640x480                   | 31.3                   | 59.5                | 25.00             |                                                    |
+| Blockade         | 20220222  | 256x224                   | 15.8                   | 60.1                | 5.20              |                                                    |
+| BombJack         | 20210915  | 264x227                   | 15.6                   | 59.2                | 6.00              |                                                    |
+| Breakout         | 20210620  | 349x228                   | 16.0                   | 63.4                | 7.16              |                                                    |
+| BurgerTime       | 20210915  | 253x240                   | 15.6                   | 57.4                | 6.00              |                                                    |
+| BurningRubber    | 20211116  | 253x240                   | 15.6                   | 59.9                | 6.00              |                                                    |
+| CanyonBomber     | 20220313  | 320x240                   | 15.8                   | 59.9                | 6.05              |                                                    |
+| Cave             | 20220409  | 320x240                   | 15.6                   | 57.2                | 7.00              |                                                    |
+| Centipede        | 20220426  | 257x240                   | 15.8                   | 59.9                | 6.05              |                                                    |
+| ComputerSpace    | 20210113  | 256x239                   | 15.3                   | 60.0                | 5.84              |                                                    |
+| Cosmic           | 20220117  | 258x193                   | 15.9                   | 60.1                | 5.41              |                                                    |
+| CrazyBalloon     | 20220119  | 258x224                   | 15.6                   | 59.1                | 4.99              |                                                    |
+| CrazyClimber     | 20210614  | 257x223                   | 15.6                   | 59.2                | 6.00              |                                                    |
+| CrazyKong        | 20210127  | 256x224                   | 15.6                   | 59.2                | 6.00              |                                                    |
+| Defender         | 20211007  | 306x240                   | 15.6                   | 60.1                | 6.00              |                                                    |
+| DigDug           | 20220317  | 289x224                   | 16.0                   | 60.8                | 6.14              |                                                    |
+| Dominos          | 20220313  | 320x240                   | 15.8                   | 59.9                | 6.05              |                                                    |
+| DonkeyKong       | 20220501  | 257x224                   | 16.0                   | 60.6                | 6.14              |                                                    |
+| DonkeyKong3      | 20210312  | 257x224                   | 16.0                   | 60.6                | 6.14              |                                                    |
+| DonkeyKongJunior | 20220227  | 257x224                   | 16.0                   | 60.6                | 6.14              |                                                    |
+| DottoriKun       | 20210705  | 448x192                   | 15.6                   | 61.0                | 8.00              |                                                    |
+| Druaga           | 20210610  | 224x294                   | 203.3                  | 60.8                | 49.12             | Might be inaccurate, need to confirm manually.     |
+| Finalizer        | 20220101  | 240x224                   | 16.0                   | 61.1                | 6.14              |                                                    |
+| FoodFight        | 20210115  | 257x224                   | 16.0                   | 60.8                | 6.14              |                                                    |
+| Frenzy           | 20211009  | 256x224                   | 15.6                   | 59.6                | 5.00              |                                                    |
+| Galaga           | 20210916  | 288x224                   | 15.6                   | 59.2                | 6.00              |                                                    |
+| Galaxian         | 20210920  | 257x224                   | 15.6                   | 59.2                | 6.00              |                                                    |
+| Gaplus           | 20210611  | 289x224                   | 16.0                   | 60.8                | 6.14              |                                                    |
+| Gauntlet         | 20220313  | 336x240                   | 15.7                   | 59.7                | 7.16              |                                                    |
+| Gyruss           | 20211225  | 256x224                   | 16.0                   | 60.6                | 6.14              |                                                    |
+| IremM62          | 20210925  |                           |                        |                     |                   | Need to fill in later, raw core output unavailable |
+| IronHorse        | 20211225  | 240x224                   | 16.0                   | 61.1                | 6.14              |                                                    |
+| Jackal           | 20211225  | 240x224                   | 16.0                   | 61.1                | 6.14              |                                                    |
+| Jailbreak        | 20211225  | 256x224                   | 16.0                   | 60.6                | 6.14              |                                                    |
+| Joust2           | 20220401  | 282x241                   | 15.6                   | 60.1                | 6.00              |                                                    |
+| LadyBug          | 20210927  | 240x192                   | 16.0                   | 61.2                | 5.00              |                                                    |
+| LunarLander      | 20210111  | 640x480                   | 31.3                   | 59.5                | 25.00             |                                                    |
+| MarioBros        | 20210925  | 256x224                   | 15.6                   | 59.2                | 6.00              |                                                    |
+| MCR1             | 20210820  |                           |                        |                     |                   | Need to fill in later, raw core output unavailable |
+| MCR2             | 20210114  |                           |                        |                     |                   | Need to fill in later, raw core output unavailable |
+| MCR3             | 20210112  |                           |                        |                     |                   | Need to fill in later, raw core output unavailable |
+| MCR3Mono         | 20210114  |                           |                        |                     |                   | Need to fill in later, raw core output unavailable |
+| MCR3Scroll       | 20210111  |                           |                        |                     |                   | Need to fill in later, raw core output unavailable |
+| MoonPatrol       | 20220322  | 240x248                   | 15.6                   | 55.4                | 6.00              |                                                    |
+| MrDo             | 20220313  | 248x192                   | 15.7                   | 59.9                | 4.90              |                                                    |
+| MysticMarathon   | 20220424  | 282x242                   | 15.6                   | 60.1                | 6.00              |                                                    |
+| NinjaKun         | 20210929  | 257x192                   | 15.6                   | 59.4                | 6.00              |                                                    |
+| Pacman           | 20210915  | 288x224                   | 15.8                   | 60.0                | 6.08              |                                                    |
+| Pengo            | 20210917  | 289x224                   | 15.6                   | 59.2                | 6.00              |                                                    |
+| PenguinKunWars   | 20200530  | 257x192                   | 15.6                   | 60.1                | 6.00              |                                                    |
+| Phoenix          | 20210915  | 239x208                   | 15.6                   | 59.6                | 5.50              |                                                    |
+| Pleiads          | 20210524  | 239x208                   | 15.6                   | 59.6                | 5.50              |                                                    |
+| PolyPlay         | 20210322  | 512x256                   | 15.6                   | 49.8                | 10.50             |                                                    |
+| Pong             | 20210117  | 374x246                   | 15.7                   | 60.1                | 7.16              |                                                    |
+| Pooyan           | 20210929  | 256x224                   | 15.6                   | 59.4                | 6.00              |                                                    |
+| Popeye           | 20210117  | 512x224                   | 15.6                   | 59.4                | 10.00             |                                                    |
+| Qbert            | 20210923  | 250x240                   | 15.7                   | 61.4                | 5.00              |                                                    |
+| RallyX           | 20210922  | 289x224                   | 16.0                   | 60.8                | 6.14              |                                                    |
+| RiverPatrol      | 20210111  | 514x223                   | 15.6                   | 59.2                | 12.00             |                                                    |
+| Robotron         | 20211007  | 296x240                   | 15.6                   | 60.1                | 6.00              |                                                    |
+| RshnAtk          | 20210924  | 240x224                   | 15.5                   | 60.6                | 6.14              |                                                    |
+| ScooterShooter   | 20211225  | 256x224                   | 16.0                   | 60.6                | 6.14              |                                                    |
+| Scramble         |           | 256x224                   | 16.0                   | 60.6                | 6.14              |                                                    |
+| SEGASYS1         | 20210618  | 256x224                   | 15.7                   | 60.1                | 6.05              |                                                    |
+| SilverLand       | 20210111  | 512x223                   | 15.6                   | 59.2                | 12.00             |                                                    |
+| SMS              | 20220326  | 256x192                   | 15.7                   | 59.9                | 5.37              |                                                    |
+| SolomonsKey      | 20210116  | 257x224                   | 15.5                   | 60.0                | 6.00              |                                                    |
+| SpaceInvaders    | 20211201  | 260x224                   | 15.6                   | 59.6                | 5.00              |                                                    |
+| SpaceRace        | 20210228  | 374x246                   | 15.7                   | 60.1                | 7.16              |                                                    |
+| Sprint1          | 20201210  |                           |                        |                     |                   | Need to fill in later, raw core output unavailable |
+| Sprint2          | 20201210  |                           |                        |                     |                   | Need to fill in later, raw core output unavailable |
+| Subs             | 20220105  | 320x224                   | 15.8                   | 59.9                | 6.05              |                                                    |
+| SuperBreakout    | 202201210 |                           |                        |                     |                   | Need to fill in later, raw core output unavailable |
+| Tecmo            | 20200810  | 256x224                   | 15.6                   | 59.2                | 6.00              |                                                    |
+| TIAMC1           | 20210322  | 256x256                   | 15.6                   | 49.8                | 5.25              |                                                    |
+| TimePilot        | 20211225  | 256x224                   | 16.0                   | 60.6                | 6.14              |                                                    |
+| TimePilot84      | 20220227  | 253x224                   | 16.0                   | 60.6                | 6.14              |                                                    |
+| TraverseUSA      | 20201213  | 240x256                   | 15.6                   | 50.1                | 6.00              |                                                    |
+| TurkeyShoot      | 20220425  | 564x241                   | 15.6                   | 60.1                | 12.00             |                                                    |
+| Ultratank        | 20211118  |                           |                        |                     |                   | Need to fill in later, raw core output unavailable |
+| Vball            | 20210621  | 240x240                   | 15.0                   | 57.9                | 6.00              |                                                    |
+| Xevious          | 20220323  | 288x224                   | 15.6                   | 59.2                | 6.00              |                                                    |
+| Zaxxon           | 20210915  |                           |                        |                     |                   | Need to fill in later, raw core output unavailable |
+| ZigZag           | 20210117  | 256x225                   | 15.6                   | 59.2                | 6.00              |                                                    |
+
 ## Console Core Default Native Resolutions
 
 | Core            | Version  | Default Native Resolution | Horizontal Freq. (kHz) | Vertical Freq. (Hz) | Pixel Clock (MHz) | Notes                                                                                                                    |
