@@ -98,3 +98,16 @@ This is a chart that shows the default native resolution, frequencies, and pixel
 | ZXNext         | 20220216 | 704x304                   | 15.6                   | 50.1                | 14.00             |                                                                                                                               |
 | ZX-Spectrum    | 20220216 | 344x284                   | 15.6                   | 50.1                | 7.00              |                                                                                                                               |
 
+## Other Core Default Native Resolutions
+
+| Core         | Version  | Default Native Resolution | Horizontal Freq. (kHz) | Vertical Freq. (Hz) | Pixel Clock (MHz) | Notes |
+| ------------ | -------- | ------------------------- | ---------------------- | ------------------- | ----------------- | ----- |
+| Arduboy      | 20220301 | 256x144                   | 15.6                   | 59.6                | 5.00              |       |
+| Chess        | 20200827 | 640x480                   | 31.3                   | 59.5                | 25.00             |       |
+| Chip8        | 20200208 | 704x240                   | 15.7                   | 59.8                | 13.50             |       |
+| EpochGalaxy  | 20200818 | 320x480                   | 31.2                   | 59.4                | 12.50             |       |
+| FlappyBird   | 20200402 | 640x480                   | 31.3                   | 59.5                | 24.99             |       |
+| GameOfLife   | 20200430 | 1920x1080                 | 67.5                   | 60.0                | 148.49            |       |
+| SlugCross    | 20220401 | 640x480                   | 31.5                   | 59.9                | 25.18             |       |
+| TomyScramble | 20200724 | 320x480                   | 31.2                   | 59.4                | 12.50             |       |
+
