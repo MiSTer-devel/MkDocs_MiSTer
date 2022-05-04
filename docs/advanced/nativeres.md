@@ -1,0 +1,38 @@
+---
+hide:
+  - toc
+---
+
+This is a chart that shows the default native resolution, frequencies, and pixel clock of each core upon startup. These values are not static and are only here for documentation purposes. This should not be taken as a list of a core's compatibility with your particular display.
+
+## Console Cores
+
+| Core            | Version  | Default Native Resolution | Horizontal Freq. (kHz) | Vertical Freq. (Hz) | Pixel Clock (MHz) | Notes                                                                                                                    |
+| --------------- | -------- | ------------------------- | ---------------------- | ------------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| AdventureVision | 20220403 | 450x174                   | 15.7                   | 60.3                | 11.00             |                                                                                                                          |
+| Arcadia         | 20211026 | 182x267                   | 19.4                   | 62.1                | 4.39              |                                                                                                                          |
+| Astrocade       | 20210303 | 180x230                   | 15.8                   | 60.0                | 3.58              |                                                                                                                          |
+| Atari5200       | 20220220 | 356x240                   | 15.7                   | 59.9                | 7.16              |                                                                                                                          |
+| Atari7800       | 20220212 | 372x224                   | 15.8                   | 60.0                | 7.16              | For analog video on Atari 2600 games, disable the video stabilizer in the Atari 2600 submenu if you cannot achieve sync. |
+| AtariLynx       | 20220417 | 160x102                   | 16.0                   | 59.2                | 7.11              |                                                                                                                          |
+| AY-3-8500       | 20220307 | 237x206                   | 15.6                   | 59.6                | 6.00              |                                                                                                                          |
+| ChannelF        | 20211026 | 208x233                   | 15.7                   | 59.9                | 3.58              |                                                                                                                          |
+| ColecoVision    | 20220214 | 256x192                   | 15.6                   | 59.7                | 5.33              |                                                                                                                          |
+| GameBoy         | 20220429 | 160x144                   | 15.8                   | 59.7                | 6.71              |                                                                                                                          |
+| GameBoy2P       | 20211121 | 320x144                   | 15.8                   | 59.7                | 6.71              | With the Analog I/O board the output of each player's screen can be split between an HDMI display and an Analog display. |
+| GBA             | 20220428 | 240x160                   | 15.8                   | 59.7                | 6.29              |                                                                                                                          |
+| GBA2P           | 20210702 | 240x160                   | 15.8                   | 59.7                | 6.29              | With the Analog I/O board the output of each player's screen can be split between an HDMI display and an Analog display. |
+| Genesis         | 20220326 | 256x224                   | 15.7                   | 59.9                | 5.37              |                                                                                                                          |
+| Intellivision   | 20211025 | 190x240                   | 15.7                   | 59.9                | 3.58              |                                                                                                                          |
+| MegaCD          | 20220326 | 320x224                   | 15.7                   | 59.9                | 6.71              |                                                                                                                          |
+| NeoGeo          | 20220403 | 320x224                   | 15.7                   | 59.6                | 6.04              |                                                                                                                          |
+| NES             | 20220326 | 256x224                   | 15.7                   | 60.1                | 5.37              |                                                                                                                          |
+| Odyssey2        | 20210530 | 368x240                   | 15.7                   | 59.5                | 7.16              |                                                                                                                          |
+| PSX             | 20220429 | 704x478i                  | 15.7                   | 59.9                | 13.42             |                                                                                                                          |
+| S32X            | 20220425 | 256x224                   | 15.7                   | 59.9                | 5.37              |                                                                                                                          |
+| SMS             | 20220326 | 256x192                   | 15.7                   | 59.9                | 5.37              |                                                                                                                          |
+| SNES            | 20220326 | 512x224                   | 15.7                   | 60.1                | 10.74             |                                                                                                                          |
+| TurboGrafx16    | 20220326 | 270x242                   | 15.7                   | 60.1                | 5.37              |                                                                                                                          |
+| VC4000          | 20211026 | 172x269                   | 19.5                   | 62.6                | 4.43              |                                                                                                                          |
+| Vectrex         | 20220301 | 540x720                   | 43.3                   | 60.0                | 24.00             |                                                                                                                          |
+| WonderSwan      | 20220417 | 224x144                   | 15.3                   | 59.4                | 6.14              |                                                                                                                          |

@@ -135,7 +135,7 @@ nav:
       - CRT Configuration Table: advanced/crttable.md
       - Using Your CRT With MiSTer: advanced/crt.md
       - Direct Video Adapter: advanced/directvideo.md
-      - Analog Video Compatibility: advanced/analogcompat.md
+      - Core Default Resolutions: advanced/nativeres.md
     - Audio Filters: advanced/audio.md
     - MIDI Features: advanced/midi.md
     - Multi-Button Mapping: advanced/multibutton.md
