@@ -111,3 +111,11 @@ This is a chart that shows the default native resolution, frequencies, and pixel
 | SlugCross    | 20220401 | 640x480                   | 31.5                   | 59.9                | 25.18             |       |
 | TomyScramble | 20200724 | 320x480                   | 31.2                   | 59.4                | 12.50             |       |
 
+## Utility Core Default Native Resolutions
+
+| Core      | Version  | Default Native Resolution | Horizontal Freq. (kHz) | Vertical Freq. (Hz) | Pixel Clock (MHz) | Notes |
+| --------- | -------- | ------------------------- | ---------------------- | ------------------- | ----------------- | ----- |
+| ADCTest   | 20201231 | 529x240                   | 15.7                   | 59.8                | 10.00             |       |
+| InputTest | 20220212 | 320x240                   | 15.2                   | 59.2                | 6.00              |       |
+| memtest   | 20210130 | 720x480                   | 31.4                   | 59.8                | 27.01             |       |
+
