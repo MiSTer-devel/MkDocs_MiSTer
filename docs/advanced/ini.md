@@ -65,3 +65,32 @@ The [MiSTer.ini configuration file](https://github.com/MiSTer-devel/Main_MiSTer/
 ## Debug Settings
 
 `log_file_entry` - Writes filename under the curse in browser for use by external integrations.
+
+## Adding Core-specific Settings
+It is possible to specify different settings for different cores; for example, you may prefer to use integer scaling just for the Game Boy Advance core so that you don't need any video filters for smooth scrolling. Simply add a section at the end of the INI file with the core name in brackets and paste your different settings below there, like so:
+
+```
+[GBA]
+vscale_mode=1
+```
+
+Or, suppose you wanted to add an option to select 8:7 aspect ratio for the SNES core:
+```
+[SNES]
+custom_aspect_ratio_1=8:7
+```
+
+The Menu core can have its own settings too. Create a section named `[Menu]` to specify settings for it.
+
+## Switching INI Files On the Fly
+MiSTer currently supports up to 3 additional INI files that can be toggled in the OSD menu, either by going to `Misc. Options`  (press `left` while in the menu) or by holding the menu `back` button on your controller and pressing a direction. This is useful if you need to switch between video configurations often. To get started, make copies of your INI file and rename them:
+
+`mister_alt_1.ini`  activated by `back + left`
+
+`mister_alt_2.ini`  activated by `back + up`
+
+`mister_alt_3.ini`  activated by `back + down`
+
+Additionally, you can switch back to your default `mister.ini` by pressing `back + right` or by selecting `Main`.
+
+Your alt INI file will stay loaded across reboots and core changes until you turn the power off; `mister.ini` will always load by default when powering on. Note that if you switch INI files while a core is running, the core will reset.
