@@ -148,6 +148,7 @@ nav:
   # Developer reference. This is going to mostly mirror what is up on Github wiki already.
   - Developer Reference:
     - Core Configuration String: developer/conf_str.md
+    - Core Names: developer/corenames.md
     - Arcade ROMS and MRA Files: developer/mra.md
     - Developer Journeys:
       - Analog Simulation: developer/analogsim.md
