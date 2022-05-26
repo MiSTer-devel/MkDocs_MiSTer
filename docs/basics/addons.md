@@ -13,13 +13,13 @@ Here's a rundown of what some of the current add-on boards are and what they do.
   ![MiSTer FPGA 128MB SDRAM Add-on Board](img/sdram.png){ align=center }
 </figure>
 
-The 128MB SDRAM Add-on board for MiSTer is essential for multiple cores to even load games. You can alternatively go with a 32MB SDRAM board for a cheaper price, however there are some games on Neo Geo, Game Boy Advance, and a few other cores which might no be compatible if you go with the smaller sized module.
+The 128MB SDRAM Add-on board for MiSTer is essential for multiple cores to even load games. You can alternatively go with a 32MB SDRAM board for a cheaper price, however there are some games on Neo Geo, Game Boy Advance, and a few other cores which might not be compatible if you go with the smaller sized module.
 
-When Plugging in the SDRAM Board, make sure to support the DE10-Nano from beneath with your thumbs. Forcing in the SDRAM Board without support can bend the DE10-Nano board and permanently damage it.
+When plugging in the SDRAM board, make sure to support the DE10-Nano from beneath with your thumbs. Forcing in the SDRAM board without support can bend the DE10-Nano board and permanently damage it.
 
 ![How to Insert MiSTer FPGA SDRAM Module Add-On Board the right way](img/sdramdiy1.gif)
 
-Removing the SDRAM Board can be tricky for some GPIO connectors and just pulling won't do it sometimes. For very tight connectors, it is recommended to wiggle the SDRAM Board back and forth to remove the connectors slowly, bit-by-bit. Just pulling with force will often bend the GPIO header.
+Removing the SDRAM board can be tricky for some GPIO connectors and just pulling won't do it sometimes. For very tight connectors, it is recommended to wiggle the SDRAM board back and forth to remove the connectors slowly, bit-by-bit. Just pulling with force will often bend the GPIO header.
 
 ![How to remove MiSTer FPGA SDRAM Module Add-On Board the right way](img/sdramdiy2.gif)
 
@@ -29,7 +29,7 @@ Removing the SDRAM Board can be tricky for some GPIO connectors and just pulling
   ![MiSTer FPGA USB Hub Add-on Board](img/usbhub.png){ align=center }
 </figure>
 
-The USB Hub Add-on board for MiSTer has two methods of connecting to your DE10-Nano either via internal headers with a slim external board or with a bridge to connect both MicroUSB ports together. This board provides an OTG USB Hub for the Mister which has one power-only usb port in the back and 6 USB 2.0 ports ont he other 3 sides. It requires power so you may need a power splitter to supply power to both the DE10-Nano and this USB hub. If you use a Digital IO board you will only need a DC to DC jumper cable and a single cable to the Digital IO board's barrel jack in order to power the whole stack.
+The USB Hub Add-on board for MiSTer has two methods of connecting to your DE10-Nano either via internal headers with a slim external board or with a bridge to connect both MicroUSB ports together. This board provides an OTG USB Hub for the MiSTer which has one power-only usb port in the back and 6 USB 2.0 ports ont he other 3 sides. It requires power so you may need a power splitter to supply power to both the DE10-Nano and this USB hub. If you use a Digital IO board you will only need a DC to DC jumper cable and a single cable to the Digital IO board's barrel jack in order to power the whole stack.
 
 ## [Digital I/O Addon Board](https://github.com/MiSTer-devel/Hardware_MiSTer/blob/master/releases/iobrd_dig_1.2.pdf){target=_blank}
 
