@@ -117,7 +117,7 @@ Unzip them. Do not zip CD games. Also put them in iso/wav/bin/img + cue format.
 ## What version of the CD card bios do I need for TG16 CD?
 Use Japanese version 3.0. You will commonly find it with filename: `Super CD-ROM System (Japan) (v3.0).pce`
 
-## How do I make MisTer boot into the NES core and a specific game?
+## How do I make MiSTer boot into the NES core and a specific game?
 You need to use two different options: autobooting a core, and starting the core on a given ROM. Here is how:
 In the .INI file, set `bootcore=NES_20201102.rbf` (or the specific core version you have), and comment out `;bootcore_timeout`.
 Then on your NES games folder (e.g. `/media/fat/games/NES/`, copy the FDS bios as `boot0.rom`, and your .NES rom to boot as `boot1.rom`.
