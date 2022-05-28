@@ -5,8 +5,8 @@ hide:
 
 Now we should define some gamepad inputs on our MiSTer. This is pretty easy to do. You should use a keyboard and your gamepad/controller for this step. For each different kind of controller you have, you should do this step, and the MiSTer will store a configuration based on that device's unique ID.
 
-## Defining your Gamepad's buttons
-Go to the second menu in the On Screen Display where you went to for to run the Downloader or WiFi scripts. There is another option here, "Define joystick buttons". Select this option to configure your buttons on your gamepad:
+## Defining your Gamepad's Buttons
+Go to the second menu in the On Screen Display, this is where you went to previously when running the Downloader or WiFi scripts. There is another option here, "Define joystick buttons". Select this option to configure your buttons on your gamepad:
 
 ![Define your gamepad!](img/define-joystick.png)
 
