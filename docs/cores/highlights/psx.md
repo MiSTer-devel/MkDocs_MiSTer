@@ -20,13 +20,72 @@ More specifically, the DualShock controller mode is a catch-all solution. Ideall
 
 Additionally, just like the original DualShock controller, there is a way to change between digital and analog modes on the controller at the press of a button (or multiple buttons depending on the controller you have). If you have a DualShock 4 or DualSense (5) controller, then you can just press in the touchpad in the center once. That will switch between Analog and Digital modes each time. If you do not have a controller with a PS4/PS5 touchpad on it to click, then you can use either L3+R3+Up/Down or L1+L2+R1+R2+Up/Down to changes modes, depending on the "DS mode" setting you have in the OSD.
 
-## Fixed blanks
+## Libcrypt Support
+
+Some games used a kind of copy protection with what was called "Libcrypt" and they will not work if it's not circumvented.
+
+You can provide an .sbi file to do that. If there is an .sbi file [( the whole collection of which can be downloaded from redump.org)](http://redump.org/sbi/psx/){target=_blank} next to a .cue with the same name, it will then be loaded automatically when mounting the CD image. The MiSTer updater automatically downloads these .sbi files so it should not be necessary to download and place them manually.
+
+## Audio and Video Options
+
+### Fixed blanks
 
 Due to the original playstation having a wide variety of resolution options available to software developers, and due to the fact that some of these software developers made the screen shake in their games by moving the image outside of the bounds of the screen, a solution was necessary to resolve sync loss and get appropriate scaling and stability through resolution changes. Fixed Horizontal blanks (Hblanks) and fixed Vertical blanks (vblanks) were added as options to stabilize the video output to make it more pleasant. If you experience problems with sync or the resolution changes don't look right to you, give these options a try and see if that remedies the problem.
 
 The Vertical crop option which is made available when Fixed VBlank is turned on is similar to the 5x scaling in other cores, but due to the nature of many PSX games using either 224p or 216p, then there have been two options made available for your convenience. Try and mess around with these settings and see what looks the best to you!
 
+A good example of a game that benefits from the Fixed Vertical Blanks option is Metal Gear Solid. The shaking of the screen in some scenes would cause your modern display to lose sync without the Fixed VBlank option turned on.
+
+A good example of a game that benefits from the Fixed Horizontal Blanks option is Final Fantasy VII. When used in conjunction with Fixed Vertical Blanks and enabling Vertical Crop -> On(224/270), you will notice that the transition from the world map to a battle will no longer make a jarring resolution change where the screen position seems to change.
+
+There are more examples like this out there, you will have to test for yourself what works best.
+
+## Dual SDRAM for the SPU
+
+The MiSTer PSX core is the first released core which supports the optional Dual SDRAM modules. This was necessary early in it's development as there wasn't enough bandwidth on one SDRAM module to contain both the test roms and small games and to store other components that were needed to be placed in SDRAM at the same time. You are not required to have Dual SDRAM on the PSX core for quite some time now, and the official release is a Single SDRAM build that is compatible with the Analog IO board.
+
+Enabling this option while a game is running will most likely crash the game. If you have a Dual SDRAM build of the core and you enable this option, you will likely have to reset the game to get it to work.
+
+There is only one humanly imperceptible difference in using the Dual SDRAM build of the MiSTer PSX core known. The audio samples are measurably more accurate to a tiny fraction of a millisecond. The human ear can't tell that 1 or 2 out of 44,100 samples per second were dropped. 
+
+This option to use Dual SDRAM for the SPU is disabled by default in the releases of the core. To get a special release with Dual SDRAM support currently you can either open the Quartus Project File (.qpf) with the name "PSX_DualSDRAM.qpf" using Quartus 17.0.2 and compile the core, or you can get the latest Test Build from the [MiSTer FPGA Discord](https://discord.com/misterfpga){target=_blank} in the #test-builds channel.
+
+## Miscellaneous Options
+
+These are the speedhacks in the MiSTer PSX core which will allow you to improve the performance of Playstation games, while potentially sacrificing some compatibility.
+
+### Fastboot
+
+Fast boot bypasses the BIOS boot logo and screen when starting a game. This can make it a lot quicker to get into the game, however there are a small number of games where it may lead to bugs and other compatibility issues. If you notice bugs in a game, try to turn off fastboot before submitting a bug report about the core first.
+
+### CD Fast Seek
+
+The CD drive in a real Playstation had a delay when the motor had to move the laser to the correct position. This speedhack removes that simulated delay from the MiSTer PSX core. This can potentially cause some compatibility issues, so if you notice any bugs in a game, try to turn off the CD Fast Seek option before submitting a bug report about the core first.
+
+### Data Cache
+The Data Cache option is a very powerful speedhack which can dramatically improve the stability and speed of the framerate of some 3d games (and a few 2d games) on the MiSTer PSX core. The original playstation did not have a data cache. Data cache are ways for CPU to store more frequently accessed data in a much faster type of memory than what is available on the motherboard. This is more of a ["what if"](https://mobile.twitter.com/AzumFpg/status/1502345713291771908){target=_blank} type of speedhack. 
+
+When you enable the Data Cache option, you will need to keep it turned on in order to keep playing the game. If you turn it off it may freeze the game until you turn it back on, or it might crash the game on the spot. If you notice bugs in a game, try to turn off Data Cache before submitting a bug report about the core first.
+
+
+
 ## Using cheats on the MiSTer PSX core
 
 Cheats on the PSX are a little bit different than other MiSTer cores' cheats implementation in how they are detected. With other cores, the cheat file has a CRC32 hash in the filename, and this is checked against the crc32 hash of the ROM that is loaded. This is not the case with PSX (or other CD-based cores with Cheats support either). Because CD images are so large, doing a crc32 check on them would take too long, so the internal Game ID is scanned for instead and the cheats file with the same internal Game ID is loaded. So Final Fantasy VII Disc 1 gets loaded, MiSTer detects that it is Game ID SCUS-94163, and MiSTer loads the cheats file named `SCUS-94163.zip` from `./cheats/PSX/`. Note that when the Data Cache enhancement is enabled in the OSD, cheats are disabled and will not function. This is by design.
 
+## Error Messages
+
+If there is a problem recognized by the MiSTer PSX core, an error overlay is displayed, showing which error has occured. You can hide these messages with the "Error Overlay" OSD option, by default they are on.
+
+List of Errors:
+
+* `E2` - CPU exception(only relevant if game shows issues)
+* `E3` thru `E6` - GPU hangs (e.g. corrupt display list)
+* `E7` - CPU2VRAM with mask-AND enabled
+* `E8` - DMA chopping enabled
+* `E9` - GPU FIFO overflow
+* `EA` - SPU timeout
+* `EB` - DMA and CPU interlock error
+* `EC` - DMA FIFO overflow
+* `ED` - CPU Data/Bus request timeout -> will also appear if the BIOS is not found or corrupt or no SDRAM module is installed
+* `EE` - Dotclock used as timer report(only relevant if game shows issues)
