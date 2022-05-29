@@ -113,6 +113,7 @@ nav:
       - Cheats: cores/features/cheats.md
       - RTC Support: cores/features/rtcsupport.md
     - Core Highlights:
+      - PSX: cores/highlights/psx.md
       - SNES: cores/highlights/snes.md
       - NES: cores/highlights/nes.md
       - Genesis: cores/highlights/genesis.md
