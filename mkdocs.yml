@@ -150,6 +150,12 @@ nav:
   - Developer Reference:
     - Porting Cores: developer/porting.md
     - Core Configuration String: developer/conf_str.md
+    - Top-level of Cores: 
+      - overview of emu module: developer/emu.md
+      - sys - hps_io: developer/hps_io.md
+      - sys - video_freak: developer/video_freak.md
+      - sys - video_mixer: developer/video_mixer.md
+      - sys - arcade_video: developer/arcade_video.md
     - Core Names: developer/corenames.md
     - Arcade ROMS and MRA Files: developer/mra.md
     - Developer Journeys:
