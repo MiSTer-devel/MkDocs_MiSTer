@@ -148,12 +148,14 @@ nav:
 
   # Developer reference. This is going to mostly mirror what is up on Github wiki already.
   - Developer Reference:
+    - Porting Cores: developer/porting.md
     - Core Configuration String: developer/conf_str.md
     - Core Names: developer/corenames.md
     - Arcade ROMS and MRA Files: developer/mra.md
     - Developer Journeys:
       - Analog Simulation: developer/analogsim.md
       - Head On Sound PCB Implementation: developer/headonsoundpcb.md
+    - Template Core: https://github.com/MiSTer-devel/Template_MiSTer
     - Useful Links: developer/links.md
     - Tips and Guidelines: developer/principles.md
 
