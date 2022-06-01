@@ -31,6 +31,12 @@ The composite video encoder of the original TurboGrafx-16 modified the colors fr
 
 The original TurboGrafx-16 had a border that was mostly not visible to the original player due to the bezel of their CRT covering this empty space. In the MiSTer TGFX16 core we leave this overscan area hidden to make it more pleasant on modern displays. If you wish to restore this overscan and if you wish to use the original system's color (instead of just Black) for it, you can just change the Overscan and Border Color options.
 
+## Extra Sprites per Line
+
+The original TurboGrafx-16 hardware had a hard limit to how many sprites could be rendered per line at a time, so when a game went over this limit they would flicker and disappear to compensate. The MiSTer core isn't forced to adhere to these limitations. While the default behavior is the same as the hardware you can turn this option to "Extra" in the OSD's Audio & Video sub-menu and see if it makes the game more pleasant. Here's a video example:
+
+![type:video](videos/tgfx16-flicker.mp4)
+
 ## Audio Boost options
 
 Some games had varying levels of audio when compared to each other, and even to their own separate audio channels. The MiSTer TurboGrafx16 core allows you to Boost the CD Audio, ADPCM, and all Audio by varying degrees. This can help when the vocals are quieter than the music, or when some sound effects feel like they should be louder, or even if a game is randomly just a lot quieter on the whole than the other games you were just playing.
