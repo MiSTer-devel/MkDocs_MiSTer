@@ -159,6 +159,7 @@ nav:
     - Core Names: developer/corenames.md
     - Arcade ROMS and MRA Files: developer/mra.md
     - Debugging (USB Blaster): developer/debugging.md
+    - Core Components Where Used: developer/component.md
     - Developer Journeys:
       - Analog Simulation: developer/analogsim.md
       - Head On Sound PCB Implementation: developer/headonsoundpcb.md
