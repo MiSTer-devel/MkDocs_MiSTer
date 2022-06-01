@@ -36,11 +36,15 @@ You can provide an .sbi file to do that. If there is an .sbi file [(the whole co
 
 Due to the original playstation having a wide variety of resolution options available to software developers, and due to the fact that some of these software developers made the screen shake in their games by moving the image outside of the bounds of the screen, a solution was necessary to resolve sync loss and get appropriate scaling and stability through resolution changes. Fixed Horizontal blanks (Hblanks) and fixed Vertical blanks (vblanks) were added as options to stabilize the video output to make it more pleasant. If you experience problems with sync or the resolution changes don't look right to you, give these options a try and see if that remedies the problem.
 
-The Vertical crop option which is made available when Fixed VBlank is turned on is similar to the 5x scaling in other cores, but due to the nature of many PSX games using either 224p or 216p, then there have been two options made available for your convenience. Try and mess around with these settings and see what looks the best to you!
+It should also be noted that Fixed Horizontal blanks makes everything fit within the original 4:3 aspect ratio of the PSX video output, so it should be turned on in pretty much all situations if you want the original resolution.
 
-A good example of a game that benefits from the Fixed Vertical Blanks option is Metal Gear Solid. The shaking of the screen in some scenes would cause your modern display to lose sync without the Fixed VBlank option turned on.
+The Vertical crop options, which are made available when Fixed VBlank is turned on, is similar to the 5x scaling in other cores, but due to the nature of many PSX games using either 224p or 216p, then there have been two options made available for your convenience.
 
-A good example of a game that benefits from the Fixed Horizontal Blanks option is Final Fantasy VII. When used in conjunction with Fixed Vertical Blanks and enabling Vertical Crop -> On(224/270), you will notice that the transition from the world map to a battle will no longer make a jarring resolution change where the screen position seems to change.
+A good example of a game that benefits from the Fixed Horizontal Blanks option is Metal Gear Solid. The shaking of the screen in some scenes would cause your modern display to lose sync without the Fixed VBlank option turned on.
+
+A good example of a game that benefits from the Fixed Vertical Blanks option is Final Fantasy VII. Horizontal blanks gives you the proper 4:3 aspect ratio first of all, but then will give you a "jump" in the resolution when it changes from world map to the battle screen. However, when used in conjunction with Vertical Crop -> On(224/270), you will notice that the transition from the world map to a battle will no longer make a jarring resolution change where the screen position seems to change. Here's an example video that shows the benefits:
+
+![type:video](videos/psx-blanks-ff7.mp4)
 
 There are more examples like this out there, you will have to test for yourself to see what works best.
 
