@@ -4,8 +4,8 @@ hide:
 ---
 
 This is a list of the core repositories and the core internal names that are used for the mister.ini core exceptions.
-
-| --------------------------------------------------------------------------------------------------------------------------------- | Internal Name   |
+| Repository URL                                                                                                                    | Internal Name   |
+| --------------------------------------------------------------------------------------------------------------------------------- | --------------- |
 | All Arcade Cores (if an MRA is used)                                                                                              | arcade          |
 | [https://github.com/MiSTer-devel/AcornAtom\_MiSTer](https://github.com/MiSTer-devel/AcornAtom_MiSTer)                             | AcornAtom       |
 | [https://github.com/MiSTer-devel/AcornElectron\_MiSTer](https://github.com/MiSTer-devel/AcornElectron_MiSTer)                     | AcornElectron   |
