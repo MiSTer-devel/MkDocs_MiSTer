@@ -39,7 +39,7 @@ If you add a status bit option like `O89` to the core configuration string, this
 
 This will communicate to other developers that `status[9:8]` are occupied and should not be used.
 
-Status Bit `[0]` is reserved as a Soft Reset and Status Bit `[1]` is reserved as a Hard Reset.
+Status Bit `[0]` is reserved as a Soft Reset.
 
 ## Valid options for the menu
 
