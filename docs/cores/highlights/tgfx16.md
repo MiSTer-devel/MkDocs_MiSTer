@@ -25,7 +25,9 @@ There are a few TurboGrafx16 games which required the Arcade card add-on. The Mi
 
 ## Color palette options
 
-The composite video encoder of the original TurboGrafx-16 modified the colors from their raw RGB values. What this means is, how you saw the colors on real hardware on an old CRT years ago, is not how it looked in emulators today or even RGB-modded original hardware! Thankfully Kitrinx and Artemio Urbina worked to develop a [mathematically derived color corrected palette](https://www.retrorgb.com/pc-engine-palette-improvements-the-amazing-people-behind-the-technology.html){target=_blank} that represents the composite video output instead. The games were likely developed with these composite colors in mind, so this option is kept as the default. If you want a more vibrant color with a lot of pop, then you can switch to the Raw RGB setting instead by toggling the Audio & Video --> Colors option.
+The composite video encoder of the original TurboGrafx-16 modified the colors from their raw RGB values. What this means is, how you saw the colors on real hardware on an old CRT years ago, is not how it looked in emulators today or even RGB-modded original hardware! Thankfully Kitrinx and Artemio Urbina worked to develop a [mathematically derived color corrected palette](https://www.retrorgb.com/pc-engine-palette-improvements-the-amazing-people-behind-the-technology.html){target=_blank} that represents the composite video output instead. The games were likely developed with these composite colors in mind, so this option is kept as the default. If you want a more vibrant color with a lot of pop, then you can switch to the Raw RGB setting instead by toggling the Audio & Video --> Colors option. Here's a video demonstrating how to change this option and the big difference it makes:
+
+![type:video](videos/tgfx16-palette.mp4)
 
 ## Overscan / Border and Border Color
 
