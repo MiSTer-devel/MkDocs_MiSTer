@@ -14,17 +14,21 @@ The MiSTer PSX core supports a very large list of control options that original 
 * [Justifier](https://en.wikipedia.org/wiki/Konami_Justifier){target=_blank}
 * SNAC (there is a special adapter required to use real PSX controller accessories. Memory cards and even the pocketstation can be used in this mode technically)
 
-## DualShock Support
+### DualShock Support
 
 More specifically, the DualShock controller mode is a catch-all solution. Ideally, it will identify what the game requires and it ought to put itself into the correct mode (either Digital or Analog) for compatibility with that game. Some games, when they are on the wrong mode, will not register inputs from your controller. If this happens, switch manually to a different mode (Digital or Analog) and see if the problem goes away.
 
 Additionally, just like the original DualShock controller, there is a way to change between digital and analog modes on the controller at the press of a button (or multiple buttons depending on the controller you have). If you have a DualShock 4 or DualSense (5) controller, then you can just press in the touchpad in the center once. That will switch between Analog and Digital modes each time. If you do not have a controller with a PS4/PS5 touchpad on it to click, then you can use either L3+R3+Up/Down or L1+L2+R1+R2+Up/Down to changes modes, depending on the "DS mode" setting you have in the OSD.
 
+## Manual Memory Card Loading
+
+You can load Playstation memory card files (.mcd or .sav) manually in the OSD in this core. It is probably best to use the 2nd slot because the default behavior is to occupy the first slot automatically with a blank memory card file. You can also opt out of auto-mounting a blank memory card file to slot 1 by turning off the Automount Memory Card 1 option in the OSD. Finally, if you have a SNAC adapter with a memory card slot connected to it somehow, the core does support real Playstation 1 memory card loading over SNAC. This is supported because the memory cards used the same SPI protocol as the controllers.
+
 ## Libcrypt Support
 
 Some games used a kind of copy protection with what was called "Libcrypt" and they will not work if it's not circumvented.
 
-You can provide an .sbi file to do that. If there is an .sbi file [( the whole collection of which can be downloaded from redump.org)](http://redump.org/sbi/psx/){target=_blank} next to a .cue with the same name, it will then be loaded automatically when mounting the CD image. The MiSTer updater automatically downloads these .sbi files so it should not be necessary to download and place them manually.
+You can provide an .sbi file to do that. If there is an .sbi file [(the whole collection can be downloaded from redump.org)](http://redump.org/sbi/psx/){target=_blank} next to a .cue with the same name, it will then be loaded automatically when mounting the CD image. The MiSTer updater automatically downloads these .sbi files so it should not be necessary to download and place them manually.
 
 ## Audio and Video Options
 
@@ -38,9 +42,29 @@ A good example of a game that benefits from the Fixed Vertical Blanks option is 
 
 A good example of a game that benefits from the Fixed Horizontal Blanks option is Final Fantasy VII. When used in conjunction with Fixed Vertical Blanks and enabling Vertical Crop -> On(224/270), you will notice that the transition from the world map to a battle will no longer make a jarring resolution change where the screen position seems to change.
 
-There are more examples like this out there, you will have to test for yourself what works best.
+There are more examples like this out there, you will have to test for yourself to see what works best.
 
-## Dual SDRAM for the SPU
+### Widescreen Modes
+
+The MiSTer PSX core has a Widescreen hack mode. There are many games which are 3d only with very little 2d, so you could potentially stretch the visible landscape and not stretch the 3d models. Some games work well with this, while others do not. Your results may vary. There are multiple Aspect Ratios for this hack to leave some options open for various displays and games, 3:2, 5:3, and 16:9 (what most modern displays are).
+
+### Dithering On/Off Toggle
+
+You can optionally toggle Dithering On and Off. In some games this can cause color banding which can look undesirable, in others it can clean up the checkerboard look without much loss. You will have to find out what is most appropriate.
+
+### Deinterlacing Methods
+
+The MiSTer PSX core supports two methods of deinterlacing the occasional interlaced video on the Playstation. Weave is the default and is often preferred, this gives you the most stable image. Bob is very jittery, but may look better on real CRT's in some situations.
+
+### Texture Filtering
+
+The Playstation didn't have any built-in texture filtering like some other consoles did (Nintendo 64 is a popular example). This means many of the textures had rough edges. In some cases this is fine, but in some games it can be very displeasing. This little trick in the MiSTer PSX core allows you to smooth out the textures on 3d objects if you wish.
+
+### Screen Rotation
+
+If for whatever reason you need to rotate your screen 180° you can just go to the Audio and Video options in the OSD and toggle "Rotate" to On or Off.
+
+### Dual SDRAM for the SPU
 
 The MiSTer PSX core is the first released core which supports the optional Dual SDRAM modules. This was necessary early in it's development as there wasn't enough bandwidth on one SDRAM module to contain both the test roms and small games and to store other components that were needed to be placed in SDRAM at the same time. You are not required to have Dual SDRAM on the PSX core for quite some time now, and the official release is a Single SDRAM build that is compatible with the Analog IO board.
 
@@ -67,8 +91,6 @@ The Data Cache option is a very powerful speedhack which can dramatically improv
 
 When you enable the Data Cache option, you will need to keep it turned on in order to keep playing the game. If you turn it off it may freeze the game until you turn it back on, or it might crash the game on the spot. If you notice bugs in a game, try to turn off Data Cache before submitting a bug report about the core first.
 
-
-
 ## Using cheats on the MiSTer PSX core
 
 Cheats on the PSX are a little bit different than other MiSTer cores' cheats implementation in how they are detected. With other cores, the cheat file has a CRC32 hash in the filename, and this is checked against the crc32 hash of the ROM that is loaded. This is not the case with PSX (or other CD-based cores with Cheats support either). Because CD images are so large, doing a crc32 check on them would take too long, so the internal Game ID is scanned for instead and the cheats file with the same internal Game ID is loaded. So Final Fantasy VII Disc 1 gets loaded, MiSTer detects that it is Game ID SCUS-94163, and MiSTer loads the cheats file named `SCUS-94163.zip` from `./cheats/PSX/`. Note that when the Data Cache enhancement is enabled in the OSD, cheats are disabled and will not function. This is by design.
@@ -89,3 +111,4 @@ List of Errors:
 * `EC` - DMA FIFO overflow
 * `ED` - CPU Data/Bus request timeout -> will also appear if the BIOS is not found or corrupt or no SDRAM module is installed
 * `EE` - Dotclock used as timer report(only relevant if game shows issues)
+
