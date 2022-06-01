@@ -158,6 +158,7 @@ nav:
       - sys - arcade_video: developer/arcade_video.md
     - Core Names: developer/corenames.md
     - Arcade ROMS and MRA Files: developer/mra.md
+    - Debugging (USB Blaster): developer/debugging.md
     - Developer Journeys:
       - Analog Simulation: developer/analogsim.md
       - Head On Sound PCB Implementation: developer/headonsoundpcb.md
