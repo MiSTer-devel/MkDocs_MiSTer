@@ -226,6 +226,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://mister-devel.github.io/MkDocs_MiSTer/developer/arcade_video/</loc>
+         <lastmod>2022-06-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://mister-devel.github.io/MkDocs_MiSTer/developer/conf_str/</loc>
          <lastmod>2022-06-01</lastmod>
          <changefreq>daily</changefreq>
@@ -236,7 +241,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://mister-devel.github.io/MkDocs_MiSTer/developer/emu/</loc>
+         <lastmod>2022-06-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://mister-devel.github.io/MkDocs_MiSTer/developer/headonsoundpcb/</loc>
+         <lastmod>2022-06-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mister-devel.github.io/MkDocs_MiSTer/developer/hps_io/</loc>
          <lastmod>2022-06-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -257,6 +272,16 @@
     </url>
     <url>
          <loc>https://mister-devel.github.io/MkDocs_MiSTer/developer/principles/</loc>
+         <lastmod>2022-06-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mister-devel.github.io/MkDocs_MiSTer/developer/video_freak/</loc>
+         <lastmod>2022-06-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mister-devel.github.io/MkDocs_MiSTer/developer/video_mixer/</loc>
          <lastmod>2022-06-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
