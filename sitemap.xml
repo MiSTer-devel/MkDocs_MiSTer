@@ -231,6 +231,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://mister-devel.github.io/MkDocs_MiSTer/developer/component/</loc>
+         <lastmod>2022-06-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://mister-devel.github.io/MkDocs_MiSTer/developer/conf_str/</loc>
          <lastmod>2022-06-01</lastmod>
          <changefreq>daily</changefreq>
