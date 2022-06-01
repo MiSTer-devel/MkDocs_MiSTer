@@ -4,6 +4,7 @@ hide:
 ---
 
 This is a list of the core repositories and the core internal names that are used for the mister.ini core exceptions.
+
 | Repository URL                                                                                                                    | Internal Name   |
 | --------------------------------------------------------------------------------------------------------------------------------- | --------------- |
 | All Arcade Cores (if an MRA is used)                                                                                              | arcade          |
