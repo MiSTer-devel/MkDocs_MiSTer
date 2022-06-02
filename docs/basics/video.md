@@ -69,6 +69,12 @@ vsync_adjust=1
 
 ## Video Processing Options Tutorial
 Here's a tutorial that you can follow along to get you started using the powerful video processing options on MiSTer FPGA.
+
+### Video Presets
+There are now Video Presets that you can choose which will set your filters and everything else to simple desirable settings. They are very easy to use, just open the OSD, press right, then go to video processing, and then "Load Preset". Select the one you want and see if it looks good to you. Here's an example video showing you how easy it is:
+
+![type:video](videos/presets.mp4)
+
 ### Filters (and scanlines)
 MiSTer has the capability to use upscaling filters and scanlines to help enhance the video output or even make it feel similar to a retro CRT television. If you opened the NES core for the first time after setting the MiSter's video output to 1920x1080p and loaded up Duck Tales, then you should see something like this:
 
