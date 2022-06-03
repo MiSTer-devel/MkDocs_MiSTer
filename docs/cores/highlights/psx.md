@@ -50,7 +50,9 @@ There are more examples like this out there, you will have to test for yourself 
 
 ### Widescreen Modes
 
-The MiSTer PSX core has a Widescreen hack mode. There are many games which are 3d only with very little 2d, so you could potentially stretch the visible landscape and not stretch the 3d models. Some games work well with this, while others do not. Your results may vary. There are multiple Aspect Ratios for this hack to leave some options open for various displays and games, 3:2, 5:3, and 16:9 (what most modern displays are).
+The MiSTer PSX core has a Widescreen hack mode. There are many games which are 3d only with very little 2d, so you could potentially stretch the visible landscape and not stretch the 3d models. Some games work well with this, while others do not. Your results may vary. There are multiple Aspect Ratios for this hack to leave some options open for various displays and games, 3:2, 5:3, and 16:9 (what most modern displays are). Here's an example using R4 - Ridge Racer Type 4:
+
+![type:video](videos/psx-widescreen.mp4)
 
 ### Dithering On/Off Toggle
 
