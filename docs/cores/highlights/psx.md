@@ -64,7 +64,9 @@ The MiSTer PSX core supports two methods of deinterlacing the occasional interla
 
 ### Texture Filtering
 
-The Playstation didn't have any built-in texture filtering like some other consoles did (Nintendo 64 is a popular example). This means many of the textures had rough edges. In some cases this is fine, but in some games it can be very displeasing. This little trick in the MiSTer PSX core allows you to smooth out the textures on 3d objects if you wish.
+The Playstation didn't have any built-in texture filtering like some other consoles did (Nintendo 64 is a popular example). This means many of the textures had rough edges. In some cases this is fine, but in some games it can be very displeasing. This little trick in the MiSTer PSX core allows you to smooth out the textures on 3d objects if you wish. A good example where this could be used is in Tony Hawk's Pro Skater 2, like in the video below:
+
+![type:video](videos/psx-texturefilter.mp4)
 
 ### Screen Rotation
 
