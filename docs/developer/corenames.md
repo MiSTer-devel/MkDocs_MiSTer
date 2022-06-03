@@ -141,6 +141,7 @@ This is a list of the core repositories and the core internal names that are use
 | [https://github.com/MiSTer-devel/Gameboy\_MiSTer](https://github.com/MiSTer-devel/Gameboy_MiSTer)                                 | GAMEBOY         |
 | [https://github.com/MiSTer-devel/GBA\_MiSTer](https://github.com/MiSTer-devel/GBA_MiSTer)                                         | GBA             |
 | [https://github.com/MiSTer-devel/Genesis\_MiSTer](https://github.com/MiSTer-devel/Genesis_MiSTer)                                 | Genesis         |
+| [https://github.com/MiSTer-devel/GnW\_MiSTer](https://github.com/MiSTer-devel/GnW_MiSTer)                                         | Game & Watch    |
 | [https://github.com/MiSTer-devel/InputTest\_MiSTer](https://github.com/MiSTer-devel/InputTest_MiSTer)                             | InputTest       |
 | [https://github.com/MiSTer-devel/Interact\_MiSTer](https://github.com/MiSTer-devel/Interact_MiSTer)                               | Interact        |
 | [https://github.com/MiSTer-devel/Intv\_MiSTer](https://github.com/MiSTer-devel/Intv_MiSTer)                                       | Intellivision   |
