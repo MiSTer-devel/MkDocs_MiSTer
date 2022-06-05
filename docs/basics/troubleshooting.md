@@ -33,3 +33,21 @@ If you have no Internet connection to the MiSTer (you can't update the MiSTer, f
 `ip addr flush wlan0`
 
 It may come back again when your local DHCP server's lease is up and new IP addresses are received. In most home networks your dhcp server is your Router/Modem combo unit.
+
+## Fixing a corrupted linux image on the MiSTer
+
+Sometimes MicroSD cards may corrupt data over time, this is normal. Rarely this can result in the linux files on the MiSTer becoming corrupted. If you notice any low-level hardware related problems like the following (but not limited to):
+
+* HDMI video output not working anymore
+* USB controllers and even keyboards not working
+* Internet no longer working anymore
+* Sound not working over HDMI anymore
+* WiFi not working anymore
+
+And many more potential hardware failures... Then it is best to try and redownload the linux files and overwrite them. The best way to do this is by following these instructions:
+
+1. Remove the MicroSD card from your MiSTer and insert it into your PC.
+2. Download the latest sd-installer release archive (usually in .7z format at the bottom of the list) from here --> [https://github.com/MiSTer-devel/SD-Installer-Win64_MiSTer](https://github.com/MiSTer-devel/SD-Installer-Win64_MiSTer){target=_blank} and unzip it on your PC.
+3. Copy and overwrite the contents of the linux folder from the archive you just downloaded over the linux folder on your MiSTer MicroSD.
+
+This is essentially what a "Linux Update" does when you run the update script. This should get everything back to normal defaults. You may need to do the [WiFi setup](wifi.md) steps again if you are using WiFi.
