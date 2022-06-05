@@ -62,7 +62,7 @@ This is a list of many recreated components used in various MiSTer FPGA cores.
 
 ## GPIO
 ### RTC
-See: [Cores supporting RTC](../cores/rtcsupport.md){target=_blank}
+See: [Cores supporting RTC](../cores/features/rtcsupport.md){target=_blank}
 
 ### Solar Sensor
 * [Gameboy Advance](https://github.com/MiSTer-devel/GBA_MiSTer){target=_blank}
