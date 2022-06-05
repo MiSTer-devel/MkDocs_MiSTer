@@ -30,3 +30,11 @@ If you are unable to use wget, this might be because you are missing security ce
 3. Type `wget --no-check-certificate https://curl.haxx.se/ca/cacert.pem` and press enter
 
 Assuming it downloaded correctly, you can _now_ use wget as nature intended.
+
+## WiFi shows two ip addresses and no internet connection
+
+If you have no Internet connection to the MiSTer (you can't update the MiSTer, for instance), and you run ip addr and your wlan0 device shows two IP addresses, that might be the root of your problem. Some WiFi adapters seem to show this behavior, even on regular linux computers, the actual root cause is not fixable. You will not have internet access in many cases if one of the two addresses is an "APIPA" address (e.g. 168.254.xxx.xxx). To temporarily clear this problem run the following command from the terminal:
+
+`ip addr flush wlan0`
+
+It may come back again when your local DHCP server's lease is up and new IP addresses are received. In most home networks your dhcp server is your Router/Modem combo unit.
