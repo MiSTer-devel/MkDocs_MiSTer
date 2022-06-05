@@ -1,8 +1,3 @@
----
-hide:
-  - toc
----
-
 ## The MiSTer FPGA's correct DIP switch configuration on the DE10-Nano
 
 If your keyboard doesn't work or something else low-level hardware related doesn't work, it's possible that one or more of the DIP switches on your DE10-Nano are misconfigured. Make sure the DIPS are configured like the following pictures:  
