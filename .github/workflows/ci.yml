@@ -13,16 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      # - name: Install Ubuntu Dependencies for Material for MkDocs Insiders
-      #   run: |
-      #     sudo apt-get install \
-      #     libcairo2-dev \
-      #     libfreetype6-dev \
-      #     libffi-dev \
-      #     libjpeg-dev \
-      #     libpng-dev \
-      #     libz-dev
-
       - name: Checkout Repository
         uses: actions/checkout@v3
         with:
@@ -47,16 +37,6 @@ jobs:
       - name: Downgrade Markupsafe to 2.0.1
         run: |
           pip install markupsafe==2.0.1
-
-        # For mkdocs insiders build purposes to use later
-        # Pillow \
-        # cairosvg \
-
-      # - name: Install mkdocs-material-insiders
-      #   env:
-      #     GH_TOKEN: ${{ secrets.MKDOCS_MATERIAL_INSIDERS }}
-      #   run: |
-      #     pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
 
       - name: Deploy Documentation
         run: |
