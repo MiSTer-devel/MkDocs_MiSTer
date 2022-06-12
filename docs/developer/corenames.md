@@ -26,6 +26,7 @@ This is a list of the core repositories and the core internal names that are use
 | [https://github.com/MiSTer-devel/Arcade-Asteroids\_MiSTer](https://github.com/MiSTer-devel/Arcade-Asteroids_MiSTer)               | ASTEROID        |
 | [https://github.com/MiSTer-devel/Arcade-Astrocade\_MiSTer](https://github.com/MiSTer-devel/Arcade-Astrocade_MiSTer)               | ASTROCADE       |
 | [https://github.com/MiSTer-devel/Arcade-ATetris\_MiSTer](https://github.com/MiSTer-devel/Arcade-ATetris_MiSTer)                   | ATetris         |
+| [https://github.com/MiSTer-devel/Arcade-Athena\_MiSTer](https://github.com/MiSTer-devel/Arcade-Athena_MiSTer)                     | Athena          |
 | [https://github.com/MiSTer-devel/Arcade-Bagman\_MiSTer](https://github.com/MiSTer-devel/Arcade-Bagman_MiSTer)                     | BAGMAN          |
 | [https://github.com/MiSTer-devel/Arcade-Berzerk\_MiSTer](https://github.com/MiSTer-devel/Arcade-Berzerk_MiSTer)                   | BERZERK         |
 | [https://github.com/MiSTer-devel/Arcade-BlackWidow\_MiSTer](https://github.com/MiSTer-devel/Arcade-BlackWidow_MiSTer)             | BWIDOW          |
