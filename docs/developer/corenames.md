@@ -105,6 +105,7 @@ This is a list of the core repositories and the core internal names that are use
 | [https://github.com/MiSTer-devel/Arcade-TIAMC1\_MiSTer](https://github.com/MiSTer-devel/Arcade-TIAMC1_MiSTer)                     | TIA-MC1         |
 | [https://github.com/MiSTer-devel/Arcade-TimePilot84\_MISTer](https://github.com/MiSTer-devel/Arcade-TimePilot84_MISTer)           | TP84            |
 | [https://github.com/MiSTer-devel/Arcade-TimePilot\_MiSTer](https://github.com/MiSTer-devel/Arcade-TimePilot_MiSTer)               | TIMEPLT         |
+| [https://github.com/MiSTer-devel/Arcade-TNKIII\_MiSTer](https://github.com/MiSTer-devel/Arcade-TNKIII_MiSTer)                     | SNK\_TripleZ80  |
 | [https://github.com/MiSTer-devel/Arcade-TraverseUSA\_MiSTer](https://github.com/MiSTer-devel/Arcade-TraverseUSA_MiSTer)           | TRAVRUSA        |
 | [https://github.com/MiSTer-devel/Arcade-TurkeyShoot\_MiSTer](https://github.com/MiSTer-devel/Arcade-TurkeyShoot_MiSTer)           | TURKEYSHOOT     |
 | [https://github.com/MiSTer-devel/Arcade-Ultratank\_MiSTer](https://github.com/MiSTer-devel/Arcade-Ultratank_MiSTer)               | ULTRATNK        |
@@ -177,6 +178,7 @@ This is a list of the core repositories and the core internal names that are use
 | [https://github.com/MiSTer-devel/SNES\_MiSTer](https://github.com/MiSTer-devel/SNES_MiSTer)                                       | SNES            |
 | [https://github.com/MiSTer-devel/SordM5\_MiSTer](https://github.com/MiSTer-devel/SordM5_MiSTer)                                   | Sord M5         |
 | [https://github.com/MiSTer-devel/Specialist\_MiSTer](https://github.com/MiSTer-devel/Specialist_MiSTer)                           | SPMX            |
+| [https://github.com/MiSTer-devel/SuperVision\_MiSTer](https://github.com/MiSTer-devel/SuperVision_MiSTer)                         | SuperVision     |
 | [https://github.com/MiSTer-devel/SVI328\_MiSTer](https://github.com/MiSTer-devel/SVI328_MiSTer)                                   | SVI328          |
 | [https://github.com/MiSTer-devel/TatungEinstein\_MiSTer](https://github.com/MiSTer-devel/TatungEinstein_MiSTer)                   | TatungEinstein  |
 | [https://github.com/MiSTer-devel/Template\_MiSTer](https://github.com/MiSTer-devel/Template_MiSTer)                               | MyCore          |
