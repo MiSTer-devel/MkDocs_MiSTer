@@ -291,6 +291,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://mister-devel.github.io/MkDocs_MiSTer/developer/test/</loc>
+         <lastmod>2022-06-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://mister-devel.github.io/MkDocs_MiSTer/developer/video_freak/</loc>
          <lastmod>2022-06-12</lastmod>
          <changefreq>daily</changefreq>
