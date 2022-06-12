@@ -26,7 +26,7 @@ Prerequisites:
 
 Make sure you update [python 3](https://www.python.org/downloads/) and [update pip](https://pip.pypa.io/en/stable/installation/). Then, `cd` into the root folder of this repo and install these modules:
 ```
-pip install mkdocs mkdocs-material mkdocs-minify-plugin mkdocs-redirects ffc-mkdocs-video mkdocs-git-revision-date-localized-plugin mkdocs-rss-plugin
+pip install Pygments mkdocs mkdocs-material mkdocs-minify-plugin mkdocs-redirects ffc-mkdocs-video mkdocs-git-revision-date-localized-plugin mkdocs-rss-plugin
 ```
 Deploy to local server from that root folder:
 ```
