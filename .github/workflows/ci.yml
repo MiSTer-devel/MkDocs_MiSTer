@@ -26,6 +26,7 @@ jobs:
       - name: Install Python Dependencies
         run: |
           pip install \
+          Pygments \
           mkdocs \
           mkdocs-material \
           mkdocs-minify-plugin \
