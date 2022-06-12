@@ -8,10 +8,11 @@ Here is a list of the arcade cores that are in the MiSTer Github Repository. (SD
 | Core Name                                                                          | SDRAM    |
 | ---------------------------------------------------------------------------------- | -------- |
 | [Arkanoid](https://github.com/MiSTer-devel/Arcade-Arkanoid_MISTer)                 |          |
-| [AsteroidsDeluxe](https://github.com/MiSTer-devel/Arcade-AsteroidsDeluxe_MiSTer)   | ✔️        |
 | [Asteroids](https://github.com/MiSTer-devel/Arcade-Asteroids_MiSTer)               |          |
+| [AsteroidsDeluxe](https://github.com/MiSTer-devel/Arcade-AsteroidsDeluxe_MiSTer)   |          |
 | [Astrocade](https://github.com/MiSTer-devel/Arcade-Astrocade_MiSTer)               | ✔️        |
 | [ATetris](https://github.com/MiSTer-devel/Arcade-ATetris_MiSTer)                   |          |
+| [Athena](https://github.com/MiSTer-devel/Arcade-Athena_MiSTer)                     |          |
 | [Bagman](https://github.com/MiSTer-devel/Arcade-Bagman_MiSTer)                     |          |
 | [Berzerk](https://github.com/MiSTer-devel/Arcade-Berzerk_MiSTer)                   |          |
 | [BlackWidow](https://github.com/MiSTer-devel/Arcade-BlackWidow_MiSTer)             |          |
