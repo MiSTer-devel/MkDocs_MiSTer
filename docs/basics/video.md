@@ -28,6 +28,8 @@ A bit of a ways down the .ini file there is a `video_mode` option. Above it the 
 
 This tells you that `video_mode=0` will set you to 1280x720 resolution at 60hz. For most people they will probably want to use 1920x1080 resolutiono at 60hz, so my advice would be to change this to `video_mode=8`. You can also use the `ini-settings.sh` script, it will tell you what option selects which resolution, so just select the right one for your display.
 
+There is a detailed explanation of video modes available in [Advanced - Video Modes](../advanced/videomodes.md) thanks to Wickerwaka.
+
 ### vsync_adjust
 Another important option is `vsync_adjust`. Most modern displays work fine at 60hz, but some games run at 60.6 hz (like Donkey Kong for the arcades) which is a "non-standard refresh rate". Therefore, MiSTer has what is called a "framebuffer". The game is still running at 60.6hz but the frames are sent at 60hz. So occasionally there is a little "stutter" on the screen to make up for the frames going too fast and being adjusted. To use a framebuffer adds a minimal amount of lag. Here's a list of the options and what they do.
 
