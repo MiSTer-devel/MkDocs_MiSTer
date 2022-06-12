@@ -70,6 +70,8 @@ This will make it so every core that starts with `dkong` will have the same rule
 vsync_adjust=1
 ```
 
+For a list of the internal core names to use in your exceptions see [Developer Reference - Core Names](../developer/corenames.md) for a complete list.
+
 ## Video Processing Options Tutorial
 Here's a tutorial that you can follow along to get you started using the powerful video processing options on MiSTer FPGA.
 
