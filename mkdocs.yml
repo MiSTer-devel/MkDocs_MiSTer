@@ -127,6 +127,7 @@ nav:
 
   # More advanced configuration options. Anything not basic or not simple essentials, dump here.
   - Advanced Configuration:
+    - Video Modes: advanced/videomodes.md
     - Add-On Boards:
       - RTC Board: advanced/rtc.md
     - Networking:

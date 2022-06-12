@@ -23,6 +23,7 @@ A bit of a ways down the .ini file there is a `video_mode` option. Above it the 
 ;11 - 1024x600@60
 ;12 - 1920x1440@60
 ;13 - 2048x1536@60
+;14 - 2560x1440@60
 ```
 
 This tells you that `video_mode=0` will set you to 1280x720 resolution at 60hz. For most people they will probably want to use 1920x1080 resolutiono at 60hz, so my advice would be to change this to `video_mode=8`. You can also use the `ini-settings.sh` script, it will tell you what option selects which resolution, so just select the right one for your display.
