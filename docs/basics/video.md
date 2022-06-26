@@ -72,7 +72,9 @@ vrr_vesa_framerate=0
 
 By default VRR is turned off for broad compatibility purposes in order to keep the MiSTer easy to use. Set `vrr_mode=` to `1` if you wish to auto-detect what your display supports. This has shown varying results, some displays can't achieve sync with this setting. If your display doesn't sync with `vrr_mode=` set to `1` (auto) then you can force enable it to either Freesync or VESA HDMI Forum VRR with `2` (Freesync) or `3` (VESA VRR) respectively. On some monitors/tv's Freesync is called "AMD Freesync" but it is open source and not exclusive to AMD products. Likewise on some monitors/tv's VESA VRR is called "GSync" even though it is not necessarily exactly the same as the proprietary standard from NVIDIA.
 
-With VRR your results may vary, make sure you can edit your MiSTer.ini easily before you change this setting as it may render display output useless until you revert the settings.
+With VRR your results may vary, make sure you can edit your MiSTer.ini easily before you change this setting as it may render display output useless until you revert the settings. You also may notice that the MiSTer's reported refresh rates and your TV's reported refresh rate isn't matching one another. This is expected, the way these refresh rates are calculated on TV's is proprietary so we have no way of knowing how accurate it is without using expensive testers. 
+
+The point of VRR on MiSTer isn't to get smoother video output, it won't do that, that is what `vsync_adjust` above is for. The point is to reduce the frequency of sync loss on certain VRR-compatible displays when using `vsync_adjust=` `1` or `2`.
 
 ### Core exceptions
 There are also ways to add exceptions. My monitor doesn't play nice with the low lag setting on the Genesis core. So in my MiSter.ini, I added the following override/exception to the **end of the file** for just the MiSTer core:
