@@ -100,6 +100,13 @@ vsync_adjust=1
 
 For a list of the internal core names to use in your exceptions see [Developer Reference - Core Names](../developer/corenames.md) for a complete list.
 
+**NOTE** - Arcade cores's internal core names are **NOT** used for the .ini core exceptions, the `<setname>` value in the MRA file is what is used. e.g. for Arkanoid (Japan).mra:
+
+```xml
+<setname>arkanoidj</setname>
+```
+means `[arkanoidj]` is the ini core exception you would use for this one game.
+
 ## Video Processing Options Tutorial
 Here's a tutorial that you can follow along to get you started using the powerful video processing options on MiSTer FPGA.
 
