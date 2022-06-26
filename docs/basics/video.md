@@ -74,7 +74,7 @@ By default VRR is turned off for broad compatibility purposes in order to keep t
 
 With VRR your results may vary, make sure you can edit your MiSTer.ini easily before you change this setting as it may render display output useless until you revert the settings. You also may notice that the MiSTer's reported refresh rates and your TV's reported refresh rate isn't matching one another. This is expected, the way these refresh rates are calculated on TV's is proprietary so we have no way of knowing how accurate it is without using expensive testers. 
 
-The point of VRR on MiSTer isn't to get smoother video output, it won't do that, that is what `vsync_adjust` above is for. The point is to reduce the frequency of sync loss on certain VRR-compatible displays when using `vsync_adjust=` `1` or `2`.
+It has been reported that VRR enabled might get measurably smoother video output (Ace noticed that the repeated and skipped frames he saw on his display went away with it enabled). There is no guarantee that the same behavior will occur on your display. It was also observed by multiple testers that it did improve sync stability with some non-standard refresh rates when enabled. Your results may vary.
 
 ### Core exceptions
 There are also ways to add exceptions. My monitor doesn't play nice with the low lag setting on the Genesis core. So in my MiSter.ini, I added the following override/exception to the **end of the file** for just the MiSTer core:
