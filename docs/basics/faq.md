@@ -95,9 +95,9 @@ MiSTer can't quite reach 4k. Edit mister.ini on your SD card to change resolutio
 Most MiSTer cores are just as, if not more accurate, as any of the other major FPGA offerings available today. Most people would not able to tell the difference between these cores and the original hardware.
 
 ## Will any MiSTer core ever get save states?
-The Gameboy, GBA, Lynx, and NES core supports save states.
+The Gameboy, GBA, Lynx, Wonderswan, NES, and PSX cores all support savestates.
 
-Cores need to be written from scratch to support them (as was done with the GBA and Lynx cores) or they need to be reworked to support pause before save states can be added (as was done with the Gameboy and NES cores). At this time there are no specific plans to apply this to other cores, but it may happen one day.
+Cores need to be written from scratch to support them (as was done with the GBA and Lynx cores) or they need to be reworked significantly to support pause before save states can be added (as was done with the Gameboy and NES cores). At this time there are no specific plans to apply this to other cores, but it may happen one day. It is not as easy to add savestate functionality to an FPGA-based emulator than it is to add it to a software-based emulator.
 
 ## Why doesn’t this core from another repo work? Why is MiSTer so hard to use?
 MiSTer repositories are self contained and the official updater script only fetches cores from the active official MiSTer repositories. Cores from other repos are not fully integrated so your results may vary. Some developers have their own discord servers or forums and you can seek support there.
