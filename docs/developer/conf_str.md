@@ -51,29 +51,29 @@ Status Bit `[0]` is reserved as a Soft Reset.
 * `d{Index}` - Same as 'D', but disables the option if `menumask[Index]` is NOT set.
 * `DIP` - in arcade cores, this will display the DIP menu from the MRA
 * `F[S][#],{Ext}[,{Text}][,{Address}]` - Load file button. 
-  * `{Ext}` - a concatenated list of 3 character file extensions. For example, `BINGEN` would be `BIN` and `GEN` extensions.
-  * Optional `{Text}` string is the text that is displayed before the extensions like "Load RAM". If `{Text}` is not specified, then default is "Load \*".
-  * Optional `[S]` - core supports save files, load a file, and mount a save for reading or writing
-  * `#` is explicit index (or index is generated from line number if index not given).
-  * Optional `{Address}` - load file directly into DDRAM at this address
-  * ioctl_index from hps_io will be: ioctl_index[5:0] = index(explicit or auto), ioctl_index[7:6] = extension index
+    * `{Ext}` - a concatenated list of 3 character file extensions. For example, `BINGEN` would be `BIN` and `GEN` extensions.
+    * Optional `{Text}` string is the text that is displayed before the extensions like "Load RAM". If `{Text}` is not specified, then default is "Load \*".
+    * Optional `[S]` - core supports save files, load a file, and mount a save for reading or writing
+    * `#` is explicit index (or index is generated from line number if index not given).
+    * Optional `{Address}` - load file directly into DDRAM at this address
+    * ioctl_index from hps_io will be: ioctl_index[5:0] = index(explicit or auto), ioctl_index[7:6] = extension index
 * `FC[#],{Ext}[,{Text}][,{Address}]` - Open file and remember it, useful for remembering an alternative rom, config, or other type of file. See F for how the options work.
 
 * `H{Index}` - Prefix which hides the option if `menumask[Index]` is set.
 * `h{Index}` - Same as `H`, but hides the option if `menumask[Index]` is NOT set.
 * `O{Index1}[{Index2}],{Name},{Options...}` - Option button that allows you to select between various choices.
-  * `{Index1}` and `{Index2}` are values from 0-9 and A-V (like Hex but it extends from A-V instead of A-F). This represents all 31 bits. First and second index are the range of bits that will be set in the status register.
-  * `{Name}` is what is shown to describe the option.
-  * `{Options...}` - a list of comma separated options.
+    * `{Index1}` and `{Index2}` are values from 0-9 and A-V (like Hex but it extends from A-V instead of A-F). This represents all 31 bits. First and second index are the range of bits that will be set in the status register.
+    * `{Name}` is what is shown to describe the option.
+    * `{Options...}` - a list of comma separated options.
 * `P{#},{Title}` - Creates sub-page for options with `{Title}`.
 * `P{#}` - Prefix to place the option into specific `{#}` page. This is added before `O#` but after something like `d#`. (e.g. `"d5P1o2,Vertical Crop,Disabled,216p(5x);",` is correct and `"P1d5o2,Vertical Crop,Disabled,216p(5x);",` is incorrect and the menu options will not work.)
 * `R{Index},{Name}` - Same as T option but closes the OSD after selecting. Convenient for Reset option.
 * `S{Slot},{Ext}[,{Text}]` - Mount SD card button. 
-  * `{Slot}` - a value from 0-3. Up to four images can be mounted at the same time.
-  * `{Ext}` - same as in `F` option.
-  * (Optional) `{Text}` - The text that is displayed before the extensions like "Load RAM". If `{Text}` is not specified, then default is "Mount \*".
+    * `{Slot}` - a value from 0-3. Up to four images can be mounted at the same time.
+    * `{Ext}` - same as in `F` option.
+    * (Optional) `{Text}` - The text that is displayed before the extensions like "Load RAM". If `{Text}` is not specified, then default is "Mount \*".
 * `T{Index},{Name}` - Trigger button. This is a simple button that will pulse HIGH of specified `{Index}` bit in status register. A perfect example of this is for a reset button.
-  * `{Name}` is the text that describes the button function.
+    * `{Name}` is the text that describes the button function.
 * `-[,TEXT]` - empty (or with `TEXT`) line.
 * Lower case options `o`,`t`,`r` equal their upper case variants with adding 32 to status bit indexes.
 
