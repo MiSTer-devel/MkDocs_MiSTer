@@ -1,3 +1,11 @@
+.md-typeset__table {
+  min-width: 100%;
+}
+
+.md-typeset table:not([class]) {
+   display: table;
+}
+
 [data-md-color-scheme="MiSTer-Dark"] {
   --md-default-fg-color: #f8f8f2;
   --md-default-fg-color--light: #f8f8f28a;
