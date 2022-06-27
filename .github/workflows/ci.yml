@@ -25,19 +25,7 @@ jobs:
 
       - name: Install Python Dependencies
         run: |
-          pip install \
-          Pygments \
-          mkdocs \
-          mkdocs-material \
-          mkdocs-minify-plugin \
-          mkdocs-redirects \
-          ffc-mkdocs-video \
-          mkdocs-git-revision-date-localized-plugin \
-          mkdocs-rss-plugin
-      
-      - name: Downgrade Markupsafe to 2.0.1
-        run: |
-          pip install markupsafe==2.0.1
+          pip install requirements.txt
 
       - name: Deploy Documentation
         run: |
