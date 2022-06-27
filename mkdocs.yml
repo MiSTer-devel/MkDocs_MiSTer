@@ -11,8 +11,17 @@ edit_uri: edit/main/docs/
 
 theme:
   palette:
-    # Currently only dark color scheme supported, it is modified in overrides folder
-    - scheme: MiSTer 
+    # Dark Mode
+    - scheme: MiSTer-Dark
+      toggle:
+        icon: material/brightness-4
+        name: Switch to Dark mode
+    # Light Mode
+    - scheme: MiSTer-Light
+      toggle:
+        icon: material/brightness-7
+        name: Switch to Light mode
+
   name: material
   favicon: assets/favicon.ico
   logo: assets/mister_kun_bw.svg
