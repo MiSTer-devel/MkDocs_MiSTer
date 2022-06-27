@@ -12,7 +12,7 @@ edit_uri: edit/main/docs/
 theme:
   palette:
     # Currently only dark color scheme supported, it is modified in overrides folder
-    - scheme: slate 
+    - scheme: MiSTer 
   name: material
   favicon: assets/favicon.ico
   logo: assets/mister_kun_bw.svg
