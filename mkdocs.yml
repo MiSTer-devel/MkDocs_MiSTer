@@ -158,6 +158,7 @@ nav:
       - sys - video_mixer: developer/video_mixer.md
       - sys - arcade_video: developer/arcade_video.md
     - Core Names: developer/corenames.md
+    - MRA Setnames: developer/mrasetnames.md
     - Arcade ROMS and MRA Files: developer/mra.md
     - Debugging (USB Blaster): developer/debugging.md
     - Core Components Where Used: developer/component.md

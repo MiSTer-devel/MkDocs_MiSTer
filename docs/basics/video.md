@@ -105,7 +105,7 @@ For a list of the internal core names to use in your exceptions see [Developer R
 ```xml
 <setname>arkanoidj</setname>
 ```
-means `[arkanoidj]` is the ini core exception you would use for this one game.
+means `[arkanoidj]` is the ini core exception you would use for this one game. For a lest of the setnames please refer to [Developer Reference - MRA Setnames](../developer/mrasetnames.md) for a complete list.
 
 ## Video Processing Options Tutorial
 Here's a tutorial that you can follow along to get you started using the powerful video processing options on MiSTer FPGA.
