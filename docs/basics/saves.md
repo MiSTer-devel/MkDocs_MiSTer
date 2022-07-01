@@ -7,7 +7,7 @@ Many MiSTer cores have the capability to let you save your game, whether it be w
 
 ## Normal game saves
 
-MiSTer will only update your normal game saves when you open the On-Screen Display (OSD). You will need to save inside the game, then open the OSD, and select "Save Backup RAM". In most cores, after you select this, you will need to open the OSD again and you should see a "Saving..." pop up on the screen. If you don't see this, then your game save likely didn't get updated.
+MiSTer will only update your normal game saves when you open the On-Screen Display (OSD). You will need to save inside the game, then open the OSD, and select "Save Backup RAM". In most cores, after you select this, you will need to open the OSD again and you should see a "Saving..." pop up on the screen. If you don't see this, then your game save likely didn't get updated. When a save is happening with the OSD open the yellow light on your Digital IO or Analog IO add-on board will be lit and will turn off when the save is completed.
 
 Opening the OSD to save can be a bit of an adjustment at first, but it is necessary. It is intended behavior as MicroSD cards have a limited number of writes until they begin to fail. Also, since these cores are in FPGA, some cores may write to your MicroSD constantly multiple times a second if there wasn't a *signal* to tell the core to backup the save to a file.
 
