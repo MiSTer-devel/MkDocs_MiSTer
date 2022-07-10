@@ -41,6 +41,22 @@ Here's a reference of the hotkeys you can use with the MiSTer. Hotkeys are usefu
 
 ## Core-specific hotkeys
 
-| Core                | Hotkey      | Description  |
-| ------------------- | ----------- | ------------ |
-| Many Computer Cores | ++win+f12++ | Open the OSD |
+### Some computer cores
+
+Some computer cores make use of the Windows key (++win++) on your keyboard.
+
+| Hotkey      | Description  |
+| ----------- | ------------ |
+| ++win+f12++ | Open the OSD |
+
+### Cores that support savestates
+
+Very few cores support savestates (NES, PSX, GameBoy, GBA, WonderSwan, AtariLynx). There are 4 savestate slots available. In those cores there is a standard savestate button you can assign on your controller (we'll call that SaveStateBtn here):
+
+| Hotkey                                  | Description                                   |
+| --------------------------------------- | --------------------------------------------- |
+| ++alt+f1++ - ++f4++                     | Save the state in slots 1-4 respectively      | 
+| ++f1++ - ++f4++                         | Restore the state from slots 1-4 respectively |
+| Controller: SaveStateBtn + Left/Right   | Switches the savestate slot                   |
+| Controller: SaveStateBtn + Start + Down | Saves to the selected slot                    |
+| Controller: SaveStateBtn + Start + Up   | Restores from the selected slot               |
