@@ -1,5 +1,18 @@
 The [MiSTer.ini configuration file](https://github.com/MiSTer-devel/Main_MiSTer/blob/master/MiSTer.ini){target=_blank} contains global settings and is capable of storing core-specific settings for the MiSTer. We'll go over each of the Global settings here and then show you how to make exceptions for those global settings for each core. Then we'll describe some core-specific settings that can be used for core exceptions only.
 
+## Alternate MiSTer INI files
+
+Before we get started, let's explain how the Alternate MiSTer INI files can work. MiSTer supports up to 4 .ini files in total (`MiSTer.ini` and 3 alternate INI files). You will need to create additional `.ini` files manually to use this feature. By default when your MiSTer boots, it will load `MiSTer.ini` from the root of your MicroSD card (or in `/media/fat/` if you are looking at the MiSTer remotely or from the terminal over the network). You can use hotkeys to switch to the alternate MiSTer INI files on the fly. The naming scheme of the Alternate MiSter INI files is important, see the table below for the naming scheme and the corresponding hotkeys.
+
+| Filename           | Hotkey Combination       |
+| ------------------ | ------------------------ |
+| `MiSTer.ini`       | Controller: Back + Right |
+| `MiSTer_alt_1.ini` | Controller: Back + Left  |
+| `MiSTer_alt_2.ini` | Controller: Back + Up    |
+| `MiSTer_alt_3.ini` | Controller: Back + Down  |
+
+This is useful for things like hybrid cores that can play multiple systems. For example, the Sega Master System core which also supports Game Gear games. You may want to use a `vscale_border` setting just for Game Gear games, so you can set up an alternate MiSTer INI file by copying your current `MiSTer.ini` and renaming it to `MiSTer_alt_1.ini`, editing the `vscale_border` option just in that one will allow you to apply a border to Game Gear games on the fly. Another example is if you want to switch your `video_mode` (screen resolution) on the fly for various reasons, or if you want to switch your `vsync_adjust` option on the fly.
+
 ## General Video Settings 
 
 `vscale_mode` - Changes how the image is scaled to the screen. 0 will fit the whole image to screen, 1 is 1:1 integer scaled, 2 uses 0.5 steps to scale, and 3 uses 0.25 steps to scale.
