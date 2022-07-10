@@ -9,7 +9,7 @@ Here's a reference of the hotkeys you can use with the MiSTer. Hotkeys are usefu
 
 | Hotkey                                    | Description                                                                        |
 | ----------------------------------------- | ---------------------------------------------------------------------------------- |
-| ++f12++                                   | Open or close the Menu/On-Screen Display                                           |
+| ++f12++                                   | Open the Menu/On-Screen Display                                                    |
 | ++alt+f12++                               | Open core select menu                                                              |
 | ++win+prtsc++                             | Take a screenshot (upscaled)                                                       |
 | ++shift+win+prtsc++                       | Take a screenshot (raw output)                                                     |
@@ -22,8 +22,9 @@ Here's a reference of the hotkeys you can use with the MiSTer. Hotkeys are usefu
 
 | Hotkey                     | Description                                                             |
 | -------------------------- | ----------------------------------------------------------------------- |
-| ++f12++                    | close OSD                                                               |
+| ++f12++                    | Close OSD                                                               |
 | ++f11++                    | Pair Bluetooth controller                                               |
+| Hold IO Board OSD Button   | Alternate method to Pair Bluetooth controller
 | Left                       | Go to information screen (shows currently selected INI file and volume) |
 | Right                      | System screen (change core, set filters, gamma, etc...)                 |
 | Controller: Back + R/L/D/U | Select Alternate INI file if defined (Default/Alt1/Alt2/Alt3)           |
@@ -37,7 +38,6 @@ Here's a reference of the hotkeys you can use with the MiSTer. Hotkeys are usefu
 | ++f2++                    | Hide / Show core dates                                                   |
 | ++f9++                    | Open Linux terminal / command line interface, use F12 to go back to menu |
 | Controller: **x** / **y** | Test the rumble motors on your controller                                |
-| Hold down the OSD Button  | Starts the bluetooth pairing screen                                      |
 
 ## Core-specific hotkeys
 
