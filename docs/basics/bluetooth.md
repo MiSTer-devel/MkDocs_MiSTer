@@ -22,3 +22,7 @@ There are many more that work than these few. Please note that some hardware rev
 ## How to pair your Bluetooth controller or Keyboard
 
 This is the easy part. Simply press the ++f11++ key on a keyboard that is already connected to the MiSTer and the pairing prompt will pop up. Alternatively, if you have a Digital IO or Analog IO addon board, then you can press and hold the OSD button to bring up the same bluetooth pairing prompt. Put your controller into pairing mode and wait. The MiSTer should find it momentarily and connect to it. You may need to define your inputs for this new controller, even if it's been plugged directly into the MiSTer before as it is seen as a different controller over bluetooth.
+
+## Bluetooth connection to MiSTer unstable?
+
+If your bluetooth connection to the MiSTer is unstable (e.g. losing the connection to your controller randomly), try getting a usb extension / pigtail adapter to move the adapter away from the USB hub. For some people the USB hub can add interference and can interrupt some adapters (like the ASUS USB-BT500 in some cases). The root cause of this behavior is not currently known.
