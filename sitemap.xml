@@ -91,6 +91,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://mister-devel.github.io/MkDocs_MiSTer/advanced/videoscaling/</loc>
+         <lastmod>2022-07-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://mister-devel.github.io/MkDocs_MiSTer/basics/addons/</loc>
          <lastmod>2022-07-15</lastmod>
          <changefreq>daily</changefreq>
