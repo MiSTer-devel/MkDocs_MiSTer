@@ -22,7 +22,8 @@ If you are unable to use wget, this might be because you are missing security ce
 
 1. Open the linux terminal/command prompt with F9, use `root` as your username and `1` as your password.
 2. Type `cd /etc/ssl/certs` and press enter.
-3. Type `wget --no-check-certificate https://curl.haxx.se/ca/cacert.pem -O cacert.pem` and press enter
+3. Type `cp cacert.pem cacert.pem.bak` to make a backup of your existing cert.
+4. Type `wget --no-check-certificate https://curl.se/ca/cacert.pem -O cacert.pem` and press enter.
 
 Assuming it downloaded correctly, you can _now_ use wget as nature intended.
 
