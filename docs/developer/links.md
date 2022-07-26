@@ -8,7 +8,10 @@ Here's some useful links for experienced and new developers:
 ## MiSTer FPGA Tutorials
 [Alanswx's MiSTer Tutorials series](https://github.com/alanswx/Tutorials_MiSTer){target=_blank}    
 [pram0d's FPGA Core Development Series Part 1](https://pram0d.com/2022/07/26/fpga-core-development-series-part-1/){target=_blank} and [Part 2](https://pram0d.com/2022/07/27/fpga-core-development-series-part-2/){target=_blank}  
-[MiSTer Retro Wolf's Tutorial Series](https://www.youtube.com/channel/UCyyulMfhskfuqLiyJw3GMSg/videos?view=0&sort=da&flow=grid){target=_blank}  
+[MiSTer Retro Wolf's Tutorial Series](https://www.youtube.com/channel/UCyyulMfhskfuqLiyJw3GMSg/videos?view=0&sort=da&flow=grid){target=_blank}
+
+## General FPGA Development Tutorials
+[Beginning FPGA Graphics](https://projectf.io/posts/fpga-graphics/){target=_blank}
 
 ## MiSTer Development Resources
 [MiSTer FPGA Core Template](https://github.com/MiSTer-devel/Template_MiSTer){target=_blank}  
