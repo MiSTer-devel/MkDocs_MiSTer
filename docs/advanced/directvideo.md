@@ -13,7 +13,7 @@ Since autumn of 2019 there is a method for outputting analog video called *Direc
 
 RGBs, RGsB and YPbPr are supported, although YPbPr has less display compatibility in *Direct Video* mode compared to YPbPr from the IO Board.
 
-Note that output resolution and format can vary from core to core. See [the analog video configuration table](crt.md/#configuration-table) for more information.
+Note that output resolution and format can vary from core to core. See [the analog video configuration table](crttable.md) for more information.
 
 ## How to Use
 
@@ -25,7 +25,7 @@ Then you need to add the following line to your [mister.ini](ini.md) file:
 
 This activates the *Direct Video* feature when the system starts. Once it's enabled, it allows your HDMI port to output the raw and unprocessed digital audio/video signal from the loaded core, which is consumed by your DAC. MiSTer will not work with your HD TV or monitor while this mode is enabled, since they require a standard HDMI signal to work, and the zero-lag *Direct Video* signal **IS NOT** standard HDMI.
 
-The resulting analog video signal from your DAC should be compatible with standard CRTs if the core loaded supports standard CRT refresh frequencies (see [analog video compatibility](Analog-video-output-compatibility) for more details). But there is still a bit of additional configuration you need to do depending on which kind of analog video signal you want to use.
+The resulting analog video signal from your DAC should be compatible with standard CRTs if the core loaded supports standard CRT refresh frequencies (see [Core Default Resolutions](nativeres.md) for an incomplete list of the core default resolutions and refresh rates, your results may vary). But there is still a bit of additional configuration you need to do depending on which kind of analog video signal you want to use.
 
 ## Setup for RGB signals
 
@@ -39,7 +39,7 @@ For optimal results, [Retro Access](https://retro-access.com/products/mister-io-
 
 YPbPr - also known as Component Video - is available in *Direct Video* mode but has limited compatibility. This is due to limitations of HDMI-to-VGA DACs, which were not meant to produce signals in the YPbPr color space in the first place, resulting in signals that are slightly out-of-spec. It is possible that your display will accept the *Direct Video* YPbPr signal with no issue, but it may also appear bright pink [due to the way many displays process such signals](https://github.com/MiSTer-devel/Main_MiSTer/issues/210#issuecomment-622672178){target=_blank}. For higher YPbPr compatibility you may prefer RGB mode with an external RGB-to-YPbPr transcoder instead, or YPbPr via the IO Board.
 
-To use YPbPr in *Direct Video* mode, you'll need to enable `composite_sync` and `ypbpr` in your [mister.ini](Configuration-Files) file. 
+To use YPbPr in *Direct Video* mode, you'll need to enable `composite_sync` and `ypbpr` in your [mister.ini](ini.md) file. 
 
 You'll also need to add a sync-on-green circuit on your VGA connection. Sync-on-green circuits can be very simple; you just need a diode (1N4148) and a 330ohm resistor (any values between 270ohm and 390ohm are advised, too high and the sync signal is too weak, too low and it's too strong).
 
@@ -49,7 +49,7 @@ You'll also need to add a sync-on-green circuit on your VGA connection. Sync-on-
 
 ## Doubling frequency
 
-This is a handy way to use those modern monitors that have VGA input but are typically not compatible with 15KHz signals, and require 31KHz analog video. In case you need it, you just have to set `forced_scandoubler=1` in your mister.ini to turn a 15KHz signal into a 31Khz one (See which cores output 15KHz video [here](Analog-video-output-compatibility)).
+This is a handy way to use those modern monitors that have VGA input but are typically not compatible with 15KHz signals, and require 31KHz analog video. In case you need it, you just have to set `forced_scandoubler=1` in your mister.ini to turn a 15KHz signal into a 31Khz one (See which cores output 15KHz video [Core Default Resolutions](nativeres.md)).
 
 
 ## Color Depth
