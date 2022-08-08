@@ -1,7 +1,7 @@
 The MegaCD core is a MiSTer project original core developed by [srg320 (Sergey Dvodnenko)](https://www.patreon.com/srg320/){target=_blank} which aims to simulate the Sega CD / Mega CD add-on for the Sega Genesis. It uses the same [fpgagen](https://github.com/Torlus/fpgagen){target=_blank} logic and many of the improvements to it made in the MiSTer Genesis core, but adds on a significant chunk of logic that handles the powerful CD addon hardware.
 
 ## Features
-* All major features from the [Genesis core](genesis.md)
+* Almost all features from the [Genesis core](genesis.md)
 * CUE/BIN support.
 * CHD support.
 * Automatic region detection.
