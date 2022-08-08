@@ -126,6 +126,7 @@ nav:
       - SNES: cores/highlights/snes.md
       - NES: cores/highlights/nes.md
       - Genesis: cores/highlights/genesis.md
+      - MegaCD: cores/highlights/megacd.md
       - TurboGrafx-16: cores/highlights/tgfx16.md
       #- Atari 7800: cores/highlights/atari7800.md
       - Game Boy 2 Player: cores/highlights/gb2p.md
