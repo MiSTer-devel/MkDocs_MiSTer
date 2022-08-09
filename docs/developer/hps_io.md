@@ -248,6 +248,7 @@ The RTC will pass the core the time from the HPS. If the HPS doesn't have the op
 NOTE: the RTC just sends the time once at the beginning of the core start. After that, the core is responsible for incrementing the seconds, or incrementing the seconds and the other fields of the RTC structure.
 
 in BCD:
+
 * `RTC[7:0]`  - seconds
 * `RTC[15:8]` - minutes
 * `RTC[23:16]` - hour
