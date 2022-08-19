@@ -7,26 +7,26 @@ Here's a table that shows you what options correlate to what video connection, t
 
 ## CRT Configuration Table
 
-| Analog Video Out   | Ini: CSYNC | Ini: YPbPr | Ini: VGA_SOG | Ini: Direct Video | VGA Scaler | SoG Switch | Force Scandoubler |
-| ------------------ | :--------: | :--------: | :----------: | :---------------: | :--------: | :--------: | :---------------: |
-| RGBS Native        |      1     |      0     |      0       |         0         |      0     |   AUTO     |          0        |
-| RGBS Scan-doubled¹ |      1     |      0     |      0       |         0         |      0     |   AUTO     |          1        |
-| RGBS Upscaled²     |      1     |      0     |      0       |         0         |      1     |   AUTO     |          0        |
-| RGBS Direct³       |      1     |      0     |      0       |         1         |      0     |    N/A     |          0        |
-| RGBHV Native       |      0     |      0     |      0       |         0         |      0     |   AUTO     |          0        |
-| RGBHV Scan-doubled |      0     |      0     |      0       |         0         |      0     |   AUTO     |          1        |
-| RGBHV Upscaled²    |      0     |      0     |      0       |         0         |      1     |   AUTO     |          0        |
-| RGBHV Direct³      |      0     |      0     |      0       |         1         |      0     |    N/A     |          0        |
-| RGsB Native        |      1     |      0     |      1       |         0         |      0     |   AUTO     |          0        |
-| RGsB Scan-doubled¹ |      1     |      0     |      1       |         0         |      0     |   AUTO     |          1        |
-| RGsB Upscaled²     |      1     |      0     |      1       |         0         |      1     |   AUTO     |          0        |
-| RGsB Direct³       |      1     |      0     |      1       |         1         |      0     |    N/A     |          0        |
-| YPbPr Native       |      0     |      1     |      1       |         0         |      0     |    OVR     |          0        |
-| YPbPr Scan-doubled |      0     |      1     |      1       |         0         |      0     |    OVR     |          1        |
-| YPbPr Upscaled²    |      0     |      1     |      1       |         0         |      1     |    OVR     |          0        |
-| YPbPr Direct³⁴     |      0     |      1     |      0       |         1         |      0     |    N/A     |          0        |
-| S-Video⁵           |      1     |      0     |      0       |         0         |      0     |    N/A     |          0        |
-| Composite⁵         |      1     |      0     |      0       |         0         |      0     |    N/A     |          0        |
+| Analog Video Out   | composite_sync= | ypbpr= | vga_sog= | direct_video= | vga_scaler= | forced_scandoubler= | SoG Switch |
+| ------------------ | :-------------: | :----: | :------: | :-----------: | :---------: | :-----------------: | :--------: |
+| RGBS Native        | 1               | 0      | 0        | 0             | 0           | 0                   | AUTO       |
+| RGBS Scan-doubled¹ | 1               | 0      | 0        | 0             | 0           | 1                   | AUTO       |
+| RGBS Upscaled²     | 1               | 0      | 0        | 0             | 1           | 0                   | AUTO       |
+| RGBS Direct³       | 1               | 0      | 0        | 1             | 0           | 0                   | N/A        |
+| RGBHV Native       | 0               | 0      | 0        | 0             | 0           | 0                   | AUTO       |
+| RGBHV Scan-doubled | 0               | 0      | 0        | 0             | 0           | 1                   | AUTO       |
+| RGBHV Upscaled²    | 0               | 0      | 0        | 0             | 1           | 0                   | AUTO       |
+| RGBHV Direct³      | 0               | 0      | 0        | 1             | 0           | 0                   | N/A        |
+| RGsB Native        | 1               | 0      | 1        | 0             | 0           | 0                   | AUTO       |
+| RGsB Scan-doubled¹ | 1               | 0      | 1        | 0             | 0           | 1                   | AUTO       |
+| RGsB Upscaled²     | 1               | 0      | 1        | 0             | 1           | 0                   | AUTO       |
+| RGsB Direct³       | 1               | 0      | 1        | 1             | 0           | 0                   | N/A        |
+| YPbPr Native       | 0               | 1      | 1        | 0             | 0           | 0                   | OVR        |
+| YPbPr Scan-doubled | 0               | 1      | 1        | 0             | 0           | 1                   | OVR        |
+| YPbPr Upscaled²    | 0               | 1      | 1        | 0             | 1           | 0                   | OVR        |
+| YPbPr Direct³⁴     | 0               | 1      | 0        | 1             | 0           | 0                   | N/A        |
+| S-Video⁵           | 1               | 0      | 0        | 0             | 0           | 0                   | N/A        |
+| Composite⁵         | 1               | 0      | 0        | 0             | 0           | 0                   | N/A        |
 
 ¹ Scan-doubled = 2x resolution (e.g. 240p > 480p)  
 ² Upscaled resolution = video_mode  
