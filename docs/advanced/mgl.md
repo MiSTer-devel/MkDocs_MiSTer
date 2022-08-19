@@ -54,7 +54,6 @@ Here is a list with MGL values for some cores:
 
 | System | Corename | Delay | Index | Type |
 | :---         |     :---:      |     :---:      |     :---:      |          ---: |
-| Commodore Amiga | Minimig | NA | NA | NA |
 | Arcade | Arcade | -| Use MRA | - |
 | Atari2600 | ATARI7800 | 1 | 0 | f |
 | Atari5200 | ATARI7800 | 1 | 1 | f |
