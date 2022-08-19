@@ -50,4 +50,10 @@ If a core pops up the OSD menu after loading the game or the game doesn't load t
 
 Until a complete **list of cores and their index numbers and file types** is ready you can test different index numbers and the file types listed above or look at the code for each core on Github. 
 
+| System | Corename | Delay | Index |
+| :---         |     :---:      |     :---:      |          ---: |
+| Amiga | Minimig | NA | NA |
+| Arcade | Arcade | Use MRA | Use MRA |
+| Atari2600 | ATARI7800 | 1 | 0 |
+
 E.g. for the **TurboGraphics** core you can take a look at the file **TurboGrafx16.sv** to see the index numbers and file types supported by that core. Find a section that starts with `parameter CONF_STR` and in that section look for the ROM type you are loading/mounting. In this case it will be `"S0,CUECHD,Insert CD;"`. Notice the S0, that is the "s" type with index of 0.
