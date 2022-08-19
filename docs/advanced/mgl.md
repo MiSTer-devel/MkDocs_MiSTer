@@ -56,7 +56,7 @@ Here is a list with MGL values for some cores:
 | :---         |     :---:      |     :---:      |     :---:      |          ---: |
 | Arcade | Arcade | -| Use MRA | - |
 | Atari2600 | ATARI7800 | 1 | 0 | f |
-| Atari5200 | ATARI7800 | 1 | 1 | f |
+| Atari5200 | ATARI5200 | 1 | 1 | f |
 | Atari7800 | ATARI7800 | 1 | 1 | f |
 | Atari Lynx | AtariLynx | 1 | 1 | f |
 | Commodore 64 | C64 | 1 | 1 | f |
