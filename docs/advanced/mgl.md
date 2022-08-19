@@ -53,7 +53,7 @@ If a core pops up the OSD menu after loading the game or the game doesn't load t
 Here is a list with the MGL values for some cores:
 
 | System              | Corename     | Delay | Index   | Type |
-| ------------------- | ------------ | ----- | -----   | ---- |
+| ------------------- | ------------ | :---: | :-----: | :--: |
 | Arcade              | Arcade       | -     | Use MRA | -    |
 | Atari 2600          | ATARI7800    | 1     | 0       | f    |
 | Atari 5200          | ATARI5200    | 1     | 1       | f    |
