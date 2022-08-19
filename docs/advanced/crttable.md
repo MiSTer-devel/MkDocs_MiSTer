@@ -3,7 +3,7 @@ hide:
   - toc
 ---
 
-Here's a table that shows you what options correlate to what video connection, to make it a bit easier to decide what you need in order to connect to your CRT, and what settings are required in the MiSTer.ini to get it to work. There is also a physical switch on the Analog IO board, in this table it is referred to as "SoG Switch". And finally there is a column for "Force Scandoubler" which is a setting in almost every MiSTer core in the OSD, usually under "Audio & Video".
+Here's a table that shows you what options correlate to what video connection, to make it a bit easier to decide what you need in order to connect to your CRT, and what settings are required in the MiSTer.ini to get it to work. There is also a physical switch on the Analog IO board, in this table it is referred to as "SoG Switch".
 
 ## CRT Configuration Table
 
