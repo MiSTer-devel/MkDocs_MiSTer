@@ -50,4 +50,31 @@ If a core pops up the OSD menu after loading the game or the game doesn't load t
 
 Until a complete **list of cores and their index numbers and file types** is ready you can test different index numbers and the file types listed above or look at the code for each core on Github. 
 
+Here is a list with MGL values for some cores:
+
+| System | Corename | Delay | Index | Type |
+| :---         |     :---:      |     :---:      |     :---:      |          ---: |
+| Arcade | Arcade | -| Use MRA | - |
+| Atari2600 | ATARI7800 | 1 | 0 | f |
+| Atari5200 | ATARI5200 | 1 | 1 | f |
+| Atari7800 | ATARI7800 | 1 | 1 | f |
+| Atari Lynx | AtariLynx | 1 | 1 | f |
+| Commodore 64 | C64 | 1 | 1 | f |
+| Famicom Disk System | NES | 2 | 0 | f |
+| Game Boy | GAMEBOY | 2 | 0 | f |
+| Game Boy Color | GAMEBOY | 2 | 0 | f |
+| Game Boy Advanced | GBA | 2 | 0 | f |
+| Genesis | Genesis | 1 | 0 | f |
+| Game Gear | SMS | 1 | 2 | f |
+| Mega CD | MegaCD | 1 | 0 | s |
+| NeoGeo | NEOGEO | 1 | 1 | f |
+| NES | NES | 2 | 0 | f |
+| Sega 32X | S32X | 1 | 0 | f |
+| Master System | SMS | 1 | 1 | f |
+| Super NES | SNES | 2 | 0 | f |
+| TurboGrafx 16 | TurboGrafx16 | 1 | 0 | f |
+| TurboGrafx 16 CD | TurboGrafx16 | 1 | 0 | s |
+| Playstation | PSX | 1 | 1 | s |
+
+
 E.g. for the **TurboGraphics** core you can take a look at the file **TurboGrafx16.sv** to see the index numbers and file types supported by that core. Find a section that starts with `parameter CONF_STR` and in that section look for the ROM type you are loading/mounting. In this case it will be `"S0,CUECHD,Insert CD;"`. Notice the S0, that is the "s" type with index of 0.
