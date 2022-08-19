@@ -1,8 +1,3 @@
----
-hide:
-  - toc
----
-
 MGL files are used as a custom method to load ROMs directly from the MiSTer FPGA's Menu core.
 
 ## MGL files run games automatically
