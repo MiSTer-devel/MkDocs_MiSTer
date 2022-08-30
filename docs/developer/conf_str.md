@@ -95,6 +95,7 @@ These must be placed at the bottom of the configuration string:
 * the only difference in the two mappings is the "philosophy" of how they are expected to work
 
 The difference is one of convention when mapping buttons:
+
 * jn is name-base mapping 
 * jp is position-based mapping
 
@@ -107,12 +108,14 @@ Consider how the internal gamepad is defined on MiSTer:
 3. That is: button 1=A, button 2=B, and so on.
 
 With "jn" mapping:
+
 * the convention is to map button A of the core to the internal "SNES A" button.
 * If the core has no button "A", this would be the first button. 
 * Second button would be "SNES B", and so forth.
 * This is because the name or order of the button matches the original definition (ABYXLR etc)
 
 With "jp" mapping:
+
 * the convention is to consider the physical location of each button
 * For a Genesis 3-button controller that has A, B, C as buttons, mapping would be "SNES Y, SNES B, SNES A"
 * This is because YBA on a SNES gamepad are the lower 3 buttons of the controller
