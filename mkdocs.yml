@@ -160,9 +160,10 @@ nav:
 
   # Developer reference. This is going to mostly mirror what is up on Github wiki already.
   - Developer Reference:
+    - Compiling for MiSTer: developer/mistercompile.md
     - Porting Cores: developer/porting.md
     - Core Configuration String: developer/conf_str.md
-    - Top-level of Cores: 
+    - Top-level of Cores:
       - overview of emu module: developer/emu.md
       - sys - hps_io: developer/hps_io.md
       - sys - video_freak: developer/video_freak.md
