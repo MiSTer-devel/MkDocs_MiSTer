@@ -23,7 +23,7 @@ theme:
         name: Switch to Light mode
 
   name: material
-  favicon: assets/favicon.ico
+  favicon: assets/8-bit_mister_kun_fullcolor.svg
   logo: assets/mister_kun_bw.svg
   font:
     text: Roboto
