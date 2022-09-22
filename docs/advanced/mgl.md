@@ -80,7 +80,7 @@ Some MGL arguments for common cores:
 | TurboGrafx-16       | _Console/TurboGrafx16 | 1     | 0       | f    |
 | TurboGrafx-16 CD    | _Console/TurboGrafx16 | 1     | 0       | s    |
 
-A more comprehensive list of MGL argments can be found [here](https://github.com/wizzomafizzo/mrext/blob/main/docs/systems.md).
+A more comprehensive list of MGL argments documented by Wizzo can be found [here](https://github.com/wizzomafizzo/mrext/blob/main/docs/systems.md){target=_blank}.
 
 ## Arcade Cores
 
