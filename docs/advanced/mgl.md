@@ -50,21 +50,21 @@ Here is a list with the MGL values for some cores:
 | System              | Corename     | Delay | Index   | Type |
 | ------------------- | ------------ | :---: | :-----: | :--: |
 | Arcade              | Arcade       | -     | Use MRA | -    |
-| Atari 2600          | ATARI7800    | 1     | 0       | f    |
-| Atari 5200          | ATARI5200    | 1     | 1       | f    |
+| Atari 2600          | ATARI7800    | 1     | 1       | f    |
+| Atari 5200          | ATARI5200    | 1     | 0       | s    |
 | Atari 7800          | ATARI7800    | 1     | 1       | f    |
-| Atari Lynx          | AtariLynx    | 1     | 1       | f    |
+| Atari Lynx          | AtariLynx    | 1     | 0       | f    |
 | Commodore 64        | C64          | 1     | 1       | f    |
-| Famicom Disk System | NES          | 2     | 0       | f    |
-| Game Boy            | GAMEBOY      | 2     | 0       | f    |
-| Game Boy Color      | GAMEBOY      | 2     | 0       | f    |
-| Game Boy Advance    | GBA          | 2     | 0       | f    |
+| Famicom Disk System | NES          | 1     | 0       | f    |
+| Game Boy            | GAMEBOY      | 1     | 1       | f    |
+| Game Boy Color      | GAMEBOY      | 1     | 1       | f    |
+| Game Boy Advance    | GBA          | 1     | 0       | f    |
 | Genesis             | Genesis      | 1     | 0       | f    |
 | Game Gear           | SMS          | 1     | 2       | f    |
 | Mega CD             | MegaCD       | 1     | 0       | s    |
 | Neo Geo             | NEOGEO       | 1     | 1       | f    |
-| NES                 | NES          | 2     | 0       | f    |
-| Sega 32X            | S32X         | 1     | 0       | f    |
+| NES                 | NES          | 1     | 0       | f    |
+| Sega 32X            | S32X         | 1     | 1       | f    |
 | Master System       | SMS          | 1     | 1       | f    |
 | Super NES           | SNES         | 2     | 0       | f    |
 | TurboGrafx 16       | TurboGrafx16 | 1     | 0       | f    |
