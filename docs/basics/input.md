@@ -43,18 +43,19 @@ SNAC adaptors allow you to connect original hardware controllers and peripherals
 ## Using a Lightgun
 
 In addtion to SNAC support for using lightguns with their original system's core, MiSTer also supports several USB lightguns. Examples include GUN4IR, Guncon 2, Guncon 3 and the Wiimote.  
-These can be used with various cores, ie they can act as a zapper in the NES core, a Guncon 1 in the PSX core etc.<BR><BR>
+These can be used with various cores, ie they can act as a zapper in the NES core, a Guncon 1 in the PSX core etc.
+
 Additional information on Guncon 2 support can be found here https://github.com/NolanNicholson/GunCon2-MiSTer
 
 
 ### Calibration
-The lightGun needs to be calibrated in each core:
+The lightgun needs to be calibrated in each core:
 * Press the F10 key while the OSD is open to show the calibration screen, follow the prompt to shoot each edge of the image
 * It is recommended to load a game and calibrate to the edges of the image, rather than the entire (widescreen) TV
   
 ### Joy1/Joy2 assignment
 * Some games require the lightgun to be set as Joy2 (Player 2) to function correctly. Other games work set at Joy1 (Player 1)
-* If setting to ‘Joy2’ then then Lightgun must be assigned as Player 2 in the core. See 'Joystick player assignment' section, above
+* If setting to ‘Joy2’ then then lightgun must be assigned as Player 2 in the core. See [Joystick player assignment](#joystick-player-assignment)
 
 
 ### PSX Lightgun Mapping
