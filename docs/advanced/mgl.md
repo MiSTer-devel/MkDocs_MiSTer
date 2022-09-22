@@ -61,7 +61,6 @@ Some MGL arguments for common cores:
 
 | System              | RBF                   | Delay | Index   | Type |
 | ------------------- | --------------------- | :---: | :-----: | :--: |
-| Arcade              | Arcade                | -     | Use MRA | -    |
 | Atari 2600/7800     | _Console/Atari7800    | 1     | 1       | f    |
 | Atari 5200          | _Console/Atari5200    | 1     | 0       | s    |
 | Atari Lynx          | _Console/AtariLynx    | 1     | 0       | f    |
@@ -82,6 +81,20 @@ Some MGL arguments for common cores:
 | TurboGrafx-16 CD    | _Console/TurboGrafx16 | 1     | 0       | s    |
 
 A more comprehensive list of MGL argments can be found [here](https://github.com/wizzomafizzo/mrext/blob/main/docs/systems.md).
+
+## Arcade Cores
+
+Arcade cores cannot be launched using MGL files. If you want to make a shortcut to an arcade core elsewhere in the menu, you'll instead have to *symlink* it there.
+
+For example, either through SSH or the console (press `F9` from the menu):
+```
+# ln -s /media/fat/_Arcade/dummy.mra /media/fat
+# ln -s /media/fat/_Arcade/cores /media/fat
+```
+
+This would make a shortcut to an arcade core in the root of the MiSTer menu. It can also be done with menu subfolders.
+
+Take note of the second line, symlinking the `cores` folder. You have to do this once for each folder you want to symlink MRA files into.
 
 ## Finding MGL Arguments
 
