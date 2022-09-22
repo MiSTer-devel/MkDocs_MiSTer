@@ -77,9 +77,9 @@ The lightGun needs to be calibrated in each core:
 
 ##### OSD Settings
 * 'Input Options' menu
-    * Super Scope: Joy1 or Joy2
+    * Super Scope: Joy2
     * Super Scope Btn: Joy
-    * Gun Type: Set based on game
+    * Gun Type: (Set based on game)
 
 ### NES Lightgun Mapping
 
@@ -102,7 +102,7 @@ The lightGun needs to be calibrated in each core:
 
 ##### OSD Settings
 * 'Input' menu
-    * Gun Control: Joy1 or Joy2
+    * Gun Control: Joy2
     * Gun Fire: Joy
 
 ### Master System Lightgun Mapping
