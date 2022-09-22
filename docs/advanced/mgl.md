@@ -80,11 +80,11 @@ Some MGL arguments for common cores:
 | TurboGrafx-16       | _Console/TurboGrafx16 | 1     | 0       | f    |
 | TurboGrafx-16 CD    | _Console/TurboGrafx16 | 1     | 0       | s    |
 
-A more comprehensive list of MGL argments documented by Wizzo can be found [here](https://github.com/wizzomafizzo/mrext/blob/main/docs/systems.md){target=_blank}.
+A more comprehensive list of MGL arguments documented by Wizzo can be found [here](https://github.com/wizzomafizzo/mrext/blob/main/docs/systems.md){target=_blank}.
 
 ## Arcade Cores
 
-Arcade cores cannot be launched using MGL files. If you want to make a shortcut to an arcade core elsewhere in the menu, you'll instead have to *symlink* it there.
+Arcade cores cannot be launched using MGL files. If you want to make a shortcut to an arcade core elsewhere in the menu, you'll instead have to *symlink* (symbolic link) it there.
 
 For example, either through SSH or the console (press `F9` from the menu):
 ```
@@ -94,7 +94,7 @@ For example, either through SSH or the console (press `F9` from the menu):
 
 This would make a shortcut to an arcade core in the root of the MiSTer menu. It can also be done with menu subfolders.
 
-Take note of the second line, symlinking the `cores` folder. You have to do this once for each folder you want to symlink MRA files into.
+Take note of the second line, symlink'ing the `cores` folder. You have to do this once for each folder you want to symlink MRA files into.
 
 ## Finding MGL Arguments
 
