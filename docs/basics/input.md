@@ -45,7 +45,7 @@ SNAC adaptors allow you to connect original hardware controllers and peripherals
 In addtion to SNAC support for using lightguns with their original system's core, MiSTer also supports several USB lightguns. Examples include GUN4IR, Guncon 2, Guncon 3 and the Wiimote.  
 These can be used with various cores, ie they can act as a zapper in the NES core, a Guncon 1 in the PSX core etc.
 
-Additional information on Guncon 2 support can be found here https://github.com/NolanNicholson/GunCon2-MiSTer
+Additional information on Guncon 2 support can be found here [https://github.com/NolanNicholson/GunCon2-MiSTer](https://github.com/NolanNicholson/GunCon2-MiSTer){target=_blank}
 
 
 ### Calibration
