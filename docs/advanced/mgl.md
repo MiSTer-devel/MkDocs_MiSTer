@@ -20,7 +20,7 @@ Example MGL files:
 ```xml
 <mistergamedescription>
 	<rbf>_console/psx</rbf>
-	<file delay="1" type="s" index="0" path="dummy.chd"/>
+	<file delay="1" type="s" index="1" path="dummy.chd"/>
 </mistergamedescription>
 ```
 
@@ -62,18 +62,18 @@ Some MGL arguments for common cores:
 | System              | RBF                   | Delay | Index   | Type |
 | ------------------- | --------------------- | :---: | :-----: | :--: |
 | Atari 2600/7800     | _Console/Atari7800    | 1     | 1       | f    |
-| Atari 5200          | _Console/Atari5200    | 1     | 0       | s    |
-| Atari Lynx          | _Console/AtariLynx    | 1     | 0       | f    |
+| Atari 5200          | _Console/Atari5200    | 1     | 1       | s    |
+| Atari Lynx          | _Console/AtariLynx    | 1     | 1       | f    |
 | Commodore 64        | _Computer/C64         | 1     | 1       | f    |
-| Famicom Disk System | _Console/NES          | 1     | 0       | f    |
-| Game Boy (Color)    | _Console/Gameboy      | 1     | 1       | f    |
-| Game Boy Advance    | _Console/GBA          | 1     | 0       | f    |
+| Famicom Disk System | _Console/NES          | 2     | 1       | f    |
+| Game Boy (Color)    | _Console/Gameboy      | 2     | 1       | f    |
+| Game Boy Advance    | _Console/GBA          | 2     | 1       | f    |
 | Game Gear           | _Console/SMS          | 1     | 2       | f    |
-| Genesis             | _Console/Genesis      | 1     | 0       | f    |
+| Genesis             | _Console/Genesis      | 1     | 1       | f    |
 | Master System       | _Console/SMS          | 1     | 1       | f    |
 | Sega CD             | _Console/MegaCD       | 1     | 0       | s    |
 | Neo Geo             | _Console/NeoGeo       | 1     | 1       | f    |
-| NES                 | _Console/NES          | 1     | 0       | f    |
+| NES                 | _Console/NES          | 2     | 1       | f    |
 | Playstation         | _Console/PSX          | 1     | 1       | s    |
 | Sega 32X            | _Console/S32X         | 1     | 1       | f    |
 | SNES                | _Console/SNES         | 2     | 0       | f    |
