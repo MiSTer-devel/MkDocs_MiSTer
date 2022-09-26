@@ -42,7 +42,7 @@ SNAC adaptors allow you to connect original hardware controllers and peripherals
 
 ## Using a Lightgun
 
-In addtion to SNAC support for using lightguns with their original system's core, MiSTer also supports several USB lightguns. Examples include GUN4IR, Guncon 2, Guncon 3 and the Wiimote.  
+In addtion to SNAC support for using lightguns with their original system's core, MiSTer also supports several USB/Bluetooth lightguns. Examples include GUN4IR, Guncon 2, Guncon 3 and the Wiimote.  
 These can be used with various cores, ie they can act as a zapper in the NES core, a Guncon 1 in the PSX core etc.
 
 Additional information on Guncon 2 support can be found here [https://github.com/NolanNicholson/GunCon2-MiSTer](https://github.com/NolanNicholson/GunCon2-MiSTer){target=_blank}
@@ -117,6 +117,21 @@ The lightgun needs to be calibrated in each core:
     * Gun Control: Joy1
     * Gun Fire: Joy
     * Gun Port: Port 1
+
+### Atari 7800 Lightgun Mapping
+
+| XG-1 light gun | Mapping |
+| -------------- | ------- |
+| Trigger        | Fire 1  |
+
+##### OSD Settings
+* 'Peripherals' menu
+    * Port1 Input: Lightgun
+    * Gun Control: Joy1
+    * Gun Fire: Joy
+ * 'Audio & Video' menu  
+    * Show Overscan: Yes
+
 
 ## Using A Mouse
 
