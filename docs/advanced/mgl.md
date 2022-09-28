@@ -2,7 +2,7 @@ MGL files are used as a custom method to load games directly from the MiSTer FPG
 
 They can be placed in the root of the SD card to show up in the top of the menu, or in a menu folder. A menu folder is a regular folder with an underscore (`_`) in front that will display in the menu. You can create your own menu folders.
 
-Not all cores support MGL files, though all the most popular cores do. Console support is good, but computer cores generally don't work well with them.
+Not all cores support MGL files, though all the most popular cores do. Console support is good, but computer cores generally don't work well with them, unless they have some mechanism to auto-boot a loaded game.
 
 ## MGL Format
 
@@ -26,8 +26,9 @@ Example MGL files:
 
 ```xml
 <mistergamedescription>
-	<rbf>_Computer/C64</rbf>
-	<file delay="1" type="f" index="1" path="some/other.zip/path/dummy.prg"/>
+	<rbf>_Computer/ao486</rbf>
+	<file delay="1" type="s" index="2" path="dummy.vhd"/>
+	<file delay="1" type="s" index="4" path="cds/dummy.iso"/>
 </mistergamedescription>
 ```
 
@@ -35,19 +36,24 @@ Example MGL files:
 <mistergamedescription>
 	<rbf>_Console/SMS</rbf>
 	<setname>GameGear</setname>
-	<file delay="1" type="f" index="2" path="dummy.gg"/>
+	<file delay="1" type="f" index="2" path="some/other.zip/path/dummy.gg"/>
 </mistergamedescription>
 ```
 
 * `rbf`: Relative path to the core's RBF file from the SD root, excluding its file extension and timestamp.
 * `setname`: Sets a core's name to this value, changing its games folder and config file.
 * `file`: The file to be loaded into the core and its launch arguments.
-  * `delay` Amount of seconds to wait before load/mount.
-  * `type` Either `f` for load file to memory or `s` for mount file.
-  * `index` Pointer to slot where file is loaded in core.
-  * `path` Path to game file relative to the core's games folder.
+    * `delay`: Amount of seconds to wait before load/mount.
+    * `type`: Either `f` for load file to memory or `s` for mount file.
+    * `index`: Pointer to slot where file is loaded in core.
+    * `path`: Path to game file relative to the core's games folder.
+* `reset`: Triggers a reset on the core. You probably don't need to use this.
+    * `delay`: Amount of seconds to wait before reset.
+	* `hold`
 
 The `rbf` and `file` tags must be present.
+
+The `file` tag can be used more than once in an MGL. Useful for cores that have multiple file slots.
 
 The `setname` tag is optional. It will make a core temporarily point to a different games folder and config file. Useful for cores which play multiple systems, or often need to toggle between different configurations.
 
@@ -100,6 +106,8 @@ Take note of the second line, symlink'ing the `cores` folder. You have to do thi
 
 If the core you are looking for isn't in these lists, you can either test out the combinations yourself, or you can look at the code on GitHub for the core to figure out the values directly.
 
-For example, to get the values for the **TurboGrafx-16**, core you can take a look at the file [TurboGrafx16.sv](https://github.com/MiSTer-devel/TurboGrafx16_MiSTer/blob/master/TurboGrafx16.sv){target=_blank} on GitHub to find the index numbers and file types supported by that core. First find the section that starts with `parameter CONF_STR` and in that section look for the file type you are launching. In this case it will be `"S0,CUECHD,Insert CD;"`. Notice the S0, that is the "s" type with index of 0.
+For example, to get the values for the **TurboGrafx-16** core, you can take a look at the file [TurboGrafx16.sv](https://github.com/MiSTer-devel/TurboGrafx16_MiSTer/blob/master/TurboGrafx16.sv){target=_blank} on GitHub to find the index numbers and file types supported by that core.
+
+First find the section that starts with `parameter CONF_STR` and in that section look for the file type you are launching. In this case it will be `"S0,CUECHD,Insert CD;"`. Notice the S0, that is the "s" type with index of 0.
 
 See the [Core Configuration String](../developer/conf_str.md) page for detailed information on this format.
