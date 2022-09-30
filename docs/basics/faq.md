@@ -13,6 +13,14 @@ Zero latency is possible with certain equipment and tweaks. [See here](../advanc
 ## I've seen in the news, "Update Framework".  What does that mean?
 The 'framework' is all the common elements between cores that handle things like IO, video scaling, etc.
 
+## Can I customize the update/downloader script to ignore certain things?
+
+Yes, you would just need to add some filters to `/media/fat/downloader.ini`. [Read this guide](https://github.com/MiSTer-devel/Downloader_MiSTer/blob/main/docs/download-filters.md){target=_blank} for more information.
+
+## Can I use the downloader script to download more cores than it currently does?
+
+Yes, there is support for custom databases in the downloader script. [Read this guide](https://github.com/MiSTer-devel/Downloader_MiSTer/blob/main/docs/custom-databases.md){target=_blank} for more information.
+
 ## Can I use original console controllers?
 Yes, there are many USB adapters for original console controllers. They can also be connected directly via the IO board as detailed below.
 
