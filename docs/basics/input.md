@@ -40,6 +40,99 @@ Generally speaking, any normal USB HID compatible input device should work. Keyb
 
 SNAC adaptors allow you to connect original hardware controllers and peripherals to the MiSTer cores. The cores which support SNAC connections have been specially built to have serial connections exposed to specific pins on the DE10-Nano. That means when you pull the trigger on the NES Zapper while aiming at your CRT, the signals travel almost instantly, similar to how they would on original hardware.
 
+## Using a Lightgun
+
+In addition to SNAC support for using lightguns with their original system's core, MiSTer also supports several USB/Bluetooth lightguns. Examples include GUN4IR, Guncon 2, Guncon 3 and the Wiimote.  
+These can be used with various cores, ie they can act as a zapper in the NES core, a Guncon 1 in the PSX core etc.
+
+Additional information on Guncon 2 support can be found here [https://github.com/NolanNicholson/GunCon2-MiSTer](https://github.com/NolanNicholson/GunCon2-MiSTer){target=_blank}
+
+
+### Calibration
+The lightgun needs to be calibrated in each core:
+* Press the ++F10++ key while the OSD is open to show the calibration screen, follow the prompt to shoot each edge of the image
+* It is recommended to load a game and calibrate to the edges of the image, rather than the entire (widescreen) TV
+  
+### Joy1/Joy2 assignment
+* This setting needs to match the player number your lightgun is currently assigned within the core. See [Joystick player assignment](#joystick-player-assignment)
+* Some systems had their lightguns connect to player 2, eg NES, SNES, Genesis. Many games from these systems will also work with the lightgun assigned as player 1 (Joy1), however some require a normal controller as player 1 and the lightgun as player 2 (Joy2). 
+
+
+### PSX Lightgun Mapping
+| Guncon    | Justifier | Mapping |
+| --------- | --------- | ------- |
+| Trigger   | Trigger   | O       |
+| A (Left)  | Start     | Start   |
+| B (Right) |           | X       |
+
+##### OSD Settings
+* Pad1: GunCon or Justifier (set based on Game)
+
+### SNES Lightgun Mapping
+
+| SuperScope | Justifier | Mapping       |
+| ---------- | --------- | ------------- |
+| Fire       | Trigger   | A (SS Fire)   |
+| Cursor     |           | B (SS Cursor) |
+| Pause      | Start     | Y (SS Pause)  |
+
+##### OSD Settings
+* 'Input Options' menu
+    * Super Scope: Joy2
+    * Super Scope Btn: Joy
+    * Gun Type: (Set based on game)
+
+### NES Lightgun Mapping
+
+| Zapper  | Mapping         |
+| ------- | --------------- |
+| Trigger | Zapper/Vaus BTN |
+
+##### OSD Settings
+* 'Input Options' menu
+    * Periphery: Zapper (Joy2)
+    * Zapper Trigger: Joystick
+
+### Genesis / Sega CD Lightgun Mapping
+| Menacer      | Justifier | Mapping |
+| ------------ | --------- | ------- |
+| Trigger      | Trigger   | A       |
+| Top Button   |           | B       |
+| Lower Button |           | C       |
+| Pause        | Start     | Start   |
+
+##### OSD Settings
+* 'Input' menu
+    * Gun Control: Joy2
+    * Gun Fire: Joy
+
+### Master System Lightgun Mapping
+
+| Phaser  | Mapping |
+| ------- | ------- |
+| Trigger | Fire 1  |
+
+##### OSD Settings
+* 'Input' menu
+    * Gun Control: Joy1
+    * Gun Fire: Joy
+    * Gun Port: Port 1
+
+### Atari 7800 Lightgun Mapping
+
+| XG-1 light gun | Mapping |
+| -------------- | ------- |
+| Trigger        | Fire 1  |
+
+##### OSD Settings
+* 'Peripherals' menu
+    * Port1 Input: Lightgun
+    * Gun Control: Joy1
+    * Gun Fire: Joy
+ * 'Audio & Video' menu  
+    * Show Overscan: Yes
+
+
 ## Using A Mouse
 
 You can also use a mouse for various purposes on the MiSTer. The main purpose for mouse support is for use with some computer cores which had mice.
