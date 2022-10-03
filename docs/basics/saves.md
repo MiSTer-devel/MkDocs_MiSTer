@@ -1,8 +1,3 @@
----
-hide:
-  - toc
----
-
 Many MiSTer cores have the capability to let you save your game, whether it be with traditional simulation of the original save features from the hardware, or with savestates. Most cores don't have savestates but a steadily increasing number do. Here's some basic information regarding how saves work on the MiSTer.
 
 ## Normal game saves
