@@ -1,8 +1,3 @@
----
-hide:
-  - toc
----
-
 MiSTer supports Cue/Bin and [CHD](https://github.com/rtissera/libchdr){target=_blank} formats. The way the MiSTer handles CD-based ROMs and images is fairly simple. There are some specifics that need to be described about how the MiSTer handles CDs.
 
 ## Will MiSTer ever support USB CD Drives?
