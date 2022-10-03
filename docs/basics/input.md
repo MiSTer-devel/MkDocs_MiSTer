@@ -45,7 +45,7 @@ Additional information on Guncon 2 support can be found here [https://github.com
 ### Calibration
 The lightgun needs to be calibrated in each core:
 
-* Press the ++F10++ key while the OSD is open to show the calibration screen, follow the prompt to shoot each edge of the image
+* Press the ++f10++ key while the OSD is open to show the calibration screen, follow the prompt to shoot each edge of the image
 * It is recommended to load a game and calibrate to the edges of the image, rather than the entire (widescreen) TV
   
 ### Joy1/Joy2 assignment
