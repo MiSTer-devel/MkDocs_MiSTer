@@ -1,8 +1,3 @@
----
-hide:
-  - toc
----
-
 MiSTer provides an on-screen display (OSD) that can be toggled on and off by pressing F12 on your keyboard (or OSD button). For each core that is loaded, this menu can be configured to add specific options for that core.
 
 The top-level module for the cores is `emu`. This does **NOT** mean `emu` is the top-level module for the project, but rather it is the top-level module for our purposes. The `emu` module is typically found in the SystemVerilog file (`*.sv` extension) with the same name as the project. As an example, the Arcade-Galaga project has it's top-level module at `Arcade-Galaga.sv`.
