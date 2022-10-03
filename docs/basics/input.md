@@ -38,7 +38,7 @@ SNAC adaptors allow you to connect original hardware controllers and peripherals
 ## Using a Lightgun
 
 In addition to SNAC support for using lightguns with their original system's core, MiSTer also supports several USB/Bluetooth lightguns. Examples include GUN4IR, Guncon 2, Guncon 3 and the Wiimote.  
-These can be used with various cores, ie they can act as a zapper in the NES core, a Guncon 1 in the PSX core etc.
+These can be used with various cores, ie they can act as a Zapper in the NES core, a Guncon 1 in the PSX core etc.
 
 Additional information on Guncon 2 support can be found here [https://github.com/NolanNicholson/GunCon2-MiSTer](https://github.com/NolanNicholson/GunCon2-MiSTer){target=_blank}
 
@@ -60,7 +60,7 @@ The lightgun needs to be calibrated in each core:
 | A (Left)  | Start     | Start   |
 | B (Right) |           | X       |
 
-##### OSD Settings
+**OSD Settings**
 * Pad1: GunCon or Justifier (set based on Game)
 
 ### SNES Lightgun Mapping
@@ -71,7 +71,7 @@ The lightgun needs to be calibrated in each core:
 | Cursor     |           | B (SS Cursor) |
 | Pause      | Start     | Y (SS Pause)  |
 
-##### OSD Settings
+**OSD Settings**
 * 'Input Options' menu
     * Super Scope: Joy2
     * Super Scope Btn: Joy
@@ -83,7 +83,7 @@ The lightgun needs to be calibrated in each core:
 | ------- | --------------- |
 | Trigger | Zapper/Vaus BTN |
 
-##### OSD Settings
+**OSD Settings**
 * 'Input Options' menu
     * Periphery: Zapper (Joy2)
     * Zapper Trigger: Joystick
@@ -96,7 +96,7 @@ The lightgun needs to be calibrated in each core:
 | Lower Button |           | C       |
 | Pause        | Start     | Start   |
 
-##### OSD Settings
+**OSD Settings**
 * 'Input' menu
     * Gun Control: Joy2
     * Gun Fire: Joy
@@ -107,7 +107,7 @@ The lightgun needs to be calibrated in each core:
 | ------- | ------- |
 | Trigger | Fire 1  |
 
-##### OSD Settings
+**OSD Settings**
 * 'Input' menu
     * Gun Control: Joy1
     * Gun Fire: Joy
@@ -119,7 +119,7 @@ The lightgun needs to be calibrated in each core:
 | -------------- | ------- |
 | Trigger        | Fire 1  |
 
-##### OSD Settings
+**OSD Settings**
 * 'Peripherals' menu
     * Port1 Input: Lightgun
     * Gun Control: Joy1
