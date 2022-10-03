@@ -1,8 +1,3 @@
----
-hide:
-  - toc
----
-
 In MiSTer terminology, a "core" is the current system that the FPGA is configured to simulate. It is configured as the "Menu" core when you power on the MiSTer for the first time. Then, if you use the OSD and go to `_Console` and then select `NES`, it will configure the FPGA to be the "NES" core.
 
 The term "core" has been used by Hardware Description Language (HDL) developers in a way which refers to the things that are programmed onto the FPGA. So for instance, the MiSTer FPGA framework uses Intel's "Altera PLL Core". This is a chunk of logic that is portable which allows developers to hook up to the clock on the chip. There are HDMI cores, ethernet cores, serial data cores, and so on...
