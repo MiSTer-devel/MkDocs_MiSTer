@@ -61,6 +61,7 @@ The lightgun needs to be calibrated in each core:
 | B (Right) |           | X       |
 
 **OSD Settings**
+
 * Pad1: GunCon or Justifier (set based on Game)
 
 ### SNES Lightgun Mapping
@@ -72,6 +73,7 @@ The lightgun needs to be calibrated in each core:
 | Pause      | Start     | Y (SS Pause)  |
 
 **OSD Settings**
+
 * 'Input Options' menu
     * Super Scope: Joy2
     * Super Scope Btn: Joy
@@ -84,6 +86,7 @@ The lightgun needs to be calibrated in each core:
 | Trigger | Zapper/Vaus BTN |
 
 **OSD Settings**
+
 * 'Input Options' menu
     * Periphery: Zapper (Joy2)
     * Zapper Trigger: Joystick
@@ -97,6 +100,7 @@ The lightgun needs to be calibrated in each core:
 | Pause        | Start     | Start   |
 
 **OSD Settings**
+
 * 'Input' menu
     * Gun Control: Joy2
     * Gun Fire: Joy
@@ -108,6 +112,7 @@ The lightgun needs to be calibrated in each core:
 | Trigger | Fire 1  |
 
 **OSD Settings**
+
 * 'Input' menu
     * Gun Control: Joy1
     * Gun Fire: Joy
@@ -120,6 +125,7 @@ The lightgun needs to be calibrated in each core:
 | Trigger        | Fire 1  |
 
 **OSD Settings**
+
 * 'Peripherals' menu
     * Port1 Input: Lightgun
     * Gun Control: Joy1
