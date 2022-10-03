@@ -1,8 +1,3 @@
----
-hide:
-  - toc
----
-
 Here's a reference of the hotkeys you can use with the MiSTer. Hotkeys are useful at saving time and there are some hotkeys which do things you can only do with a keyboard or gamepad. Some of these hotkeys only work in the Main Menu core, others will work inside emulators as part of the gameplay, and some will work in all instances.
 
 ## In any core, with OSD closed
