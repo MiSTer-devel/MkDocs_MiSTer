@@ -1,8 +1,3 @@
----
-hide:
-  - toc
----
-
 Here's some useful links for experienced and new developers:
 
 ## MiSTer FPGA Tutorials
