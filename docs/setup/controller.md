@@ -1,8 +1,3 @@
----
-hide:
-  - toc
----
-
 Now we should define some gamepad inputs on our MiSTer. This is pretty easy to do. You should use a keyboard and your gamepad/controller for this step. For each different kind of controller you have, you should do this step, and the MiSTer will store a configuration based on that device's unique ID.
 
 ## Defining your Gamepad's Buttons
