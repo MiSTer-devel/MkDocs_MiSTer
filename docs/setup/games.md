@@ -1,8 +1,3 @@
----
-hide:
-  - toc
----
-
 To play games on the MiSTer you will need to transfer them to your MicroSD. There are other ways to load games, like over a NAS or using USB drive, but for now we're going to stick to the most basic easy method. If you'd like more information on these other methods you can head to the [Advanced Networking Page](../advanced/network.md) of this site, to find out more.
 
 ## Games folder description
