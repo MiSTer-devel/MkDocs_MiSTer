@@ -1,8 +1,3 @@
----
-hide:
-  - toc
----
-
 First thing to do is to install the software onto your MicroSD card.
 
 ## Flash Mr. Fusion to your MicroSD
