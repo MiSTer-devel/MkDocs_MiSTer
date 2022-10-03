@@ -1,8 +1,3 @@
----
-hide:
-  - toc
----
-
 The standard paths are of the form `/media/fat/games/<CORE>`, where `<CORE>` is the [internal core name](../developer/corenames.md) of the given system. 
 
 Please check the respective README file for each core to determine the appropriate full path.
