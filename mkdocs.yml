@@ -198,7 +198,8 @@ markdown_extensions:
   # https://squidfunk.github.io/mkdocs-material/reference/images/
   - attr_list
   # https://facelessuser.github.io/pymdown-extensions/extensions/keys/
-  - pymdownx.keys
+  - pymdownx.keys:
+      camel_case: true
   # https://facelessuser.github.io/pymdown-extensions/extensions/emoji/
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
