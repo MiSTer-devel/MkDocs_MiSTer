@@ -1,8 +1,3 @@
----
-hide:
-  - toc
----
-
 This page explains most of the intricacies of the way MiSTer handles ROMs for Arcade systems.
 
 ## MRA Format
