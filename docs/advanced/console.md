@@ -1,8 +1,3 @@
----
-hide:
-  - toc
----
-
 The DE10-nano board has console port. The console allows you to login into Linux without a network connection and also provides some debug/info which sometimes useful to track the problems.
 
 Refer to the **UART-to-USB (USB Mini-B)** connector on the board right side in the picture below:
