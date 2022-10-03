@@ -1,8 +1,3 @@
----
-hide:
-  - toc
----
-
 Here's some tips and guidelines when contributing to the MiSTer project.
 
 ## Indent with tabs, not spaces
