@@ -1,8 +1,3 @@
----
-hide:
-  - toc
----
-
 MiSTer has support for a wide variety of input devices. It also has options to configure these devices to fit your needs in addition to several quality of life features across most, sometimes all, cores. Here is a breakdown of some special configurations for various input devices like spinners, gamepads, joysticks, and keyboards.
 
 MiSTer has a set of standard features for USB gaming controllers:
