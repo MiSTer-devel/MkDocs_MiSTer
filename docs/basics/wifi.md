@@ -1,8 +1,3 @@
----
-hide:
-  - toc
----
-
 Wifi is totally optional and it's setup is fairly simple with the MiSTer. You will need a compatible dongle, the wifi script (which is provided with the Mr. Fusion image), and a keyboard attached to your MiSTer to type in your WiFi password.
 
 ## Suggested WiFi Adapters
