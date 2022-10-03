@@ -42,9 +42,9 @@ These can be used with various cores, ie they can act as a zapper in the NES cor
 
 Additional information on Guncon 2 support can be found here [https://github.com/NolanNicholson/GunCon2-MiSTer](https://github.com/NolanNicholson/GunCon2-MiSTer){target=_blank}
 
-
 ### Calibration
 The lightgun needs to be calibrated in each core:
+
 * Press the ++F10++ key while the OSD is open to show the calibration screen, follow the prompt to shoot each edge of the image
 * It is recommended to load a game and calibrate to the edges of the image, rather than the entire (widescreen) TV
   
@@ -127,9 +127,7 @@ The lightgun needs to be calibrated in each core:
  * 'Audio & Video' menu  
     * Show Overscan: Yes
 
-
 ## Using A Mouse
-
 You can also use a mouse for various purposes on the MiSTer. The main purpose for mouse support is for use with some computer cores which had mice.
 
 One of the cool things you can do is use the mouse as an emulated lightgun. The same principles behind doing this applies to a wiimote with a powered sensor bar. You can do this by pairing your wiimote to the MiSTer and it will be used as a Mouse when paired.
@@ -139,7 +137,6 @@ One of the cool things you can do is use the mouse as an emulated lightgun. The 
 You can also use a mouse for a paddle style controller if you'd like.
 
 ## Are gaming keyboards worth it?
-
 High performance and expensive keyboards and mice aren't advantageous to use for MiSTer. They won't give any major or even minor significant benefits. Additionally, these devices often have too many functions and many virtual devices cluttering the input subsystem which may introduce input lag or be complete unresponsive. They may also prevent other devices, such as gamepads, from working. So if you experience problems with your gaming keyboard, try a simpler keyboard instead to see if that resolves the issue. General advice is not to go out and buy a specialty gaming keyboard for MiSTer specifically, it may end up being a waste of money.
 
 ## What about rumble support?
@@ -158,5 +155,4 @@ The Grey/Orange (brick decorated) USB Adapters are functionally the same, after 
 Alternative 8Bitdo adapters, such as the 8Bitdo Console Retro Receiver (SNES, NES, Genesis) are always in X-Input mode when connected via microUSB.
 
 ## JammaSD support
-
 MiSTer supports the use of a JammaSD by detecting if the pressed buttons are from player 1 or 2. You first have to configure player 1 in main menu (as a joypad) (and also remap it in cores if needed). Player 2 inputs will be auto defined, like if it was a second identical joypad. JammaSD support was added with a VID/PID that should be the same across all devices, but if your device has a different VID/PID, you can adjust it in the MiSTer.ini file.
