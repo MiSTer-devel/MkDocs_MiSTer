@@ -8,8 +8,8 @@ Because some arcade boards can change games by just putting in new roms, it made
 ```bash
 /_Arcade/<game name>.mra
 /_Arcade/cores/<game rbf>.rbf
-/_Arcade/mame/<mame rom>.zip
-/_Arcade/hbmame/<hbmame rom>.zip
+/games/mame/<mame rom>.zip
+/games/hbmame/<hbmame rom>.zip
 ```
 There are other locations for these files based on search paths.
 
