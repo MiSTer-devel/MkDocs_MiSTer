@@ -28,11 +28,11 @@ Here's a reference of the hotkeys you can use with the MiSTer. Hotkeys are usefu
 ## In the Main Menu core only
 
 | Hotkey                    | Description                                                              |
-| ------------------------- | ------------------------------------------------------------------------ |
-| ++f1++                    | Switch background type (static, wallpaper, color bars, black)            |
-| ++f2++                    | Hide / Show core dates                                                   |
-| ++f9++                    | Open Linux terminal / command line interface, use F12 to go back to menu |
-| Controller: **x** / **y** | Test the rumble motors on your controller                                |
+| ---------------------------------- | ------------------------------------------------------------------------ |
+| ++f1++                             | Switch background type (static, wallpaper, color bars, black)            |
+| ++f2++                             | Hide / Show core dates                                                   |
+| ++f9++                             | Open Linux terminal / command line interface, use F12 to go back to menu |
+| Controller: **LB** + **X** / **Y** | Test the rumble motors on your controller                                |
 
 ## Core-specific hotkeys
 
