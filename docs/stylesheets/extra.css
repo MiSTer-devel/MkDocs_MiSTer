@@ -33,8 +33,8 @@
   --md-code-hl-operator-color: var(--md-code-hl-keyword-color);
   --md-code-hl-punctuation-color: var(--md-code-fg-color);
   --md-code-hl-comment-color: #6272a4;
-  --md-code-hl-generic-color: #f8f8f28a;
-  --md-code-hl-variable-color: var(--md-code-h1-generic-color) !important;
+  --md-code-hl-generic-color: #f8f8f2;
+  --md-code-hl-variable-color: var(--md-code-h1-generic-color);
   --md-typeset-color: var(--md-default-fg-color);
   --md-typeset-a-color: #a7a4e0;
   --md-typeset-mark-color: #8be9fd4d;
