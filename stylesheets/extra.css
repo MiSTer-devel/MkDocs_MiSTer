@@ -30,11 +30,11 @@
   --md-code-hl-keyword-color: #ff79c6;
   --md-code-hl-string-color: #1c7d4d;
   --md-code-hl-name-color: #8be9fd;
-  --md-code-hl-operator-color: var(--md-code-hl-keyword-color) !important;
+  --md-code-hl-operator-color: var(--md-code-hl-keyword-color);
   --md-code-hl-punctuation-color: var(--md-code-fg-color);
   --md-code-hl-comment-color: #6272a4;
   --md-code-hl-generic-color: #f8f8f28a;
-  --md-code-hl-variable-color: var(--md-code-h1-generic-color);
+  --md-code-hl-variable-color: var(--md-code-h1-generic-color) !important;
   --md-typeset-color: var(--md-default-fg-color);
   --md-typeset-a-color: #a7a4e0;
   --md-typeset-mark-color: #8be9fd4d;
