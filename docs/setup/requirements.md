@@ -22,7 +22,7 @@ The MiSTer SDRAM add-on board is required by many cores, like the SNES, NES, Pla
 
 **USB OTG Adapter/Hub:**
 
-Preferably, the MiSTer USB Hub Add-on board which you can assemble yourself if you are good at soldering, or you can [buy from the various shops that sell them](http://127.0.0.1:8000/MkDocs_MiSTer/basics/addons/#where-to-buy){target=_blank} instead.
+Preferably, the MiSTer USB Hub Add-on board which you can assemble yourself if you are good at soldering, or you can [buy from the various shops that sell them](../basics/addons/#where-to-buy){target=_blank} instead.
 
 At a minimum, the [MakerSpot Micro USB OTG Hub](https://www.amazon.com/MakerSpot-Accessories-Charging-Extension-Raspberry/dp/B01JL837X8){target=_blank} works very well for the MiSTer, if you are looking for a very cheap option.
 
