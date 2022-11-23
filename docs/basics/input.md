@@ -5,7 +5,7 @@ MiSTer has a set of standard features for USB gaming controllers:
 * Auto Fire
 * Mouse emulation from your joystick
 
-## Joystick player assignment
+## Default Joystick Player Assignment Method
 
 Up to 6 player controllers are supported (depending on core):
 
@@ -16,6 +16,16 @@ Up to 6 player controllers are supported (depending on core):
 * If you reset the core, it also resets the player assignments.
 
 Please note; if a controller doesn't seem to work, it's possible you will need to reboot the MiSTer into the Menu core, and define the inputs for that controller if it hasn't been done already. Also, if the controller attached has the same Product ID and Vendor ID as seen by the linux system, you may not be able to use two of them at the same time. It depends upon how the controller is made to work.
+
+## Advanced Joystick Player Assignment Method
+
+There is now an alternate method to do joystick player assignment manually based upon the vendor ID and product ID of the USB device (e.g. an an arcade cabinet with two usb encoder joysticks and the one on the right always being assigned to player 2). To use this manual joystick player assignment feature you can assign it by one of three identification methods:
+
+1. For bluetooth devices connected wirelessly, you would use the bluetooth MAC address.
+2. For wired devices you would typically use the VendorID and ProductID.
+3. For multiple devices that share the same VendorID and ProductID, you would want to use the USB port location.
+
+The easiest way to get this information is to either [open up a console connection](../advanced/console/){target=_blank} or SSH into your MiSTer as root and run `killall MiSTer; /media/fat/MiSTer` to watch the debug output whenever you plug or unplug a usb device. Then you would enter that information into your MiSTer.ini with [the instructions provided in the section](https://github.com/MiSTer-devel/Main_MiSTer/blob/6bda023db86670baf1cfd6ead671d0849bb32d94/MiSTer.ini#L141-L162)[target=_blank} that starts with `Permanently assign specific controller to specific player.`.
 
 ## Auto Fire
 
