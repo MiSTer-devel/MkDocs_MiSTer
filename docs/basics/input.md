@@ -25,7 +25,7 @@ There is now an alternate method to do joystick player assignment manually based
 2. For wired devices you would typically use the VendorID and ProductID.
 3. For multiple devices that share the same VendorID and ProductID, you would want to use the USB port location.
 
-The easiest way to get this information is to either [open up a console connection](../advanced/console/){target=_blank} or SSH into your MiSTer as root and run `killall MiSTer; /media/fat/MiSTer` to watch the debug output whenever you plug or unplug a usb device. Then you would enter that information into your MiSTer.ini with [the instructions provided in the section](https://github.com/MiSTer-devel/Main_MiSTer/blob/6bda023db86670baf1cfd6ead671d0849bb32d94/MiSTer.ini#L141-L162)[target=_blank} that starts with `Permanently assign specific controller to specific player.`.
+The easiest way to get this information is to either [open up a console connection](../advanced/console/){target=_blank} or SSH into your MiSTer as root and run `killall MiSTer; /media/fat/MiSTer` to watch the debug output whenever you plug or unplug a usb device. Then you would enter that information into your MiSTer.ini with [the instructions provided in the section](https://github.com/MiSTer-devel/Main_MiSTer/blob/6bda023db86670baf1cfd6ead671d0849bb32d94/MiSTer.ini#L141-L162){target=_blank} that starts with `Permanently assign specific controller to specific player.`.
 
 ## Auto Fire
 
