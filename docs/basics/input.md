@@ -64,11 +64,11 @@ The lightgun needs to be calibrated in each core:
 
 
 ### PSX Lightgun Mapping
-| Guncon    | Justifier | Mapping |
-| --------- | --------- | ------- |
-| Trigger   | Trigger   | O       |
-| A (Left)  | Start     | Start   |
-| B (Right) |           | X       |
+| Guncon    | Justifier   | Mapping               |
+| --------- | ------------| --------------------- |
+| Trigger   | Trigger     | O (Gun Fire:Negcon A) |
+| A (Left)  | Start       | Start (Gun A)         |
+| B (Right) | Rear Button | X (Gun B:Negcon I)    |
 
 **OSD Settings**
 
