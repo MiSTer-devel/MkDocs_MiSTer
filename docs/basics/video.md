@@ -63,9 +63,9 @@ You will need a recent build of [the Main MiSTer binary](https://github.com/MiST
 vrr_mode=0
 ; Freesync min/max framerate parameter defaults to the min/max capability reported by the display
 ; Freesync minimum framerate. 
-vrr_freesync_min_framerate=0
+vrr_min_framerate=0
 ; Freesync maximum framerate
-vrr_freesync_max_framerate=0
+vrr_max_framerate=0
 ; VESA VRR base framerate. Normally set to the current video mode's output framerate
 vrr_vesa_framerate=0
 ```
