@@ -8,6 +8,11 @@ Side Note: If you have a Digital IO board then your first of the large dips in t
 ![MiSTer FPGA DIP Switches Correct Digital IO board Configuration - Big DIPS - Terasic DE10-Nano](img/dips3.png)  
 *Credit for 2nd and 3rd pictures goes to Nat from [MiSTerFPGA.co.uk](https://misterfpga.co.uk){target=_blank}*
 
+| Board      | SW0 | SW1 | SW2 | SW3 |
+| ---------- | --- | --- | --- | --- |
+| Analog IO  | Off | Off | Off | Off |
+| Digital IO | Off | Off | Off | On  |
+
 ## My gamepad doesn't work
 
 If your gamepad doesn't work in the menu, you need to make sure you have [defined your inputs for that gamepad](../setup/controller.md){target=_blank}. If your gamepad doesn't work in the core, but it does work in the menu, then you need to define the gamepad in that core in the secondary OSD menu. If neither of these work, make sure you your DIP switches are correct as shown above.
