@@ -1,5 +1,10 @@
 Here's a description of some basic video customization features on the MiSTer. You can change your resolution, modify the framebuffer to reduce input latency and video stuttering, add some video filters, use shadowmasks, and even gamma correction. Also, you can use 5x overscan mode to push a 1200p image into 1080p for square pixels and nearly the original overscan of a CRT, depending on the game's resolution. There are lots of options to play with, here's some basic ones.
 
+## Video Presets
+Video Presets were added so you can easily load a good-looking preset that will work in most situations. This is a great way to get started. They are easy to use, just open the OSD, press right, then go to video processing, and then "Load Preset". Select the one you want and see if it looks good to you. Here's an example video showing you how easy it is:
+
+![type:video](videos/presets.mp4)
+
 ## MiSTer Ini Video Settings
 In the [MiSTer.ini](../advanced/ini.md){target=_blank} file there are many video setttings to try. We'll just focus on a couple here for now and you can dive deeper into things like CRT usage in the [Advanced - CRT](../advanced/crt.md){target=_blank} section.
 
@@ -109,11 +114,6 @@ means `[arkanoidj]` is the ini core exception you would use for this one game. F
 
 ## Video Processing Options Tutorial
 Here's a tutorial that you can follow along to get you started using the powerful video processing options on MiSTer FPGA.
-
-### Video Presets
-There are now Video Presets that you can choose which will set your filters and everything else to simple desirable settings. They are very easy to use, just open the OSD, press right, then go to video processing, and then "Load Preset". Select the one you want and see if it looks good to you. Here's an example video showing you how easy it is:
-
-![type:video](videos/presets.mp4)
 
 ### Filters (and scanlines)
 MiSTer has the capability to use upscaling filters and scanlines to help enhance the video output or even make it feel similar to a retro CRT television. If you opened the NES core for the first time after setting the MiSter's video output to 1920x1080p and loaded up Duck Tales, then you should see something like this:
