@@ -146,7 +146,7 @@ A number of complex cores (like ao486) benefit from having the chip at cooler te
 ## Can you take screenshots on the MiSTer?
 You can take screenshots on the MiSTer very easily. All you have to do is press ++win+prtsc++ on your keyboard and you will get an upscaled screenshot. For raw output from the core (which may be distorted or in a weird aspect ratio) prese ++shift+win+prtsc++. The screenshots are stored in `./screenshots` in a folder named after the core you took the screenshot in.
 
-These screenshots do include the effects of any video processing options, they are very simple. To take screenshots of the full video processing (i.e. the image you see on your modern screen when using the MiSTer) you will need to use some kind of capture card that supports the desired resolution.
+These screenshots do not include the effects of any video processing options, they are very simple. To take screenshots of the full video processing (i.e. the image you see on your modern screen when using the MiSTer) you will need to use some kind of capture card that supports the desired resolution.
 
 [Here is an example of a raw screenshot from the NES core](img/raw_screenshot.png){target=_blank}
 
