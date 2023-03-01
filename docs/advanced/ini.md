@@ -41,7 +41,9 @@ This is useful for things like hybrid cores that can play multiple systems. For 
 
 `forced_scandoubler` - VGA output will always run in 31kHz mode (scandoubled) if this setting is turned on, useful for computer CRT's.
 
-`ypbpr` - Changes the VGA output to a YPbPr signal.
+`vga_mode=rgb` - Changes the VGA output to a rgb, ypbpr, svideo, cvbs. rgb is default.
+
+`ntsc_mode=0` - Only for S-Video and CVBS vga_mode. 0 - normal NTSC, 1 - PAL-60, 2 - PAL-M. Note: No cores officially use these settings.
 
 `composite_sync` - Sends the sync signal on Hsync over VGA output, needed for certain configurations.
 
@@ -52,6 +54,8 @@ This is useful for things like hybrid cores that can play multiple systems. For 
 `direct_video` - This changes the HDMI output to an analog signal, only supported with certain Direct Video Adapters that have AG62xx chipsets. If you have issues with color or no image, in addition to checking `composite_sync` and `ypbpr` options, you can also try changing `hdmi_limited` to `1`. If you are using `ypbpr` with component cables, the Direct Video adapter will need a modification to combine HSYNC and Green in order to work.
 
 `fb_terminal` - Best left at 1. If you have issues with running scripts on a CRT or Analog display, try switching this to 0 to see if that helps.
+
+`vga_sog=0` - Forces Sync on Green using the Analog IO board. (Ignores Switch)
 
 ## Audio Settings
 
