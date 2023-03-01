@@ -78,54 +78,53 @@ Most of the settings changes are done in your `MiSTer.ini` file, which is locate
 
 ### Connecting to Composite or S-Video
 
-One method of obtaining Composite or S-Video on a capable CRT TV set is by using a special adapter. At the moment these are available for sale from [Antoniovillena](https://www.antoniovillena.es/store/product/vga-composite-s-video-adapter/){target=_blank} and [Ultimatemister (PT)](https://ultimatemister.com/product/mister-vga-to-composite-s-video/){target=_blank}.
+### Official MiSTer - YC (S-Video / Composite) 
+MiSTerFPGA now natively outputs s-video / composite directly from the core. The cores generate two signals that use the existing RGB pins, where the luma (Brightness) uses the green output and the chroma (Color) uses the red output.
+
+#### Connection Requirements - S-Video
+
+[MiSTerAddons - Active Y/C Adapter](https://misteraddons.com/collections/parts/products/yc-active-encoder-board/){target=_blank} and [Ultimatemister - Passive Adapter](https://ultimatemister.com/product/mikes1-yc-passive-board/){target=_blank}.
+* The Active Adapters are recommended for the best quality for both composite and S-Video but the passive adapter can be a good alternative.
+* VGA to Component Cable (Only required for some monitors, i.e Commodore 1702)
+* Custom RCA to S-Video Connector
+
+#### Connection Requirements - Composite
+
+[MiSTerAddons - Active Y/C Adapter](https://misteraddons.com/collections/parts/products/yc-active-encoder-board/){target=_blank} and [Ultimatemister - Passive Adapter](https://ultimatemister.com/product/mikes1-yc-passive-board/){target=_blank}.
+* The Active Adapters are recommended for the best quality for both composite and S-Video but the passive adapter can be a good alternative.
+* VGA to Component Cable to a 1-Male to 2-Female RCA Y-Adapter Splitter Cable. Warning: This method will produce severe rainbowing because of the lack of a luma trap.
+
+### Using the Analog IO Board 
+
+#### Configuration Requirements
+
+- Sync on Green - OFF (If using an Active or Passive Adapter, they will generate the sync)
+
+#### INI Settings
+`vga_scaler=0`    
+`Composite sync = 1`   
+`vga_mode=svideo`  Note: cvbs can also be used but is not recommended  
+`ntsc_mode=0`      Note: 0 - normal NTSC, 1 - PAL-60, 2 - PAL-M, Note: this is currently not being used by any cores    
+
+### Using a Direct Video adapter
+
+#### Configuration Requirements
+- A Sync On Green Circuit is Required. Active / Passive adapters will include a SOG circuit. Alternatively for more information read  here: [Direct Video - Setup for YPbPr Signals](directvideo.md#setup-for-ypbpr-signals)
+
+#### INI Settings
+`Direct_video = 1`  
+`Composite sync = 1`  
+`vga_mode=svideo`  Note: cvbs can also be used but is not recommended  
+`ntsc_mode=0`      Note: 0 - normal NTSC, 1 - PAL-60, 2 - PAL-M, Note: this is currently not being used by any cores    
+
+### Alternative Methods of converting RGB to Composite or S-Video
+Alternative methods of obtaining Composite or S-Video on a capable CRT TV set is by using a special adapter. At the moment these are available for sale from [Antoniovillena](https://www.antoniovillena.es/store/product/vga-composite-s-video-adapter/){target=_blank} and [Ultimatemister (PT)](https://ultimatemister.com/product/mister-vga-to-composite-s-video/){target=_blank}.
 
 There's also an open-source design which you can DIY: [Github](https://github.com/MikeS11/MiSTerCRT){target=_blank} / [forum link](https://misterfpga.org/viewtopic.php?f=33&t=2894){target=_blank}.
 
 **These adapters have been reported to work well in S-Video mode, but Composite has problems with rainbow artifacting and excessive dot crawl. This is currently unavoidable and expected**
 
 Another alternative is the [Axunworks converter](https://www.axunworks.com/RGB-to-Composite-S-Video-p341706.html){target=_blank}. It requires using a VGA-to-BNC cable with BNC-to-RCA adapters and most likely also suffers from artifacting in Composite [(forum thread)](https://shmups.system11.org/viewtopic.php?f=6&t=63452&start=270){target=_blank}. Some other options reported to work well are converters from seller "wakabavideo" and "Keene Scart to S-Video" brand on ebay.
-
-### Unofficial Custom YC (S-Video / Composite) Cores by MikeS11
-These requirements are for a [set of unofficial cores (currently in testing)](https://github.com/MikeS11/MiSTerFPGA_YC_Encoder/tree/main/YC%20Builds){target=_blank} that natively output s-video / composite directly from the core. The current cores generate two signals that use the existing RGB pins, where the luma (Brightness) uses the green output and the chroma (Color) uses the red output. Please do not report any bugs from using these cores in the official repositories, they are unofficial and in a testing state. It is possible that bugs could be induced by the changes made to the core.
-
-#### Connection Requirements - S-Video
-
-* A custom breakout board / cable the converts VGA to S-Video.
-* VGA to Component Cable (Only required for some monitors, i.e Commodore 1702)
-* Custom RCA to S-Video Connector
-
-#### Connection Requirements - Composite
-
-* A custom breakout board / cable the converts VGA to Composite
-* VGA to Component Cable to a 1-Male to 2-Female RCA Y-Adapter Splitter Cable
-
-*Note 1: It is recommended that you use a 0.47nF Capacitor in series with the Chroma signal. This will reduce the output voltage of your composite signal.*  
-*Note 2: If using composite, it is recommended to use a breakout board with a luma trap that will filter out frequencies that confuse the tv from thinking brightness changes are color. (E.g Color Bleed & Rainbow Artifacting). A cheaper alternative is to connect a 10uH and 200pF capacitor in parallel to the luma signal before you combine chroma.*
-
-### Using the Analog IO Board with the YC Test Cores
-
-#### Configuration Requirements
-
-- Sync on Green - ON
-- Enable S-Video in the core menu
-
-#### INI Settings
-`vga_scaler=0`
-
-### Using a Direct Video adapter with the YC Test Cores
-
-#### Configuration Requirements
-- A Sync On Green Circuit is Required. Please read more here: [Direct Video - Setup for YPbPr Signals](directvideo.md#setup-for-ypbpr-signals)
-- Enable S-Video in the core menu
-
-#### INI Settings
-`YPbPr = 0`  
-`Direct_video = 1`  
-`Composite sync = 1`  
-`vga_scaler=0`
-
-More info & updates: [Twitter](https://twitter.com/MikeSimone3){target=_blank} / [S-Video Chroma Generation Document](https://docs.google.com/document/d/1FrfUKQedBdkgifHC88ouqLF9IDCNamC8TyLIcY3rou0/edit){target=_blank} [YC Core Clock Frequency List](https://docs.google.com/spreadsheets/d/12_6MyuY7f6CZYXztdT0C30SWL0nk2_MNe_Cno_D-txA/edit#gid=1960982362/){target=_blank} / [Forum Post: S-Video and Composite over Component output! (custom cores)](https://misterfpga.org/viewtopic.php?t=4434){target=_blank}
 
 ## Types of CRT Displays
 
