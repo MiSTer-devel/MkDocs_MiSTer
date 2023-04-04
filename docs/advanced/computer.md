@@ -30,6 +30,7 @@ DOS tools are here : [dos_ftpd.zip](https://github.com/MiSTer-devel/ao486_MiSTer
 * **Tandy Color Computer 3 (CoCo3)**. Serial Connection.
 * **Macintosh Plus**. Serial and PPP support.
 * **AtariST**. Serial and PPP support.
+* **Apple IIe**. Serial Connection
 
 OSD provides an option to switch between PPP and Console on these cores.
 Both console and PPP are using baud rate 115200 8N1 mode with hardware RTS/CTS flow control for stability.
@@ -139,3 +140,16 @@ The following is an example for connecting to a BBS using UltimaTerm 4.0:
 6. Save your changes with ++alt+d++ then ++f1++ key.
 7. Hit ++alt+a++ to open Phonebook, add a BBS and dial away.
 8. Alternatively, you can dial directly by issuing an `ATDTBBS_Address:port`. Full UltimaTerm 4.0 Documentation [HERE](https://colorcomputerarchive.com/repo/Documents/Manuals/Applications/Ultimaterm%20v4.0%20%28Ken%20Johnston%29.pdf){target=_blank}
+
+## Serial connection on Apple IIe
+Apple IIe has serial support via implemented SuperSerial Card in Slot 2. While theoretically some programs may use up to 19200 baud, I found it to be more stable at 1200 and/or 2400 baud. 
+Terminal programs tested : 
+ACT - Apple Conference Terminal v.3.0.3 [HERE](https://mirrors.apple2.org.za/ftp.apple.asimov.net/images/communications/Apple%20Conference%20Terminal%20V3.0.3.dsk){target=_blank}
+
+Practical Peripherals Communication Program for Apple II v.1.01 [HERE](https://mirrors.apple2.org.za/ftp.apple.asimov.net/images/communications/Apple_II_Comm_Program.dsk){target=_blank}
+
+1. Start the Apple IIe core
+2. In the MiSTer System Menu ++win+f12++  set the "Uart Connection" to "Modem", Link to "TCP", Baud to "1200" and save it.
+3. Load either of terminal programs listed above, both have intuitive menus and 80 column modes
+4. Configure the terminal's baud speed to match the one set earlier (e.g. 1200 baud, Word Length 8, Stop Bits 1, Parity None, SuperSerial Card Slot 2)
+5. Enter in terminal mode and ATDT your favorite BBS
