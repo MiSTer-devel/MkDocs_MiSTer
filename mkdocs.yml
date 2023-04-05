@@ -133,6 +133,7 @@ nav:
     - Console Cores: cores/console.md
     - Computer Cores: cores/computer.md
     - Arcade Cores: cores/arcade.md
+    - Other Cores: cores/other.md
     - Core Paths: cores/paths.md
 
   # More advanced configuration options. Anything not basic or not simple essentials, dump here.
