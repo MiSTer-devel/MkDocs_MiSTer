@@ -124,3 +124,7 @@ Here is a list of the arcade cores that are in the MiSTer Github Repository.
 | [Xevious](https://github.com/MiSTer-devel/Arcade-Xevious_MiSTer)                   |          |
 | [Zaxxon](https://github.com/MiSTer-devel/Arcade-Zaxxon_MiSTer)                     | ✔️       |
 | [ZigZag](https://github.com/MiSTer-devel/Arcade-ZigZag_MiSTer)                     |          |
+
+Also check the following list of JOTEGO arcade cores:
+
+[JOTEGO Arcade Cores list](https://github.com/jotego/jtbin/wiki)
