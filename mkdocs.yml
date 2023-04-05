@@ -35,6 +35,8 @@ theme:
     - search.suggest
     # Update url with the active anchor as highlighted in ToC
     - navigation.tracking
+    # Enable Edit on Github Button (needed after version 9)
+    - content.action.edit
   # Folder for css and page overrides
   custom_dir: overrides
 
