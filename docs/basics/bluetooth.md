@@ -8,7 +8,6 @@ Generally speaking, most bluetooth 4.0 adapters use one of two similar chips, th
 * [Edimax BT-8500 (5.0)](https://www.amazon.com/Edimax-BT-8500-Bluetooth-Supports-Controllers/dp/B08M1VJHVD/){target=_blank}
 * [MiSTerAddons.com's Bluetooth 4.2 / WiFi AC600 Combo Adapter](https://misteraddons.com/collections/parts/products/wifi-bt-usb-adapter){target=_blank}
 * [MiSTerFPGA.co.uk's CSR8510 Bluetooth 4.0 Adapter](https://misterfpga.co.uk/product/mister-fpga-bluetooth-adapter-dongle/){target=_blank}
-* [Ultimatemister.com's CSR8510 Bluetooth 4.0 Adapter](https://ultimatemister.com/product/mister-bluetooth-adapter/){target=_blank}
 * [MiSTerKits.com's CSR8510 Bluetooth 4.0 Adapter](https://www.misterkits.com/products/mister-bluetooth-adapter){target=_blank}
 * [ZEXMTE Long Range USB Bluetooth (5.0)](https://www.amazon.com/ZEXMTE-Bluetooth-Adapter-Keyboard-Headphones/dp/B09D7W918Q){target=_blank}
 
