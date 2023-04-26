@@ -23,7 +23,7 @@ jobs:
           wget https://codeload.github.com/MiSTer-devel/MkDocs_MiSTer/zip/refs/heads/videos
           unzip videos
           cd MkDocs_MiSTer-videos/
-          cp docs ../
+          cp -r docs ../
 
       - name: Setup Python runtime
         uses: actions/setup-python@v3
