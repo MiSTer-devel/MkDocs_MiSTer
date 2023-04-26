@@ -16,20 +16,28 @@ A project was launched that makes it easier to get a network attached storage (N
 
 ## Static IP Address configuration
 Currently the best way to do this is using `connmanctl` (try `connmanctl help` for more info).
+
 * Create /var/lib/connman directory so changes will persist across reboots  
+
 ```
 # mkdir /var/lib/connman
 ```
-* Find your on-board network service name.  
+
+* Find your on-board network service name.
+  
 ```
 # connmanctl services
 *AO Wired                ethernet_020304050607_cable
 ```
-* Setup IP address (e.g. `192.168.1.123`, should be unused), subnet mask (e.g. `255.255.255.0`) and gateway (e.g. `192.168.1.1`, typically your router IP address). To configure the right device use the service name returned from above command (e.g. `ethernet_020304050607_cable`). This will disable the use of DHCP.  
+
+* Setup IP address (e.g. `192.168.1.123`, should be unused), subnet mask (e.g. `255.255.255.0`) and gateway (e.g. `192.168.1.1`, typically your router IP address). To configure the right device use the service name returned from above command (e.g. `ethernet_020304050607_cable`). This will disable the use of DHCP.
+ 
 ```
 # connmanctl config ethernet_020304050607_cable --ipv4 manual 192.168.1.123 255.255.255.0 192.168.1.1
 ```
-* Setup one or more DNS server(s) (e.g. `192.168.1.1` from your router, `8.8.8.8` from Google DNS.  
+
+* Setup one or more DNS server(s) (e.g. `192.168.1.1` from your router, `8.8.8.8` from Google DNS.
+
 ```
 # connmanctl config ethernet_020304050607_cable --nameservers 192.168.1.1 8.8.8.8
 ```

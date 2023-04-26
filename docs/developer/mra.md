@@ -105,6 +105,7 @@ end
 ```
 
 ### Explanation for XML elements and attributes
+
 * **name**: As an element this indicates how the rom should be called. The value should be taken from MAME. As an attribute this indicates an external rom file (or part thereof) that should be loaded by MiSTer.
 * **mratimestamp**: This indicates the date on which the *.mra file was created (useful for other users to determine if there is a newer version of the *.mra file available to which they should upgrade). The date format is yyyymmdd.
 * **mameversion**: This indicates on which version of a MAME romset the *.mra file is based (which version was used for testing). The dot in MAME's version numbering is omitted.

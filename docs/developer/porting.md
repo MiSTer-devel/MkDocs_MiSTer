@@ -6,6 +6,7 @@ We will use [ZX Spectrum](https://github.com/MiSTer-devel/ZX-Spectrum_MISTer){ta
 Most of the sources of the Framework are located in [sys](https://github.com/MiSTer-devel/ZX-Spectrum_MISTer/tree/master/sys){target=_blank} folder.
 
 Usually, for a new project, you need to take following files/folders:
+
 * sys folder
 * jtag.cdf
 * jtag_lite.cdf
@@ -172,6 +173,7 @@ Make sure you set correct mode signed/unsigned, otherwise audio will be distorte
 There is a supplementary module **hps_io.v** which is also required to use in the same entity (see zxspectrum.sv). It provides in/out control from ARM side. Most signals are same or similar to MiST (user_io+data_io or mist_io modules) signals. So, if the core is ported from MiST, it in most cases it's 1:1 signal connections.
 
 MiSTer has some changes/improvements over original MiST io modules:
+
 * Supports up to 4 images mount at the same time (MiST has only 1). Set module parameter VDNUM to 2..4 if more than 1 mounted image is required. If VDNUM=1 then related signals are same as in MiST.
 * Due to SD card on MiSTer uses multiple partitions and holds other vital to MiSTer parts, access to whole SD card from cores is not available in MiSTer. Only the access to image files is possible. Cores requiring direct access to whole SD card should be redesigned to access to images only.
 * Main MiSTer file system on SD card is exFAT which supports files bigger than 4GB.

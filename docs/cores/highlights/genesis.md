@@ -1,6 +1,7 @@
 The Genesis core is a port of the [fpgagen](https://github.com/Torlus/fpgagen){target=_blank} core to MiSTer, with significant enhancements and additions. The audio filtering options have been adjusted according to real hardware using [MDFourier](https://junkerhq.net/MDFourier/){target=_blank}.
 
 ## Features
+
 * Composite Blending effect (e.g. Sonic Waterfall transparency)
 * CPU Turbo option (e.g. Road Rash gameplay speed)
 * Increase sprite limit.

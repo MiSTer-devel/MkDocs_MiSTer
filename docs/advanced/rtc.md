@@ -42,6 +42,7 @@ The following section will walk you through the steps of creating your own Miste
 ### 1. Order PCB
 
 #### Approved PCB Manufactors
+
   * [PCBway](https://www.pcbway.com/setinvite.aspx?inviteid=43024){target=_blank} - [Quick order RTC v1.2](https://www.pcbway.com/project/shareproject/RTC_for_MiSTer_v1_2.html){target=_blank} - [Quick order RTC v1.3 (with temp sensor)](https://www.pcbway.com/project/shareproject/W43024ASU40_rtc_1_3.html){target=_blank}
   * [EasyEDA](https://easyeda.com/){target=_blank}
   * [JLCPCB](https://jlcpcb.com/){target=_blank}

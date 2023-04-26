@@ -5,6 +5,7 @@ There are many computer-core specific features and functionality to go over. Her
 Starting from 2018 may 7 release MiSTer supports serial (UART) connection from FPGA to Linux. Linux OS runs PPP or Console daemon on this connection allowing access the internet or Linux shell from FPGA cores.
 
 ## Cores supporting serial connection
+
 * **Minimig**. Tested on [Roadshow TCP/IP](https://misterfpga.org/viewtopic.php?f=4&t=2063&p=18598&hilit=Roadshow#p18598){target=_blank}, AmiTCP and Miami. 
     1. AmiTCP provides more complete solution with ftpd daemon. There are many other 3rd party addons are based on AmiTCP, so it's advised to use this package.
     2. Roadshow works very well, it is fully compatible with AmiTCP and offers additional extensions. Follow these [Instructions](https://misterfpga.org/viewtopic.php?f=4&t=2063&p=18598&hilit=Roadshow#p18598){target=_blank} for complete setup.  It is still a paid for and supported product, you can find more information [here](http://roadshow.apc-tcp.de/index-en.php){target=_blank}.
