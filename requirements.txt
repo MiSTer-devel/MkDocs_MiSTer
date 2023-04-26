@@ -1,9 +1,0 @@
-mkdocs-material
-
-# Plugins
-ffc-mkdocs-video
-mkdocs-git-revision-date-localized-plugin
-mkdocs-material-extensions
-mkdocs-minify-plugin
-mkdocs-redirects
-mkdocs-rss-plugin
