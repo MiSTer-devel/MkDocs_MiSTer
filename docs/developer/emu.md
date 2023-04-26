@@ -218,6 +218,7 @@ For full understanding of the SDRAM interface you will need to look at the speci
 Look through the data sheet for the [32MB](https://github.com/MiSTer-devel/Main_MiSTer/wiki/files/AS4C16M16SA-V3.0_March%202015.pdf){target=_blank} module. The 64MB module data sheet isn't as detailed.
 
 Some examples of SDRAM modules:
+
 * single port direct usage: [Gameboy](https://github.com/MiSTer-devel/Gameboy_MiSTer/blob/master/rtl/sdram.sv){target=_blank}
 * multi port request/response: [Gameboy Advance](https://github.com/MiSTer-devel/GBA_MiSTer/blob/master/rtl/sdram.sv){target=_blank}
 * complex bank machine: [JT Frame](https://github.com/jotego/jtframe/blob/master/hdl/sdram/jtframe_sdram_bank.v){target=_blank}

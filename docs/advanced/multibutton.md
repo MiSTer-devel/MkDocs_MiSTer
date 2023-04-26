@@ -41,12 +41,14 @@ Assume a six button arcade controller (for Street Fighter 2) with 3 punch button
 We will map the buttons so that Breakers / Breakers' revenge has the same kind of layout.
 
 This particular game uses the following attack buttons:
+
 * A: Weak Punch
 * B: Weak Kick
 * C: Strong Punch
 * D: Strong Kick
 
 In addition, most characters have an extra "command" move mapped to:
+
 * Weak Punch + Strong Punch 
 * Weak Kick + Strong Kick 
 

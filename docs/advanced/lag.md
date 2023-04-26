@@ -3,6 +3,7 @@ A common concern among retro enthusiasts is whether a device of this sort has _l
 Every electronic equipment exhibits some kind of _latency_, but it only becomes problematic if this latency causes frames to be missed. A frame is typically 16ms for a system using a 60 frames per second (60 Hz) display.
 
 Lag is only problematic in a few specific cases:
+
 * Some older games were designed to rely on extremely quick response times (e.g. Punch-Out on NES).
 * If the latency is different between two players, it could introduce an unfair advantage.
 * Lag that isn't constant can be an issue on games that require precise movement. (Most players can adapt to lag that is consistent.)

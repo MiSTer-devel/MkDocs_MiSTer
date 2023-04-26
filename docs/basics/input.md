@@ -1,6 +1,7 @@
 MiSTer has support for a wide variety of input devices. It also has options to configure these devices to fit your needs in addition to several quality of life features across most, sometimes all, cores. Here is a breakdown of some special configurations for various input devices like spinners, gamepads, joysticks, and keyboards.
 
 MiSTer has a set of standard features for USB gaming controllers:
+
 * Up to 6 player support
 * Auto Fire
 * Mouse emulation from your joystick
@@ -59,6 +60,7 @@ The lightgun needs to be calibrated in each core:
 * It is recommended to load a game and calibrate to the edges of the image, rather than the entire (widescreen) TV
   
 ### Joy1/Joy2 assignment
+
 * This setting needs to match the player number your lightgun is currently assigned within the core. See [Default Joystick Player Assignment Method](#default-joystick-player-assignment-method)
 * Some systems had their lightguns connect to player 2, eg NES, SNES, Genesis. Many games from these systems will also work with the lightgun assigned as player 1 (Joy1), however some require a normal controller as player 1 and the lightgun as player 2 (Joy2). 
 

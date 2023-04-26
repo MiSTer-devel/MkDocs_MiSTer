@@ -108,12 +108,14 @@ The [Arcade-Battlezone](https://github.com/jopdorp/Arcade-BattleZone_MiSTer){tar
 [MiSTer - Head On](headonsoundpcb.md)
 
 ### Informational resources
+
 * For finding the right values of a filter: [https://www.micromodeler.com/dsp/](https://www.micromodeler.com/dsp/){target=_blank}
 * Common operational amplifier uses, such as differentiators and integrators: [https://en.wikipedia.org/wiki/Operational_amplifier_applications](https://en.wikipedia.org/wiki/Operational_amplifier_applications){target=_blank}
 * Explanation of how 555 timers work: [https://www.electronics-tutorials.ws/waveforms/555_oscillator.html](https://www.electronics-tutorials.ws/waveforms/555_oscillator.html){target=_blank}
 * Spice programming [https://www.allaboutcircuits.com/textbook/reference/chpt-7/fundamentals-spice-programming/](https://www.allaboutcircuits.com/textbook/reference/chpt-7/fundamentals-spice-programming/){target=_blank}
 
 ### Code examples
+
 * [example of a noise-based sound python implementation in a notebook](https://github.com/jopdorp/Arcade-BattleZone_MiSTer/blob/sound/spice/Red%20baron%20crash%20circuit%20sim.ipynb){target=_blank}
 * [example of a piece of python code that generates a lookup table](https://github.com/jopdorp/Arcade-BattleZone_MiSTer/blob/sound/rtl/generate_control_coltages_to_frequency.py){target=_blank}
 * [example of a common digital noise generator](https://github.com/jopdorp/Arcade-BattleZone_MiSTer/blob/sound/rtl/noise_source_shell_explo.sv){target=_blank}
@@ -122,6 +124,7 @@ The [Arcade-Battlezone](https://github.com/jopdorp/Arcade-BattleZone_MiSTer){tar
 * [example of a spice netlist for a noise based sound](https://github.com/jopdorp/Arcade-BattleZone_MiSTer/blob/sound/spice/bang.cir){target=_blank}
 
 ### Tooling
+
 * [https://www.falstad.com/circuit/](https://www.falstad.com/circuit/){target=_blank}
 * [http://ngspice.sourceforge.net/](http://ngspice.sourceforge.net/){target=_blank}
 * [https://www.audacityteam.org/](https://www.audacityteam.org/){target=_blank}
