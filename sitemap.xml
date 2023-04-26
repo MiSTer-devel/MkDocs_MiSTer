@@ -316,6 +316,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://mister-devel.github.io/MkDocs_MiSTer/developer/savestates/</loc>
+         <lastmod>2023-04-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://mister-devel.github.io/MkDocs_MiSTer/developer/test/</loc>
          <lastmod>2023-04-26</lastmod>
          <changefreq>daily</changefreq>
