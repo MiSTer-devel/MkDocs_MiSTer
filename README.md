@@ -34,6 +34,8 @@ mkdocs serve
 ```
 And it should give you a weburl in the terminal to go to --> http://127.0.0.1:8000
 
+Note: video files are stored in a separate branch named `videos`. This is to make it easier to clone quickly with the command `git clone --depth 1 https://github.com/MiSTer-devel/MkDocs_MiSTer.git`. Thanks to @agg23 for the suggestion.
+
 ## Credits
 
 Huge thanks to [@tofukazoo](https://github.com/tofukazoo) (Jorge González) for helping me with the initial GitHub automation, lots of conceptual brainstorming, important early-stage debating, and finally the motivation and encouragement to get this project going!
