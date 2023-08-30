@@ -17,7 +17,7 @@ Here are the SNES enhancement chips currently supported with some example games 
 * ST1010 (F1 Roc 2 - Race of Champions)
 * S-RTC (Daikaiju Monogatari II)
 
-Currently the only enhancement chips not supported are GB-Z80 (Super Game Boy), MX15001TFC (Nintendo Power Flash Cartridges), ST011 (Hayazashi Nidan Morita Shougi), and ST018 (Hayazashi Nidan Morita Shougi 2). This is mostly because the core is already near the limit of what the DE10-Nano's Cyclone V is capable of fitting into it's design.
+Currently the only enhancement chips not supported are MX15001TFC (Nintendo Power Flash Cartridges), ST011 (Hayazashi Nidan Morita Shougi), and ST018 (Hayazashi Nidan Morita Shougi 2). This is mostly because the core is already near the limit of what the DE10-Nano's Cyclone V is capable of fitting into it's design.
 
 ### SNES Enancement Chip Example Video
 ![type:video](videos/snes-chips.mp4)
