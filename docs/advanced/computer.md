@@ -62,7 +62,7 @@ SET MTCPSLIP=true
 mtu 1500
 packetint 0x60
 hostname ao486_fpga
-IPADDR 192.168.1.254 <- Change this to reflect your network.
+IPADDR 192.168.1.254 <- Change this to reflect your network. Only the first three octets, the last .254 is the default IP assigned to the core !!!
 NETMASK 255.255.255.0
 GATEWAY 192.168.1.1 <- Change this to reflect your network.
 NAMESERVER 8.8.8.8 <- You can change this to reflect your network if you want to.
