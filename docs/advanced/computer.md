@@ -104,19 +104,19 @@ epppd com1 115200 local
 ## PPP connection in Windows 95/98 on ao486
 1. In the Mister System Menu ++win+f12++ set the "Uart Connection" to "PPP", Baud to "115200" and save it.
 2. Get the modem driver from [HERE](https://github.com/MiSTer-devel/ao486_MiSTer/blob/master/releases/drv/modem9x.inf){target=_blank} and transfer it to your VHD or a floppy image
-   * Click the Windows 95 Start button, point to Settings, and then click Control Panel. Double-click Add New Hardware
-   * Select No to Windows search for new harware. Click Next, then select Modem from next page.
-   * Check "Don't detect my modem", then Have disk on the next page. Navigate to modem9x.inf location and install it.
+    * Click the Windows 95 Start button, point to Settings, and then click Control Panel. Double-click Add New Hardware
+    * Select No to Windows search for new harware. Click Next, then select Modem from next page.
+    * Check "Don't detect my modem", then Have disk on the next page. Navigate to modem9x.inf location and install it.
 3. Install Dial-Up Networking:
-   * Click the Windows 95 Start button, point to Settings, and then click Control Panel. Double-click Add/Remove Programs.
-   * Click the Windows Setup tab. Select Communications. Click Details, select Dial-Up Networking and click OK.
-   * Click OK to close the Windows Setup dialog box. Now Dial-up networking should be now under "My Computer".
+    * Click the Windows 95 Start button, point to Settings, and then click Control Panel. Double-click Add/Remove Programs.
+    * Click the Windows Setup tab. Select Communications. Click Details, select Dial-Up Networking and click OK.
+    * Click OK to close the Windows Setup dialog box. Now Dial-up networking should be now under "My Computer".
 4. Create a dial-up connection
-   * Open My Computer then Dial-Up Networking. Double-click on Make New Connection.
-   * Name it to your liking, be sure to select Generic NULL Modem. Use any phone number you want, it won't matter. Hit Next then Finish to end setup
-   * Right-click on the newly made connection, then Properties:
-       * **General** tab - make sure the Generic Null Modem is selected and set to COM 1, 115200 baud
-       * **Server Types** tab - Select "PPP: Windows 95, Windows NT 3.5, Internet" and Uncheck everything except TCP/IP
+    * Open My Computer then Dial-Up Networking. Double-click on Make New Connection.
+    * Name it to your liking, be sure to select Generic NULL Modem. Use any phone number you want, it won't matter. Hit Next then Finish to end setup
+    * Right-click on the newly made connection, then Properties:
+        * **General** tab - make sure the Generic Null Modem is selected and set to COM 1, 115200 baud
+        * **Server Types** tab - Select "PPP: Windows 95, Windows NT 3.5, Internet" and Uncheck everything except TCP/IP
     * Hit OK, then double-click on thee dial-up connection to connect. You should have now a working PPP connection under Win95/98.
 5. **Important:**
 DNS is not acquired automatically by Windows 95 (or Windows NT) unless either:
