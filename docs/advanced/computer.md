@@ -132,7 +132,8 @@ ms-dns 8.8.8.8         #or  8.8.4.4 etc
 ```
 
 ## PPP connection in Windows NT 4.0 on ao486
-The full how-to install Windows NT 4.0 and PPP setup on [MiSTerFPGA forum](https://misterfpga.org/viewtopic.php?t=4400)
+The full how-to install Windows NT 4.0 and PPP setup on [MiSTerFPGA forum](https://misterfpga.org/viewtopic.php?t=4400):
+
 1. In the Mister System Menu ++win+f12++ set the "Uart Connection" to "PPP", Baud to "115200" and save it. **Important: Plain 115200, not Turbo one !!!**
 2. Get the modem driver from [HERE](https://github.com/MiSTer-devel/ao486_MiSTer/blob/master/releases/drv/modem9x.inf){target=_blank} and transfer it to your VHD or a floppy image
 3. Mount Windows NT 4.0 CD-ROM image 
