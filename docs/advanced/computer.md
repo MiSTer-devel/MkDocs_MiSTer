@@ -25,7 +25,7 @@ echo 1 > /proc/sys/net/ipv4/ip_forward
 ```
 Of course, change the baud rate as well to 230400 on your TCP/IP stack of choice. Tested under MiamiDX, no issues.
 
-* **ao486**. PPP and serial connections are working under DOS, tested with mTCP and various terminal software. PPP is also working under Win3.11/Win95/Win95.
+* **ao486**. PPP and serial connections are working under DOS, tested with mTCP and various terminal software. PPP is also working under Win3.11/Win95/Win98/NT 4.0.
 DOS tools are here : [dos_ftpd.zip](https://github.com/MiSTer-devel/ao486_MiSTer/raw/master/sw/dos_ftpd.zip){target=_blank}. The DOS FTP server included does not support passive mode, so set your client to use active.
 * **C64**. Serial connection.
 * **Tandy Color Computer 3 (CoCo3)**. Serial Connection.
@@ -44,11 +44,15 @@ No special settings are required of Linux.
 ## PPP connection
 Using this connection core may have internet connection. More important, the core may run ftp daemon and provide access to its filesystem, so you can use FTP client on PC to move the files to/from the emulated system.
 
-PPP daemon uses **/media/fat/linux/ppp_options** (linux\ppp_options of PC) file. Most likely you don't need to modify it. Recent update assigns IPs automatically. Core gets <your_net>.254 IP (for example 192.168.1.254). If you want other IP, then modify ppp_options file.
+PPP daemon uses **/media/fat/linux/ppp_options** (linux\ppp_options of PC) file. Most likely you don't need to modify it. Recent update assigns IPs automatically. **Core gets <your_net>.254 IP (for example 192.168.1.254). If you want to use other IP or your router has the .254, then modify ppp_options file.**. At the bottom of the file uncomment and modify the last line:
+```
+# You may explicitly define local and remote IPs for PPP link.
+# new MiSTer releases don't require it anymore.
+# IPs entered here will override automatically assigned IPs.
+#192.168.1.1:192.168.1.10
+```
 
 For correct PPP work, make sure you see a network icon in Menu core before starting the other core. Otherwise PPP link won't get IPs. If you've started core earlier, then simply connect the core to PPP and disconnect. Next connection will get correct IP. Or you can switch UART mode in OSD to renew the IP.
-
-**NOTE:** I'm looking Amiga and MSDOS terminal supporting color and control codes of linux, so it will be possible to use Midnight Commander in terminal connection. If you know such terminal application, then let me know.
 
 ## PPP connection in MS-DOS on ao486
 1. In the Mister System Menu ++win+f12++ set the "Uart Connection" to "PPP", Baud to "115200" and save it.
@@ -82,19 +86,13 @@ epppd com1 115200 local
 ```
 8. Enjoy telnet, ftp, irc, and other internet applications while you use MS-DOS. Be sure and make sure you have ANSI.SYS loaded in CONFIG.SYS if you want to use the telnet client to hit telnet BBSes. Original discussion [HERE](https://misterfpga.org/viewtopic.php?t=896){target=_blank}.
 
-## PPP connection in Windows 95 on ao486
-Unfortunately winsock and winsock2 provided by Microsoft do not work with the ppp connection when in Windows 95.
-
-The following steps will allow you to get it working:
-
-1. In the Mister System Menu ++win+f12++ set the "Uart Connection" to "PPP" and save it.
-2. In Windows 95 ensure the COM1 device is installed in Start->Settings->Control Panel->System - Device Manager Tab, there should be a twisty called Ports(COM & LPT) and under that a "Communications Port (COM1)"
-3. If it doesn't exist go to Start->Settings->Control Panel->Add/New Hardware and it should be automatically added.
-4. Get the replacement PPP client
+## PPP connection in Windows 3.11 on ao486
+1. In the Mister System Menu ++win+f12++ set the "Uart Connection" to "PPP", Baud to "115200" and save it.
+2. Get the Trumpet Winsock PPP client
     * Download the software.  There are other newer versions available BUT be warned only version 3.0 will work.
-        * [Trumpet Winsock 3.0](https://winworldpc.com/product/trumpet-winsock/3x){target=_blank} - (I extracted the file from the disk image and uploaded it using the DOS ftp client documented above)
-5. License the Software - This software is still shareware (time limited) please license it appropriately. Once you acquire a license you can put the details in Tcpman in the "Special" menu in "Password registration"
-6. Configure Software  
+        * [Trumpet Winsock 3.0](https://winworldpc.com/product/trumpet-winsock/3x){target=_blank}
+3. License the Software - This software is still shareware (time limited) please license it appropriately. Once you acquire a license you can put the details in Tcpman in the "Special" menu in "Password registration"
+4. Configure Software  
     * Start Tcpman
     * Under File-->PPP Options ensure all checkboxes are unchecked and the text boxes are blank.
     * Under File-->Setup Enter an "IP Address" suitable for your LAN eg 192.168.1.254 and a "DNS Server(s)" 192.168.1.1
@@ -102,12 +100,62 @@ The following steps will allow you to get it working:
     * In the "Dialer settings..."  
         * "COMM port" COM1  
         * "Baud rate" 115200
-7. Using the software ( important, be patient )
-    * Win95 is rather slow so let it start fully before starting the PPP manager (Tcpman)
-    * Once it is started it will begin syncing with PPP on the linux host... Be patient it takes a few seconds.
-    * When you see the PPP[C021] SND and RCV you can start your TCP/IP program
 
-I have found it to be a little complicated to get started, but once it is running it is rock solid and supports multiple client programs at once.
+## PPP connection in Windows 95/98 on ao486
+1. In the Mister System Menu ++win+f12++ set the "Uart Connection" to "PPP", Baud to "115200" and save it.
+2. Get the modem driver from [HERE](https://github.com/MiSTer-devel/ao486_MiSTer/blob/master/releases/drv/modem9x.inf){target=_blank} and transfer it to your VHD or a floppy image
+   * Click the Windows 95 Start button, point to Settings, and then click Control Panel. Double-click Add New Hardware
+   * Select No to Windows search for new harware. Click Next, then select Modem from next page.
+   * Check "Don't detect my modem", then Have disk on the next page. Navigate to modem9x.inf location and install it.
+3. Install Dial-Up Networking:
+   * Click the Windows 95 Start button, point to Settings, and then click Control Panel. Double-click Add/Remove Programs.
+   * Click the Windows Setup tab. Select Communications. Click Details, select Dial-Up Networking and click OK.
+   * Click OK to close the Windows Setup dialog box. Now Dial-up networking should be now under "My Computer".
+4. Create a dial-up connection
+   * Open My Computer then Dial-Up Networking. Double-click on Make New Connection.
+   * Name it to your liking, be sure to select Generic NULL Modem. Use any phone number you want, it won't matter. Hit Next then Finish to end setup
+   * Right-click on the newly made connection, then Properties:
+       * **General** tab - make sure the Generic Null Modem is selected and set to COM 1, 115200 baud
+       * **Server Types** tab - Select "PPP: Windows 95, Windows NT 3.5, Internet" and Uncheck everything except TCP/IP
+    * Hit OK, then double-click on thee dial-up connection to connect. You should have now a working PPP connection under Win95/98.
+5. **Important:**
+DNS is not acquired automatically by Windows 95 (or Windows NT) unless either:
+    * Click on TCP/IP Settings in the above Server Types tab, TCP/IP Settings  and configure static name servers (either by using your router's internal IP address - usually .1 - or Google public ones like 8.8.8.8)
+    * Login into your MiSTer by SSH or F9, go to /media/fat/linux and change your ppp_options file by uncommenting (delete the front #) and modifying the IP addresses from "ms-dns" entries:
+```
+# /etc/ppp/options
+
+# Specify which DNS Servers the incoming Win95 or WinNT Connection should use
+# Two Servers can be remotely configured
+ms-dns 192.168.1.1  #CHANGE it to your network's needs
+ms-dns 8.8.8.8         #or  8.8.4.4 etc
+```
+
+## PPP connection in Windows NT 4.0 on ao486
+The full how-to install Windows NT 4.0 and PPP setup on [MiSTerFPGA forum](https://misterfpga.org/viewtopic.php?t=4400)
+1. In the Mister System Menu ++win+f12++ set the "Uart Connection" to "PPP", Baud to "115200" and save it. **Important: Plain 115200, not Turbo one !!!**
+2. Get the modem driver from [HERE](https://github.com/MiSTer-devel/ao486_MiSTer/blob/master/releases/drv/modem9x.inf){target=_blank} and transfer it to your VHD or a floppy image
+3. Mount Windows NT 4.0 CD-ROM image 
+4. Open My Computer and click on the Dial-Up Networking. When prompted, navigate to /i386 folder on the CD-ROM. There will be the "rascfg" files and the rest needed for setup.
+5. During setup, when **Remote Access Setup** asks you to add a modem, hit **Yes**, then in the following window, check **"Don't detect my modem..."**. In the next window, click on **"Have disk"** and point to where modem9x driver is.
+6. From that point on, the setup will take you to use the **Generic null modem**, hit **OK**, hit **Continue**, check only **TCP/IP** when prompted then again **Continue**. Setup will continue and at some point it will ask you to restart.
+7. After installing Dial-Up Networking, you will get an Event Error at every boot. It doesn't break PPP, but get rid off it by re-running the Service Pack 6 (mount misternt.iso CD-ROM and run sp6ai386) and restart again when asked.
+8. The New Phonebook Entry Wizard will appear after, name your connection to your liking and Check "I know all about phonebook...." box to jump to finish. You can use any number (I used 555-1234).
+9. Click on **More** then **Edit entry and modem properties**
+    * **Basic** tab - be sure to  have "Dial using" set to Generic NULL modem (COM1), speed set to 115200
+    * **Server** tab - uncheck everything except TCP/IP, Dial up server type should be "PPP: WinNT, 98 Plus, Internet"
+10. **Important:**
+DNS is not acquired automatically by Windows NT (or Win95) unless either:
+    * Click on TCP/IP Settings in the above Server tab and use configure static Nameserver (either by using your router's internal IP address - usually .1 - or Google public ones like 8.8.8.8)
+    * Login into your MiSTer by SSH or F9, go to /media/fat/linux and change your ppp_options file by uncommenting (delete the front #) and modifying the IP addresses from "ms-dns" entries:
+```
+# /etc/ppp/options
+
+# Specify which DNS Servers the incoming Win95 or WinNT Connection should use
+# Two Servers can be remotely configured
+ms-dns 192.168.1.1  #CHANGE it to your network's needs
+ms-dns 8.8.8.8         #or  8.8.4.4 etc
+```
 
 ## Serial connection on C64
 The following is an example for connecting to a BBS using Striketerm 2014 and VIC-101 2400 baud mode:
