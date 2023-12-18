@@ -6,3 +6,4 @@ ENV/
 env.bak/
 venv.bak/
 .DS_Store
+*.mp4
