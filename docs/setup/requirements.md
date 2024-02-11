@@ -1,13 +1,19 @@
+---
+hide:
+  - toc
+---
+
 There are a few things you will need in order to setup your MiSTer:
 
 * Terasic DE10-Nano
 * MiSTer SDRAM Add-On Board (Optional but many cores require it)
-* Cooling for the FPGA (Highly recommended)
+* Cooling for the FPGA (recommended)
 * MicroSD card (minimum 4GB) and MicroSD Card Reader
 * USB OTG Adapter or MiSTer USB Hub Add-On Board (no USB devices will work without this)
 * USB Keyboard
+* USB Gamepad (recommended)
 * Internet connection
-* HDMI Monitor/TV and HDMI Cable
+* HDMI Display and HDMI Cable
 
 ## Where to buy
 **DE10-Nano:**
@@ -28,7 +34,7 @@ At a minimum, the [MakerSpot Micro USB OTG Hub](https://www.amazon.com/MakerSpot
 
 **Cooling:**
 
-The processor on the DE10-Nano is 21.5mm x 21.5mm so a heatsink that is around this size is suitable. If using one larger than these dimensions, please make sure to use care to not let the heatsink touch other electronic components outside the processor.
+The processor on the DE10-Nano is 21.5mm x 21.5mm so a heatsink that is around this size is suitable. If using one larger than these dimensions, please make sure to to not let the heatsink touch other electronic components outside the processor.
 
 There is no mounting mechanism for the heatsink, you will need to use an "adhesive thermal pad". 3M makes some good ones, and the heatsinks you can buy in this size usually come with these kinds of thermal pads already.
 
