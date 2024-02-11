@@ -8,6 +8,10 @@ If you are wanting to make your own case you might want some ideas. There is an 
 
 There are lots of 3d Printed cases on the internet. Here are some generic ones that may interest you if you have a 3d printer:
 
+* [Retro Frog's Compact Case](https://www.printables.com/model/318829-mister-fpga-compact-case){target=_blank}
+* [Retro Frog's Full Size Console Case](https://www.printables.com/model/545650-mister-fpga-full-size-console-case){target=_blank}
+* [Retro Frog's Mini Console Case](https://www.printables.com/model/627450-mister-fpga-mini-console-case){target=_blank}
+* [Retro Frog's simple Top and Bottom plate case](https://www.printables.com/model/79238-mister-fpga-top-and-bottom-plate-case){target=_blank}
 * [jaddel's simple de10-nano case with a fan mount and user buttons](https://www.thingiverse.com/thing:4857974){target=_blank}
 * [misteraddons.com's early design](https://www.thingiverse.com/thing:3647626){target=_blank}
 * [hackerjack42's addendum to misteraddon.com's early design above](https://www.thingiverse.com/thing:4059606){target=_blank}
