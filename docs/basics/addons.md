@@ -105,14 +105,11 @@ If you'd like to buy a board from a vendor online (instead of soldering one your
 * [MiSTerAddons.com](https://misteraddons.com){target=_blank} (USA)
 * [UltimateMiSTer.com](https://ultimatemister.com/){target=_blank} (Portugal)
 * [MiSTerFPGA.co.uk](https://misterfpga.co.uk){target=_blank} (United Kingdom)
-* [AntonioVillena.es](https://www.antoniovillena.es/store/){target=_blank} (Spain)
+* [AntonioVillena.com](https://antoniovillena.com/){target=_blank} (Spain)
 * [LegacyPixels.com](https://www.legacypixels.com/mister/){target=_blank} (USA)
-* [OzMiSTerMods.com](https://ozmistermods.com/){target=_blank} (Australia)
 * [CAMInventions.com](https://www.caminventions.com/){target=_blank} (Australia)
-* [MiSTerKits.com](https://www.misterkits.com/){target=_blank} (USA)
 * [ManuFerHi.com](https://manuferhi.com/c/mister-fpga){target=_blank} (Spain)
 * [MiSTer-FPGA.de](https://www.mister-fpga.de/sonstiges/mister-fpga-emu-2-0/mister-kaufen/){target=_blank} (Germany)
-* [RetroKit.tech](https://retrokit.tech/shop/){target=_blank} (United Kingdom)
 * [RetroCastle AliExpress store](https://www.aliexpress.com/store/912024455){target=_blank} (China)
 
-This is not an official endorsement of these sellers, merely a collection of links. Any hardware failures or shipping failures you have should prompt you to reach out for support from the vendor you purchased your board from first.
+This is not an official endorsement of any sellers, merely a collection of links. Any hardware failures or shipping failures you have should prompt you to reach out for support from the vendor you purchased your board from first.
