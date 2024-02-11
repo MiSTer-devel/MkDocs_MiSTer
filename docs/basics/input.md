@@ -53,13 +53,14 @@ These can be used with various cores, ie they can act as a Zapper in the NES cor
 
 Additional information on Guncon 2 support can be found here [https://github.com/NolanNicholson/GunCon2-MiSTer](https://github.com/NolanNicholson/GunCon2-MiSTer){target=_blank}
 
-### Calibration
+### Lightgun Calibration
+
 The lightgun needs to be calibrated in each core:
 
 * Press the ++f10++ key while the OSD is open to show the calibration screen, follow the prompt to shoot each edge of the image
 * It is recommended to load a game and calibrate to the edges of the image, rather than the entire (widescreen) TV
   
-### Joy1/Joy2 assignment
+### Lightgun Joy1/Joy2 assignment
 
 * This setting needs to match the player number your lightgun is currently assigned within the core. See [Default Joystick Player Assignment Method](#default-joystick-player-assignment-method)
 * Some systems had their lightguns connect to player 2, eg NES, SNES, Genesis. Many games from these systems will also work with the lightgun assigned as player 1 (Joy1), however some require a normal controller as player 1 and the lightgun as player 2 (Joy2). 
@@ -146,21 +147,25 @@ The lightgun needs to be calibrated in each core:
     * Show Overscan: Yes
 
 ## Using A Mouse
+
 You can also use a mouse for various purposes on the MiSTer. The main purpose for mouse support is for use with some computer cores which had mice.
 
-One of the cool things you can do is use the mouse as an emulated lightgun. The same principles behind doing this applies to a wiimote with a powered sensor bar. You can do this by pairing your wiimote to the MiSTer and it will be used as a Mouse when paired.
+You can also use the mouse as an emulated lightgun. The same principles behind doing this applies to a wiimote with a powered sensor bar. You can do this by pairing your wiimote to the MiSTer and it will be used as a Mouse when paired.
 
 ![type:video](videos/mouse-lightgun.mp4)
 
 You can also use a mouse for a paddle style controller if you'd like.
 
 ## Are gaming keyboards worth it?
+
 High performance and expensive keyboards and mice aren't advantageous to use for MiSTer. They won't give any major or even minor significant benefits. Additionally, these devices often have too many functions and many virtual devices cluttering the input subsystem which may introduce input lag or be complete unresponsive. They may also prevent other devices, such as gamepads, from working. So if you experience problems with your gaming keyboard, try a simpler keyboard instead to see if that resolves the issue. General advice is not to go out and buy a specialty gaming keyboard for MiSTer specifically, it may end up being a waste of money.
 
 ## What about rumble support?
+
 Rumble / controller vibration has recently been added to the Game Boy core, the Game Boy Advance core, and, of course, the Playstation core. With regards to the Playstation core you will need to make sure your controller's rumble is upported. You can test rumble support on your controller at the menu core by holding the "L" button and pressing the "X" or "Y" face buttons (assuming an SNES-style layout) to test each of the two motors. Controllers have to be in X-Input mode in order to work with rumble reliably.
 
 ## What about PS3/PS4/PS5, XBoxOne/360, Switch, and 8bitdo receivers/gamepads?
+
 The ideal solution today for these types gamepads is to use 3rd-party receivers, such as 8bitdo retro receivers, specifically the 8Bitdo Wireless Bluetooth Adapter, or any number of name-brand Bluetooth 4.x/5.0 receivers. The 8bitdo receiver easily supports Xbox One S/X, PS3, PS4, Wii, Switch, and 8Bitdo's own gamepads and it can pair easily without using the bluetooth setup menu. One 8bitdo bluetooth receiver will pair with one controller at one time. If multiple controllers are required for multiplayer games, then multiple receivers will need to be purchased if you are using the 8bitdo receiver, however a regular Bluetooth usb receiver does not suffer from this limitation.
 
 The 8bitdo receivers have been reported as having some lag introduced, limited range, and bad line of sight, when compared to Bluetooth 5.0 adapters (like the TP-Link and Asus ones). The main appeal of the 8bitdo receivers is the ease of use and quick pairing. The 8bitdo receivers act as a controller themselves and are a compatibility layer between your paired controller and whatever they are attached to via USB, for easy compatibility. Bluetooth adapters by comparison pair your controller itself directly as a device to the MiSTer. No matter what controller you connect, the 8bitdo receiver will see it as the same controller, the 8bitdo receiver's controller. This means that some features like the DualSense (PS5) controller's added mute button and touchpad will not be available, whereas using bluetooth 5.0 may run a very minor risk of limited compatibility (until device support is added into the framework and linux by the development team), but will come with every feature.
@@ -173,4 +178,5 @@ The Grey/Orange (brick decorated) USB Adapters are functionally the same, after 
 Alternative 8Bitdo adapters, such as the 8Bitdo Console Retro Receiver (SNES, NES, Genesis) are always in X-Input mode when connected via microUSB.
 
 ## JammaSD support
-MiSTer supports the use of a JammaSD by detecting if the pressed buttons are from player 1 or 2. You first have to configure player 1 in main menu (as a joypad) (and also remap it in cores if needed). Player 2 inputs will be auto defined, like if it was a second identical joypad. JammaSD support was added with a VID/PID that should be the same across all devices, but if your device has a different VID/PID, you can adjust it in the MiSTer.ini file.
+
+MiSTer supports the use of a JammaSD by detecting if the pressed buttons are from Player 1 or 2. You first have to configure player 1 in main menu (as a joypad) (and also remap it in cores if needed). Player 2 inputs will be auto defined, like if it was a second identical joypad. MiSTer also supports a second JammaSD being plugged in for Player 3 and 4. JammaSD support was added with a VID/PID that should be the same across all devices, but if your device has a different VID/PID, you can adjust it in the MiSTer.ini file using the jamma_vid/jamma_pid/jamma2_vid/jamma2_pid options.
