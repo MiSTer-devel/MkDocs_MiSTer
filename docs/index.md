@@ -12,7 +12,7 @@ hide:
 *Check the navigation sidebar to the left for documentation on how to use your MiSTer FPGA.*
 
 Please join the official [MiSTer FPGA Discord Server](https://discord.gg/MiSTerFPGA){target=_blank} for help, updates, and a very active community.  
-Follow the official [MiSTer FPGA Twitter account](https://twitter.com/MiSTerFPGABot/){target=_blank} for updates, community tweets, and memes.  
+Follow the official [MiSTer FPGA X (formerly Twitter) account](https://twitter.com/MiSTerFPGABot/){target=_blank} for updates, community tweets, and memes.  
 Head to the [MiSTer FPGA Forums](https://misterfpga.org){target=_blank} for classic forum discussions.  
 Check out the [MiSTer FPGA Github Wiki](https://github.com/MiSTer-devel/Wiki_MiSTer/wiki){target=_blank} if you couldn't find the right information in this documentation site.  
 Check out [My Life In Gaming's MiSTer FPGA 2022 Primer Guide](https://www.youtube.com/watch?v=rhT6YYRH1EI){target=_blank} for a comprehensive video review of the MiSTer.
