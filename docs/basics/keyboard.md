@@ -1,12 +1,15 @@
 MiSTer supports keyboard re-mapping which is useful for reduced size or localized keyboards. Key remapping is system wide, so every core will have same key mapping. Keep in mind there is no macro key functionality, so single keys are remapped to another single key. Some multimedia keys generate several [key codes](https://www.scs.stanford.edu/10wi-cs140/pintos/specs/kbd/scancodes-5.html){target=_blank} - these keys cannot be remapped. Each keyboard model has its own key map stored in `/media/fat/config/kbd_[VID]_[PID].map` file. To reset all keys to their default state, simply delete the appropriate map file which has the matching VenderID and ProductID in the filename. Key remapping is available through the Menu core only.
 
 ## Joystick emulation
+
 Keyboards can be switched to joystick emulation. You need to define keys used for joystick emulation the same way you did for joysticks. Auto fire is also supported the same way as they are for joysticks (Menu+button). The button defined for "KBD TOGGLE" provides a quick switch between keyboard and joystick use for defined keys.
 
 ## Mouse emulation
+
 Keyboards can be switched to mouse emulation. You need to define mouse emulation buttons in the Menu core the same way as for joystick, in the Define Gamepad menu option.
 
 ## Emulation switch
+
 To switch between emulation modes press ++num-lock++ or ++scroll-lock++ until the desired mode is selected. 
 
 The switching sequence is `Mouse >> Joy1 >> Joy2 >> None`
