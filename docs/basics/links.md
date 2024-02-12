@@ -1,8 +1,8 @@
-Here's a collection of links to various information, videos, and articles about the MiSTer. MiSTer is an evolving platform, so these videos can only represent what was available at the time of them being made, some information and representations may be outdated. If you just want a comprehensive full review of almost everything MiSTer has to offer that is up to date, watch the My Life In Gaming video here:
+Here's a collection of links to various information, videos, and articles about the MiSTer. MiSTer is an evolving platform, so these videos can only represent what was available at the time of them being made, some information and representations may be outdated. If you just want a comprehensive full review of almost everything MiSTer has to offer that is relatively up to date then watch the My Life In Gaming video here:
 
 [MiSTer FPGA in 2022: A Primer Guide to Retro Gaming's Hardware Emulator / MY LIFE IN GAMING](https://youtu.be/rhT6YYRH1EI){target=_blank} - March 31, 2022
 
-Otherwise there are some older videos listed below.
+Otherwise there are some other videos listed below.
 
 ## MiSTer FPGA Articles
 
@@ -31,6 +31,11 @@ Otherwise there are some older videos listed below.
 
 ## Tutorials
 
+* [MiSTer FPGA 2023 Build Guide and Software Setup! (Video Game Esoterica)](https://www.youtube.com/watch?v=V5DLwTDyh_o){target=_blank}
+* [MiSTer FPGA Analog Video Guide and Setup Tutorial - VGA, PVM's and Component Video (Video Game Esoterica)](https://www.youtube.com/watch?v=-dG3fPjlOuM){target=_blank}
+* [MiSTer FPGA Hardware Guide and Setup Tutorial - Initial Setup and Quick Start Guide (Video Game Esoterica)](https://www.youtube.com/watch?v=pZEpusjC6QA){target=_blank}
+* [MiSTer FPGA Controller Guide and Suggested Controllers for Cores (Video Game Esoterica)](https://www.youtube.com/watch?v=O5vlJzmMQ1I){target=_blank}
+* [MiSTer MT-32 Pi MIDI Build and Tutorial - MIDI on MiSTer FPGA (Video Game Esoterica)](https://www.youtube.com/watch?v=KA8iP4fqDo8){target=_blank}
 * [MiSTer assembly and config (Ownlonymous)](https://www.youtube.com/watch?v=9CGZtv7vj5A){target=_blank}
 * [Creating a MiSTer SD card (NML32)](https://www.youtube.com/watch?v=lPObjJvPeW0){target=_blank}
 * [Mounting a VHD from Windows over the network (NML32)](https://www.youtube.com/watch?v=OR0wVkt3kY8){target=_blank}
@@ -42,7 +47,6 @@ Otherwise there are some older videos listed below.
 ## FPGA Discussion
 
 * [Oct 2019 - Lon.TV - Lon & RetroRGB discuss FPGA](https://www.youtube.com/watch?v=NJtwaHeGmrk){target=_blank}
-* [Sep 2019 - SmokeMonster - FPGA Revolution](https://www.youtube.com/watch?v=X2G0WJ-Z9tk){target=_blank}
 
 ## Other / Demonstrations
 
