@@ -11,7 +11,6 @@ You will require a compatible USB WiFi Adapter to use this feature as there is n
 * Netgear A6100 or A6150
 * D-link AC1300 MU-MIMO Wi-Fi Nano USB Adapter DWA-181
 
-
 Your results may vary as there may be new hardware revisions of these adapters which are not currently supported. There are ways to compile your own drivers for your device but that is for advanced users.
 
 ## Setup wifi with a script
