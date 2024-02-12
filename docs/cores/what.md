@@ -1,6 +1,6 @@
 In MiSTer terminology, a "core" is the current system that the FPGA is configured to simulate. It is configured as the "Menu" core when you power on the MiSTer for the first time. Then, if you use the OSD and go to `_Console` and then select `NES`, it will configure the FPGA to be the "NES" core.
 
-The term "core" has been used by Hardware Description Language (HDL) developers in a way which refers to the things that are programmed onto the FPGA. So for instance, the MiSTer FPGA framework uses Intel's "Altera PLL Core". This is a chunk of logic that is portable which allows developers to hook up to the clock on the chip. There are HDMI cores, ethernet cores, serial data cores, and so on...
+The term "core" has been used by Hardware Description Language (HDL) developers in a way which refers to the things that are programmed onto the FPGA. So for instance, the MiSTer FPGA framework uses Intel's "Altera PLL Core". This is a chunk of logic that is portable which allows developers to configure the clock speeds on the chip. There are HDMI cores, ethernet cores, serial data cores, and so on...
 
 However, for MiSTer, a core refers to the system being emulated. So you have the [PSX (Playstation) core](https://github.com/MiSTer-devel/PSX_MiSTer){target=_blank}, the [Minimig (Amiga) core](https://github.com/MiSTer-devel/Minimig-AGA_MiSTer){target=_blank}, the [SNES core](https://github.com/MiSTer-devel/SNES_MiSTer){target=_blank}, and so many more to explore.
 
@@ -12,7 +12,7 @@ Now, you may be worried that all of this rewriting of the FPGA could reduce it's
 
 ## Core updates and issues
 
-Cores on MiSTer are the result of the collaboration between many people and extensive testing, sometimes over many years and prior open-source projects. Most console and computer cores have now been compared to original hardware to a high level of precision (e.g. audio capture comparison), with the few issues remaining documented on their respective github repository pages. Please refer to these pages, per core, before submitting any issues.
+Cores on MiSTer are the result of the collaboration between many people over many years and across multiple prior open-source projects. Most console and computer cores have now been compared to original hardware to a high level of precision (e.g. audio capture comparison), with the few issues remaining documented on their respective github repository pages. Please refer to these pages, per core, before submitting any issues.
 
 For a list of core repositories, head on over to the [MiSTer FPGA GitHub Organization Repositories list](https://github.com/MiSTer-devel){target=_blank} for more information. The core links there will bring you to the release folder on github, which will also allow you to find the Issues page and the readme files, ideally listing all available features and limitations in detail per core.
 
