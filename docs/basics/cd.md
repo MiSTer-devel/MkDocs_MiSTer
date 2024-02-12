@@ -2,10 +2,24 @@ MiSTer supports Cue/Bin and [CHD](https://github.com/rtissera/libchdr){target=_b
 
 ## Will MiSTer ever support USB CD Drives?
 
-The short answer is **no**. The long answer is that 1) there is too much hardware variation in CD drives and the drivers that go with them for it to be worth it and 2) everything added to the Linux image and Main binary for the MiSTer have to be very carefully considered as the goal is to keep it lightweight and not bloated. 
+The short answer is **no**. The long answer is that:
+
+1. There is too much hardware variation in CD drives and the drivers that go with them for it to be worth it and
+2. Everything added to the Linux image and Main binary for the MiSTer have to be very carefully considered as the goal is to keep it lightweight and not bloated. 
 
 CD Drive support is not a priority, as properly dumped CD-ROM images are bit-perfect where it counts (excluding randomized subchannel data and garbage data fill-in).
 
 ## Cue/Bin Folders and CHD files
 
 If you are using cue/bin files, then you need to place them in their own folder separate from the other cue/bin ROMs. Currently every CD-based core supports cue/bin. CHD files are a compressed CD image format that is also supported by almost every CD-based core. CHD files don't need to be placed in their own folder separate from each other.
+
+## Multi-disc games
+
+For multi-disc games like on Playstation / PSX you will want to place each of the disc files into the same subfolder like so:
+
+```
+./Valkyrie Profile (USA)/Valkyrie Profile (USA) (Disc 1).chd
+./Valkyrie Profile (USA)/Valkyrie Profile (USA) (Disc 2).chd
+```
+
+This will signal to the MiSTer that the save file name should be `Valkyrie Profile (USA).sav` (the subfolder name). It will also allow you to switch discs by loading the other disc image without resetting the core.
