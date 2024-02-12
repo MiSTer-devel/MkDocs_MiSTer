@@ -1,4 +1,4 @@
-**Note: This core is in the process of being deprecated thanks to the new hardware accurate Megadrive core by Nukeykt that was made from decaps. The turbo and sprite limit features are unavailable in the Megadrive core currently.**
+**Note:** This core is in the process of being deprecated thanks to the new hardware accurate Megadrive core by Nukeykt that was made from decaps. The turbo and sprite limit features are unavailable in the Megadrive core currently.**
 
 The Genesis core is a port of the [fpgagen](https://github.com/Torlus/fpgagen){target=_blank} core to MiSTer, with significant enhancements and additions. The audio filtering options have been adjusted according to real hardware using [MDFourier](https://junkerhq.net/MDFourier/){target=_blank}.
 
