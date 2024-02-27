@@ -15,19 +15,20 @@ Here's a reference of the hotkeys you can use with the MiSTer. Hotkeys are usefu
 
 ## With the OSD open, in any core
 
-| Hotkey                     | Description                                                             |
-| -------------------------- | ----------------------------------------------------------------------- |
-| ++f12++                    | Close OSD                                                               |
-| ++f11++                    | Pair Bluetooth controller                                               |
-| Hold IO Board OSD Button   | Alternate method to Pair Bluetooth controller
-| Left                       | Go to information screen (shows currently selected INI file and volume) |
-| Right                      | System screen (change core, set filters, gamma, etc...)                 |
-| Controller: Back + R/L/U/D | Select Alternate INI file if defined (Default/Alt1/Alt2/Alt3)           |
-| Controller: Select         | Expands submenus in the OSD when highlighted                            |
+| Hotkey                       | Description                                                             |
+| ---------------------------- | ----------------------------------------------------------------------- |
+| ++f12++                      | Close OSD                                                               |
+| ++f11++                      | Pair Bluetooth controller                                               |
+| Hold IO Board OSD Button     | Alternate method to Pair Bluetooth controller                           |
+| Left                         | Go to information screen (shows currently selected INI file and volume) |
+| Right                        | System screen (change core, set filters, gamma, etc...)                 |
+| Controller: Back + R/L/U/D   | Select Alternate INI file if defined (Default/Alt1/Alt2/Alt3)           |
+| Controller: Select           | Expands submenus in the OSD when highlighted                            |
+| Controller: Shoulder Buttons | Cycles through the OSD options in a core in either direction            |
 
 ## In the Main Menu core only
 
-| Hotkey                    | Description                                                              |
+| Hotkey                             | Description                                                              |
 | ---------------------------------- | ------------------------------------------------------------------------ |
 | ++f1++                             | Switch background type (static, wallpaper, color bars, black)            |
 | ++f2++                             | Hide / Show core dates                                                   |
