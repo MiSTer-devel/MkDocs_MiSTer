@@ -13,6 +13,10 @@ Before we get started, let's explain how the Alternate MiSTer INI files can work
 
 This is useful for things like hybrid cores that can play multiple systems. For example, the Sega Master System core which also supports Game Gear games. You may want to use a `vscale_border` setting just for Game Gear games, so you can set up an alternate MiSTer INI file by copying your current `MiSTer.ini` and renaming it to `MiSTer_alt_1.ini`, editing the `vscale_border` option just in that one will allow you to apply a border to Game Gear games on the fly. Another example is if you want to switch your `video_mode` (screen resolution) on the fly for various reasons, or if you want to switch your `vsync_adjust` option on the fly.
 
+## Alternate MiSTer INI Naming Option
+
+You can also have some alternative named MiSTer.ini files and they will appear named in the OSD Information screen when you press Left on the gamepad/keyboard where the IP address and resolution are showng. The regular `MiSTer.ini` is called "Main", whereas the custom named ones will show up as whatever comes after the underscore. For example, `MiSTer_CRT.ini` will be selectable in the config section and be called "CRT" next to "Main".
+
 ## General Video Settings 
 
 `vscale_mode` - Changes how the image is scaled to the screen. 0 will fit the whole image to screen, 1 is 1:1 integer scaled, 2 uses 0.5 steps to scale, and 3 uses 0.25 steps to scale.
