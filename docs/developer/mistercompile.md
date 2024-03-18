@@ -29,6 +29,12 @@ The Main MiSTer binary is a good place to start for this guide. I will assume yo
 
 Clone the Main_MiSTer repository:
 
+```
+git clone https://github.com/MiSTer-devel/Main_MiSTer.git
+```
+
+Then `cd` into that directory that was created and follow up with `make`.
+
 ## MiSTer Linux Kernel
 
 Edit your sources file:
