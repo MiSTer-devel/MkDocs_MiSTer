@@ -172,6 +172,7 @@ nav:
       - sys - video_freak: developer/video_freak.md
       - sys - video_mixer: developer/video_mixer.md
       - sys - arcade_video: developer/arcade_video.md
+    - Useful Snippets: developer/snippets.md
     - Savestates: developer/savestates.md
     - Core Names: developer/corenames.md
     - MRA Setnames: developer/mrasetnames.md
