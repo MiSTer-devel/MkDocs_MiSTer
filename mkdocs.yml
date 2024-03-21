@@ -130,7 +130,6 @@ nav:
       - TurboGrafx-16: cores/highlights/tgfx16.md
       - Genesis: cores/highlights/genesis.md
       - MegaCD: cores/highlights/megacd.md
-      #- Atari 7800: cores/highlights/atari7800.md
       - Game Boy 2 Player: cores/highlights/gb2p.md
     - Console Cores: cores/console.md
     - Computer Cores: cores/computer.md
