@@ -11,7 +11,7 @@ Starting from 2018 may 7 release MiSTer supports serial (UART) connection from F
     2. Roadshow works very well, it is fully compatible with AmiTCP and offers additional extensions. Follow these [Instructions](https://misterfpga.org/viewtopic.php?f=4&t=2063&p=18598&hilit=Roadshow#p18598){target=_blank} for complete setup.  It is still a paid for and supported product, you can find more information [here](http://roadshow.apc-tcp.de/index-en.php){target=_blank}.
     3.  Miami was successfully tested. The Miami settings that worked: use PPP connection via serial.device, set baud rate to 115200, RTS/CTS to on, and enable 8N1. Set modem to nullmodem. Manually enter an IP suitable for your lan ending in 254, e.g. 192.168.1.254. Manually add a DNS server, e.g. 8.8.8.8 for Google DNS. Term v4.7 has been used to test console connection. For a more detailed MiamiDX setup guide, please check [here](https://www.geocities.ws/allforamiga/){target=_blank}
     4.  You can also double the speed on Minimig by modifying the /sbin/uartmode script, like mine:
-```
+```sh
 echo "$localip:$remoteip" >/tmp/ppp_options
 cat /media/fat/linux/ppp_options >>/tmp/ppp_options
 
@@ -38,15 +38,17 @@ OSD provides an option to switch between PPP and Console on these cores.
 Both console and PPP are using baud rate 115200 8N1 mode with hardware RTS/CTS flow control for stability.
 
 ## Console connection
+
 Using this connection with supported terminal application on FPGA core, you can access the Linux shell and do some file managements or Linux settings if required.
 
 No special settings are required of Linux. 
 
 ## PPP connection
+
 Using this connection core may have internet connection. More important, the core may run ftp daemon and provide access to its filesystem, so you can use FTP client on PC to move the files to/from the emulated system.
 
 PPP daemon uses **/media/fat/linux/ppp_options** (linux\ppp_options of PC) file. Most likely you don't need to modify it. Recent update assigns IPs automatically. **Core gets <your_net>.254 IP (for example 192.168.1.254). If you want to use other IP or your router has the .254, then modify ppp_options file.**. At the bottom of the file uncomment and modify the last line:
-```
+```ini
 # You may explicitly define local and remote IPs for PPP link.
 # new MiSTer releases don't require it anymore.
 # IPs entered here will override automatically assigned IPs.
@@ -56,18 +58,19 @@ PPP daemon uses **/media/fat/linux/ppp_options** (linux\ppp_options of PC) file.
 For correct PPP work, make sure you see a network icon in Menu core before starting the other core. Otherwise PPP link won't get IPs. If you've started core earlier, then simply connect the core to PPP and disconnect. Next connection will get correct IP. Or you can switch UART mode in OSD to renew the IP.
 
 ## PPP connection in MS-DOS on ao486
+
 1. In the Mister System Menu ++win+f12++ set the "Uart Connection" to "PPP", Baud to "115200" and save it.
 2.  Download the DOS PPPD driver: DOSPPP06.ZIP from [HERE](https://www.ibiblio.org/pub/micro/pc-stuff/freedos/files/net/dosppp/){target=_blank}.
 3.  Grab the latest version of Michael Brutman's mTCP TCP/IP applications for MS-DOS, from the 'Downloads' section [HERE](http://www.brutman.com/mTCP/){target=_blank}
 4.  Transfer those zip files over to your ao486's virtual hard drive and unzip them into the directory of your choice (e.g. C:\NETWORK)
 5.  In MS-DOS on the core, you need to edit a mtcp config file. There's a sample config in the SAMPLES directory called 'sample.cfg' that you can use as a base, 
 or you can use the example below (simple text file named mtcp.cfg in your installation folder). If you use the sample.cfg file, you need to add the top MTCPSLIP line.:
-```
+```ini
 SET MTCPSLIP=true
 mtu 1500
 packetint 0x60
 hostname ao486_fpga
-IPADDR 192.168.1.254 <- Change this to reflect your network. Only the first three octets, the last .254 is the default IP assigned to the core !!!
+IPADDR 192.168.1.254 <- Change this to reflect your network. Only the first three octets (e.g. 192.168.1), the last .254 is the default IP assigned to the core !!!
 NETMASK 255.255.255.0
 GATEWAY 192.168.1.1 <- Change this to reflect your network.
 NAMESERVER 8.8.8.8 <- You can change this to reflect your network if you want to.
@@ -77,17 +80,18 @@ IRCJR_NICK fpga_user
 IRCJR_NAME FPGA_User
 ```
 6. Edit your AUTOEXEC.BAT and add the path to your installation folder, as well with the MTCP variable:
-```
+```bat
 PATH C:\DOS;C:\NETWORK
 SET MTCPCFG=C:\NETWORK\MTCP.CFG
 ```
 7. The DOS PPPD driver archive includes the ppp packet driver, which you need to load:
-```
+```bat
 epppd com1 115200 local
 ```
 8. Enjoy telnet, ftp, irc, and other internet applications while you use MS-DOS. Be sure and make sure you have ANSI.SYS loaded in CONFIG.SYS if you want to use the telnet client to hit telnet BBSes. Original discussion [HERE](https://misterfpga.org/viewtopic.php?t=896){target=_blank}.
 
 ## PPP connection in Windows 3.11 on ao486
+
 1. In the Mister System Menu ++win+f12++ set the "Uart Connection" to "PPP", Baud to "115200" and save it.
 2. Get the Trumpet Winsock PPP client
     * Download the software.  There are other newer versions available BUT be warned only version 3.0 will work.
@@ -103,6 +107,7 @@ epppd com1 115200 local
         * "Baud rate" 115200
 
 ## PPP connection in Windows 95/98 on ao486
+
 1. In the Mister System Menu ++win+f12++ set the "Uart Connection" to "PPP", Baud to "115200" and save it.
 2. Get the modem driver from [HERE](https://github.com/MiSTer-devel/ao486_MiSTer/blob/master/releases/drv/modem9x.inf){target=_blank} and transfer it to your VHD or a floppy image
     * Click the Windows 95 Start button, point to Settings, and then click Control Panel. Double-click Add New Hardware
@@ -123,7 +128,7 @@ epppd com1 115200 local
 DNS is not acquired automatically by Windows 95 (or Windows NT) unless either:
     * Click on TCP/IP Settings in the above Server Types tab, TCP/IP Settings  and configure static name servers (either by using your router's internal IP address - usually .1 - or Google public ones like 8.8.8.8)
     * Login into your MiSTer by SSH or F9, go to /media/fat/linux and change your ppp_options file by uncommenting (delete the front #) and modifying the IP addresses from "ms-dns" entries:
-```
+```ini
 # /etc/ppp/options
 
 # Specify which DNS Servers the incoming Win95 or WinNT Connection should use
@@ -133,6 +138,7 @@ ms-dns 8.8.8.8         #or  8.8.4.4 etc
 ```
 
 ## PPP connection in Windows NT 4.0 on ao486
+
 The full how-to install Windows NT 4.0 and PPP setup on [MiSTerFPGA forum](https://misterfpga.org/viewtopic.php?t=4400):
 
 1. In the Mister System Menu ++win+f12++ set the "Uart Connection" to "PPP", Baud to "115200" and save it. **Important: Plain 115200, not Turbo one !!!**
@@ -150,7 +156,7 @@ The full how-to install Windows NT 4.0 and PPP setup on [MiSTerFPGA forum](https
 DNS is not acquired automatically by Windows NT (or Win95) unless either:
     * Click on TCP/IP Settings in the above Server tab and use configure static Nameserver (either by using your router's internal IP address - usually .1 - or Google public ones like 8.8.8.8)
     * Login into your MiSTer by SSH or F9, go to /media/fat/linux and change your ppp_options file by uncommenting (delete the front #) and modifying the IP addresses from "ms-dns" entries:
-```
+```ini
 # /etc/ppp/options
 
 # Specify which DNS Servers the incoming Win95 or WinNT Connection should use
@@ -158,7 +164,9 @@ DNS is not acquired automatically by Windows NT (or Win95) unless either:
 ms-dns 192.168.1.1  #CHANGE it to your network's needs
 ms-dns 8.8.8.8         #or  8.8.4.4 etc
 ```
+
 ## PPP connection in MS-DOS on PC XT
+
 Instructions would be the same as for DOS under ao486, the only difference is that the PPP connection will use COM 2 serial port on the XT core, instead of COM 1 as on ao486:
 1. In the Mister System Menu ++win+f12++ set the "Uart Connection" to "PPP", Baud to "115200" and save it.
 2.  Download the DOS PPPD driver: DOSPPP06.ZIP from [HERE](https://www.ibiblio.org/pub/micro/pc-stuff/freedos/files/net/dosppp/){target=_blank}.
@@ -166,7 +174,7 @@ Instructions would be the same as for DOS under ao486, the only difference is th
 4.  Transfer those zip files over to your PC XT's virtual hard drive and unzip them into the directory of your choice (e.g. C:\NETWORK)
 5.  In MS-DOS on the core, you need to edit a mtcp config file. There's a sample config in the SAMPLES directory called 'sample.cfg' that you can use as a base, 
 or you can use the example below (simple text file named mtcp.cfg in your installation folder). If you use the sample.cfg file, you need to add the top MTCPSLIP line.:
-```
+```ini
 SET MTCPSLIP=true
 mtu 1500
 packetint 0x60
@@ -181,16 +189,17 @@ IRCJR_NICK fpga_user
 IRCJR_NAME FPGA_User
 ```
 6. Edit your AUTOEXEC.BAT and add the path to your installation folder, as well with the MTCP variable:
-```
+```bat
 PATH C:\DOS;C:\NETWORK
 SET MTCPCFG=C:\NETWORK\MTCP.CFG
 ```
 7. The DOS PPPD driver archive includes the ppp packet driver, which you need to load:
-```
+```bat
 epppd com2 115200 local
 ```
 
 ## Serial connection on C64
+
 The following is an example for connecting to a BBS using Striketerm 2014 and VIC-101 2400 baud mode:
 
 1. Start the C64 core (please note that custom kernels may remove functionality required, if in doubt use the built in kernel).
@@ -212,6 +221,7 @@ The following is an example for connecting to a BBS using CCGMS Ultimate and UP9
 7. Enjoy the faster BBS experience.
 
 ## Serial connection on Color Computer 3 (CoCo3)
+
 The following is an example for connecting to a BBS using UltimaTerm 4.0:
 
 1. Start the CoCo3 core (use Multi-pak Slot 4 Disk or Slot 2 CoCoSDC)
@@ -224,11 +234,13 @@ The following is an example for connecting to a BBS using UltimaTerm 4.0:
 8. Alternatively, you can dial directly by issuing an `ATDTBBS_Address:port`. Full UltimaTerm 4.0 Documentation [HERE](https://colorcomputerarchive.com/repo/Documents/Manuals/Applications/Ultimaterm%20v4.0%20%28Ken%20Johnston%29.pdf){target=_blank}
 
 ## Serial connection on Apple IIe
-Apple IIe has serial support via implemented SuperSerial Card in Slot 2. While theoretically some programs may use up to 19200 baud, I found it to be more stable at 1200 and/or 2400 baud. 
-Terminal programs tested : 
-ACT - Apple Conference Terminal v.3.0.3 [HERE](https://mirrors.apple2.org.za/ftp.apple.asimov.net/images/communications/Apple%20Conference%20Terminal%20V3.0.3.dsk){target=_blank}
 
-Practical Peripherals Communication Program for Apple II v.1.01 [HERE](https://mirrors.apple2.org.za/ftp.apple.asimov.net/images/communications/Apple_II_Comm_Program.dsk){target=_blank}
+Apple IIe has serial support via implemented SuperSerial Card in Slot 2. While theoretically some programs may use up to 19200 baud, I found it to be more stable at 1200 and/or 2400 baud.
+
+Terminal programs tested:
+
+* ACT - Apple Conference Terminal v.3.0.3 [HERE](https://mirrors.apple2.org.za/ftp.apple.asimov.net/images/communications/Apple%20Conference%20Terminal%20V3.0.3.dsk){target=_blank}
+* Practical Peripherals Communication Program for Apple II v.1.01 [HERE](https://mirrors.apple2.org.za/ftp.apple.asimov.net/images/communications/Apple_II_Comm_Program.dsk){target=_blank}
 
 1. Start the Apple IIe core
 2. In the MiSTer System Menu ++win+f12++  set the "Uart Connection" to "Modem", Link to "TCP", Baud to "1200" and save it.
