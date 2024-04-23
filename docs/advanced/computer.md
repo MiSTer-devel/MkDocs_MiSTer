@@ -168,6 +168,7 @@ ms-dns 8.8.8.8         #or  8.8.4.4 etc
 ## PPP connection in MS-DOS on PC XT
 
 Instructions would be the same as for DOS under ao486, the only difference is that the PPP connection will use COM 2 serial port on the XT core, instead of COM 1 as on ao486:
+
 1. In the Mister System Menu ++win+f12++ set the "Uart Connection" to "PPP", Baud to "115200" and save it.
 2.  Download the DOS PPPD driver: DOSPPP06.ZIP from [HERE](https://www.ibiblio.org/pub/micro/pc-stuff/freedos/files/net/dosppp/){target=_blank}.
 3.  Grab the latest version of Michael Brutman's mTCP TCP/IP applications for MS-DOS, from the 'Downloads' section [HERE](http://www.brutman.com/mTCP/){target=_blank}
