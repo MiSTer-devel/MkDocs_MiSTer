@@ -157,7 +157,7 @@ nav:
 
   # Developer reference. This is going to mostly mirror what is up on Github wiki already.
   - Developer Reference:
-    #- Compiling for MiSTer: developer/mistercompile.md
+    - Compiling for MiSTer: developer/mistercompile.md
     - Porting Cores: developer/porting.md
     - Core Configuration String: developer/conf_str.md
     - Top-level of Cores:

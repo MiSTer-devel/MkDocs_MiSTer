@@ -4,7 +4,7 @@ MiSTer uses a combination of various compiled binaries in the finished product. 
 
 These prerequisites are not completely strict, only some of them are. I'm using a specific linux distro (Ubuntu 20.04.5 LTS in WSL2), but you may find that other distros work for you, however your results may vary. Install the prereqs that I use for the Main MiSTer Binary and Linux kernel compilation this way:
 
-```
+```sh
 sudo apt update && sudo apt upgrade -y
 sudo apt-get install build-essential git libncurses-dev flex bison openssl libssl-dev dkms libelf-dev libudev-dev libpci-dev libiberty-dev autoconf liblz4-tool bc curl gcc git libssl-dev libncurses5-dev lzop make u-boot-tools libgmp3-dev libmpc-dev
 ```
@@ -29,7 +29,7 @@ The Main MiSTer binary is a good place to start for this guide. I will assume yo
 
 Clone the Main_MiSTer repository:
 
-```
+```sh
 git clone https://github.com/MiSTer-devel/Main_MiSTer.git
 ```
 
@@ -39,15 +39,15 @@ Then `cd` into that directory that was created and follow up with `make`.
 
 Edit your sources file:
 
-```
+```sh
 sudo nano /etc/apt/sources.list
 ```
 
 Uncomment all of the lines which start with `deb-src` and then run the following:
 
-```
+```sh
 sudo apt-get update
 sudo apt-get build-dep linux
 ```
 
-to be continued...
+to be continued... If you would like to contribute to this article, please do! :)
