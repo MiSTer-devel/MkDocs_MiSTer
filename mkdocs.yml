@@ -3,7 +3,7 @@ site_url: https://mister-devel.github.io/MkDocs_MiSTer/
 site_author: Kevin Coleman
 site_description: >-
   MiSTer FPGA is an open source project that aims to recreate various classic computers, game consoles, and arcade machines, using modern hardware.
-copyright: Copyright &copy; 2022-2023 MiSTer FPGA
+copyright: Copyright &copy; 2022-2024 MiSTer FPGA
 
 repo_name: MkDocs_MiSTer
 repo_url: https://github.com/MiSTer-devel/MkDocs_MiSTer/
@@ -61,11 +61,6 @@ plugins:
   # Makes things load faster at the cost of a little extra build time
   - minify:
       minify_html: true
-  # - social:
-  #     cards_color:
-  #       fill: "#44475a"
-  #       text: "#f8f8f2de"
-  #     cards_font: Roboto
 
 
 # Customization
@@ -199,15 +194,15 @@ markdown_extensions:
   - pymdownx.snippets
   # https://facelessuser.github.io/pymdown-extensions/extensions/superfences/
   - pymdownx.superfences
-  # https://squidfunk.github.io/mkdocs-material/reference/images/
-  - attr_list
   # https://facelessuser.github.io/pymdown-extensions/extensions/keys/
   - pymdownx.keys:
       camel_case: true
   # https://facelessuser.github.io/pymdown-extensions/extensions/emoji/
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  # https://squidfunk.github.io/mkdocs-material/reference/images/
+  - attr_list
   # https://python-markdown.github.io/extensions/md_in_html/
   - md_in_html
 
