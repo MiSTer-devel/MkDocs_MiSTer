@@ -23,15 +23,21 @@ sudo apt-get install build-essential git libncurses-dev flex bison openssl libss
 
 Download the correct cross-compiler for compiling ARM binaries on a 64-bit x86-based system:
 
-`wget -c https://developer.arm.com/-/media/Files/downloads/gnu-a/10.2-2020.11/binrel/gcc-arm-10.2-2020.11-x86_64-arm-none-linux-gnueabihf.tar.xz`
+```sh
+wget -c https://developer.arm.com/-/media/Files/downloads/gnu-a/10.2-2020.11/binrel/gcc-arm-10.2-2020.11-x86_64-arm-none-linux-gnueabihf.tar.xz
+```
 
 Extract this archive to somewhere you prefer, we will use it as a PATH, so here we will extract to `/opt`:
 
-`tar xf gcc-arm-10.2-2020.11-x86_64-arm-none-linux-gnueabihf.tar.xz -C /opt`
+```sh
+tar xf gcc-arm-10.2-2020.11-x86_64-arm-none-linux-gnueabihf.tar.xz -C /opt
+```
 
 Add this to your path temporarily each time you compile:
 
-`export PATH=/opt/gcc-arm-10.2-2020.11-x86_64-arm-none-linux-gnueabihf/bin:$PATH`
+```sh
+export PATH=/opt/gcc-arm-10.2-2020.11-x86_64-arm-none-linux-gnueabihf/bin:$PATH
+```
 
 **Note:** On WSL2 I have to run these export commands again after logging out, this may not be the case in your scenario, there are ways to permanently set them, but I'm preferring not to do that, you can also use them as parameters with `make` like normal (e.g. `PATH=/opt/gcc-arm-10.2-2020.11-x86_64-arm-none-linux-gnueabihf/bin:$PATH make -j30`).
 
