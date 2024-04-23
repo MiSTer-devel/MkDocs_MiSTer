@@ -1,4 +1,16 @@
-MiSTer uses a combination of various compiled binaries in the finished product. There is a customized minimal Linux Kernel, a bootloader, a Main MiSTer binary that's written in C, and then there are the cores built on the MiSTer framework written in a combination of VHDL, Verilog, and SystemVerilog. In order to compile the "full stack" as it were, you need a variety of tools. I'm writing this guide with the hopes of expanding on it as I explore how to compile the variety of MiSTer cores and programs myself.
+MiSTer uses a combination of various compiled binaries in the finished product. There is a customized minimal Linux Kernel, a bootloader, a Main MiSTer binary that's written in C, and then there are the cores built on the MiSTer framework written in a combination of VHDL, Verilog, and SystemVerilog. In order to compile the "full stack" as it were, you need a variety of tools.
+
+## To compile MiSTer FPGA cores
+
+The vast majority of MiSTer FPGA cores currently use Quartus 17.0.2 for compilation. Here are the download links for both Windows and Linux:
+
+[Windows Download](https://download.altera.com/akdlm/software/acdsinst/17.0std.2/602/ib_tar/Quartus-lite-17.0.2.602-windows.tar){target=_blank}
+
+[Linux Download](https://download.altera.com/akdlm/software/acdsinst/17.0std.2/602/ib_tar/Quartus-lite-17.0.2.602-linux.tar){target=_blank}
+
+The Linux version is intended to work with Ubuntu 18.xx, you may have to adjust by downloading some missing dependencies if you use a newer version or another distribution.
+
+Open the .qpf file from the MiSTer core you wish to compile with Quartus and press the play button. It's as simple as that!
 
 ## General prerequisites for ARM Cross Compiling
 
