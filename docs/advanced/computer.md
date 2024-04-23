@@ -27,6 +27,7 @@ Of course, change the baud rate as well to 230400 on your TCP/IP stack of choice
 
 * **ao486**. PPP and serial connections are working under DOS, tested with mTCP and various terminal software. PPP is also working under Win3.11/Win95/Win98/NT 4.0.
 DOS tools are here : [dos_ftpd.zip](https://github.com/MiSTer-devel/ao486_MiSTer/raw/master/sw/dos_ftpd.zip){target=_blank}. The DOS FTP server included does not support passive mode, so set your client to use active.
+* **PC XT**. PPP and serial connections are working under DOS, tested with mTCP/DOS PPP and various terminal software.
 * **C64**. Serial connection.
 * **Tandy Color Computer 3 (CoCo3)**. Serial Connection.
 * **Macintosh Plus**. Serial and PPP support.
@@ -156,6 +157,37 @@ DNS is not acquired automatically by Windows NT (or Win95) unless either:
 # Two Servers can be remotely configured
 ms-dns 192.168.1.1  #CHANGE it to your network's needs
 ms-dns 8.8.8.8         #or  8.8.4.4 etc
+```
+## PPP connection in MS-DOS on PC XT
+Instructions would be the same as for DOS under ao486, the only difference is that the PPP connection will use COM 2 serial port on the XT core, instead of COM 1 as on ao486:
+1. In the Mister System Menu ++win+f12++ set the "Uart Connection" to "PPP", Baud to "115200" and save it.
+2.  Download the DOS PPPD driver: DOSPPP06.ZIP from [HERE](https://www.ibiblio.org/pub/micro/pc-stuff/freedos/files/net/dosppp/){target=_blank}.
+3.  Grab the latest version of Michael Brutman's mTCP TCP/IP applications for MS-DOS, from the 'Downloads' section [HERE](http://www.brutman.com/mTCP/){target=_blank}
+4.  Transfer those zip files over to your PC XT's virtual hard drive and unzip them into the directory of your choice (e.g. C:\NETWORK)
+5.  In MS-DOS on the core, you need to edit a mtcp config file. There's a sample config in the SAMPLES directory called 'sample.cfg' that you can use as a base, 
+or you can use the example below (simple text file named mtcp.cfg in your installation folder). If you use the sample.cfg file, you need to add the top MTCPSLIP line.:
+```
+SET MTCPSLIP=true
+mtu 1500
+packetint 0x60
+hostname PCXT_fpga
+IPADDR 192.168.1.254 <- Change this to reflect your network. Only the first three octets, the last .254 is the default IP assigned to the core !!!
+NETMASK 255.255.255.0
+GATEWAY 192.168.1.1 <- Change this to reflect your network.
+NAMESERVER 8.8.8.8 <- You can change this to reflect your network if you want to.
+LEASE_TIME 86400
+IRCJR_USER FPGA_User
+IRCJR_NICK fpga_user
+IRCJR_NAME FPGA_User
+```
+6. Edit your AUTOEXEC.BAT and add the path to your installation folder, as well with the MTCP variable:
+```
+PATH C:\DOS;C:\NETWORK
+SET MTCPCFG=C:\NETWORK\MTCP.CFG
+```
+7. The DOS PPPD driver archive includes the ppp packet driver, which you need to load:
+```
+epppd com2 115200 local
 ```
 
 ## Serial connection on C64
