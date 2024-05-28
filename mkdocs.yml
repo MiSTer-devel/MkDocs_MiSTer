@@ -46,6 +46,8 @@ plugins:
   - search:
     # Only English for now
       lang: en
+  # https://squidfunk.github.io/mkdocs-material/tutorials/social/basic/
+  - social
   # mkdocs-rss-plugin
   # https://MiSTer-devel.github.io/MkDocs_MiSTer/feed_rss_updated.xml
   # https://MiSTer-devel.github.io/MkDocs_MiSTer/feed_rss_created.xml
