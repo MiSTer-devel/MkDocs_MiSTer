@@ -7,3 +7,4 @@ mkdocs-material-extensions
 mkdocs-minify-plugin
 mkdocs-redirects
 mkdocs-rss-plugin
+mkdocs-material[imaging]
