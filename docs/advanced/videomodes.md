@@ -48,7 +48,7 @@ Video mode timing can be fully specified using a video modeline which consists o
 ```ini
 video_mode=hact,hfp,hs,hbp,vact,vfp,vs,vbp,fpix
 ```
-`#!ini hact` and `#!ini vact` defines the active (visible) size of the video mode in horizontal and vertical pixels, respectively. `#!ini hfp`, `#!ini hs` and `#!ini hbp` defines the duration of horizontal front porch, sync and back porch in pixels. `#!ini vfp`, `#!ini vs` abd `#!ini vbp` define the same properties, but for the vertical timing. Finally, the `#!ini fpix` value is the frequency of the pixel clock in KHz (pixels clocks are usually specified in MHz, so multiply the Mhz value by a 1000 to get the value in KHz).
+`hact` and `vact` defines the active (visible) size of the video mode in horizontal and vertical pixels, respectively. `hfp`, `hs` and `hbp` defines the duration of horizontal front porch, sync and back porch in pixels. `vfp`, `vs` abd `vbp` define the same properties, but for the vertical timing. Finally, the `fpix` value is the frequency of the pixel clock in KHz (pixels clocks are usually specified in MHz, so multiply the Mhz value by a 1000 to get the value in KHz).
 
 MiSTer modelines are similar to XFree86 modelines, but the information is expressed slightly differently. You can convert an XFree86 modeline to a MiSTer one using the custom video mode tool by morf77 [available here](https://morf77.pythonanywhere.com/){target=_blank} which can be used in conjunction with a [modeline calculator](https://arachnoid.com/modelines/){target=_blank}.
 
