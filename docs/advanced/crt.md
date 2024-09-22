@@ -51,7 +51,7 @@ Most of the settings changes are done in your `MiSTer.ini` file, which is locate
   `composite_sync=1`
 
 * consumer TVs (15kHz) with Component  
-  `ypbpr=1`  
+  `vga_mode=ypbpr`  
   *You might need to flip the SoG switch on the I/O board*
 
 * VGA monitors (31khz)  
@@ -66,7 +66,7 @@ Most of the settings changes are done in your `MiSTer.ini` file, which is locate
 * consumer TVs (15kHz) with Component  
   `direct_video=1  `  
   `composite_sync=1`  
-  `ypbpr=1`
+  `vga_mode=ypbpr`
 
 * VGA monitors (31khz)  
   `direct_video=1  `  
