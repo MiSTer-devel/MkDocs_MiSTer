@@ -40,8 +40,16 @@ Example MGL files:
 </mistergamedescription>
 ```
 
+```xml
+<mistergamedescription>
+	<rbf>_Console/Gameboy</rbf>
+	<setname same_dir="1">GBC</setname>
+</mistergamedescription>
+```
+
 * `rbf`: Relative path to the core's RBF file from the SD root, excluding its file extension and timestamp.
 * `setname`: Sets a core's name to this value, changing its games folder and config file.
+    * `setname same_dir="1"`: Sets a core's name to this value, changing its config file while keeping the core's original games folder
 * `file`: The file to be loaded into the core and its launch arguments.
     * `delay`: Amount of seconds to wait before load/mount.
     * `type`: Either `f` for load file to memory or `s` for mount file.
@@ -51,11 +59,11 @@ Example MGL files:
     * `delay`: Amount of seconds to wait before reset.
 	* `hold`
 
-The `rbf` and `file` tags must be present.
+The `rbf` tag must be present.
 
-The `file` tag can be used more than once in an MGL. Useful for cores that have multiple file slots.
+The `file` tag is optional. It can be used more than once in an MGL. Useful for cores that have multiple file slots.
 
-The `setname` tag is optional. It will make a core temporarily point to a different games folder and config file. Useful for cores which play multiple systems, or often need to toggle between different configurations.
+The `setname` tag is optional. It will make a core temporarily point to a different games folder and config file. Useful for cores which play multiple systems, or often need to toggle between different configurations. `setname same_dir="1"` will make a core temporarily point to a different config file while still using the core's original games folder. Useful if you wish to load games from the core's normal games folder while having custom configuration.
 
 The `type` and `index` attributes depend on what values were configured by the core's developer. See below for [how to check those](#finding-mgl-arguments).
 
