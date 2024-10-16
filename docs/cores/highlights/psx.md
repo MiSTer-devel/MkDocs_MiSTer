@@ -14,7 +14,7 @@ The MiSTer PSX core supports a very large list of control options that original 
 * [Justifier](https://en.wikipedia.org/wiki/Konami_Justifier){target=_blank}
 * SNAC (there is a special adapter required to use real PSX controller accessories. Memory cards and even the pocketstation can be used in this mode technically)
 * [Analog Joystick](https://en.wikipedia.org/wiki/PlayStation_Analog_Joystick){target=_blank}
-* [Pop'n Music Controller](https://www.resetera.com/threads/popn-music-ot-button-slapping-intensifies.3419/)
+* [Pop'n Music Controller](https://www.resetera.com/threads/popn-music-ot-button-slapping-intensifies.3419/){target=_blank}
 
 ### DualShock Support
 
