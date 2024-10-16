@@ -14,11 +14,13 @@ There are other valid paths, that are available for backwards-compatibility reas
 ## Path Priority
 There is a priority order of core paths. When you plug in a USB drive and it has a folder `/games/PSX` on it (mounted locally as `/media/usb<0..5>/games/PSX` when plugged in), then the MiSTer PSX core will look to that folder on the USB drive instead of the local one on the MicroSD at `/media/fat/games/PSX`. Here is the priority list from [Main_MiSTer's file_io.cpp](https://github.com/MiSTer-devel/Main_MiSTer/blob/master/file_io.cpp#L922){target=_blank} in order of highest priority to lowest:
 
-1. `/media/fat`
-2. `/media/usb<0..5>`
-3. `/media/usb<0..5>/games`
-4. `/media/fat/cifs`
-5. `/media/fat/cifs/games`
-6. `/media/fat/games`
+1. `/media/usb<0..5>`
+2. `/media/usb<0..5>/games`
+3. `/media/network`
+4. `/media/network/games`
+5. `/media/fat/cifs`
+6. `/media/fat/cifs/games`
+7. `/media/fat`
+8. `/media/fat/games`
 
 If the core's folder isn't found in any of these it should create the folder.
