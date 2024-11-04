@@ -194,7 +194,7 @@ A number of complex cores (like ao486) benefit from having the chip at cooler te
 
 ## How do I change the wallpaper/background on the Menu core when I turn on my MiSTer?
 
-By default the background of the Menu core when you turn on the MiSTer displays a simulation of old TV static. You can change the background type to color bars, plain black background, and a wallpaper. The wallpaper option will check for `menu.jpg` or `menu.png` in the root of your MicroSD storage (or `/media/fat/` when the MiSTer is running). If you don't have either of these files there then it will look in the `./wallpapers` folder and randomly pick any `.png` or `.jpg` file inside each time the Menu core is loaded. Please note, EXIF metadata for rotation values will influence the orientation of the image. You can modify this value with online EXIF data editors available if you run into orientation issues.
+By default the background of the Menu core when you turn on the MiSTer displays a simulation of old TV static. You can change the background type to color bars, plain black background, and a wallpaper by pressing F1 on the keyboard in the Menu core. The wallpaper option will check for `menu.jpg` or `menu.png` in the root of your MicroSD storage (or `/media/fat/` when the MiSTer is running). If you don't have either of these files there then it will look in the `./wallpapers` folder and randomly pick any `.png` or `.jpg` file inside each time the Menu core is loaded. Please note, EXIF metadata for rotation values will influence the orientation of the image. You can modify this value with online EXIF data editors available if you run into orientation issues.
 
 ## Can you take screenshots on the MiSTer?
 
