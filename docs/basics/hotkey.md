@@ -45,6 +45,18 @@ Some computer cores make use of the Windows key (++win++) on your keyboard.
 | ----------- | ------------ |
 | ++win+f12++ | Open the OSD |
 
+### Light gun cores
+
+Some consoles cores make use of USB/BT light guns, such as the Guncon2, Guncon3, Gun4IR, Sinden, etc.
+
+[Read this guide](./faq.md){target=_blank} for more information.
+
+[More calibration info here.](https://github.com/NolanNicholson/GunCon2-MiSTer?tab=readme-ov-file#calibration-instructions){target=_blank}
+
+| Hotkey             | Description                                                              |
+| ------------------ | ------------------------------------------------------------------------ |
+| OSD Open + ++f10++ | Enters light gun calibration. For best results, use a white/bright image |
+
 ### Cores that support savestates
 
 Very few cores support savestates (NES, PSX, GameBoy, GBA, WonderSwan, AtariLynx). There are 4 savestate slots available. In those cores there is a standard savestate button you can assign on your controller (we'll call that SaveStateBtn here):
