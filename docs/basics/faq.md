@@ -32,6 +32,16 @@ Yes, there are many USB adapters for original console controllers available, see
 
 Light guns such as the NES Zapper are too timing sensitive to work over USB, but will work fine on supported cores via the IO board as detailed below. 
 
+MiSTer supports several USB light guns, such as GunCon2, GunCon3, Gun4IR, Sinden, etc.
+
+GunCon2 requires a CRT and a way to tap into the sync signal. GunCon3, and Gun4IR work on all displays. Sinden requires a modern display and dedicated files for MiSTer.
+
+Reflex Adapt supports overclocked GunCon1, with better performance than GunCon2, when 1ms (1000Hz) polling is enabled.
+
+Each core requires calibration. Calibrate your guns from the distance you plan to play. For best results, use a white screen to calibrate.
+
+Never allow the calibration value to be less than 0. If you save a calibration with a negative value, it will likely cause the core to crash. To fix this, remove the core's light gun calibration file from the "config" folder of your MiSTer's micro SD card. 
+
 ## Any USB controller recommendations?
 
 Almost any controller that uses USB will work with MiSTer. You can also use a Bluetooth or 2.4ghz USB adapter for wireless. Good controllers that many users seem to like and have low input latency are:
