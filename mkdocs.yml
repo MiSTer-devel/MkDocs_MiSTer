@@ -141,7 +141,7 @@ nav:
     - Add-On Boards:
       - RTC Board: advanced/rtc.md
     - Networking:
-      - Setting Up SSH, FTP, and NAS: advanced/network.md
+      - Advanced Networking: advanced/network.md
       - Computer Core Networking: advanced/computer.md
     - CRT Displays:
       - CRT Configuration Table: advanced/crttable.md
