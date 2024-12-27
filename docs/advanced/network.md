@@ -49,3 +49,46 @@ You could write a script to help with typing and remembering your settings.
 ```
 # connmanctl config ethernet_020304050607_cable --dhcp
 ```
+
+## Tailscale Networking
+
+Adding your MiSTer to a Tailnet has a lot of benefits: being able to travel with it while still retaining access to a NAS with games hosted on it, being able to remotely administer a less-technical friends MiSTer and being able to remotely SSH/SFTP in to your MiSTer to run scripts and install cores to name a few.
+
+If you do not already have a Tailnet, follow the instructions [here](https://tailscale.com/kb/1017/install){target=blank} to get started. Make sure you add at least one computer/NAS/phone to the Tailnet once it's created.
+
+Go to the [Tailscale Package Repository](https://pkgs.tailscale.com/stable/#static){target=blank} and download the ARMv7 binary package (It will look something like `arm: tailscale_x.xx.x_arm.tgz`).
+
+Extract the archive on your computer and SFTP the files (`tailscaled` and `tailscale`) to your MiSTer. In this documentation we use the path `/media/fat/linux/tailscale/` but you can use any directory under `/media/fat/` just make sure you edit all the paths in the examples and scripts that follow.
+
+SSH into your MiSTer and change directory to where you put the extracted Tailscale files. Create a directory to house the Tailscale state on boot with `mkdir .state`. Now start the Tailscale Daemon with the following command:
+```
+# /media/fat/linux/tailscale/tailscaled --tun=userspace-networking --statedir=/media/fat/linux/tailscale/.state/
+```
+`--tun=userspace-networking` is added because the MiSTer Linux Kernel is not compiled with TUN support, so running it in the userspace allows the daemon to start. `--statedir=/media/fat/linux/tailscale/.state/` is to prevent the daemon from erroring out on a cold boot when the OS root directory is mounted as Read Only.
+
+Once the Dameon starts, you can then run the the following command to get your MiSTer joined to your tailnet:
+```
+# /media/fat/linux/tailscale/tailscale up --accept-routes
+```
+The `--accept-routes` is only needed if you have a machine on your tailnet set up as a subnet router.
+
+When that command finishes you will see a URL at the bottom of it's output. This is the URL that you will need to paste into your browser to join the device to your Tailnet. Do that now.
+
+Once you have the MiSTer joined to the Tailnet, create a `tailstart.sh` file in the tailscale directory and put the following into it (with your preferred command line editor):
+```
+#/bin/sh
+
+/media/fat/linux/tailscale/tailscaled --tun=userspace-networking --statedir=/media/fat/linux/tailscale/.state/ > /dev/null 2>&1 &
+/media/fat/linux/tailscale/tailscale up --accept-routes > /dev/null 2>&1 &
+```
+
+Once the file is created and has the script in it, run:
+```
+# chmod +x tailstart.sh
+```
+Now to have Tailscale start when your MiSTer boots, edit the `user-startup.sh` file in `/media/fat/linux/` and add the following line to the bottom of it:
+```
+/media/fat/linux/tailscale/tailstart.sh
+```
+
+Now your MiSTer will connect to your Tailnet after every reboot.
