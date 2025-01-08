@@ -81,16 +81,18 @@ Most of the settings changes are done in your `MiSTer.ini` file, which is locate
 ### Official MiSTer - YC (S-Video / Composite) 
 MiSTerFPGA now natively outputs s-video / composite directly from the core. The cores generate two signals that use the existing RGB pins, where the luma (Brightness) uses the green output and the chroma (Color) uses the red output.
 
+#### Adapter Boards
+
+[MiSTerAddons - Active Y/C Adapter](https://misteraddons.com/collections/parts/products/yc-active-encoder-board/){target=_blank}, [Ultimate MiSTer - Active Adapter](https://ultimatemister.com/product/mikes11-active-composite-svideo/){target=_blank}, [Antonio Villena - Active Adapter](https://antoniovillena.com/product/mikes1-vga-composite-adapter/){target=blank}, and [Ultimatemister - Passive Adapter](https://ultimatemister.com/product/mikes1-yc-passive-board/){target=_blank}. There's also an open-source design which you can DIY: [Github](https://github.com/MikeS11/MiSTerCRT){target=_blank} / [forum link](https://misterfpga.org/viewtopic.php?f=33&t=2894){target=_blank}.
+
 #### Connection Requirements - S-Video
 
-[MiSTerAddons - Active Y/C Adapter](https://misteraddons.com/collections/parts/products/yc-active-encoder-board/){target=_blank} and [Ultimatemister - Passive Adapter](https://ultimatemister.com/product/mikes1-yc-passive-board/){target=_blank}.
 * The Active Adapters are recommended for the best quality for both composite and S-Video but the passive adapter can be a good alternative.
 * VGA to Component Cable (Only required for some monitors, i.e Commodore 1702)
 * Custom RCA to S-Video Connector
 
 #### Connection Requirements - Composite
 
-[MiSTerAddons - Active Y/C Adapter](https://misteraddons.com/collections/parts/products/yc-active-encoder-board/){target=_blank} and [Ultimatemister - Passive Adapter](https://ultimatemister.com/product/mikes1-yc-passive-board/){target=_blank}.
 * The Active Adapters are recommended for the best quality for both composite and S-Video but the passive adapter can be a good alternative.
 * VGA to Component Cable to a 1-Male to 2-Female RCA Y-Adapter Splitter Cable. Warning: This method will produce severe rainbowing because of the lack of a luma trap.
 
@@ -118,9 +120,7 @@ MiSTerFPGA now natively outputs s-video / composite directly from the core. The 
 `ntsc_mode=0`      Note: 0 - normal NTSC, 1 - PAL-60, 2 - PAL-M, Note: this is currently not being used by any cores    
 
 ### Alternative Methods of converting RGB to Composite or S-Video
-Alternative methods of obtaining Composite or S-Video on a capable CRT TV set is by using a special adapter. At the moment these are available for sale from [Antoniovillena](https://www.antoniovillena.es/store/product/vga-composite-s-video-adapter/){target=_blank} and [Ultimatemister (PT)](https://ultimatemister.com/product/mister-vga-to-composite-s-video/){target=_blank}.
-
-There's also an open-source design which you can DIY: [Github](https://github.com/MikeS11/MiSTerCRT){target=_blank} / [forum link](https://misterfpga.org/viewtopic.php?f=33&t=2894){target=_blank}.
+Alternative methods of obtaining Composite or S-Video on a capable CRT TV set is by using a external adapters which do not rely on the MiSTer's native Y/C output, but will take RGB or Component and transcode the signal to S-Video or Composite.
 
 **These adapters have been reported to work well in S-Video mode, but Composite has problems with rainbow artifacting and excessive dot crawl. This is currently unavoidable and expected**
 
