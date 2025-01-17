@@ -6,6 +6,10 @@ MiSTer will never use physical cartridges.
 
 The project aims to replace the need for having original hardware for the same experience. It is also physically impractical/impossible given the number of GPIO pins available from the FPGA. 
 
+## Why doesn't MiSTer have a fancy GUI with cover art and metadata?
+
+There are a few reasons combined to explain not having a big fancy GUI on MiSTer. First, MiSTer's menu is designed to take up a very limited amount of space on the FPGA and use the least amount of resources on the ARM processor side. Second, the DE10-Nano has no graphics processor, so a fancy GUI will be rendered slowly in software by the CPU unless it is rendered on the FPGA side. Finally, the MiSTer menu has to fit on a wide variety of very low resolution analog displays and still be useful.
+
 ## Does MiSTer have lag?
 
 It depends on your setup, but it ranges from imperceptibly low to around one frame of lag.  
