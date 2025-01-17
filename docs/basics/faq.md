@@ -16,9 +16,9 @@ It depends on your setup, but it ranges from imperceptibly low to around one fra
 
 Zero latency is possible with certain equipment and tweaks. [See here](../advanced/lag.md) for a more detailed explanation.
 
-## I've seen in the news, "Update Framework".  What does that mean?
+## I've seen in the news, "Update Framework" or "Update Sys".  What does that mean?
 
-The "framework" has all the common elements between cores that handle things like IO, video scaling, etc...
+The "framework" (or "sys") has all the common elements between cores that handle things like IO, video scaling, etc...
 
 ## Can I customize the update/downloader script to ignore certain things?
 
