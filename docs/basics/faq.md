@@ -71,7 +71,7 @@ Yes, you can. [See here](../advanced/lag.md).
 
 ## Do I need the official USB Hub Add-On Board?
 
-No, but you will probably want some sort of inexpensive OTG hub (such as the [MakerSpot Micro USB OTG Hub](https://www.amazon.com/MakerSpot-Accessories-Charging-Extension-Raspberry/dp/B01JL837X8){target=_blank}) at least (or a regular hub with an adapter). Use a powered hub if you have many devices.
+No, but you will probably want some sort of inexpensive OTG hub (such as the [MakerSpot Micro USB OTG Hub](https://www.amazon.com/MakerSpot-Accessories-Charging-Extension-Raspberry/dp/B01JL837X8){target=_blank} at least (or a regular hub with an adapter). Use a powered hub if you have many devices.
 
 ## Do I need to have a USB keyboard with me to use MiSTer?
 
@@ -89,8 +89,8 @@ No. The IO board is optional, but offers features that could be important for so
 
 SNAC (Serial Native Accessory Converter) is used for direct wiring. Supporting cores (SNES, Genesis, NES, and TG16) allow you to directly connect original controllers. SNAC Adapters can be purchased from various sellers online:
 
-* [MiSTerFPGA.co.uk's SNAC adapters](https://misterfpga.co.uk/product/mister-snac-controller-adapters/){target=_blank} (best to use alongside their [SNAC extension cable](https://misterfpga.co.uk/product/mister-snac-extension-cable/){target=_blank})
-* [UltimateMiSTer.com's SNAC Adapters](https://ultimatemister.com/product-category/mister-snac/){target=_blank} (best to use alongside their [SNAC extension cable](https://ultimatemister.com/product/snac-extension-c64-iec-mt32-pi/){target=_blank})
+* [MiSTerFPGA.co.uk's SNAC adapters](https://misterfpga.co.uk/product/mister-snac-controller-adapters/){target=_blank} (best to use alongside their [SNAC extension cable](https://misterfpga.co.uk/product/mister-snac-extension-cable/){target=_blank}
+* [UltimateMiSTer.com's SNAC Adapters](https://ultimatemister.com/product-category/mister-snac/){target=_blank} (best to use alongside their [SNAC extension cable](https://ultimatemister.com/product/snac-extension-c64-iec-mt32-pi/){target=_blank}
 * [MiSTerAddons.com's SNAC V1](https://misteraddons.com/products/mister-fpga-serial-native-accessory-converter-snac){target=_blank} and [SNAC V2](https://misteraddons.com/products/snax){target=_blank} and [SNAC V3](https://misteraddons.com/products/snax64){target=_blank} which all use [external controller adapters](https://misteraddons.com/products/hdmi-controller-adapters){target=_blank} made for them purchased separately.
 
  See [this page](https://github.com/blue212/SNAC){target=_blank} for details on SNAC.
@@ -121,7 +121,7 @@ The DE10-Nano board needs a 5V power supply with at least 2A. The connector is a
 
 ## My MiSTer needs a case. What should I do?
 
-There are two routes you can take; either make it yourself or purchase a case from an online vendor. For DiY, you can find the necessary 3D print files online (e.g. [thingiverse](https://www.thingiverse.com/search?q=mister+fpga){target=_blank}).
+There are two routes you can take; either make it yourself or purchase a case from an online vendor. For DiY, you can find the necessary 3D print files online (e.g. [thingiverse](https://www.thingiverse.com/search?q=mister+fpga){target=_blank}.
 
 ## What kind of screws do I use with the DE-10 Nano's 14mm long brass standoffs?
 
