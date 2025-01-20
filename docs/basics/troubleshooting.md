@@ -13,7 +13,7 @@ If you have a Digital IO board then your first of the large dips in the 2nd pict
 | Analog IO  | Off | Off | Off | Off |
 | Digital IO | Off | Off | Off | On  |
 
-**Note:** If your IO board is based on the [Official 9.2 design](link here), you needn't toggle any of the switches. The new board's framework will autodetect the configuration for you.
+**Note:** If your IO board is based on the 9.2 [IO Board](https://mister-devel.github.io/MkDocs_MiSTer/assets/92_io_board.png) and [AV Mezzanine Board](https://mister-devel.github.io/MkDocs_MiSTer/assets/92_av_board.png), you needn't toggle any of the switches. The new board's framework will autodetect the configuration for you.
 
 ## My gamepad doesn't work
 
