@@ -18,7 +18,7 @@ Zero latency is possible with certain equipment and tweaks. [See here](../advanc
 
 ## I've seen in the news, "Update Framework" or "Update Sys".  What does that mean?
 
-The "framework" (or "sys") has all the common elements between cores that handle things like IO, video scaling, etc...
+The "framework" (or "sys") has all the common elements between cores that handle things like IO, video scaling, etc... Therefore this means that core had it's framework elements updated.
 
 ## Can I customize the update/downloader script to ignore certain things?
 
