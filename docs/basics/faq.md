@@ -60,10 +60,10 @@ And many many more. Check [MiSTerAddons' input latency tests](https://rpubs.com/
 
 There are also some excellent usb controller adapters which enable you to use original console controllers:
 
-* [UltimateMiSTer.com's Daemon USB Adapters](https://ultimatemister.com/product-category/daemonbite-adapters/){target=_blank} - Support for multiple kinds of controllers using an RP2040 chip and the GP2040 firmware.
-* [MiSTerAddons.com's Reflex Adapt](https://misteraddons.com/products/reflex-adapt){target=_blank} - Supports multiple controller types with one primary device to use with [multiple controller adapter cables](https://misteraddons.com/products/hdmi-controller-adapters){target=_blank}.
-* [Timville Triple Controller Daemonbite](https://www.tindie.com/products/timville/triple-controller-classic-gaming-usb-adapter/){target=_blank} - A spinoff of MickGuyver's Daemonbite adapters that has support for NES, Genesis, and SNES original hardware. You can also make it yourself using instructions found [here](https://github.com/timville85/TripleController){target=_blank}. There is an option to purchase a 3d printed housing that you can also print yourself using the 3d files from [here](https://www.thingiverse.com/thing:5011783){target=_blank}.
-* [2600-daptor D9](http://www.2600-daptor.com/){target=_blank} - Lowest latency "controller" in the [MiSTerAddons input latency tests](https://rpubs.com/misteraddons/inputlatency){target=_blank}.
+* [UltimateMiSTer.com's Daemon USB Adapters](https://ultimatemister.com/product-category/daemonbite-adapters/){target=_blank} (Portugal) - Support for multiple kinds of controllers using an RP2040 chip and the GP2040 firmware.
+* [MiSTerAddons.com's Reflex Adapt](https://misteraddons.com/products/reflex-adapt){target=_blank} (USA) - Supports multiple controller types with one primary device to use with [multiple controller adapter cables](https://misteraddons.com/products/hdmi-controller-adapters){target=_blank}.
+* [Timville Triple Controller Daemonbite](https://www.tindie.com/products/timville/triple-controller-classic-gaming-usb-adapter/){target=_blank} (USA) - A spinoff of MickGuyver's Daemonbite adapters that has support for NES, Genesis, and SNES original hardware. You can also make it yourself using instructions found [here](https://github.com/timville85/TripleController){target=_blank}. There is an option to purchase a 3d printed housing that you can also print yourself using the 3d files from [here](https://www.thingiverse.com/thing:5011783){target=_blank}.
+* [2600-daptor D9](http://www.2600-daptor.com/){target=_blank}
 
 ## Can I increase the polling rate of my USB controller to improve input latency?
 
