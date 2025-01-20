@@ -109,7 +109,7 @@ If you'd like to buy a board from a vendor online (instead of soldering one your
 * [LegacyPixels.com](https://www.legacypixels.com/mister/){target=_blank} (USA)
 * [CAMInventions.com](https://www.caminventions.com/){target=_blank} (Australia)
 * [ManuFerHi.com](https://manuferhi.com/c/mister-fpga){target=_blank} (Spain)
-* [MiSTer-FPGA.de](https://www.mister-fpga.de/sonstiges/mister-fpga-emu-2-0/mister-kaufen/){target=_blank} (Germany)
-* [RetroCastle AliExpress store](https://www.aliexpress.com/store/912024455){target=_blank} (China)
+* [RetroCastle](https://www.retrocastlestore.com/){target=_blank} (China)
+* [RetroRemake](https://retroremake.co/pages/store){target=_blank} (China) (NOTE: This uses a clone board of the DE10-Nano, not the real Terasic DE10-Nano)
 
 This is not an official endorsement of any sellers, merely a collection of links. Any hardware failures or shipping failures you have should prompt you to reach out for support from the vendor you purchased your board from first.
