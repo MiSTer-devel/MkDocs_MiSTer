@@ -1,10 +1,10 @@
 Here are some Frequently Asked Questions that you may have. If there is anything missing here, feel free to contribute by editing the page on github using the Edit pen icon in the top right.
 
-## When will MiSTer support cartridges?
+## When will MiSTer support cartridges or USB CD Drives?
 
-MiSTer will never use physical cartridges. 
+MiSTer will never officially use physical cartridges or support USB CD Drives. 
 
-The project aims to replace the need for having original hardware for the same experience. It is also physically impractical/impossible given the number of GPIO pins available from the FPGA. 
+The project aims to replace the need for having original hardware for the same experience. It is physically impractical to support cartridges given the number of GPIO pins available from the FPGA. USB CD Drives all will have different latency and buffer characteristics, different drivers, and actually will add unpredictable latency to the current method of loading CD games.
 
 ## Why doesn't MiSTer have a fancy GUI with cover art and metadata?
 
