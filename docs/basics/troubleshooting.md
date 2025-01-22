@@ -25,13 +25,13 @@ If you have a fancy gamer keyboard with lots of macros and RGB lights, it's poss
 
 ## The lights on my MiSTer light up, but I don't get video out of the HDMI port
 
-If your MiSTer looks like it's booting up, but you don't get any video output from the HDMI, there are a couple of things you should try:
+If your MiSTer looks like it's booting up, but you don't get any video output from the HDMI port, there are a couple of things you should try:
 
 1. Do the usual basic troubleshooting by checking that the cable is good and has a good connection to both your MiSTer and the display device.
 2. Try another cable just in case
 3. Pop the SD card out and back into the slot. (if the MiSTer can't read the SD card (or the card is empty) it will fail to boot completely).
 
-Finally, you can verify that the MiSTer has booted by using connecting to it via either SSH or FTP. If you can connect, then it has booted.
+Finally, you can verify that the MiSTer has booted by using connecting to it via either [SSH or FTP](https://mister-devel.github.io/MkDocs_MiSTer/advanced/network/?h=ip#network-access). If you can connect, then it has booted.
 
 ## Fixing missing certs
 
