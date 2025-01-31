@@ -205,6 +205,24 @@ Generally, no. While it’s always possible that someone will take time to port 
 
 A number of complex cores (like ao486) benefit from having the chip at cooler temperatures, since heat can affect the tight timings they require. A heatsink is recommended to avoid any possible glitches, but you won't damage your DE10-Nano if you choose not to use one. A fan is even better on top of that.
 
+## My fan is very loud, is there anything I can do about that?
+
+Probably.
+
+While not ubiquitous, a lot of IO boards will have a [jumper](https://en.wikipedia.org/wiki/Jumper_(computing)) next to or near the fan hookup to change the fan's voltage from 5v to 3v. 
+
+The jumper will likely either be next to the fan power's connector (you may have to remove the [mezzanine board](https://mister-devel.github.io/MkDocs_MiSTer/assets/92_av_board.png) to access it).
+
+Here is an example of the jumper on the top side of the board.
+
+![IO Board with the 5v jumper on the top side](https://mister-devel.github.io/MkDocs_MiSTer/assets/jumper_top.png)
+
+Here is an example of the jumper on the bottom side of the board.
+
+![IO Board with the 5v jumper on the bottom side](https://mister-devel.github.io/MkDocs_MiSTer/assets/jumper_bottom.png)
+
+Changing the jumper's position in the block should slow the fan down (and make it quieter).
+
 ## How do I change the wallpaper/background on the Menu core when I turn on my MiSTer?
 
 By default the background of the Menu core when you turn on the MiSTer displays a simulation of old TV static. You can change the background type to color bars, plain black background, and a wallpaper by pressing F1 on the keyboard in the Menu core. The wallpaper option will check for `menu.jpg` or `menu.png` in the root of your MicroSD storage (or `/media/fat/` when the MiSTer is running). If you don't have either of these files there then it will look in the `./wallpapers` folder and randomly pick any `.png` or `.jpg` file inside each time the Menu core is loaded. Please note, EXIF metadata for rotation values will influence the orientation of the image. You can modify this value with online EXIF data editors available if you run into orientation issues.
