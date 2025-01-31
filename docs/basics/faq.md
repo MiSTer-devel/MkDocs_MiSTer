@@ -209,9 +209,9 @@ A number of complex cores (like ao486) benefit from having the chip at cooler te
 
 Probably.
 
-While not ubiquitous, a lot of IO boards will have a [jumper](https://en.wikipedia.org/wiki/Jumper_(computing)) next to or near the fan hookup to change the fan's voltage from 5v to 3v. 
+While not ubiquitous, a lot of IO boards will have a [jumper](https://en.wikipedia.org/wiki/Jumper_(computing)){target=_blank} next to or near the fan hookup to change the fan's voltage from 5v to 3v. 
 
-The jumper will likely either be next to the fan power's connector (you may have to remove the [mezzanine board](https://mister-devel.github.io/MkDocs_MiSTer/assets/92_av_board.png) to access it).
+The jumper will likely either be next to the fan power's connector (you may have to remove the [mezzanine board](https://mister-devel.github.io/MkDocs_MiSTer/assets/92_av_board.png){target=_blank} to access it).
 
 Here is an example of the jumper on the top side of the board.
 
