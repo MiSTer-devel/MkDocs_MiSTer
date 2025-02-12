@@ -211,13 +211,13 @@ Probably.
 
 While not ubiquitous, a lot of IO boards will have a [jumper](https://en.wikipedia.org/wiki/Jumper_(computing)){target=_blank} next to or near the fan hookup to change the fan's voltage from 5v to 3v. 
 
-The jumper will likely either be next to the fan power's connector (you may have to remove the [mezzanine board](https://mister-devel.github.io/MkDocs_MiSTer/assets/92_av_board.png){target=_blank} to access it).
+The jumper will likely either be next to the fan power's connector (you may have to remove the [mezzanine board](https://mister-devel.github.io/MkDocs_MiSTer/assets/92_av_board.png){target=_blank} to access it), or on the underside of the board.
 
 Here is an example of the jumper on the top side of the board.
 
 ![IO Board with the 5v jumper on the top side](https://mister-devel.github.io/MkDocs_MiSTer/assets/jumper_top.png)
 
-Here is an example of the jumper on the bottom side of the board.
+Here is an example of the jumper on the underside of the board.
 
 ![IO Board with the 5v jumper on the bottom side](https://mister-devel.github.io/MkDocs_MiSTer/assets/jumper_bottom.png)
 
