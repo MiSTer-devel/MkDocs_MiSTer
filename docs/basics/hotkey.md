@@ -49,7 +49,7 @@ Some computer cores make use of the Windows key (++win++) on your keyboard.
 
 Some consoles cores make use of USB/BT light guns, such as the Guncon2, Guncon3, Gun4IR, Sinden, etc.
 
-[Read this guide](./faq.md){target=_blank} for more information.
+[Read this guide](./input.md#using-a-lightgun){target=_blank} for more information.
 
 [More calibration info here.](https://github.com/NolanNicholson/GunCon2-MiSTer?tab=readme-ov-file#calibration-instructions){target=_blank}
 
