@@ -231,7 +231,7 @@ By default the background of the Menu core when you turn on the MiSTer displays 
 
 You can take screenshots on the MiSTer very easily. All you have to do is press ++win+prtsc++ on your keyboard and you will get an upscaled screenshot. For raw output from the core (which may be distorted or in a weird aspect ratio) prese ++shift+win+prtsc++. The screenshots are stored in `./screenshots` in a folder named after the core you took the screenshot in.
 
-These screenshots do not include the effects of any video processing options, they are very simple. To take screenshots of the full video processing (i.e. the image you see on your modern screen when using the MiSTer) you will need to use some kind of capture card that supports the desired resolution. An example capture card that tis frequently used in the community is the [Magewell USB HDMI Gen 1 or Gen 2](https://www.magewell.com/products/usb-capture-hdmi-gen-2){target=_blank} which can be found for a fraction of the retail price on eBay used.
+These screenshots do not include the effects of any video processing options, they are very simple. To take screenshots of the full video processing (i.e. the image you see on your modern screen when using the MiSTer) you will need to use some kind of capture card that supports the desired resolution. An example capture card that is frequently used in the community is the [Magewell USB HDMI Gen 1 or Gen 2](https://www.magewell.com/products/usb-capture-hdmi-gen-2){target=_blank} which can be found for a fraction of the retail price on eBay used.
 
 [Here is an example of a raw screenshot from the NES core](img/raw_screenshot.png){target=_blank}
 
