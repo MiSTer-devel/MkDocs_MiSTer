@@ -3,7 +3,7 @@ site_url: https://mister-devel.github.io/MkDocs_MiSTer/
 site_author: Kevin Coleman
 site_description: >-
   MiSTer FPGA is an open source project that aims to recreate various classic computers, game consoles, and arcade machines, using modern hardware.
-copyright: Copyright &copy; 2022-2024 MiSTer FPGA
+copyright: Copyright &copy; 2022-2025 MiSTer FPGA
 
 repo_name: MkDocs_MiSTer
 repo_url: https://github.com/MiSTer-devel/MkDocs_MiSTer/
