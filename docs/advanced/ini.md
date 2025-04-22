@@ -102,4 +102,9 @@ custom_aspect_ratio_1=8:7
 
 The Menu core can have its own settings too. Create a section named `[Menu]` to specify settings for it.
 
-You can also make exceptions for all Arcade cores with the `[arcade]` header in the same way, and you can have separate settings for vertical arcade cores by using `[arcade_vertical]` because you may want a different video preset by default for vertical oriented arcard cores.
+You can also make exceptions for all Arcade cores with the `[arcade]` header in the same way, and you can have separate settings for vertical arcade cores by using `[arcade_vertical]` because you may want a different video preset by default for vertical oriented arcard cores, like this example:
+
+```
+[arcade_vertical]
+direct_video=0
+```
