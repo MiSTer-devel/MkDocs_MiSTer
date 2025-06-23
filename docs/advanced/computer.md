@@ -6,24 +6,10 @@ Starting from 2018 may 7 release MiSTer supports serial (UART) connection from F
 
 ## Cores supporting serial connection
 
-* **Minimig**. Tested on [Roadshow TCP/IP](https://misterfpga.org/viewtopic.php?f=4&t=2063&p=18598&hilit=Roadshow#p18598){target=_blank}, AmiTCP and Miami. 
+* **Minimig**. Tested on [Roadshow TCP/IP](https://misterfpga.org/viewtopic.php?f=4&t=2063&p=18598&hilit=Roadshow#p18598){target=_blank}, AmiTCP and Miami. Supported speeds are 115200 or 230400 baud, be sure to match the OSD settings with your TCP/IP stack of choice !
     1. AmiTCP provides more complete solution with ftpd daemon. There are many other 3rd party addons are based on AmiTCP, so it's advised to use this package.
     2. Roadshow works very well, it is fully compatible with AmiTCP and offers additional extensions. Follow these [Instructions](https://misterfpga.org/viewtopic.php?f=4&t=2063&p=18598&hilit=Roadshow#p18598){target=_blank} for complete setup.  It is still a paid for and supported product, you can find more information [here](http://roadshow.apc-tcp.de/index-en.php){target=_blank}.
-    3.  Miami was successfully tested. The Miami settings that worked: use PPP connection via serial.device, set baud rate to 115200, RTS/CTS to on, and enable 8N1. Set modem to nullmodem. Manually enter an IP suitable for your lan ending in 254, e.g. 192.168.1.254. Manually add a DNS server, e.g. 8.8.8.8 for Google DNS. Term v4.7 has been used to test console connection. For a more detailed MiamiDX setup guide, please check [here](https://www.geocities.ws/allforamiga/){target=_blank}
-    4.  You can also double the speed on Minimig by modifying the /sbin/uartmode script, like mine:
-```sh
-echo "$localip:$remoteip" >/tmp/ppp_options
-cat /media/fat/linux/ppp_options >>/tmp/ppp_options
-
-echo 1 > /proc/sys/net/ipv4/ip_forward
-[ -f /tmp/CORENAME ] && core_name=$(cat /tmp/CORENAME)
-    if [ "$core_name" == "Minimig" ]; then
-        taskset 1 pppd 230400 file /tmp/ppp_options
-    else
-        taskset 1 pppd $conn_speed file /tmp/ppp_options
-    fi
-```
-Of course, change the baud rate as well to 230400 on your TCP/IP stack of choice. Tested under MiamiDX, no issues.
+    3.  Miami was successfully tested. The Miami settings that worked: use PPP connection via serial.device, set baud rate to 115200 OR 230400, RTS/CTS to on, and enable 8N1. Set modem to nullmodem. Manually enter an IP suitable for your lan ending in 254, e.g. 192.168.1.254. Manually add a DNS server, e.g. 8.8.8.8 for Google DNS. Term v4.7 has been used to test console connection. For a more detailed MiamiDX setup guide, please check [here](https://www.geocities.ws/allforamiga/){target=_blank}
 
 * **ao486**. PPP and serial connections are working under DOS, tested with mTCP and various terminal software. PPP is also working under Win3.11/Win95/Win98/NT 4.0.
 DOS tools are here : [dos_ftpd.zip](https://github.com/MiSTer-devel/ao486_MiSTer/raw/master/sw/dos_ftpd.zip){target=_blank}. The DOS FTP server included does not support passive mode, so set your client to use active.
