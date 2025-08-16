@@ -4,9 +4,10 @@ MiSTer uses a combination of various compiled binaries in the finished product. 
 
 The vast majority of MiSTer FPGA cores currently use Quartus 17.0.2 for compilation. Here are the download links for both Windows and Linux:
 
-[Windows Download](https://download.altera.com/akdlm/software/acdsinst/17.0std.2/602/ib_tar/Quartus-lite-17.0.2.602-windows.tar){target=_blank}
-
-[Linux Download](https://download.altera.com/akdlm/software/acdsinst/17.0std.2/602/ib_tar/Quartus-lite-17.0.2.602-linux.tar){target=_blank}
+| Download URL                                                                                                                           | SHA1 Checksum                              |
+|----------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|
+| [Linux](https://download.altera.com/akdlm/software/acdsinst/17.0std.2/602/ib_tar/Quartus-lite-17.0.2.602-linux.tar){target=_blank}     | `02aebab728d54e3ca8660d2646fdf93bc669b0ac` |
+| [Windows](https://download.altera.com/akdlm/software/acdsinst/17.0std.2/602/ib_tar/Quartus-lite-17.0.2.602-windows.tar){target=_blank} | `01d1f9cea037cf4b8c666da1193f94ba626b6fb3` |
 
 The Linux version is intended to work with Ubuntu 18.xx, you may have to adjust by downloading some missing dependencies if you use a newer version or another distribution.
 
