@@ -43,6 +43,30 @@ PPP daemon uses **/media/fat/linux/ppp_options** (linux\ppp_options of PC) file.
 
 For correct PPP work, make sure you see a network icon in Menu core before starting the other core. Otherwise PPP link won't get IPs. If you've started core earlier, then simply connect the core to PPP and disconnect. Next connection will get correct IP. Or you can switch UART mode in OSD to renew the IP.
 
+### MS-DNS configuration
+
+DNS is not acquired automatically by Windows 95/98/NT on a PPP connection
+and requires manual configuration either in the Operating System or in `ppp_options` file on your MiSTers SD Card.
+The latter is the better solution as it allows multiple Windows machines to autoconfigure.
+
+1. Get a valid DNS server address:
+    * Run `cat /etc/resolv.conf | awk '/nameserver/ {print $2}'` on your MiSTer or other Linux devices on the same network to get the DNS server address(es) it autoconfigured
+    * Run `ipconfig /all` on a modern Windows device on the same network and look for `DNS Servers` in the output to get the DNS server address(es) it autoconfigured
+    * Alternatively, use a public DNS server (`8.8.8.8`, `8.8.4.4`, `9.9.9.9`, `1.1.1.1` etc...) at the expense of longer name resolving times
+2. Open `ppp_options` for editing on your MiSTer SD Card:
+    * Located at `/media/fat/linux/ppp_options` when accessed from the MiSTer itself
+    * Located at `linux/ppp_options` when accessed by inserting the SD Card into another device
+3. Specify ms-dns entries with the DNS server addresses you got earlier:
+    * Find and remove the `#` at the beginning of the ms-dns line to uncomment it
+    * Modify the ip address so it's the valid DNS server address you got in step 1
+    * As an example: if the valid DNS server address was `10.0.0.138` then `ppp_options` should be modified to look like:
+   ```ini
+   # Specify which DNS Servers the incoming Win95 or WinNT Connection should use
+   # Two Servers can be remotely configured
+   ms-dns 10.0.0.138
+   # ms-dns 192.168.1.2
+   ```
+
 ## PPP connection in MS-DOS on ao486
 
 1. In the Mister System Menu ++win+f12++ set the "Uart Connection" to "PPP", Baud to "115200" and save it.
@@ -113,15 +137,7 @@ epppd com1 115200 local
 5. **Important:**
 DNS is not acquired automatically by Windows 95 (or Windows NT) unless either:
     * Click on TCP/IP Settings in the above Server Types tab, TCP/IP Settings  and configure static name servers (either by using your router's internal IP address - usually .1 - or Google public ones like 8.8.8.8)
-    * Login into your MiSTer by SSH or F9, go to /media/fat/linux and change your ppp_options file by uncommenting (delete the front #) and modifying the IP addresses from "ms-dns" entries:
-```ini
-# /etc/ppp/options
-
-# Specify which DNS Servers the incoming Win95 or WinNT Connection should use
-# Two Servers can be remotely configured
-ms-dns 192.168.1.1  #CHANGE it to your network's needs
-ms-dns 8.8.8.8         #or  8.8.4.4 etc
-```
+    * Edit "ms-dns" lines in the `ppp_options`, see [MS-DNS configuration](#ms-dns-configuration)
 
 ## PPP connection in Windows NT 4.0 on ao486
 
@@ -141,15 +157,7 @@ The full how-to install Windows NT 4.0 and PPP setup on [MiSTerFPGA forum](https
 10. **Important:**
 DNS is not acquired automatically by Windows NT (or Win95) unless either:
     * Click on TCP/IP Settings in the above Server tab and use configure static Nameserver (either by using your router's internal IP address - usually .1 - or Google public ones like 8.8.8.8)
-    * Login into your MiSTer by SSH or F9, go to /media/fat/linux and change your ppp_options file by uncommenting (delete the front #) and modifying the IP addresses from "ms-dns" entries:
-```ini
-# /etc/ppp/options
-
-# Specify which DNS Servers the incoming Win95 or WinNT Connection should use
-# Two Servers can be remotely configured
-ms-dns 192.168.1.1  #CHANGE it to your network's needs
-ms-dns 8.8.8.8         #or  8.8.4.4 etc
-```
+    * Edit "ms-dns" lines in the `ppp_options`, see [MS-DNS configuration](#ms-dns-configuration)
 
 ## PPP connection in MS-DOS on PC XT
 
