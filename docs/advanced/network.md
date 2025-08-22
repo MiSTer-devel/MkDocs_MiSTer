@@ -39,40 +39,110 @@ If certain cores doesn't start when loading games from CIFS share but work OK wh
 A project was launched by Dan Mons that makes it easier to get a network attached storage (NAS) device up and running which was focused solely on retro gaming device compatibility. The MiSTer platform is one of the project's primary focuses and it works quite well. All you need is a Raspberry Pi4 or Pi5 and some kind of external hard drive storage device. Remember: NAS IS NOT BACKUP! You could lose data if you rely solely on a NAS for important data. They have a good [installation guide](https://github.com/danmons/retronas/wiki/Installing-RetroNAS){target=_blank} that is simple to follow and [MiSTer-specific instructions](https://github.com/danmons/retronas/wiki/MiSTer-FPGA){target=_blank} to help get you started. They also have video guides available on Youtube for [installation](https://www.youtube.com/watch?v=szA-MSabplc){target=_blank} and [MiSTer FPGA-specific configuration](https://www.youtube.com/watch?v=OrTctA-5kqk){target=_blank} if you prefer.
 
 ## Static IP Address configuration
-Currently the best way to do this is using `connmanctl` (try `connmanctl help` for more info).
+By default, MiSTer uses `dhcpcd` (not to be confused with `dhcpd`) to acquire a local network IP address from a DHCP server.
+If you want to set a static IP address and/or router/DNS addresses.
+You can do so by modifying `dhcpcd.conf`.
+There are many other features available in `dhcpcd.conf` 
+then what's discussed here. 
+For full documentation read [dhcpcd.conf (5)](https://man.archlinux.org/man/dhcpcd.conf.5){target=blank}.
 
-* Create /var/lib/connman directory so changes will persist across reboots  
+### Login to Linux terminal on the MiSTer
+From the MiSTers startup menu, press ++F9++ to get a Linux terminal then
+login as root (see [Network Access](#network-access) for the default credentials).
 
+While you can use SSH to access the MiSTers Linux terminal remotely and configure a static IP address that way;
+it is not recommended as you may lose network access (and therefore your SSH connection) to your MiSTer
+after the IP address changes.
+
+### Get the name of the network interface to assign a static IP address
+There will always be at least two network interfaces on DE-10 Nano MiSTer:
+
+| Interface Name | Description                                             |
+|----------------|---------------------------------------------------------|
+| `lo`           | Linux virtual network loopback device (not interesting) |
+| `eth0`         | The DE-10 Nanos built-in Gigabit Ethernet               |
+
+These two interface names should be consistent across all MiSTers.
+However, if you want to set a static IP address on a USB network card, 
+you will first need to know the name Linux has given to the interface.
+To do this run the command `ip link` by typing it and then pressing ++Enter++.
+You should get an output that looks somewhat like this:
 ```
-# mkdir /var/lib/connman
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
+    link/ether 01:02:03:04:05:06 brd ff:ff:ff:ff:ff:ff
+```
+If necessary, you can run the command `ip addr` instead to see what IP address is currently assigned to each interface (if any).
+You would get an output that looks somewhat like this:
+```
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 01:02:03:04:05:06 brd ff:ff:ff:ff:ff:ff
+    inet 10.0.0.221/24 brd 10.0.0.255 scope global dynamic noprefixroute eth0
+       valid_lft 40368sec preferred_lft 34968sec
+```
+There will be an additional entry 
+for each USB Wi-Fi and/or ethernet adapter MiSTer has recognized.
+Take note of the interface name you want to change before proceeding to the next step.
+The interface names are case-sensitive.
+
+### Configure a static IP address to an interface
+
+> Let's assume you want the network interface named `eth0` to be assigned a static ip address of `192.168.0.128`.
+Replace these values with the network interface name you got in the previous step
+and the IP address you want to set it to.
+
+Open dhcpcd configuration file for editing by running the command `nano /etc/dhcpcd.conf` 
+(or `vi /etc/dhcpcd.conf` if you know what that is and prefer it).
+Press ++Down++ until you're at the bottom of the file then type the following:
+```
+interface eth0
+static ip_address=192.168.0.128/24
+```
+Be sure to type these lines at the very bottom of the file as these lines are order-sensitive.
+Any line below an `interface` line will apply to that interface until the next `interface` line.
+Any line above the first `interface` line will apply to all network interfaces.
+
+You can optionally specify any combination of options for an interface, here are some useful ones:
+
+| Option                        | Description                                       |
+|-------------------------------|---------------------------------------------------|
+| `static routers=`             | Manually specify routers/gateways to the Internet |
+| `static domain_name_servers=` | Manually specify DNS servers to revolve names     |
+| `ntp_servers=`                | Manually specify NTP servers to get time from     |
+
+With all these options manually specified a interface configuration could look somewhat like this:
+```
+interface eth0
+static ip_address=192.168.0.128/24
+static routers=192.168.0.1
+static domain_name_servers=8.8.8.8 1.1.1.1
+ntp_servers=192.168.0.1 0.pool.ntp.org 1.pool.ntp.org 2.pool.ntp.org
 ```
 
-* Find your on-board network service name.
-  
-```
-# connmanctl services
-*AO Wired                ethernet_020304050607_cable
-```
+Once done, press ++Ctrl+o++ to make `nano` save `dhcpcd.conf` then ++Ctrl+x++ to exit `nano`.
+Run the command `reboot` to restart the MiSTer back to the startup menu with the new network settings applied.
 
-* Setup IP address (e.g. `192.168.1.123`, should be unused), subnet mask (e.g. `255.255.255.0`) and gateway (e.g. `192.168.1.1`, typically your router IP address). To configure the right device use the service name returned from above command (e.g. `ethernet_020304050607_cable`). This will disable the use of DHCP.
- 
-```
-# connmanctl config ethernet_020304050607_cable --ipv4 manual 192.168.1.123 255.255.255.0 192.168.1.1
-```
+### Re-Enabling DHCP
+If your static IP configuration isn't working, or you simply want to revert to automatic DHCP IP assignment.
+Open `/etc/dhcpcd.conf` again and comment out the lines by placing a `#` character at the beginning of each line 
+that you want to revert the behavior of.
+Commenting out lines is as good as removing them but saves you having to write them again later if you change your mind.
 
-* Setup one or more DNS server(s) (e.g. `192.168.1.1` from your router, `8.8.8.8` from Google DNS.
-
+To revert all of your configurations, comment out every line you added like so:
 ```
-# connmanctl config ethernet_020304050607_cable --nameservers 192.168.1.1 8.8.8.8
+#interface eth0
+#static ip_address=192.168.0.128/24
+#static routers=192.168.0.1
+#static domain_name_servers=8.8.8.8 1.1.1.1
+#ntp_servers=192.168.0.1 0.pool.ntp.org 1.pool.ntp.org 2.pool.ntp.org
 ```
-You could write a script to help with typing and remembering your settings.
-
-> You can also setup your on-board network connection by editing `/etc/network/interfaces`. This is currently not advised. Because if you have a DHCP server in your network, the network stack will still contact the DHCP server and assign the returned IP address regardless, leading to usually unwanted behavior.
-
-## Re-Enabling DHCP
-```
-# connmanctl config ethernet_020304050607_cable --dhcp
-```
+Just like before: save the file and reboot to restart the MiSTer
+back to the startup menu with the new network settings applied.
 
 ## Tailscale Networking
 
