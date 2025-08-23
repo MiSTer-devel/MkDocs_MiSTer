@@ -5,7 +5,33 @@ MiSTer board can be access through on-board Ethernet port. System has **FTP**, *
 
 User name: **root**  Password: **1**
 
-When using FTP, make sure your file transfers are in Binary not ASCII. ASCII-type transfers will result in corruption of that data. A good FTP client for Windows that defaults to Binary and supports FTP as well as SFTP and SCP (ssh copy) is [WinSCP](https://winscp.net/eng/download.php).
+### FTP/SFTP
+The File Transfer Protocol (FTP) is a standardized network protocol that allows computers on a network to transfer files between each other. 
+It can be used to upload or download files to your MiSTer from another computer on the network without having to remove the SD card.
+SFTP is simply FTP with an encrypted connection, however; it should be noted that not all FTP clients support SFTP.
+
+You can use whatever FTP or SFTP client you prefer
+so long as you make sure your file transfers are in binary and not ASCII.
+ASCII-type transfers will result in corruption of that data.
+
+Once connected to the MiSTer your SDCard content will be in the `/media/fat` path.
+
+If you don't have a compatible FTP client already then try [FileZilla](https://filezilla-project.org/download.php?type=client){target=blank}. 
+It is a solid choice for Linux, MacOS and Windows.
+Another good FTP client for Windows is [WinSCP](https://winscp.net/eng/download.php){target=blank}.
+
+### SSH
+Secure shell (SSH) is a standardized network protocol for remotely operating computers over a network.
+It can be used to operate a text terminals of computers (including the one on your MiSTer) remotely from another computer on the network.
+
+On Linux and MacOS the `ssh` client is more than likely pre-installed. 
+Open a terminal emulator and type `ssh` followed by the user and address. 
+For example if the MiSTers IP address is `192.168.2.8` and you wanted to login as the `root` user,
+then the command to connect would be `ssh root@192.168.2.8`.
+
+There is no official SSH client for Windows but [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) can be used instead.
+Using the same example as above type `root@192.168.2.8` into the **Host Name** text field.
+Ensure **Port** is set to `22` and **Connection type** is set to **SSH** then click **Open**.
 
 ## Share Mounting
 The MiSTer can mount a network share from another computer or server as if it were storage. CIFS and NFS shares are supported. The following helper scripts are provided to simplify this process, if you want to use them download to them to /media/fat/Scripts
