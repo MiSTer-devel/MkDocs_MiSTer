@@ -16,20 +16,45 @@ ASCII-type transfers will result in corruption of that data.
 
 Once connected to the MiSTer your SDCard content will be in the `/media/fat` path.
 
-If you don't have a compatible FTP client already then try [FileZilla](https://filezilla-project.org/download.php?type=client){target=blank}. 
-It is a solid choice for Linux, MacOS and Windows.
-Another good FTP client for Windows is [WinSCP](https://winscp.net/eng/download.php){target=blank}.
+If you don't have a compatible FTP client already, then try [FileZilla](https://filezilla-project.org/download.php?type=client){target=blank}. 
+It is a solid choice for all modern operating systems (Linux, MacOS and Windows). 
+Older version of FileZilla such as `2.1.9a` are compatible with Windows 95/NT3.5+
+and can be used inside [ao486 core with a PPP connection](computer.md#ppp-connection-in-windows-9598-on-ao486).
+
+Another good FTP client for modern Windows operating systems is [WinSCP](https://winscp.net/eng/download.php){target=blank}.
+
+Once one of these clients is installed, run the program and open the **Site Manager** dialog.
+
+| FTP Client | Site Manager Location                     |
+|------------|-------------------------------------------|
+| FileZilla  | **File** -> **Site Manager**              |
+| WinSCP     | **Tabs** -> **Sites** -> **Site Manager** |
+
+Set **Protocol** to either `FTP` or `SFTP` and fill out the **Host**, **User** and **Password** fields.
+For example: if the MiSTers IP address is `192.168.2.8` and you wanted to login as the `root` user,
+then **Host** would be `192.168.2.8`, user would be `root` and password would be the user password.
+
+You can optionally set the **Default Remote Directory** for this site to `/media/fat`.
+This will make the FTP automatically navigate to the SD Card on the MiSTer after connecting. 
+Furthermore, if you have an organized folder on your computer for MiSTer content, 
+you may want to set the **Default Local Directory** to that path.
+
+| FTP Client | Remote Directory Location                                                    |
+|------------|------------------------------------------------------------------------------|
+| FileZilla  | **Site Manager** -> **Advanced** -> **Default Remote Directory:**            |
+| WinSCP     | **Site Manager** -> **Advanced** -> **Directories** -> **Remote Directory:** |
+
+After the settings have been set click **Connect** or **Login**.
 
 ### SSH
 Secure shell (SSH) is a standardized network protocol for remotely operating computers over a network.
-It can be used to operate a text terminals of computers (including the one on your MiSTer) remotely from another computer on the network.
+It can be used to operate a text terminal on a computer (including the one on your MiSTer) remotely from another computer on the network.
 
-On Linux and MacOS the `ssh` client is more than likely pre-installed. 
-Open a terminal emulator and type `ssh` followed by the user and address. 
+To connect on Linux and MacOS open a terminal emulator and type `ssh` followed by the user and address. 
 For example if the MiSTers IP address is `192.168.2.8` and you wanted to login as the `root` user,
 then the command to connect would be `ssh root@192.168.2.8`.
 
-There is no official SSH client for Windows but [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) can be used instead.
+If your Windows machine does not have `ssh` installed in Command Prompt you can download and run [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html){target=blank} instead.
 Using the same example as above type `root@192.168.2.8` into the **Host Name** text field.
 Ensure **Port** is set to `22` and **Connection type** is set to **SSH** then click **Open**.
 
