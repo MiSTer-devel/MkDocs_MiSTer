@@ -89,15 +89,100 @@ If certain cores doesn't start when loading games from CIFS share but work OK wh
 ## RetroNAS
 A project was launched by Dan Mons that makes it easier to get a network attached storage (NAS) device up and running which was focused solely on retro gaming device compatibility. The MiSTer platform is one of the project's primary focuses and it works quite well. All you need is a Raspberry Pi4 or Pi5 and some kind of external hard drive storage device. Remember: NAS IS NOT BACKUP! You could lose data if you rely solely on a NAS for important data. They have a good [installation guide](https://github.com/danmons/retronas/wiki/Installing-RetroNAS){target=_blank} that is simple to follow and [MiSTer-specific instructions](https://github.com/danmons/retronas/wiki/MiSTer-FPGA){target=_blank} to help get you started. They also have video guides available on Youtube for [installation](https://www.youtube.com/watch?v=szA-MSabplc){target=_blank} and [MiSTer FPGA-specific configuration](https://www.youtube.com/watch?v=OrTctA-5kqk){target=_blank} if you prefer.
 
-## Static IP Address configuration
+## Network settings and configuration
 By default, MiSTer uses `dhcpcd` (not to be confused with `dhcpd`) to acquire a local network IP address from a DHCP server.
-If you want to set a static IP address and/or router/DNS addresses.
-You can do so by modifying `dhcpcd.conf`.
-There are many other features available in `dhcpcd.conf` 
-then what's discussed here. 
+It is a powerful DHCP client with a lot of control and customization options in its configuration file (`dhcpcd.conf`),
+too many to be discussed here. 
+Instead, will cover the most likely reasons you would want to modify the way `dhcpcd` behaves on a MiSTer. 
 For full documentation read [dhcpcd.conf (5)](https://man.archlinux.org/man/dhcpcd.conf.5){target=blank}.
 
-### Login to Linux terminal on the MiSTer
+### Hostname configuration
+`dhcpcd` can be configured so that MiSTer offers its preferred name to your DHCP server, but it's disabled by default.
+Enabling it will allow you to connect to your MiSTer by a designated name
+instead of having to look up and remember an IP address.
+
+#### Login to Linux terminal on the MiSTer
+From the MiSTers startup menu, press ++F9++ to get a Linux terminal then
+login as root (see [Network Access](#network-access) for the default credentials).
+
+Alternatively, you can log in remotely with [SSH](#ssh). 
+This is recommended if possible as you will be able to copy and paste the commands instead of typing them out by hand. 
+
+#### Check your local network has a top-level domain assigned
+Before enabling this feature, you should be sure 
+that your network router supports top-level domains (TLDs) in the local network.
+
+To do this, run the command `dhcpcd -U | less` and press ++Enter++
+then use ++Down++ and ++Up++ key to look for at least one `domain_name` entry that looks somewhat like this:
+```
+domain_name=lan
+```
+Remember the value after the `=` for later and press ++Q++ to return to the terminal.
+If you find more than one `domain_name` value, remember them all.
+If you have no `domain_name` value in the results then your network router is not offering a top level domain
+and there's no point in proceeding.
+
+Alternatively, you can run this command:
+```
+`dhcpcd -U | 2>/dev/null | grep domain_name= | cut -c13-`
+```
+... which will find and filter `domain_name` values for you. 
+The result of which would look like this instead:
+```
+lan
+```
+
+#### Enable sending preferred name to DHCP server
+Open dhcpcd configuration file for editing by running the command `nano /etc/dhcpcd.conf`
+(or `vi /etc/dhcpcd.conf` if you know what that is and prefer it) and press ++Enter++.
+
+Press ++Down++ until you find this text:
+```
+# Request a hostname from the network
+#option host_name
+```
+Uncomment the option by removing the `#` in front of it so it looks like this:
+```
+# Request a hostname from the network
+option host_name
+```
+Once done, press ++Ctrl+o++ to make `nano` save `dhcpcd.conf` then ++Ctrl+x++ to exit `nano`.
+
+#### Set the MiSTers preferred name
+To set the name itself run the command `nano /etc/hostname`.
+You should see a word in the file (likely `MiSTer`). 
+Change this text to whatever you want your MiSTers name to be.
+You can choose any name you like but for best compatibility with other network devices follow these restraints:
+
+* Only use alphanumeric (A to Z) characters, (no Kanji or Cyrillic)
+    * The name will be case-insensitive, mix uppercase and lowercase as you please
+* Avoid using symbols (`!`, `?`, `#`, `%` etc...) and especially not a period (`.`)
+* Avoid starting the name with a number (0 to 9) 
+* Avoid using spaces and multiple words
+* Try to choose a name that is no more than 15 characters total
+
+Once done, press ++Ctrl+o++ to make `nano` save `hostname` then ++Ctrl+x++ to exit `nano`.
+
+Run the command `hostname` to confirm that the MiSTers name has changed then
+run the command `reboot` to restart the MiSTer back to the startup menu with the new network settings applied.
+
+#### Test the name change
+> Let's assume you set your MiSTers name to be `timemachine` and your top level domain is `.home`.
+Replace this value with the top level domain you found earlier and the name you actually set your MiSTer to be.
+
+The MiSTer should now be accessible from at least one of the top level domains you found earlier.
+From another computer on the network, open a terminal emulator or command prompt and type `ping timemachine.home`. 
+You should see replies, if you do then you can now use `timemachine.home` 
+within your local network to connect to your MiSTer.  
+
+### Static IP Address configuration
+Before proceeding with configuring a static IP address, consider if it's really necessary.
+Setting a static IP address could result in a conflict with another network device
+if one is given the same address while setting an address outside the range
+of the networks subnet will result in your MiSTer not being able to connect to anything. 
+If in doubt, try [Hostname configuration](#hostname-configuration) first.
+
+#### Login to Linux terminal on the MiSTer
 From the MiSTers startup menu, press ++F9++ to get a Linux terminal then
 login as root (see [Network Access](#network-access) for the default credentials).
 
@@ -105,7 +190,7 @@ While you can use SSH to access the MiSTers Linux terminal remotely and configur
 it is not recommended as you may lose network access (and therefore your SSH connection) to your MiSTer
 after the IP address changes.
 
-### Get the name of the network interface to assign a static IP address
+#### Get the name of the network interface to assign a static IP address
 There will always be at least two network interfaces on DE-10 Nano MiSTer:
 
 | Interface Name | Description                                             |
@@ -141,7 +226,7 @@ for each USB Wi-Fi and/or ethernet adapter MiSTer has recognized.
 Take note of the interface name you want to change before proceeding to the next step.
 The interface names are case-sensitive.
 
-### Configure a static IP address to an interface
+#### Configure a static IP address to an interface
 
 > Let's assume you want the network interface named `eth0` to be assigned a static ip address of `192.168.0.128`.
 Replace these values with the network interface name you got in the previous step
@@ -178,7 +263,7 @@ ntp_servers=192.168.0.1 0.pool.ntp.org 1.pool.ntp.org 2.pool.ntp.org
 Once done, press ++Ctrl+o++ to make `nano` save `dhcpcd.conf` then ++Ctrl+x++ to exit `nano`.
 Run the command `reboot` to restart the MiSTer back to the startup menu with the new network settings applied.
 
-### Re-Enabling DHCP
+#### Re-Enabling DHCP
 If your static IP configuration isn't working, or you simply want to revert to automatic DHCP IP assignment.
 Open `/etc/dhcpcd.conf` again and comment out the lines by placing a `#` character at the beginning of each line 
 that you want to revert the behavior of.
