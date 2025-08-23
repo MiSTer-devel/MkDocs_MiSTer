@@ -165,7 +165,7 @@ Before enabling this feature, you should be sure
 that your network router supports top-level domains (TLDs) in the local network.
 
 To do this, run the command `dhcpcd -U | less` and press ++Enter++
-then use ++Down++ and ++Up++ key to look for at least one `domain_name` entry that looks somewhat like this:
+then use the ++Down++ and ++Up++ keys to search for at least one `domain_name` entry that looks somewhat like this:
 ```
 domain_name=lan
 ```
