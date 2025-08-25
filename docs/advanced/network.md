@@ -5,7 +5,67 @@ MiSTer board can be access through on-board Ethernet port. System has **FTP**, *
 
 User name: **root**  Password: **1**
 
-When using FTP, make sure your file transfers are in Binary not ASCII. ASCII-type transfers will result in corruption of that data. A good FTP client for Windows that defaults to Binary and supports FTP as well as SFTP and SCP (ssh copy) is [WinSCP](https://winscp.net/eng/download.php).
+If you connect to your MiSTer over the network frequently,
+consider [Setting up a hostname](#hostname-configuration) for your MiSTer 
+so you don't have to lookup and/or remember your MiSTers IP address.
+
+### FTP/SFTP
+The File Transfer Protocol (FTP) is a standardized network protocol that allows computers on a network to transfer files between each other. 
+It can be used to upload or download files to your MiSTer from another computer on the network without having to remove the SD card.
+SFTP is simply FTP with an encrypted connection, however; it should be noted that not all FTP clients support SFTP.
+
+You can use whatever FTP or SFTP client you prefer
+so long as you make sure your file transfers are in binary and not ASCII.
+ASCII-type transfers will result in corruption of that data.
+
+Once connected to the MiSTer your SDCard content will be in the `/media/fat` path.
+
+If you don't have a compatible FTP client already, then try [FileZilla](https://filezilla-project.org/download.php?type=client){target=blank}. 
+It is a solid choice for all modern operating systems (Linux, MacOS and Windows). 
+Older version of FileZilla such as `2.1.9a` are compatible with Windows 95/NT3.5+
+and can be used inside [ao486 core with a PPP connection](computer.md#ppp-connection-in-windows-9598-on-ao486).
+
+Another good FTP client for modern Windows operating systems is [WinSCP](https://winscp.net/eng/download.php){target=blank}.
+
+Once one of these clients is installed, run the program and open the **Site Manager** dialog.
+
+| FTP Client | Site Manager Location                     |
+|------------|-------------------------------------------|
+| FileZilla  | **File** -> **Site Manager**              |
+| WinSCP     | **Tabs** -> **Sites** -> **Site Manager** |
+
+Set **Protocol** to either `FTP` or `SFTP` and fill out the **Host**, **User** and **Password** fields.
+For example: if the MiSTers IP address is `192.168.2.8` and you wanted to login as the `root` user,
+then **Host** would be `192.168.2.8`, user would be `root` and password would be the user password.
+
+You can optionally set the **Default Remote Directory** for this site to `/media/fat`.
+This will make the FTP automatically navigate to the SD Card on the MiSTer after connecting. 
+Furthermore, if you have an organized folder on your computer for MiSTer content, 
+you may want to set the **Default Local Directory** to that path.
+
+| FTP Client | Remote Directory Location                                                    |
+|------------|------------------------------------------------------------------------------|
+| FileZilla  | **Site Manager** -> **Advanced** -> **Default Remote Directory:**            |
+| WinSCP     | **Site Manager** -> **Advanced** -> **Directories** -> **Remote Directory:** |
+
+After the settings have been set click **Connect** or **Login**.
+
+You should connect to your MiSTer and be able to upload or download files. 
+
+### SSH
+Secure shell (SSH) is a standardized network protocol for remotely operating computers over a network.
+It can be used to operate a text terminal on a computer (including the one on your MiSTer) remotely from another computer on the network.
+
+To connect on Linux and MacOS open a terminal emulator and type `ssh` followed by the user and address. 
+For example if the MiSTers IP address is `192.168.2.8` and you wanted to login as the `root` user,
+then the command to connect would be `ssh root@192.168.2.8`.
+
+If your Windows machine does not have `ssh` installed in Command Prompt you can download and run [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html){target=blank} instead.
+Using the same example as above type `root@192.168.2.8` into the **Host Name** text field.
+Ensure **Port** is set to `22` and **Connection type** is set to **SSH** then click **Open**.
+
+You should now connect to your MiSTer and be asked for the password.
+After which you'll be able to run commands as if you were in front of your MiSTer.
 
 ## Share Mounting
 The MiSTer can mount a network share from another computer or server as if it were storage. CIFS and NFS shares are supported. The following helper scripts are provided to simplify this process, if you want to use them download to them to /media/fat/Scripts
@@ -37,112 +97,6 @@ If certain cores doesn't start when loading games from CIFS share but work OK wh
 
 ## RetroNAS
 A project was launched by Dan Mons that makes it easier to get a network attached storage (NAS) device up and running which was focused solely on retro gaming device compatibility. The MiSTer platform is one of the project's primary focuses and it works quite well. All you need is a Raspberry Pi4 or Pi5 and some kind of external hard drive storage device. Remember: NAS IS NOT BACKUP! You could lose data if you rely solely on a NAS for important data. They have a good [installation guide](https://github.com/danmons/retronas/wiki/Installing-RetroNAS){target=_blank} that is simple to follow and [MiSTer-specific instructions](https://github.com/danmons/retronas/wiki/MiSTer-FPGA){target=_blank} to help get you started. They also have video guides available on Youtube for [installation](https://www.youtube.com/watch?v=szA-MSabplc){target=_blank} and [MiSTer FPGA-specific configuration](https://www.youtube.com/watch?v=OrTctA-5kqk){target=_blank} if you prefer.
-
-## Static IP Address configuration
-By default, MiSTer uses `dhcpcd` (not to be confused with `dhcpd`) to acquire a local network IP address from a DHCP server.
-If you want to set a static IP address and/or router/DNS addresses.
-You can do so by modifying `dhcpcd.conf`.
-There are many other features available in `dhcpcd.conf` 
-then what's discussed here. 
-For full documentation read [dhcpcd.conf (5)](https://man.archlinux.org/man/dhcpcd.conf.5){target=blank}.
-
-### Login to Linux terminal on the MiSTer
-From the MiSTers startup menu, press ++F9++ to get a Linux terminal then
-login as root (see [Network Access](#network-access) for the default credentials).
-
-While you can use SSH to access the MiSTers Linux terminal remotely and configure a static IP address that way;
-it is not recommended as you may lose network access (and therefore your SSH connection) to your MiSTer
-after the IP address changes.
-
-### Get the name of the network interface to assign a static IP address
-There will always be at least two network interfaces on DE-10 Nano MiSTer:
-
-| Interface Name | Description                                             |
-|----------------|---------------------------------------------------------|
-| `lo`           | Linux virtual network loopback device (not interesting) |
-| `eth0`         | The DE-10 Nanos built-in Gigabit Ethernet               |
-
-These two interface names should be consistent across all MiSTers.
-However, if you want to set a static IP address on a USB network card, 
-you will first need to know the name Linux has given to the interface.
-To do this run the command `ip link` by typing it and then pressing ++Enter++.
-You should get an output that looks somewhat like this:
-```
-1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
-    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
-2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
-    link/ether 01:02:03:04:05:06 brd ff:ff:ff:ff:ff:ff
-```
-If necessary, you can run the command `ip addr` instead to see what IP address is currently assigned to each interface (if any).
-You would get an output that looks somewhat like this:
-```
-1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
-    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
-    inet 127.0.0.1/8 scope host lo
-       valid_lft forever preferred_lft forever
-2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
-    link/ether 01:02:03:04:05:06 brd ff:ff:ff:ff:ff:ff
-    inet 10.0.0.221/24 brd 10.0.0.255 scope global dynamic noprefixroute eth0
-       valid_lft 40368sec preferred_lft 34968sec
-```
-There will be an additional entry 
-for each USB Wi-Fi and/or ethernet adapter MiSTer has recognized.
-Take note of the interface name you want to change before proceeding to the next step.
-The interface names are case-sensitive.
-
-### Configure a static IP address to an interface
-
-> Let's assume you want the network interface named `eth0` to be assigned a static ip address of `192.168.0.128`.
-Replace these values with the network interface name you got in the previous step
-and the IP address you want to set it to.
-
-Open dhcpcd configuration file for editing by running the command `nano /etc/dhcpcd.conf` 
-(or `vi /etc/dhcpcd.conf` if you know what that is and prefer it).
-Press ++Down++ until you're at the bottom of the file then type the following:
-```
-interface eth0
-static ip_address=192.168.0.128/24
-```
-Be sure to type these lines at the very bottom of the file as these lines are order-sensitive.
-Any line below an `interface` line will apply to that interface until the next `interface` line.
-Any line above the first `interface` line will apply to all network interfaces.
-
-You can optionally specify any combination of options for an interface, here are some useful ones:
-
-| Option                        | Description                                       |
-|-------------------------------|---------------------------------------------------|
-| `static routers=`             | Manually specify routers/gateways to the Internet |
-| `static domain_name_servers=` | Manually specify DNS servers to revolve names     |
-| `ntp_servers=`                | Manually specify NTP servers to get time from     |
-
-With all these options manually specified a interface configuration could look somewhat like this:
-```
-interface eth0
-static ip_address=192.168.0.128/24
-static routers=192.168.0.1
-static domain_name_servers=8.8.8.8 1.1.1.1
-ntp_servers=192.168.0.1 0.pool.ntp.org 1.pool.ntp.org 2.pool.ntp.org
-```
-
-Once done, press ++Ctrl+o++ to make `nano` save `dhcpcd.conf` then ++Ctrl+x++ to exit `nano`.
-Run the command `reboot` to restart the MiSTer back to the startup menu with the new network settings applied.
-
-### Re-Enabling DHCP
-If your static IP configuration isn't working, or you simply want to revert to automatic DHCP IP assignment.
-Open `/etc/dhcpcd.conf` again and comment out the lines by placing a `#` character at the beginning of each line 
-that you want to revert the behavior of.
-Commenting out lines is as good as removing them but saves you having to write them again later if you change your mind.
-
-To revert all of your configurations, comment out every line you added like so:
-```
-#interface eth0
-#static ip_address=192.168.0.128/24
-#static routers=192.168.0.1
-#static domain_name_servers=8.8.8.8 1.1.1.1
-#ntp_servers=192.168.0.1 0.pool.ntp.org 1.pool.ntp.org 2.pool.ntp.org
-```
-Just like before: save the file and reboot to restart the MiSTer
-back to the startup menu with the new network settings applied.
 
 ## Tailscale Networking
 
@@ -186,3 +140,194 @@ Now to have Tailscale start when your MiSTer boots, edit the `user-startup.sh` f
 ```
 
 Now your MiSTer will connect to your Tailnet after every reboot.
+
+## Network settings and configuration
+By default, MiSTer uses `dhcpcd` (not to be confused with `dhcpd`) to acquire a local network IP address from a DHCP server.
+It is a powerful DHCP client with a lot of control and customization options in its configuration file (`dhcpcd.conf`),
+too many to be discussed here.
+Instead, will cover the most likely reasons you would want to modify the way `dhcpcd` behaves on a MiSTer.
+For full documentation read [dhcpcd.conf (5)](https://man.archlinux.org/man/dhcpcd.conf.5){target=blank}.
+
+### Hostname configuration
+`dhcpcd` can be configured so that MiSTer offers its preferred name to your DHCP server, but it's disabled by default.
+Enabling it will allow you to connect to your MiSTer by a designated name
+instead of having to look up and remember an IP address.
+
+#### Login to Linux terminal on the MiSTer
+From the MiSTers startup menu, press ++F9++ to get a Linux terminal then
+login as root (see [Network Access](#network-access) for the default credentials).
+
+Alternatively, you can log in remotely with [SSH](#ssh).
+This is recommended if possible as you will be able to copy and paste the commands instead of typing them out by hand.
+
+#### Check your local network has a top-level domain assigned
+Before enabling this feature, you should be sure
+that your network router supports top-level domains (TLDs) in the local network.
+
+To do this, run the command `dhcpcd -U | less` and press ++Enter++
+then use the ++Down++ and ++Up++ keys to search for at least one `domain_name` entry that looks somewhat like this:
+```
+domain_name=lan
+```
+Remember the value after the `=` for later and press ++Q++ to return to the terminal.
+If you find more than one `domain_name` value, remember them all.
+If you have no `domain_name` value in the results then your network router is not offering a top level domain
+and there's no point in proceeding.
+
+Alternatively, you can run this command:
+```bash
+dhcpcd -U | 2>/dev/null | grep domain_name= | cut -c13-
+```
+...which will find and filter `domain_name` values for you.
+The result of which would look like this instead:
+```
+lan
+```
+
+#### Enable sending preferred name to DHCP server
+Open dhcpcd configuration file for editing by running the command `nano /etc/dhcpcd.conf`
+(or `vi /etc/dhcpcd.conf` if you know what that is and prefer it) and press ++Enter++.
+
+Press ++Down++ until you find this text:
+```
+# Request a hostname from the network
+#option host_name
+```
+Uncomment the option by removing the `#` in front of it so it looks like this:
+```
+# Request a hostname from the network
+option host_name
+```
+Once done, press ++Ctrl+o++ to make `nano` save `dhcpcd.conf` then ++Ctrl+x++ to exit `nano`.
+
+#### Set the MiSTers preferred name
+To set the name itself run the command `nano /etc/hostname`.
+You should see a word in the file (likely `MiSTer`).
+Change this text to whatever you want your MiSTers name to be.
+You can choose any name you like but for best compatibility with other network devices follow these restraints:
+
+* Only use alphanumeric (A to Z) characters, (no Kanji or Cyrillic)
+    * The name will be case-insensitive, mix uppercase and lowercase as you please
+* Avoid using symbols (`!`, `?`, `#`, `%` etc...) and especially not a period (`.`)
+* Avoid starting the name with a number (0 to 9)
+* Avoid using spaces and multiple words
+* Try to choose a name that is no more than 15 characters total
+
+Once done, press ++Ctrl+o++ to make `nano` save `hostname` then ++Ctrl+x++ to exit `nano`.
+
+Run the command `hostname` to confirm that the MiSTers name has changed then
+run the command `reboot` to restart the MiSTer back to the startup menu with the new network settings applied.
+
+#### Test the name change
+> Let's assume you set your MiSTers name to be `timemachine` and your top level domain is `.home`.
+Replace this value with the top level domain you found earlier and the name you actually set your MiSTer to be.
+
+The MiSTer should now be accessible from at least one of the top level domains you found earlier.
+From another computer on the network, open a terminal emulator or command prompt and type `ping timemachine.home`.
+You should see replies, if you do then you can now use `timemachine.home`
+within your local network to connect to your MiSTer.
+
+### Static IP Address configuration
+Before proceeding with configuring a static IP address, consider if it's really necessary.
+Setting a static IP address could result in a conflict with another network device
+if one is given the same address while setting an address outside the range
+of the networks subnet will result in your MiSTer not being able to connect to anything.
+If in doubt, try [Hostname configuration](#hostname-configuration) first.
+
+#### Login to Linux terminal on the MiSTer
+From the MiSTers startup menu, press ++F9++ to get a Linux terminal then
+login as root (see [Network Access](#network-access) for the default credentials).
+
+While you can use SSH to access the MiSTers Linux terminal remotely and configure a static IP address that way;
+it is not recommended as you may lose network access (and therefore your SSH connection) to your MiSTer
+after the IP address changes.
+
+#### Get the name of the network interface to assign a static IP address
+There will always be at least two network interfaces on DE-10 Nano MiSTer:
+
+| Interface Name | Description                                             |
+|----------------|---------------------------------------------------------|
+| `lo`           | Linux virtual network loopback device (not interesting) |
+| `eth0`         | The DE-10 Nanos built-in Gigabit Ethernet               |
+
+These two interface names should be consistent across all MiSTers.
+However, if you want to set a static IP address on a USB network card,
+you will first need to know the name Linux has given to the interface.
+To do this run the command `ip link` by typing it and then pressing ++Enter++.
+You should get an output that looks somewhat like this:
+```
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP mode DEFAULT group default qlen 1000
+    link/ether 01:02:03:04:05:06 brd ff:ff:ff:ff:ff:ff
+```
+If necessary, you can run the command `ip addr` instead to see what IP address is currently assigned to each interface (if any).
+You would get an output that looks somewhat like this:
+```
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 01:02:03:04:05:06 brd ff:ff:ff:ff:ff:ff
+    inet 10.0.0.221/24 brd 10.0.0.255 scope global dynamic noprefixroute eth0
+       valid_lft 40368sec preferred_lft 34968sec
+```
+There will be an additional entry
+for each USB Wi-Fi and/or ethernet adapter MiSTer has recognized.
+Take note of the interface name you want to change before proceeding to the next step.
+The interface names are case-sensitive.
+
+#### Configure a static IP address to an interface
+
+> Let's assume you want the network interface named `eth0` to be assigned a static ip address of `192.168.0.128`.
+Replace these values with the network interface name you got in the previous step
+and the IP address you want to set it to.
+
+Open dhcpcd configuration file for editing by running the command `nano /etc/dhcpcd.conf`
+(or `vi /etc/dhcpcd.conf` if you know what that is and prefer it).
+Press ++Down++ until you're at the bottom of the file then type the following:
+```
+interface eth0
+static ip_address=192.168.0.128/24
+```
+Be sure to type these lines at the very bottom of the file as these lines are order-sensitive.
+Any line below an `interface` line will apply to that interface until the next `interface` line.
+Any line above the first `interface` line will apply to all network interfaces.
+
+You can optionally specify any combination of options for an interface, here are some useful ones:
+
+| Option                        | Description                                       |
+|-------------------------------|---------------------------------------------------|
+| `static routers=`             | Manually specify routers/gateways to the Internet |
+| `static domain_name_servers=` | Manually specify DNS servers to revolve names     |
+| `ntp_servers=`                | Manually specify NTP servers to get time from     |
+
+With all these options manually specified a interface configuration could look somewhat like this:
+```
+interface eth0
+static ip_address=192.168.0.128/24
+static routers=192.168.0.1
+static domain_name_servers=8.8.8.8 1.1.1.1
+ntp_servers=192.168.0.1 0.pool.ntp.org 1.pool.ntp.org 2.pool.ntp.org
+```
+
+Once done, press ++Ctrl+o++ to make `nano` save `dhcpcd.conf` then ++Ctrl+x++ to exit `nano`.
+Run the command `reboot` to restart the MiSTer back to the startup menu with the new network settings applied.
+
+#### Re-Enabling DHCP
+If your static IP configuration isn't working, or you simply want to revert to automatic DHCP IP assignment.
+Open `/etc/dhcpcd.conf` again and comment out the lines by placing a `#` character at the beginning of each line
+that you want to revert the behavior of.
+Commenting out lines is as good as removing them but saves you having to write them again later if you change your mind.
+
+To revert all of your configurations, comment out every line you added like so:
+```
+#interface eth0
+#static ip_address=192.168.0.128/24
+#static routers=192.168.0.1
+#static domain_name_servers=8.8.8.8 1.1.1.1
+#ntp_servers=192.168.0.1 0.pool.ntp.org 1.pool.ntp.org 2.pool.ntp.org
+```
+Just like before: save the file and reboot to restart the MiSTer
+back to the startup menu with the new network settings applied.
