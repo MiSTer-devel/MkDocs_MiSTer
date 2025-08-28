@@ -234,7 +234,7 @@ This is recommended if possible as you will be able to copy and paste the comman
 Before enabling this feature, you should be sure
 that your network router supports top-level domains (TLDs) in the local network.
 
-To do this, run the command `dhcpcd -U | less` and press ++Enter++
+To do this, run the command `dhcpcd -U | less` by typing it and pressing ++Enter++
 then use the ++Down++ and ++Up++ keys to search for at least one `domain_name` entry that looks somewhat like this:
 ```
 domain_name=lan
@@ -255,8 +255,8 @@ lan
 ```
 
 #### Enable sending preferred name to DHCP server
-Open dhcpcd configuration file for editing by running the command `nano /etc/dhcpcd.conf`
-(or `vi /etc/dhcpcd.conf` if you know what that is and prefer it) and press ++Enter++.
+Open dhcpcd configuration file for editing by running the command `nano /etc/dhcpcd.conf` 
+by typing it and pressing ++Enter++.
 
 Press ++Down++ until you find this text:
 ```
@@ -354,8 +354,7 @@ The interface names are case-sensitive.
 Replace these values with the network interface name you got in the previous step
 and the IP address you want to set it to.
 
-Open dhcpcd configuration file for editing by running the command `nano /etc/dhcpcd.conf`
-(or `vi /etc/dhcpcd.conf` if you know what that is and prefer it).
+Open dhcpcd configuration file for editing by running the command `nano /etc/dhcpcd.conf`.
 Press ++Down++ until you're at the bottom of the file then type the following:
 ```
 interface eth0
