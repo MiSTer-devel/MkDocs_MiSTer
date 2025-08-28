@@ -148,6 +148,76 @@ too many to be discussed here.
 Instead, will cover the most likely reasons you would want to modify the way `dhcpcd` behaves on a MiSTer.
 For full documentation read [dhcpcd.conf (5)](https://man.archlinux.org/man/dhcpcd.conf.5){target=blank}.
 
+### MAC address configuration
+A MAC address (medium access control address) is a network address assigned 
+to the hardware of every network interface. 
+It allows network switches to learn where traffic should be routed to.
+It can be thought of like an IP address but statically assigned to hardware and only relevant within your local network.
+
+Much like IP addresses, MAC addresses have to be unique for the network to function properly,  
+but unlike IP addresses, they cannot be dynamically assigned by a DHCP server, MAC addresses are static by design. 
+Most vendors work around this problem by shipping their products with a random MAC address from the factory.
+The idea being the sheer number of MAC addresses being randomly assigned 
+means the chance of the same MAC address being used in the same local network and causing a conflict is very low.
+
+Due to the way the DE-10 nano is built, 
+it is common that two or more MiSTers will have the exact same MAC address on their onboard ethernet port.
+If two such MiSTers are on the same network at the same time, then the 
+network switches between them might send packets to the wrong MiSTer
+and cause connections to fail for what appears to be no reason.
+Fortunately, it's possible to override the default MAC address.
+
+#### Login to Linux terminal on the MiSTer
+From the MiSTers startup menu, press ++F9++ to get a Linux terminal then
+login as root (see [Network Access](#network-access) for the default credentials).
+
+#### Check MAC address
+Remove the cord from your MiSTers built-in ethernet if there is one attached
+then run the command `ip link` by typing it and pressing ++Enter++. 
+You should get a result somewhat like this:
+```
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+2: eth0: <NO-CARRIER,BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state DOWN mode DEFAULT group default qlen 1000
+    link/ether 02:03:04:05:06:07 brd ff:ff:ff:ff:ff:ff permaddr 02:03:04:05:06:07
+```
+`eth0` should be the built-in ethernet on the DE-10 nano while `link/ether` is the currently assigned MAC address
+and `permaddr` is the hardware default MAC address if no other is given. 
+
+Repeat these first two steps on all you MiSTers and continue on each one that has the same `link/ether` as another.
+
+#### Override MAC address
+> Let's assume you want the network interface named `eth0` to be assigned a MAC address of `01:02:03:04:05:06`.
+Replace these values with the conflicting network interface name you saw in the previous step
+and the MAC address you want to set it to. 
+You can choose any MAC address you like, so long as it is **not** used by **any** other device.
+> 
+> A valid MAC address is six sets of two digits between `01` and `fe` each seperated by a `:` character.
+
+Run the command `nano /etc/dhcpcd.enter-hook` to edit or create the file then write the following
+```
+if [ "$interface" = "eth0" ]; then
+    ip link set dev "$interface" address 01:02:03:04:05:06
+fi
+```
+
+Once done, press ++Ctrl+o++ to make `nano` save `dhcpcd.enter-hook` then ++Ctrl+x++ to exit `nano`.
+Run the command `reboot` to restart the MiSTer back to the startup menu with the new network settings applied.
+
+#### Verify the new MAC address applied
+Login to root on the Linux terminal the same way you did before and run the command `ip link` again. 
+You should get a result somewhat like this:
+```
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+2: eth0: <NO-CARRIER,BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state DOWN mode DEFAULT group default qlen 1000
+    link/ether 01:02:03:04:05:06 brd ff:ff:ff:ff:ff:ff permaddr 02:03:04:05:06:07
+```
+`link/ether` should be the same MAC address you set in `/etc/dhcpcd.enter-hook`. 
+If it is, you can now reattach the cord to this MiSTers built-in ethernet.
+In the unlikely event that the new MAC address you chose conflicts with another device on your network
+then replace that MAC address in `dhcpcd.enter-hook` with another random MAC address and `reboot` again.
+
 ### Hostname configuration
 `dhcpcd` can be configured so that MiSTer offers its preferred name to your DHCP server, but it's disabled by default.
 Enabling it will allow you to connect to your MiSTer by a designated name
