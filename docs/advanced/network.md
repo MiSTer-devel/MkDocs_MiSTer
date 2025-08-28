@@ -244,9 +244,9 @@ If you find more than one `domain_name` value, remember them all.
 If you have no `domain_name` value in the results then your network router is not offering a top level domain
 and there's no point in proceeding.
 
-Alternatively, you can run this command:
+Alternatively, you can run this more complex command:
 ```bash
-dhcpcd -U | 2>/dev/null | grep domain_name= | cut -c13-
+dhcpcd -U 2>/dev/null | grep domain_name= | cut -c13-
 ```
 ...which will find and filter `domain_name` values for you.
 The result of which would look like this instead:
