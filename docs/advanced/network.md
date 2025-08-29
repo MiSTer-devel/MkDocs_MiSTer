@@ -160,12 +160,13 @@ Most vendors work around this problem by shipping their products with a random M
 The idea being the sheer number of MAC addresses being randomly assigned 
 means the chance of the same MAC address being used in the same local network and causing a conflict is very low.
 
-Due to the way the DE-10 nano is built, 
-it is common that two or more MiSTers will have the exact same MAC address on their onboard ethernet port.
-If two such MiSTers are on the same network at the same time, then the 
-network switches between them might send packets to the wrong MiSTer
-and cause connections to fail for what appears to be no reason.
-Fortunately, it's possible to override the default MAC address.
+Some operating systems like [Mr Fusion](../setup/software.md#flash-mr-fusion-to-your-microsd) 
+will randomize the MiSTers MAC address during setup while other installers will use the same MAC address everytime.
+Therefore, it is common that two or more MiSTers will have the exact same MAC address on their onboard ethernet port.
+
+If two MiSTers with the same MAC address are on the same network at the same time,  
+the network switches may start sending packets to the wrong MiSTer and cause connections to fail.
+Fortunately, if this is the case, it's possible to override the default MAC address.
 
 #### Login to Linux terminal on the MiSTer
 From the MiSTers startup menu, press ++F9++ to get a Linux terminal then
