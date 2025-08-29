@@ -148,6 +148,46 @@ too many to be discussed here.
 Instead, will cover the most likely reasons you would want to modify the way `dhcpcd` behaves on a MiSTer.
 For full documentation read [dhcpcd.conf (5)](https://man.archlinux.org/man/dhcpcd.conf.5){target=blank}.
 
+### MAC address configuration
+A MAC address (medium access control address) is a network address assigned 
+to the hardware of every network interface. 
+It allows network switches to learn where traffic should be routed to.
+It can be thought of like an IP address but statically assigned to hardware and only relevant within your local network.
+
+Much like IP addresses, MAC addresses have to be unique for the network to function properly,  
+but unlike IP addresses, they cannot be dynamically assigned by a DHCP server, MAC addresses are static by design.
+
+Some installers like [Mr Fusion](../setup/software.md#flash-mr-fusion-to-your-microsd) 
+will randomize the MiSTers MAC address during setup, but others will use the same MAC address everytime.
+Therefore, it is common that two or more MiSTers will have the exact same MAC address on their onboard ethernet port.
+
+If two MiSTers with the same MAC address are on the same network at the same time,  
+the network switches may start sending packets to the wrong MiSTer and cause connections to fail.
+Fortunately, if this is the case, it's possible to override the default MAC address.
+
+#### Login to Linux terminal on the MiSTer
+From the MiSTers startup menu, press ++F9++ to get a Linux terminal then
+login as root (see [Network Access](#network-access) for the default credentials).
+
+#### Change MAC address
+Open u-boot.txt file for editing by running the command `nano /media/fat/linux/u-boot.txt`
+by typing it and pressing ++Enter++.
+The file should contain a line that looks somewhat like this:
+```
+ethaddr=EA:C8:21:56:E3:43
+```
+
+Edit the MAC address so that no MiSTers on your network share the same address.
+MAC addresses are made up of six sets of two characters that range between `00`-`FF` and are seperated by `:`.
+When changing the MAC address, avoid these addresses that have special meaning:
+
+* Any address that start's with `00`, `01`, `02`, `03`, `06` or `0A`
+* Broadcast (`FF:FF:FF:FF:FF:FF`)
+* All zeros (`00:00:00:00:00:00`)
+
+Once done, press ++Ctrl+o++ to make `nano` save `u-boot.txt` then ++Ctrl+x++ to exit `nano` then
+run the command `reboot` to restart the MiSTer back to the startup menu with the new MAC address applied.
+
 ### Hostname configuration
 `dhcpcd` can be configured so that MiSTer offers its preferred name to your DHCP server, but it's disabled by default.
 Enabling it will allow you to connect to your MiSTer by a designated name
@@ -164,7 +204,7 @@ This is recommended if possible as you will be able to copy and paste the comman
 Before enabling this feature, you should be sure
 that your network router supports top-level domains (TLDs) in the local network.
 
-To do this, run the command `dhcpcd -U | less` and press ++Enter++
+To do this, run the command `dhcpcd -U | less` by typing it and pressing ++Enter++
 then use the ++Down++ and ++Up++ keys to search for at least one `domain_name` entry that looks somewhat like this:
 ```
 domain_name=lan
@@ -174,9 +214,9 @@ If you find more than one `domain_name` value, remember them all.
 If you have no `domain_name` value in the results then your network router is not offering a top level domain
 and there's no point in proceeding.
 
-Alternatively, you can run this command:
+Alternatively, you can run this more complex command:
 ```bash
-dhcpcd -U | 2>/dev/null | grep domain_name= | cut -c13-
+dhcpcd -U 2>/dev/null | grep domain_name= | cut -c13-
 ```
 ...which will find and filter `domain_name` values for you.
 The result of which would look like this instead:
@@ -185,8 +225,8 @@ lan
 ```
 
 #### Enable sending preferred name to DHCP server
-Open dhcpcd configuration file for editing by running the command `nano /etc/dhcpcd.conf`
-(or `vi /etc/dhcpcd.conf` if you know what that is and prefer it) and press ++Enter++.
+Open dhcpcd configuration file for editing by running the command `nano /etc/dhcpcd.conf` 
+by typing it and pressing ++Enter++.
 
 Press ++Down++ until you find this text:
 ```
@@ -284,8 +324,7 @@ The interface names are case-sensitive.
 Replace these values with the network interface name you got in the previous step
 and the IP address you want to set it to.
 
-Open dhcpcd configuration file for editing by running the command `nano /etc/dhcpcd.conf`
-(or `vi /etc/dhcpcd.conf` if you know what that is and prefer it).
+Open dhcpcd configuration file for editing by running the command `nano /etc/dhcpcd.conf`.
 Press ++Down++ until you're at the bottom of the file then type the following:
 ```
 interface eth0
