@@ -181,7 +181,9 @@ Edit the MAC address so that no MiSTers on your network share the same address.
 MAC addresses are made up of six sets of two characters that range between `00`-`FF` and are seperated by `:`.
 When changing the MAC address, avoid these addresses that have special meaning:
 
-* Any address that start's with `00`, `01`, `02`, `03`, `06` or `0A`
+* Multicast (any address where the first set ends in `1`, `3`, `5`, `7`, `9`, `B`, `D` or `F`):
+    * ❌ `EB:C8:21:56:E3:43`
+    * ✔️ `EC:C8:21:56:E3:43`
 * Broadcast (`FF:FF:FF:FF:FF:FF`)
 * All zeros (`00:00:00:00:00:00`)
 
