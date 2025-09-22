@@ -15,7 +15,7 @@ This is useful for things like hybrid cores that can play multiple systems. For 
 
 ## Alternate MiSTer INI Naming Option
 
-You can also have some alternative named MiSTer.ini files and they will appear named in the OSD Information screen when you press Left on the gamepad/keyboard where the IP address and resolution are showng. The regular `MiSTer.ini` is called "Main", whereas the custom named ones will show up as whatever comes after the underscore. For example, `MiSTer_CRT.ini` will be selectable in the config section and be called "CRT" next to "Main".
+You can also have some alternative named MiSTer.ini files and they will appear named in the OSD Information screen when you press Left on the gamepad/keyboard where the IP address and resolution are showing. The regular `MiSTer.ini` is called "Main", whereas the custom named ones will show up as whatever comes after the underscore. For example, `MiSTer_CRT.ini` will be selectable in the config section and be called "CRT" next to "Main".
 
 ## General Video Settings 
 
