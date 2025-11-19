@@ -7,3 +7,4 @@ env.bak/
 venv.bak/
 .DS_Store
 *.mp4
+.cache
