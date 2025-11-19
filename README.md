@@ -36,9 +36,13 @@ We can now install our requirements in the new virtual environment:
 ```
 python3 -m pip install -r requirements.txt
 ```
-Deploy to local server from that root folder:
+Run a local server from the root folder:
 ```
 mkdocs serve
+```
+The server can also detect changes and refresh the pages as you edit them:
+```
+mkdocs serve --watch docs
 ```
 And it should give you a weburl in the terminal to go to --> http://127.0.0.1:8000
 
