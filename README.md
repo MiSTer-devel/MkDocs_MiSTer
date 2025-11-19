@@ -24,9 +24,17 @@ Prerequisites:
 * Python 3
 * Pip
 
-Make sure you update [python 3](https://www.python.org/downloads/) and [update pip](https://pip.pypa.io/en/stable/installation/). Then, `cd` into the root folder of this repo and install the requirements:
+In the root folder of this repo, create a [virtual environment](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/), activate it, and update pip:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python3 -m pip install --upgrade pip
 ```
-pip install -r requirements.txt
+
+We can now install our requirements in the new virtual environment:
+```
+python3 -m pip install -r requirements.txt
 ```
 Deploy to local server from that root folder:
 ```
