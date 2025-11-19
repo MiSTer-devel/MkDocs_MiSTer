@@ -25,9 +25,14 @@ You can also have some alternative named MiSTer.ini files and they will appear n
 
 `hdmi_limited` - Changes the color range output over HDMI. 0 = `0-255`, 1 = `16-235`, and 2 = `16-255`. A setting of 2 can be useful if you have problems with some Digital Video adapters. It can also help if your screen has a dynamic backlight and you want to brighten things up, to change the setting to 1.
 
+`hdmi_game_mode` - configure game mode on HDMI output. It may give a better optimization on some displays, but also 
+a worse result on others. 0 - non-game (default), 1 - enabled.
+
 `fb_size` - Effects the scaling of things drawn to the Linux framebuffer, such as when you run scripts. Best left to 0 for automatic.
 
 `video_mode` - Sets the resolution for HDMI and VGA_Scaler output. This can be one of the premade values from 0-13 or it can be a custom video mode. See the notes in the [.ini Master](https://github.com/MiSTer-devel/Main_MiSTer/blob/2b0b8a1422540fa5c49e6a71a694848143341c87/MiSTer.ini#L75){target=_blank} for custom video mode syntax. There is also a useful custom video mode tool by morf77 [available here](https://morf77.pythonanywhere.com/){target=_blank} which can be used in conjunction with a [modeline calculator](https://arachnoid.com/modelines/){target=_blank}.
+
+`hdr` - Configures the use of HDR. 0 - disabled, 1 - enables HDR using [HLG](https://en.wikipedia.org/wiki/Hybrid_log%E2%80%93gamma){target=_blank} (recommended for most users), 2 - enable HDR using the [DCI P3 color space](https://en.wikipedia.org/wiki/DCI-P3){target=_blank} (use color controls to tweak, suggestion: set `video_saturation` to 80).
 
 `video_info` - Number of seconds that it will display the video info in the top left corner of the screen whenever the resolution or frequency has changed.
 
