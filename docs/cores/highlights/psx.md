@@ -30,7 +30,7 @@ You can load Playstation memory card files (.mcd or .sav) manually in the OSD in
 
 Some games used a kind of copy protection with what was called "Libcrypt" and they will not work if it's not circumvented.
 
-You can provide an .sbi file to do that. If there is an .sbi file [(the whole collection can be downloaded from redump.org)](http://redump.org/sbi/psx/){target=_blank} next to a .cue with the same name, it will then be loaded automatically when mounting the CD image. The MiSTer updater automatically downloads these .sbi files so it should not be necessary to download and place them manually.
+You can provide an .sbi file to do that. If there is an .sbi file [(the whole collection can be downloaded from redump.org)](http://redump.org/sbi/psx/){target=_blank} next to a .cue with the same name, it will then be loaded automatically when mounting the CD image.
 
 ## Audio and Video Options
 
