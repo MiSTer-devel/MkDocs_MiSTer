@@ -1,0 +1,32 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/python
+{
+  "name": "Python 3",
+  "image": "mcr.microsoft.com/devcontainers/python:0-3.11-bullseye",
+  "forwardPorts": [
+    8000
+  ],
+  "postCreateCommand": "pip3 install --user -r requirements.txt",
+  "postStartCommand": "mkdocs serve --watch docs",
+  "portsAttributes": {
+    "8000": {
+      "label": "preview",
+      "onAutoForward": "openPreview"
+    }
+  },
+  "customizations": {
+    "codespaces": {
+      "openFiles": [
+        "README.md",
+        "CONTRIBUTING.md"
+      ],
+      "repositories": {
+        "MiSTer-devel/MkDocs_MiSTer": {
+          "permissions": {
+            "pull_requests": "write"
+          }
+        }
+      }
+    }
+  }
+}
