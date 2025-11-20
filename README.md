@@ -1,3 +1,5 @@
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/MiSTer-devel/MkDocs_MiSTer)
+
 # MkDocs_MiSTer
 
 https://MiSTer-devel.github.io/MkDocs_MiSTer/
