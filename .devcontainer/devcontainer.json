@@ -19,14 +19,7 @@
       "openFiles": [
         "README.md",
         "CONTRIBUTING.md"
-      ],
-      "repositories": {
-        "MiSTer-devel/MkDocs_MiSTer": {
-          "permissions": {
-            "pull_requests": "write"
-          }
-        }
-      }
+      ]
     }
   }
 }
