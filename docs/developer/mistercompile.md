@@ -67,6 +67,8 @@ Make sure you have enough RAM available or you will experience [disconnects](htt
 colima start --cpu 4 --memory 8
 ```
 
+After the devcontainer is setup, you can proceed as before and run `make`.
+
 ## MiSTer Linux Kernel
 
 Edit your sources file:
