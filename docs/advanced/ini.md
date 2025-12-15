@@ -30,7 +30,7 @@ a worse result on others. 0 - non-game (default), 1 - enabled.
 
 `fb_size` - Effects the scaling of things drawn to the Linux framebuffer, such as when you run scripts. Best left to 0 for automatic.
 
-`video_mode` - Sets the resolution for HDMI and VGA_Scaler output. This can be one of the premade values from 0-13 or it can be a custom video mode. See the notes in the [.ini Master](https://github.com/MiSTer-devel/Main_MiSTer/blob/2b0b8a1422540fa5c49e6a71a694848143341c87/MiSTer.ini#L75){target=_blank} for custom video mode syntax. There is also a useful custom video mode tool by morf77 [available here](https://morf77.pythonanywhere.com/){target=_blank} which can be used in conjunction with a [modeline calculator](https://arachnoid.com/modelines/){target=_blank}.
+`video_mode` - Sets the resolution for HDMI and VGA_Scaler output. This can be one of the premade values from 0-13 or it can be a custom video mode. See the notes in the [.ini](https://github.com/MiSTer-devel/Main_MiSTer/blob/master/MiSTer.ini){target=_blank} for custom video mode syntax. There is also a useful custom video mode tool by morf77 [available here](https://morf77.pythonanywhere.com/){target=_blank} which can be used in conjunction with a [modeline calculator](https://arachnoid.com/modelines/){target=_blank}.
 
 `hdr` - Configures the use of HDR. 0 - disabled, 1 - enables HDR using [HLG](https://en.wikipedia.org/wiki/Hybrid_log%E2%80%93gamma){target=_blank} (recommended for most users), 2 - enable HDR using the [DCI P3 color space](https://en.wikipedia.org/wiki/DCI-P3){target=_blank} (use color controls to tweak, suggestion: set `video_saturation` to 80).
 
