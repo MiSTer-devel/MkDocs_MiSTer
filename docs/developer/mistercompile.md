@@ -44,7 +44,9 @@ export PATH=/opt/gcc-arm-10.2-2020.11-x86_64-arm-none-linux-gnueabihf/bin:$PATH
 
 ## Main MiSTer Binary
 
-The Main MiSTer binary is a good place to start for this guide. I will assume you are either running a linux system or you are using Windows Subsystem for Linux. I'm using Ubuntu current (22.0).
+The Main MiSTer binary is a good place to start for this guide. 
+
+### Linux (including WSL)
 
 Clone the Main_MiSTer repository:
 
@@ -53,6 +55,19 @@ git clone https://github.com/MiSTer-devel/Main_MiSTer.git
 ```
 
 Then `cd` into that directory that was created and follow up with `make`.
+
+### macOS
+
+With Apple Silicon, the commonly used toolchains do not run directly as they are built for x86_64.
+
+You can take advantage of an [IDE with devcontainers support](https://containers.dev/supporting){target=_blank} as the Main MiSTer repo includes a [devcontainer configuration](https://github.com/MiSTer-devel/Main_MiSTer/tree/master/.devcontainer){target=_blank}.
+
+Make sure you have enough RAM available or you will experience [disconnects](https://code.visualstudio.com/docs/remote/troubleshooting#_troubleshooting-hanging-or-failing-connections){target=_blank}. E.g. if using [Colima](https://github.com/abiosoft/colima){target=_blank}, the following appears sufficient to quickly compile MiSTer: 
+```
+colima start --cpu 4 --memory 8
+```
+
+After the devcontainer is setup, you can proceed as before and run `make`.
 
 ## MiSTer Linux Kernel
 
