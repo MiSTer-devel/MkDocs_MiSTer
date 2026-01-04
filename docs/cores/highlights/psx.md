@@ -118,6 +118,8 @@ Fast boot bypasses the BIOS boot logo and screen when starting a game. This can 
 
 The core offers various options to improve gameplay for some games, but those options cannot be considered stable through all games. If you use one or more of these options, the core will warn you every time you start a game.
 
+_Note_: Please do not report bugs with these options turned on. Instead please confirm whether the issues persist without unsafe options turned on.
+
 * **480i to 480p hack:** Allows to render some games with full 480p resolution, removing interlacing artifacts. Only works for some full 3D 480i titles.
 * **Turbo:** Increases CPU, DMA, Memory and GTE performance by ~10%(Low), ~20%(Medium) or 50%(High). Cheats cannot be used while Turbo is on and are disabled automatically.
 * **Pause when CD slow:** CD data must be returned in a fixed time frame, otherwise the core will pause until the data has arrived. Disabling this will remove these pauses, but also risk that the game hangs up due to CD data being late.
@@ -139,6 +141,20 @@ By default there are 3 information overlays that are disabled, you can enable th
 ## Using cheats on the MiSTer PSX core
 
 Cheats on the PSX are a little bit different than other MiSTer cores' cheats implementation in how they are detected. With other cores, the cheat file has a CRC32 hash in the filename, and this is checked against the crc32 hash of the ROM that is loaded. This is not the case with PSX (or other CD-based cores with Cheats support either). Because CD images are so large, doing a crc32 check on them would take too long, so the internal Game ID is scanned for instead and the cheats file with the same internal Game ID is loaded. So Final Fantasy VII Disc 1 gets loaded, MiSTer detects that it is Game ID SCUS-94163, and MiSTer loads the cheats file named `SCUS-94163.zip` from `./cheats/PSX/`. Note that when the Data Cache enhancement is enabled in the OSD, cheats are disabled and will not function. This is by design.
+
+## Core variants
+
+There is an internal variant of this core referred to as `PSX2XCPU` (sometimes abbreviated to just PSX turbo core, or `2X`).
+
+It is *not officially distributed* and needs to be installed manually. We document it here strictly for reference.
+
+This variant introduces a 2x CPU speed-up, from approximately 33MHz to 66MHz. Unlike other unofficial/experimental dual SDRAM variants, it only uses one 128MB SDRAM board. Very few games benefit from using it in comparison to the official version, as generally the **Turbo** [option](#unsafe-options) in the official core is sufficient.
+
+In the 2X variant, with Turbo on, the CPU can run up to 3-4 times the original speed, which can be too high (e.g. the risk that they hang is much higher).
+
+The variant is currently a [branch in the core repo](https://github.com/MiSTer-devel/PSX_MiSTer/tree/2xCPU/){target=_blank}.
+
+_Please do not report issues in these experimental builds_.
 
 ## Error Messages
 
