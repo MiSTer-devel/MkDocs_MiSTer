@@ -34,9 +34,9 @@ Auto fire rates can be modified by increments of 32ms all the way up to 1024ms (
 
 ## Maximum number of players
 
-MiSTer supports _up to_ 6 players on separate controllers via USB or Bluetooth.
+MiSTer (as a framework) supports _up to_ 6 players on separate controllers via USB or Bluetooth.
 
-This will however can be further constrained by the core. For instance, as of January 2026, you can use up to 2 of these controllers with the Saturn core.
+The total number however can be further constrained by the core. For instance, as of January 2026, you can use up to 2 of these controllers with the Saturn core.
 
 If available in the core, you might be able to combine these with more via [SNAC](#serial-native-accessory-convertor-snac).
 
