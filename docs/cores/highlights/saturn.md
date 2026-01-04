@@ -41,7 +41,7 @@ The Sega Saturn MiSTer core, developed originally by [srg320 (Sergey Dvodnenko)]
 ## Media support
 
   - Multi-disc support
-  - CHD support
+  - BIN/CUE and CHD support (see [CD support](../../basics/cd.md#cuebin-folders-and-chd-files))
   - Multiple region support + Automatic region detection
 
 ## BIOS and region selection
