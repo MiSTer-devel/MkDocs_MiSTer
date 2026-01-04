@@ -1,14 +1,12 @@
 MiSTer has support for a wide variety of input devices. It also has options to configure these devices to fit your needs in addition to several quality of life features across most, sometimes all, cores. Here is a breakdown of some special configurations for various input devices like spinners, gamepads, joysticks, and keyboards.
 
-MiSTer has a set of standard features for USB gaming controllers:
+MiSTer has a set of standard features for USB/Bluetooth gaming controllers:
 
-* Up to 6 player support
 * Auto Fire
 * Mouse emulation from your joystick
+* Up to 6 player support
 
 ## Default Joystick Player Assignment Method
-
-Up to 6 player controllers are supported (depending on core):
 
 * After a core starts, press a button on any connected controller to make it the Player 1 gamepad/joystick
 * Press a button on a second controller to make it the Player 2 joystick (if supported by the core)
@@ -33,6 +31,14 @@ The easiest way to get this information is, after enabling debug on MiSTer.ini, 
 Any defined button (except the d-pad) supports the auto fire feature. To activate auto fire, press and hold the desired button and then quickly press and release the button defined as `BUTTON OSD`(for joystick) or `KBD TOGGLE`(for keyboard). To deactivate auto fire, repeat the the same procedure for that same button you set before.
 
 Auto fire rates can be modified by increments of 32ms all the way up to 1024ms (repeating the button once every second). To change the speed, press and hold a direction on the d-pad and then quickly press the button defined as `BUTTON OSD`(for joystick) or `KBD TOGGLE`(for keyboard). Up or right increases the delay of the auto fire while down and left decrease the delay. Some games will not function properly if the auto fire rate is too fast, so this is a useful feature to keep in mind if you run into problems.
+
+## Maximum number of players
+
+MiSTer supports _up to_ 6 players on separate controllers via USB or Bluetooth.
+
+This will however can be further constrained by the core. For instance, as of January 2026, you can use up to 2 of these controllers with the Saturn core.
+
+If available in the core, you might be able to combine these with more via [SNAC](#serial-native-accessory-convertor-snac).
 
 ## Mouse emulation
 
