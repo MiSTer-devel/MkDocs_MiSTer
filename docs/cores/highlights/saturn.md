@@ -87,7 +87,7 @@ MiSTer systems are expected to have a single 128MB SDRAM module. Official core r
 
 As part of their development workflow, developers can start with two SDRAM modules in their development hardware (at the expense of losing some analogue functionality) simply for development convenience. This is to obtain extra bandwidth before the core is optimised for official releases targetting the single SDRAM builds of end users. 
 
-During development and/or before cores reach that stage, or as the limit of the hardware is reached, Dual SDRAM variants of cores might be distributed unofficially in the community. Some enthusiasts also build SDRAM stacks while using experimental builds.
+During development and/or before cores reach that stage, or as the limit of the hardware is reached, Dual SDRAM variants of cores might be distributed unofficially in the community. Some enthusiasts also build dual SDRAM stacks while using experimental builds.
 
 In the Saturn core, the Dual SDRAM builds continue to be built and discussed due to a few outstanding but generally minor issues present in the official single SDRAM build. A number of these can currently be mitigated with the [fast timings](#fast-timings) option, but not all. Releases are not official and use of single SDRAM builds continues to be encouraged.
 
