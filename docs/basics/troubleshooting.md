@@ -1,19 +1,32 @@
 ## The MiSTer FPGA's correct DIP switch configuration on the DE10-Nano
 
-If your keyboard doesn't work or something else low-level hardware related doesn't work, it's possible that one or more of the DIP switches on your DE10-Nano are misconfigured. Make sure the DIPS are configured like the following pictures:  
-![MiSTer FPGA DIP Switches Correct Configuration - Small DIPS - Terasic DE10-Nano](img/dips1.png)  
-![MiSTer FPGA DIP Switches Correct Analog IO board Configuration - Big DIPS - Terasic DE10-Nano](img/dips2.png)
+If your keyboard doesn't work or something else low-level hardware related doesn't work, it's possible that one or more of the DIP switches on your DE10-Nano are misconfigured.
 
-If you have a Digital IO board then your first of the large dips in the 2nd picture above needs to be turned On (up) and the rest should be turned off (down) in order to use the 2nd SDRAM module, if you have one. Here's a demonstration with a picture again:  
-![MiSTer FPGA DIP Switches Correct Digital IO board Configuration - Big DIPS - Terasic DE10-Nano](img/dips3.png)  
-*Credit for 2nd and 3rd pictures goes to Nat from [MiSTerFPGA.co.uk](https://misterfpga.co.uk){target=_blank}*
+### Upper DIP Switches
 
-| Board      | SW0 | SW1 | SW2 | SW3 |
-| ---------- | --- | --- | --- | --- |
-| Analog IO  | Off | Off | Off | Off |
-| Digital IO | Off | Off | Off | On  |
+Make sure the DIPS are configured like the following pictures:  
+![MiSTer FPGA DIP Switches Correct Configuration - Small DIPS - Terasic DE10-Nano](img/dips1.png)
 
-**Note:** If your IO board is based on the 9.2 [IO Board](https://mister-devel.github.io/MkDocs_MiSTer/assets/92_io_board.png) and [AV Mezzanine Board](https://mister-devel.github.io/MkDocs_MiSTer/assets/92_av_board.png), you needn't toggle any of the switches. The new board's framework will autodetect the configuration for you.
+### Lower DIP Switches
+
+If your IO board is based on the 9.2 [IO Board](https://mister-devel.github.io/MkDocs_MiSTer/assets/92_io_board.png) and [AV Mezzanine Board](https://mister-devel.github.io/MkDocs_MiSTer/assets/92_av_board.png), you needn't toggle any of the lower switches. 
+
+The new board's framework will autodetect the configuration for you.
+
+Please see the below for previous boards.
+
+??? note "IO boards before 9.2"
+
+    ![MiSTer FPGA DIP Switches Correct Analog IO board Configuration - Big DIPS - Terasic DE10-Nano](img/dips2.png)
+
+    If you have a Digital IO board then your first of the large dips in the 2nd picture above needs to be turned On (up) and the rest should be turned off (down) in order to use the 2nd SDRAM module, if you have one. Here's a demonstration with a picture again:  
+    ![MiSTer FPGA DIP Switches Correct Digital IO board Configuration - Big DIPS - Terasic DE10-Nano](img/dips3.png)  
+    *Credit for 2nd and 3rd pictures goes to Nat from [MiSTerFPGA.co.uk](https://misterfpga.co.uk){target=_blank}*
+
+    | Board      | SW0 | SW1 | SW2 | SW3 |
+    | ---------- | --- | --- | --- | --- |
+    | Analog IO  | Off | Off | Off | Off |
+    | Digital IO | Off | Off | Off | On  |
 
 ## My gamepad doesn't work
 
