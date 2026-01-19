@@ -209,6 +209,8 @@ markdown_extensions:
   # https://python-markdown.github.io/extensions/md_in_html/
   - md_in_html
   - footnotes
+  - admonition
+  - pymdownx.details
 
 extra_css:
   - stylesheets/extra.css
