@@ -20,6 +20,7 @@ The Sega Saturn MiSTer core, developed originally by [srg320 (Sergey Dvodnenko)]
         - NetLink
         - Floppy Disk Drive
         - Keyboard
+        - Multitap
 
 - [SNAC](./../../basics/input.md#serial-native-accessory-convertor-snac): 
     - Supported:
@@ -33,10 +34,7 @@ The Sega Saturn MiSTer core, developed originally by [srg320 (Sergey Dvodnenko)]
     - Not currently supported:
 
         - Saturn MIDI Interface Box
-
-    - To be confirmed:
-
-        - Multitap (via SNAC)
+        - Multitap (via SNAC) [^2]
 
 ## Media support
 
@@ -77,7 +75,7 @@ After loading the core, in the OSD, under `Hardware -> Timings` you will find an
 - `Normal` (default)
 - `Fast` (commonly referred to as "fast timings")
 
-Whilst `Fast` is made available, it can break some titles (e.g. freezes and graphical glitches) and is best not used as default[^2]. It exists to address issues in the `Normal` mode with the released version of the core.
+Whilst `Fast` is made available, it can break some titles (e.g. freezes and graphical glitches) and is best not used as default[^3]. It exists to address issues in the `Normal` mode with the released version of the core.
 
 ## FAQ
 
@@ -97,7 +95,7 @@ More info [here](https://github.com/MiSTer-devel/Saturn_MiSTer/issues/251#issuec
 
 Please review the rest of this page as we document limitations per feature/section.
 
-The remaining [GitHub issues](https://github.com/MiSTer-devel/Saturn_MiSTer){target=_blank} covers these more thoroughly[^3].
+The remaining [GitHub issues](https://github.com/MiSTer-devel/Saturn_MiSTer){target=_blank} covers these more thoroughly[^4].
 
 ## Source code
 
@@ -105,5 +103,6 @@ Available [here](https://github.com/MiSTer-devel/Saturn_MiSTer){target=_blank}.
 
 
 [^1]: Analogue triggers (to replicate the 3D Control Pad) are not currently supported. If set to use the 3D Control Pad, the core will simply not feed input to the triggers (e.g. to map digital to analogue signal, or use the compatibility digital mode of the 3D Control Pad, as that is equivalent to the Control Pad mode already supported)
-[^2]: see these comments: [1](https://github.com/MiSTer-devel/Saturn_MiSTer/issues/251#issuecomment-2481394472){target=_blank}, [2](https://github.com/MiSTer-devel/Saturn_MiSTer/issues/251#issuecomment-2481418725){target=_blank}
-[^3]: some issues may be out of date and no longer apply (and/or require more testing before closing)
+[^2]: support for multitap is not currently included in the core as of January 2026, although it was implemented previously and may be readded at some point
+[^3]: see these comments: [1](https://github.com/MiSTer-devel/Saturn_MiSTer/issues/251#issuecomment-2481394472){target=_blank}, [2](https://github.com/MiSTer-devel/Saturn_MiSTer/issues/251#issuecomment-2481418725){target=_blank}
+[^4]: some issues may be out of date and no longer apply (and/or require more testing before closing)
