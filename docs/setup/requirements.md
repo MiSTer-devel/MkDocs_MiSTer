@@ -3,19 +3,38 @@ hide:
   - toc
 ---
 
+
+A MiSTer stack consists of the DE10-Nano board from Terasic, coupled with a number of [add-on boards](../basics/addons.md).
+
+## Pre-built solutions and clones
+
+Over time, two kinds of hardware solutions have appeared in the market:
+
+- pre-built kits (using the DE10-Nano)
+- clones of the DE10-Nano[^1] (and their equivalent pre-built kits)
+
+We don't cover the various options here and their trade-offs. MiSTer is designed and tested with the DE10-Nano board and the stack we describe below. 
+
+[^1]: Hardware solutions using clone boards can aim for compatibility with the MiSTer project, but with minor differences in hardware, ocasional incompatibilities can occur (although they can also be fixed, it's not within the scope of the project). We refer to the respective sellers for compatibility and support.
+
+## Build from scratch
+
 There are a few things you will need in order to setup your MiSTer:
 
 * Terasic DE10-Nano
-* MiSTer SDRAM Add-On Board (Optional but many cores require it)
-* Cooling for the FPGA (recommended)
 * MicroSD card (minimum 4GB) and MicroSD Card Reader
-* USB OTG Adapter or MiSTer USB Hub Add-On Board (no USB devices will work without this)
+* USB OTG Adapter or a [MiSTer USB Hub Add-On Board](../basics/addons.md#usb-hub-addon-board){target=_blank} (no USB devices will work without this)
 * USB Keyboard
-* USB Gamepad (recommended)
-* Internet connection
 * HDMI Display and HDMI Cable
 
-## Where to buy
+Recommended:
+
+* [MiSTer SDRAM Add-On Board](../basics/addons.md#128mb-sdram-addon-board){target=_blank} (optional but many cores require it)
+* USB Gamepad
+* Cooling for the FPGA
+* Internet connection
+
+### Where to buy
 **DE10-Nano:**
 
 * [Terasic](http://de10-nano.terasic.com){target=_blank}
