@@ -6,7 +6,7 @@ The configuration string is stored in the variable `CONF_STR` of the `emu` modul
 
 Each line of the configuration string is delimited with a semicolon.
 
-Most cores have a Status Bit Map placed at the top of the `CONF_STR` section. When developing a core, please use this as it's a helpful reference which aids in collaboration. This reference is edited by fellow developers to communicate which status bits are occupied. Only one option can occupy `status[8]` so this is important.
+Most cores have a Status Bit Map placed at the top of the `CONF_STR` section. When developing a core, please use this as it's a helpful reference which aids in collaboration. This reference is edited by fellow developers to communicate which status bits are occupied. Only one option can occupy a status bit, so this is important.
 
 ## Status Bit Map
 
@@ -79,7 +79,7 @@ These must be placed at the bottom of the configuration string:
 * `J[1],{Button1}[,{Button2},...]` - J1 means lock keyboard to joystick emulation mode. Useful for keyboard-less systems such as consoles. {Button1},{Button2},... is list of joystick buttons used in the core. Up to 12 buttons can be listed. Analog axis are not defined here. The user just needs to map them through the Menu core.
 * `jn,{SNES Button Name1},[,{SNES Button2},...]` - this sets the default mapping of the buttons. ie: jn,A would map joystick bit 4 to the A button on a SNES style controller automatically
 * `jp` - same as `jn` but used when `gamepad_defaults=1` in `MiSTer.INI`. Typically refers to positional mapping relative to a SNES controller
-* `V,{Version String}` - Version string. {Version String} is the version string. Takes the core name and appends version string for name to display.
+* `V,{Version String}` - Version string. Takes the core name and appends version string for name to display when the core is loaded. Note that the timestamp in the core browser (before the core is loaded) is not derived from `Version String`, but the .rbf filename.
 * `I,INFO1,INFO2,...,INFO255` - `INFO1-INFO255` lines to display as OSD info (top left corner of screen).
 * `DEFMRA,{mra name}` - default MRA (ie: Puckman.mra) to be used when core is uploaded by USB blaster (debug)
 
