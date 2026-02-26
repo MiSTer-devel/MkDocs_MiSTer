@@ -28,9 +28,17 @@ The easiest way to get this information is, after enabling debug on MiSTer.ini, 
 
 ## Auto Fire
 
-Any defined button (except the d-pad) supports the auto fire feature. To activate auto fire, press and hold the desired button and then quickly press and release the button defined as `BUTTON OSD`(for joystick) or `KBD TOGGLE`(for keyboard). To deactivate auto fire, repeat the the same procedure for that same button you set before.
+Any defined button (except the d-pad) supports the auto fire feature. To activate auto fire, press and hold the desired button and then quickly press and release the button defined as `BUTTON OSD`(for joystick) or `KBD TOGGLE`(for keyboard). To increase the autofire rate on that button, repeat the the same procedure. To disable autofire continue stepping that button through rates until it displays that autofire is now disabled on that button. Using this method, each button may have its own autofire rate.
 
-Auto fire rates can be modified by increments of 32ms all the way up to 1024ms (repeating the button once every second). To change the speed, press and hold a direction on the d-pad and then quickly press the button defined as `BUTTON OSD`(for joystick) or `KBD TOGGLE`(for keyboard). Up or right increases the delay of the auto fire while down and left decrease the delay. Some games will not function properly if the auto fire rate is too fast, so this is a useful feature to keep in mind if you run into problems.
+By default, MiSTer allows autofire rates of 10hz, 15hz, and 30hz to be used. If you'd like to set custom rates, this can be done by modifying the MiSTer.ini file. Up to five custom rates can be defined by adding or modifying the autofire_rates line. You may find that some games work better with certain rates, and that other rates (particularly 30hz) are too fast for certain games to process.
+
+autofire_rates=7.5,10,15,20,30
+
+Advanced users may set a custom autofire rate as a pattern of button presses and releases. Prefix the pattern with 0b, and input 0 for each frame for which the button should be released, and 1 for each frame for which it should be held.
+
+autofire_rates=0b000011111
+
+This line would configure a single autofire rate in which the button is held for five frames, released for four frames, and the cycle then repeats. You can freely mix numeric and pattern-based rates in your autofire_rates line. MiSTer will ignore any rates it is unable to properly process.
 
 ## Maximum number of players
 
