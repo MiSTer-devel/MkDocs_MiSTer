@@ -3,11 +3,14 @@
 {
   "name": "Python 3",
   "image": "mcr.microsoft.com/devcontainers/python:0-3.11-bullseye",
+  "features": {
+    "ghcr.io/jsburckhardt/devcontainer-features/uv:1": {}
+  },
   "forwardPorts": [
     8000
   ],
-  "postCreateCommand": "pip3 install --user -r requirements.txt",
-  "postStartCommand": "mkdocs serve --watch docs",
+  "postCreateCommand": "uv sync",
+  "postStartCommand": "uv run mkdocs serve --watch docs",
   "portsAttributes": {
     "8000": {
       "label": "preview",
