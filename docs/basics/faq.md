@@ -28,6 +28,12 @@ Yes, you would just need to add some filters to `/media/fat/downloader.ini`. [Re
 
 Yes, there is support for custom databases in the downloader script. [Read this guide](https://github.com/MiSTer-devel/Downloader_MiSTer/blob/main/docs/custom-databases.md){target=_blank} for more information.
 
+## What are unstable cores? How do I install one?
+
+Unstable cores are automatically built from the latest commits to a core's repository. They reflect the most recent changes made by developers and are updated continuously as new code is pushed. While they may contain bugs or unfinished features, they will eventually mature into a stable release. Unstable cores are intentionally not installed by update scripts, but there are valid use cases for using one, such as testing bug fixes or new features. Note that not every core has automated unstable builds available.
+
+Unstable builds are uploaded to the [MiSTer-unstable-nightlies GitHub organization](https://github.com/MiSTer-unstable-nightlies), which hosts forks of core repositories. The downloads can be found under the Releases tab of the core's repository (not to be confused with the `releases` folder visible in the repository file tree, which contains the stable upstream builds and should be ignored). To install the build, copy the `.rbf` file to the appropriate folder on your MiSTer's micro SD card. You may want to place it in a dedicated `/_Unstable/` folder to keep these builds separate from stable cores. 
+
 ## Can I use original console controllers?
 
 Yes, there are many USB adapters for original console controllers available, see the usb controller recommendations below. They can also be connected directly via the IO board's User port (SNAC) as detailed below.
