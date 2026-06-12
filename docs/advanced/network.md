@@ -104,6 +104,8 @@ Adding your MiSTer to a Tailnet has a lot of benefits: being able to travel with
 
 If you do not already have a Tailnet, follow the instructions [here](https://tailscale.com/kb/1017/install){target=blank} to get started. Make sure you add at least one computer/NAS/phone to the Tailnet once it's created.
 
+To install Tailscale onto your MiSTer you can either use [this easier scripted install method](https://github.com/davewongillies/MiSTer-tailscale#setup) or follow the manual steps below.
+
 Go to the [Tailscale Package Repository](https://pkgs.tailscale.com/stable/#static){target=blank} and download the ARMv7 binary package (It will look something like `arm: tailscale_x.xx.x_arm.tgz`).
 
 Extract the archive on your computer and SFTP the files (`tailscaled` and `tailscale`) to your MiSTer. In this documentation we use the path `/media/fat/linux/tailscale/` but you can use any directory under `/media/fat/` just make sure you edit all the paths in the examples and scripts that follow.
