@@ -28,17 +28,29 @@ The easiest way to get this information is, after enabling debug on MiSTer.ini, 
 
 ## Auto Fire
 
-Any defined button (except the d-pad) supports the auto fire feature. To activate auto fire, press and hold the desired button and then quickly press and release the button defined as `BUTTON OSD`(for joystick) or `KBD TOGGLE`(for keyboard). To increase the autofire rate on that button, repeat the the same procedure. To disable autofire continue stepping that button through rates until it displays that autofire is now disabled on that button. Using this method, each button may have its own autofire rate.
+Any defined button supports the auto fire feature. To activate auto fire, press and hold the desired button and then quickly press and release the button defined as `BUTTON OSD`(for joystick) or `KBD TOGGLE`(for keyboard). To increase the autofire rate on that button, repeat the the same procedure. To disable autofire continue stepping that button through rates until it displays that autofire is now disabled on that button. Using this method, each button may have its own autofire rate.
 
-By default, MiSTer allows autofire rates of 10hz, 15hz, and 30hz to be used. If you'd like to set custom rates, this can be done by modifying the MiSTer.ini file. Up to five custom rates can be defined by adding or modifying the autofire_rates line. You may find that some games work better with certain rates, and that other rates (particularly 30hz) are too fast for certain games to process.
+By default, MiSTer allows autofire rates of 10 hz, 15 hz, and 30 hz to be used. If you'd like to set custom rates, this can be done by modifying the MiSTer.ini file. Custom rates are defined by adding or modifying the autofire_rates line. Custom rates will be rounded down to the nearest rate that repeats cleanly at 60 Hz. You may find that some games work better with certain rates, and that other rates (particularly 30hz) are too fast for certain games to process.
 
-autofire_rates=7.5,10,15,20,30
+`autofire_rates=7.5,10,15,20,30`
 
 Advanced users may set a custom autofire rate as a pattern of button presses and releases. Prefix the pattern with 0b, and input 0 for each frame for which the button should be released, and 1 for each frame for which it should be held.
 
-autofire_rates=0b000011111
+`autofire_rates=0b000011111`
 
 This line would configure a single autofire rate in which the button is held for five frames, released for four frames, and the cycle then repeats. You can freely mix numeric and pattern-based rates in your autofire_rates line. MiSTer will ignore any rates it is unable to properly process.
+
+### (Advanced) Built-in Custom Rates
+
+As a convenience to players of shooting games (which often favor very particular autofire rates) one custom rate has been included which can be accessed using a special keyword rather than having to calculate the custom pattern. Simply include the value where you would normally place a custom rate or pattern in your `autofire_rates=` line. Others may be added in the future as they are recommended by the community or the user who maintains autofire gets better at shooting games.
+
+| Value       | Target Game   | Resulting Rate |
+| ----------- | ------------- | -------------- |
+| GUNFRONTIER | Gun Frontier  | 6.67 Hz        |
+
+### Auto Fire and the Joystick/D-pad
+
+By default, autofire does not apply to the d-pad/joystick. If you wish to override this behavior and allow directional inputs to use autofire, add `autofire_on_directions=1` to your MiSTer.ini
 
 ## Maximum number of players
 
