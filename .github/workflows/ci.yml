@@ -4,39 +4,46 @@ on:
     branches:
       - main
 
-env:
-  PYTHON_VERSION: 3.8
-
 jobs:
   deploy:
     name: Build documentation
     runs-on: ubuntu-latest
     steps:
       - name: Checkout main branch
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
+
+      - name: "Set up Python"
+        uses: actions/setup-python@v6
+        with:
+          python-version-file: ".python-version"
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          version: "0.9.17"
+
+      - name: Install Python
+        run: uv python install
+
       - name: Download videos branch and unzip
         run: |
           wget https://codeload.github.com/MiSTer-devel/MkDocs_MiSTer/zip/refs/heads/videos || exit 1
           unzip videos || exit 1
           cd MkDocs_MiSTer-videos/ || exit 1
           cp -r docs ../ || exit 1
-      - name: Setup Python runtime
-        uses: actions/setup-python@v3
+
+      - name: Enable caching
+        uses: astral-sh/setup-uv@v7
         with:
-          python-version: ${{ env.PYTHON_VERSION }}
-      - name: Cache Python dependencies
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-pip-
+          enable-cache: true
+
       - name: Install Python Dependencies
         run: |
-          pip install -r requirements.txt
+          uv sync --locked --all-extras
+
       - name: Deploy Documentation
         run: |
-          mkdocs gh-deploy --force
-          mkdocs --version
+          uv mkdocs gh-deploy --force
+          uv mkdocs --version

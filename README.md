@@ -23,28 +23,22 @@ MiSTer FPGA Documentation built in Material for MkDocs.
 ## Instructions for deploying a local environment
 
 Prerequisites:
-* Python 3
-* Pip
+* [uv](https://docs.astral.sh/uv/)
 
-In the root folder of this repo, create a [virtual environment](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/), activate it, and update pip:
+In the root folder of this repo, run:
 
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
-python3 -m pip install --upgrade pip
+uv python install
+uv sync --all-packages --locked
 ```
 
-We can now install our requirements in the new virtual environment:
+We can now run a local server from the root folder:
 ```
-python3 -m pip install -r requirements.txt
-```
-Run a local server from the root folder:
-```
-mkdocs serve
+uv run mkdocs serve
 ```
 The server can also detect changes and refresh the pages as you edit them:
 ```
-mkdocs serve --watch docs
+uv run mkdocs serve --watch docs
 ```
 And it should give you a weburl in the terminal to go to --> http://127.0.0.1:8000
 
