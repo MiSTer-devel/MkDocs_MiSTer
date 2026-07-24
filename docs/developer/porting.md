@@ -17,6 +17,7 @@ Usually, for a new project, you need to take following files/folders:
 * zxspectrum-lite.srf (some warnings ignores)
 
 You need to make some changes:
+
 * Rename zxspectrum.* files according to a new project.
 * Inside files find the "zxspectrum" word and replace it with the name of your project.
 * in *.qsf files at the end you will find the list of project files. Remove files not related to your project.
