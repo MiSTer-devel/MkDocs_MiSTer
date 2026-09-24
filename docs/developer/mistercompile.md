@@ -9,7 +9,14 @@ The vast majority of MiSTer FPGA cores currently use Quartus 17.0.2 for compilat
 | [Linux](https://download.altera.com/akdlm/software/acdsinst/17.0std.2/602/ib_tar/Quartus-lite-17.0.2.602-linux.tar){target=_blank}     | `02aebab728d54e3ca8660d2646fdf93bc669b0ac` |
 | [Windows](https://download.altera.com/akdlm/software/acdsinst/17.0std.2/602/ib_tar/Quartus-lite-17.0.2.602-windows.tar){target=_blank} | `01d1f9cea037cf4b8c666da1193f94ba626b6fb3` |
 
-The Linux version is intended to work with Ubuntu 18.xx, you may have to adjust by downloading some missing dependencies if you use a newer version or another distribution.
+If the Linux installer gets stuck or fails, you may need to install each component individually. Visit the [Altera Download Center](https://www.altera.com/downloads/fpga-development-tools/quartus-prime-lite-edition-design-software-version-17-0-linux) and download the following files:
+1. Individual Files > Quartus Software > Quartus Prime (Includes Nios II EDS)
+2. Individual Files > Devices > Cyclone V Device Support
+3. Individual Files > Quartus Software > ModelSim-FPGA Edition (includes Starter Edition)
+4. Additional Software > Add-On Software > Quartus Prime Help
+5. Updates > Software and IP Updates 2 > Quartus Prime Software v17.0 Update 2
+
+First, run `chmod +x *.run` to make the downloaded installers executable. Run the main installer (file #1) from the terminal and un-check all extra software packages when prompted, except for Cyclone V support. Next run the Help installer, then the ModelSim installer, and finally install the 17.0.2 update. For this last installer, make sure to un-check the "Allow patches to be uninstalled" box. Each installer's GUI window should close automatically once done, though you may have to send a CTRL-C in the terminal to get the process to exit fully.
 
 Open the .qpf file from the MiSTer core you wish to compile with Quartus and press the play button. It's as simple as that!
 
